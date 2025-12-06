@@ -1,0 +1,31 @@
+WSKAZNIK_INDEX;WSKAZNIK
+0;C Środki pieniężne i pap. wart. 
+1;CF Nadwyżka finansowa 
+2;DEPR Amortyzacja 
+3;EN Liczba jednostek gospodarczych 
+4;GS (I) Przychody netto ze sprzedaży i zrównane z nimi 
+5;GS Przychody ogółem 
+6;INV Zapasy 
+7;IO Wartość nakładów inwestycyjnych 
+8;IP Odsetki do zapłacenia 
+9;LTC Długoterminowe kredyty bankowe 
+10;LTL Zobowiązania długoterminowe 
+11;NP Wynik finansowy netto (zysk netto) 
+12;NWC Kapitał obrotowy 
+13;OFE Pozostałe koszty finansowe 
+14;OP Wynik na działalności operacyjnej 
+15;PEN Liczba rentownych jednostek gospodarczych 
+16;PNPM Przychody netto 
+17;POS Wynik na sprzedaży 
+18;PPO Pozostałe przychody operacyjne 
+19;Przewidywana liczba pracujących 0-9
+20;Przewidywana liczba pracujących 10-49
+21;Przewidywana liczba pracujących 250=>
+22;Przewidywana liczba pracujących 50-249
+23;Przewidywana liczba pracujących Ogółem
+24;Przych. fin. Przychody finansowe 
+25;REC Należności krótkoterminowe 
+26;STC Krótkoterminowe kredyty bankowe 
+27;STL Zobowiązania krótkoterminowe 
+28;TC Koszty ogółem 
+29;Upadłość
