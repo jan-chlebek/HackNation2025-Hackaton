@@ -223,7 +223,7 @@ export default function Analytics() {
 
   // Combine all results for comparison
   const combinedData = data.topsisResults
-    .filter((t) => t.alternative_id) // Filter out empty alternative_id
+    .filter((t) => t.alternative_id !== "" && t.alternative_id != null) // Filter out empty alternative_id
     .map((t) => {
       const vikor = data.vikorResults.find(
         (v) => v.alternative_id === t.alternative_id

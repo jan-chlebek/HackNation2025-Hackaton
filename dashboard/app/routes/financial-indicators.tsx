@@ -39,6 +39,21 @@ const CHART_COLORS = [
   "#f39c12",
 ];
 
+// Indicator codes for data extraction
+const INDICATOR_CODES = {
+  TOTAL_REVENUE: "GS Przychody ogółem",
+  NET_PROFIT: "NP Wynik finansowy netto",
+  OPERATING_RESULT: "OP Wynik na działalności operacyjnej",
+  CASH_FLOW: "CF Nadwyżka finansowa",
+  TOTAL_COSTS: "TC Koszty ogółem",
+  SALES_RESULT: "POS Wynik na sprzedaży",
+  NET_REVENUE: "PNPM Przychody netto",
+  WORKING_CAPITAL: "NWC Kapitał obrotowy",
+  CASH: "C Środki pieniężne",
+  SHORT_TERM_LIABILITIES: "STL Zobowiązania krótkoterminowe",
+  INVENTORY: "INV Zapasy",
+} as const;
+
 interface FinancialIndicator {
   PKD: string;
   NAZWA_PKD: string;
@@ -100,6 +115,13 @@ export async function loader({ request }: Route.LoaderArgs) {
     /^\d{4}$/.test(key)
   );
 
+  // Helper function to parse financial values
+  const parseFinancialValue = (value: string | undefined): number => {
+    if (!value) return 0;
+    const parsed = parseFloat(value.replace(/\s/g, "").replace(",", "."));
+    return isNaN(parsed) ? 0 : parsed;
+  };
+
   // Helper function to extract time series data
   const extractTimeSeries = (indicatorCode: string): TimeSeriesData[] => {
     const row = overallData.find((r) => r.WSKAZNIK.startsWith(indicatorCode));
@@ -108,25 +130,25 @@ export async function loader({ request }: Route.LoaderArgs) {
     return years
       .map((year) => ({
         year,
-        value: parseFloat(row[year]?.replace(/\s/g, "").replace(",", ".") || "0"),
+        value: parseFinancialValue(row[year]),
       }))
-      .filter((d) => !isNaN(d.value) && d.value !== 0);
+      .filter((d) => d.value !== 0);
   };
 
   // Get key indicators
-  const revenue = extractTimeSeries("GS Przychody ogółem");
-  const netProfit = extractTimeSeries("NP Wynik finansowy netto");
-  const operatingResult = extractTimeSeries("OP Wynik na działalności operacyjnej");
-  const cashFlow = extractTimeSeries("CF Nadwyżka finansowa");
-  const totalCosts = extractTimeSeries("TC Koszty ogółem");
-  const salesResult = extractTimeSeries("POS Wynik na sprzedaży");
-  const netRevenue = extractTimeSeries("PNPM Przychody netto");
+  const revenue = extractTimeSeries(INDICATOR_CODES.TOTAL_REVENUE);
+  const netProfit = extractTimeSeries(INDICATOR_CODES.NET_PROFIT);
+  const operatingResult = extractTimeSeries(INDICATOR_CODES.OPERATING_RESULT);
+  const cashFlow = extractTimeSeries(INDICATOR_CODES.CASH_FLOW);
+  const totalCosts = extractTimeSeries(INDICATOR_CODES.TOTAL_COSTS);
+  const salesResult = extractTimeSeries(INDICATOR_CODES.SALES_RESULT);
+  const netRevenue = extractTimeSeries(INDICATOR_CODES.NET_REVENUE);
   
   // Additional metrics for ratios
-  const workingCapital = extractTimeSeries("NWC Kapitał obrotowy");
-  const cash = extractTimeSeries("C Środki pieniężne");
-  const shortTermLiabilities = extractTimeSeries("STL Zobowiązania krótkoterminowe");
-  const inventory = extractTimeSeries("INV Zapasy");
+  const workingCapital = extractTimeSeries(INDICATOR_CODES.WORKING_CAPITAL);
+  const cash = extractTimeSeries(INDICATOR_CODES.CASH);
+  const shortTermLiabilities = extractTimeSeries(INDICATOR_CODES.SHORT_TERM_LIABILITIES);
+  const inventory = extractTimeSeries(INDICATOR_CODES.INVENTORY);
 
   // Calculate correlations
   const calculatePearson = (x: number[], y: number[]): number => {
@@ -219,9 +241,9 @@ export async function loader({ request }: Route.LoaderArgs) {
     const wc = workingCapital.find((d) => d.year === year)?.value || 0;
     const stl = shortTermLiabilities.find((d) => d.year === year)?.value || 1;
     const inv = inventory.find((d) => d.year === year)?.value || 0;
-    const c = cash.find((d) => d.year === year)?.value || 0;
 
-    // Current assets = Working Capital + Short-term Liabilities
+    // Working Capital = Current Assets - Current Liabilities
+    // Therefore: Current Assets = Working Capital + Current Liabilities
     const currentAssets = wc + stl;
     const quickAssets = currentAssets - inv;
 
