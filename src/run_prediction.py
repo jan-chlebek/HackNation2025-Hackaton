@@ -1,281 +1,300 @@
 """
-Time Series Forecasting for Financial Indicators.
+Evaluate prediction accuracy by comparing predicted values with actual values.
 
-This script loads data from kpi-value-table.csv, trains on specified historical years,
-and generates predictions in the same format.
+This script compares predictions in results-future/ with actual values in results-pipeline/
+for overlapping years, using normalized metrics for better comparison.
 
-Run from project root: python src/run_prediction.py
+Run from project root: python src/evaluate_predictions.py
 """
 
 import pandas as pd
 import numpy as np
-import os
-import sys
 from pathlib import Path
-from typing import List, Tuple
-
-# Add src to path for imports
-sys.path.append(str(Path(__file__).parent))
-
-from prediction import (
-    ForecastConfig, 
-    CategoryPredictor, 
-    LinearTrendForecaster,
-    ExponentialSmoothingForecaster,
-    SimpleARIMAForecaster,
-    MonteCarloForecaster,
-    EnsembleForecaster
-)
+from sklearn.metrics import r2_score, mean_squared_log_error
 
 
-def load_kpi_data(start_year: int, end_year: int) -> pd.DataFrame:
-    """
-    Load KPI data from results-pipeline folder.
+def load_data():
+    """Load actual and predicted data."""
+    print("Loading data...")
     
-    Args:
-        start_year: Starting year for historical data
-        end_year: Ending year for historical data
-        
-    Returns:
-        DataFrame filtered by year range
-    """
-    input_dir = 'results-pipeline'
+    # Load actual data
+    actual = pd.read_csv('results-pipeline/kpi-value-table.csv', sep=';')
+    print(f"  Actual data: {len(actual)} records, years {actual['rok'].min()}-{actual['rok'].max()}")
     
-    print(f"Loading data from {input_dir}/kpi-value-table.csv...")
-    kpi_data = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
+    # Load predictions
+    predicted = pd.read_csv('results-future/kpi-value-table-predicted.csv', sep=';')
+    print(f"  Predicted data: {len(predicted)} records, years {predicted['rok'].min()}-{predicted['rok'].max()}")
     
-    print(f"  Total records: {len(kpi_data)}")
-    print(f"  Year range in data: {kpi_data['rok'].min()} - {kpi_data['rok'].max()}")
-    
-    # Filter by year range
-    filtered_data = kpi_data[(kpi_data['rok'] >= start_year) & (kpi_data['rok'] <= end_year)].copy()
-    
-    print(f"  Filtered to years {start_year}-{end_year}: {len(filtered_data)} records")
-    print(f"  Unique PKD_INDEX: {filtered_data['PKD_INDEX'].nunique()}")
-    print(f"  Unique WSKAZNIK_INDEX: {filtered_data['WSKAZNIK_INDEX'].nunique()}")
-    
-    return filtered_data
+    return actual, predicted
 
 
-def prepare_prediction_input(kpi_data: pd.DataFrame) -> pd.DataFrame:
-    """
-    Convert kpi-value-table format to prediction input format.
+def calculate_metrics(actual_values, predicted_values):
+    """Calculate various accuracy metrics."""
+    metrics = {}
     
-    Args:
-        kpi_data: DataFrame with columns [rok, wartosc, WSKAZNIK_INDEX, PKD_INDEX]
-        
-    Returns:
-        DataFrame with columns [kpi_id, cat_id, value, direction, year]
-    """
-    print("\nPreparing data for prediction...")
+    # Basic error metrics
+    error = predicted_values - actual_values
+    abs_error = np.abs(error)
     
-    # Create prediction-ready format
-    # PKD_INDEX as kpi_id (alternatives), WSKAZNIK_INDEX as cat_id (criteria)
-    prediction_df = pd.DataFrame({
-        'kpi_id': kpi_data['WSKAZNIK_INDEX'].astype(str) + '_' + kpi_data['PKD_INDEX'].astype(str),
-        'cat_id': kpi_data['WSKAZNIK_INDEX'].astype(str),
-        'value': kpi_data['wartosc'],
-        'direction': 'max',  # Default direction
-        'year': kpi_data['rok'],
-        'PKD_INDEX': kpi_data['PKD_INDEX'],
-        'WSKAZNIK_INDEX': kpi_data['WSKAZNIK_INDEX']
-    })
+    # Mean Absolute Error
+    metrics['MAE'] = abs_error.mean()
     
-    # Remove missing values
-    initial_rows = len(prediction_df)
-    prediction_df = prediction_df.dropna(subset=['value'])
-    removed = initial_rows - len(prediction_df)
+    # Root Mean Squared Error
+    metrics['RMSE'] = np.sqrt((error ** 2).mean())
     
-    if removed > 0:
-        print(f"  Removed {removed} rows with missing values")
+    # Normalized RMSE (by range of actual values)
+    value_range = actual_values.max() - actual_values.min()
+    if value_range > 0:
+        metrics['NRMSE (range)'] = metrics['RMSE'] / value_range
+    else:
+        metrics['NRMSE (range)'] = np.nan
     
-    # Remove infinite values
-    initial_rows = len(prediction_df)
-    prediction_df = prediction_df[~np.isinf(prediction_df['value'])]
-    removed = initial_rows - len(prediction_df)
+    # Normalized RMSE (by mean of actual values)
+    if actual_values.mean() != 0:
+        metrics['NRMSE (mean)'] = metrics['RMSE'] / abs(actual_values.mean())
+    else:
+        metrics['NRMSE (mean)'] = np.nan
     
-    if removed > 0:
-        print(f"  Removed {removed} rows with infinite values")
+    # Mean Absolute Percentage Error
+    pct_error = (error / actual_values) * 100
+    pct_error = pct_error.replace([np.inf, -np.inf], np.nan)
+    metrics['MAPE (%)'] = np.abs(pct_error).mean()
     
-    print(f"  Final dataset: {len(prediction_df)} rows")
-    print(f"  Unique combinations: {prediction_df['kpi_id'].nunique()}")
+    # Symmetric MAPE (handles zero values better)
+    smape = 200 * abs_error / (np.abs(actual_values) + np.abs(predicted_values))
+    smape = smape.replace([np.inf, -np.inf], np.nan)
+    metrics['sMAPE (%)'] = smape.mean()
     
-    return prediction_df
+    # R-squared (coefficient of determination)
+    metrics['R²'] = r2_score(actual_values, predicted_values)
+    
+    # Mean Absolute Scaled Error (MASE) - scaled by naive forecast
+    # Naive forecast error (using mean absolute difference of actual values)
+    naive_error = np.abs(actual_values.diff()).mean()
+    if naive_error > 0:
+        metrics['MASE'] = metrics['MAE'] / naive_error
+    else:
+        metrics['MASE'] = np.nan
+    
+    # Median Absolute Error (more robust to outliers)
+    metrics['MedAE'] = abs_error.median()
+    
+    # Mean Squared Logarithmic Error (for positive values only)
+    if (actual_values > 0).all() and (predicted_values > 0).all():
+        metrics['MSLE'] = mean_squared_log_error(actual_values, predicted_values)
+        metrics['RMSLE'] = np.sqrt(metrics['MSLE'])
+    else:
+        metrics['MSLE'] = np.nan
+        metrics['RMSLE'] = np.nan
+    
+    return metrics
 
 
-def convert_predictions_to_kpi_format(predictions: pd.DataFrame, 
-                                     original_data: pd.DataFrame) -> pd.DataFrame:
-    """
-    Convert prediction output back to kpi-value-table format.
+def evaluate_accuracy(actual: pd.DataFrame, predicted: pd.DataFrame):
+    """Compare predictions with actual values."""
     
-    Args:
-        predictions: Prediction results
-        original_data: Original kpi_data with PKD_INDEX and WSKAZNIK_INDEX
-        
-    Returns:
-        DataFrame in kpi-value-table format [rok, wartosc, WSKAZNIK_INDEX, PKD_INDEX]
-    """
-    print("\nConverting predictions to kpi-value-table format...")
+    # Find overlapping years
+    actual_years = set(actual['rok'].unique())
+    predicted_years = set(predicted['rok'].unique())
+    overlap_years = sorted(actual_years & predicted_years)
     
-    # Extract PKD_INDEX and WSKAZNIK_INDEX from kpi_id and cat_id
-    predictions_copy = predictions.copy()
+    if not overlap_years:
+        print("\n⚠ No overlapping years found between actual and predicted data!")
+        print(f"  Actual years: {sorted(actual_years)}")
+        print(f"  Predicted years: {sorted(predicted_years)}")
+        return None
     
-    # Parse kpi_id to get WSKAZNIK_INDEX and PKD_INDEX
-    predictions_copy[['WSKAZNIK_INDEX', 'PKD_INDEX']] = predictions_copy['kpi_id'].str.split('_', expand=True)
-    predictions_copy['WSKAZNIK_INDEX'] = predictions_copy['WSKAZNIK_INDEX'].astype(int)
-    predictions_copy['PKD_INDEX'] = predictions_copy['PKD_INDEX'].astype(float)
+    print(f"\nOverlapping years for comparison: {overlap_years}")
     
-    # Create output in same format as input
-    output_df = pd.DataFrame({
-        'rok': predictions_copy['year'].astype(int),
-        'wartosc': predictions_copy['ensemble_forecast'],
-        'WSKAZNIK_INDEX': predictions_copy['WSKAZNIK_INDEX'],
-        'PKD_INDEX': predictions_copy['PKD_INDEX']
-    })
-    
-    # Sort to match original format
-    output_df = output_df.sort_values(['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX']).reset_index(drop=True)
-    
-    print(f"  Generated {len(output_df)} prediction records")
-    print(f"  Years: {sorted(output_df['rok'].unique())}")
-    
-    return output_df
-
-
-def run_predictions(start_year: int = 2018,
-                   end_year: int = 2024,
-                   forecast_years: int = 3,
-                   mc_simulations: int = 1000,
-                   output_dir: str = 'results-future') -> pd.DataFrame:
-    """
-    Run complete prediction pipeline.
-    
-    Args:
-        start_year: Start of historical data range
-        end_year: End of historical data range
-        forecast_years: Number of years to forecast into the future
-        mc_simulations: Number of Monte Carlo simulations
-        output_dir: Directory to save results
-        
-    Returns:
-        DataFrame with predictions in kpi-value-table format
-    """
-    print("="*90)
-    print("FINANCIAL INDICATOR FORECASTING")
-    print("="*90)
-    print(f"\nConfiguration:")
-    print(f"  Historical data: {start_year} - {end_year} ({end_year - start_year + 1} years)")
-    print(f"  Forecast horizon: {forecast_years} years ({end_year + 1} - {end_year + forecast_years})")
-    print(f"  Monte Carlo simulations: {mc_simulations}")
-    print(f"  Output directory: {output_dir}/")
-    
-    # Step 1: Load historical data
-    kpi_data = load_kpi_data(start_year, end_year)
-    
-    # Step 2: Prepare for prediction
-    prediction_input = prepare_prediction_input(kpi_data)
-    
-    # Step 3: Configure forecasting
-    config = ForecastConfig(
-        forecast_years=forecast_years,
-        min_historical_years=3,
-        mc_simulations=mc_simulations,
-        mc_noise_std=0.10
+    # Merge on year, PKD_INDEX, and WSKAZNIK_INDEX
+    comparison = actual[actual['rok'].isin(overlap_years)].merge(
+        predicted[predicted['rok'].isin(overlap_years)],
+        on=['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX'],
+        suffixes=('_actual', '_predicted')
     )
     
-    print("\n" + "="*90)
-    print("RUNNING FORECASTING MODELS")
-    print("="*90)
+    print(f"\nMatched {len(comparison)} records for comparison")
     
-    # Step 4: Run predictions
-    predictor = CategoryPredictor(prediction_input, config)
-    forecasts = predictor.predict_all_categories()
+    if len(comparison) == 0:
+        print("⚠ No matching records found!")
+        return None
     
-    # Step 5: Convert back to kpi-value-table format
-    predictions_kpi_format = convert_predictions_to_kpi_format(forecasts, kpi_data)
+    # Calculate error columns
+    comparison['error'] = comparison['wartosc_predicted'] - comparison['wartosc_actual']
+    comparison['abs_error'] = np.abs(comparison['error'])
+    comparison['pct_error'] = (comparison['error'] / comparison['wartosc_actual']) * 100
+    comparison['abs_pct_error'] = np.abs(comparison['pct_error'])
     
-    # Step 6: Create output directory
-    output_path = Path(output_dir)
-    output_path.mkdir(parents=True, exist_ok=True)
+    # Symmetric absolute percentage error
+    comparison['smape'] = 200 * comparison['abs_error'] / (
+        np.abs(comparison['wartosc_actual']) + np.abs(comparison['wartosc_predicted'])
+    )
     
-    # Step 7: Save results
-    output_file = output_path / 'kpi-value-table-predicted.csv'
-    predictions_kpi_format.to_csv(output_file, sep=';', index=False)
+    # Replace infinite values with NaN
+    comparison['pct_error'] = comparison['pct_error'].replace([np.inf, -np.inf], np.nan)
+    comparison['abs_pct_error'] = comparison['abs_pct_error'].replace([np.inf, -np.inf], np.nan)
+    comparison['smape'] = comparison['smape'].replace([np.inf, -np.inf], np.nan)
     
-    print("\n" + "="*90)
-    print("SAVING RESULTS")
-    print("="*90)
-    print(f"\n✓ Predictions saved to: {output_file}")
+    # Calculate overall metrics
+    overall_metrics = calculate_metrics(
+        comparison['wartosc_actual'].values,
+        comparison['wartosc_predicted'].values
+    )
     
-    # Also save detailed forecasts with all methods
-    detailed_file = output_path / 'detailed-forecasts.csv'
-    forecasts.to_csv(detailed_file, index=False)
-    print(f"✓ Detailed forecasts saved to: {detailed_file}")
+    # Print overall metrics
+    print("\n" + "="*80)
+    print("OVERALL ACCURACY METRICS")
+    print("="*80)
+    print("\nAbsolute Error Metrics:")
+    print(f"  Mean Absolute Error (MAE):              {overall_metrics['MAE']:.4f}")
+    print(f"  Median Absolute Error (MedAE):          {overall_metrics['MedAE']:.4f}")
+    print(f"  Root Mean Squared Error (RMSE):         {overall_metrics['RMSE']:.4f}")
     
-    # Save summary statistics
-    summary = predictor.get_forecast_summary(forecasts)
-    summary_file = output_path / 'forecast-summary.csv'
-    summary.to_csv(summary_file, index=False)
-    print(f"✓ Summary statistics saved to: {summary_file}")
+    print("\nNormalized Error Metrics:")
+    print(f"  Normalized RMSE (by range):             {overall_metrics['NRMSE (range)']:.4f}")
+    print(f"  Normalized RMSE (by mean):              {overall_metrics['NRMSE (mean)']:.4f}")
     
-    # Print statistics
-    print("\n" + "="*90)
-    print("FORECAST STATISTICS")
-    print("="*90)
+    print("\nPercentage Error Metrics:")
+    print(f"  Mean Absolute % Error (MAPE):           {overall_metrics['MAPE (%)']:.2f}%")
+    print(f"  Symmetric MAPE (sMAPE):                 {overall_metrics['sMAPE (%)']:.2f}%")
     
-    future_years = sorted(predictions_kpi_format['rok'].unique())
-    print(f"\nFuture years predicted: {future_years}")
+    print("\nGoodness-of-Fit Metrics:")
+    print(f"  R-squared (R²):                         {overall_metrics['R²']:.4f}")
+    print(f"  Mean Absolute Scaled Error (MASE):      {overall_metrics['MASE']:.4f}")
     
-    for year in future_years:
-        year_data = predictions_kpi_format[predictions_kpi_format['rok'] == year]
-        print(f"\nYear {year}:")
-        print(f"  Records: {len(year_data)}")
-        print(f"  PKD sectors: {year_data['PKD_INDEX'].nunique()}")
-        print(f"  Indicators: {year_data['WSKAZNIK_INDEX'].nunique()}")
-        print(f"  Value range: {year_data['wartosc'].min():.2f} to {year_data['wartosc'].max():.2f}")
-        print(f"  Mean value: {year_data['wartosc'].mean():.2f}")
+    if not np.isnan(overall_metrics['RMSLE']):
+        print("\nLogarithmic Metrics (for positive values):")
+        print(f"  Root Mean Squared Log Error (RMSLE):    {overall_metrics['RMSLE']:.4f}")
     
-    # Show sample of predictions
-    print("\n" + "="*90)
-    print("SAMPLE PREDICTIONS (first 20 rows)")
-    print("="*90)
-    print(predictions_kpi_format.head(20).to_string(index=False))
+    # Interpretation guide
+    print("\n" + "="*80)
+    print("INTERPRETATION GUIDE")
+    print("="*80)
+    print("R² (closer to 1.0 is better):")
+    if overall_metrics['R²'] >= 0.9:
+        print("  ✓ Excellent fit (≥0.9)")
+    elif overall_metrics['R²'] >= 0.7:
+        print("  ✓ Good fit (0.7-0.9)")
+    elif overall_metrics['R²'] >= 0.5:
+        print("  ~ Moderate fit (0.5-0.7)")
+    else:
+        print("  ✗ Poor fit (<0.5)")
     
-    return predictions_kpi_format
+    print("\nsMAPE (closer to 0% is better):")
+    if overall_metrics['sMAPE (%)'] <= 10:
+        print("  ✓ Excellent accuracy (≤10%)")
+    elif overall_metrics['sMAPE (%)'] <= 20:
+        print("  ✓ Good accuracy (10-20%)")
+    elif overall_metrics['sMAPE (%)'] <= 30:
+        print("  ~ Moderate accuracy (20-30%)")
+    else:
+        print("  ✗ Poor accuracy (>30%)")
+    
+    # Metrics by year
+    print("\n" + "="*80)
+    print("ACCURACY BY YEAR")
+    print("="*80)
+    
+    year_metrics = []
+    for year in overlap_years:
+        year_data = comparison[comparison['rok'] == year]
+        year_m = calculate_metrics(
+            year_data['wartosc_actual'].values,
+            year_data['wartosc_predicted'].values
+        )
+        year_metrics.append({
+            'Year': year,
+            'Records': len(year_data),
+            'MAE': year_m['MAE'],
+            'RMSE': year_m['RMSE'],
+            'NRMSE': year_m['NRMSE (range)'],
+            'MAPE (%)': year_m['MAPE (%)'],
+            'sMAPE (%)': year_m['sMAPE (%)'],
+            'R²': year_m['R²']
+        })
+    
+    year_df = pd.DataFrame(year_metrics)
+    print(year_df.to_string(index=False))
+    
+    # Metrics by indicator
+    print("\n" + "="*80)
+    print("ACCURACY BY INDICATOR (Top 10 worst by sMAPE)")
+    print("="*80)
+    
+    indicator_metrics = []
+    for wskaznik in comparison['WSKAZNIK_INDEX'].unique():
+        ind_data = comparison[comparison['WSKAZNIK_INDEX'] == wskaznik]
+        if len(ind_data) >= 5:  # Only if we have enough samples
+            ind_m = calculate_metrics(
+                ind_data['wartosc_actual'].values,
+                ind_data['wartosc_predicted'].values
+            )
+            indicator_metrics.append({
+                'WSKAZNIK_INDEX': wskaznik,
+                'Records': len(ind_data),
+                'sMAPE (%)': ind_m['sMAPE (%)'],
+                'R²': ind_m['R²'],
+                'NRMSE': ind_m['NRMSE (range)']
+            })
+    
+    if indicator_metrics:
+        ind_df = pd.DataFrame(indicator_metrics).sort_values('sMAPE (%)', ascending=False).head(10)
+        print(ind_df.to_string(index=False))
+    
+    # Top 10 worst predictions
+    print("\n" + "="*80)
+    print("TOP 10 WORST PREDICTIONS (by sMAPE)")
+    print("="*80)
+    worst = comparison.nlargest(10, 'smape')[
+        ['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX', 'wartosc_actual', 'wartosc_predicted', 'smape', 'abs_pct_error']
+    ]
+    print(worst.to_string(index=False))
+    
+    # Top 10 best predictions
+    print("\n" + "="*80)
+    print("TOP 10 BEST PREDICTIONS (by sMAPE)")
+    print("="*80)
+    best = comparison.nsmallest(10, 'smape')[
+        ['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX', 'wartosc_actual', 'wartosc_predicted', 'smape', 'abs_pct_error']
+    ]
+    print(best.to_string(index=False))
+    
+    # Save detailed comparison
+    output_dir = Path('results-future')
+    output_file = output_dir / 'prediction-accuracy.csv'
+    comparison.to_csv(output_file, index=False)
+    print(f"\n✓ Detailed comparison saved to: {output_file}")
+    
+    # Save metrics summary
+    metrics_file = output_dir / 'accuracy-metrics.csv'
+    metrics_df = pd.DataFrame([overall_metrics])
+    metrics_df.to_csv(metrics_file, index=False)
+    print(f"✓ Metrics summary saved to: {metrics_file}")
+    
+    return comparison, overall_metrics
 
 
 if __name__ == '__main__':
-    # Configuration - EDIT THESE PARAMETERS
-    START_YEAR = 2015      # First year of historical data to use
-    END_YEAR = 2022        # Last year of historical data to use
-    FORECAST_YEARS = 3     # Number of years to predict into the future
-    MC_SIMULATIONS = 1000  # Number of Monte Carlo simulations
-    OUTPUT_DIR = 'results-future'  # Output directory
-    
     try:
-        # Run predictions
-        predictions = run_predictions(
-            start_year=START_YEAR,
-            end_year=END_YEAR,
-            forecast_years=FORECAST_YEARS,
-            mc_simulations=MC_SIMULATIONS,
-            output_dir=OUTPUT_DIR
-        )
+        actual, predicted = load_data()
+        results, metrics = evaluate_accuracy(actual, predicted)
         
-        print("\n" + "="*90)
-        print("FORECASTING COMPLETE!")
-        print("="*90)
-        print(f"\nOutput files in {OUTPUT_DIR}/:")
-        print("  • kpi-value-table-predicted.csv - Predictions in original format")
-        print("  • detailed-forecasts.csv - Detailed forecasts with all methods")
-        print("  • forecast-summary.csv - Summary statistics")
-        print(f"\nTo use predictions:")
-        print(f"  1. Original data is in: results-pipeline/kpi-value-table.csv")
-        print(f"  2. Predictions are in: {OUTPUT_DIR}/kpi-value-table-predicted.csv")
-        print(f"  3. You can combine them for complete time series analysis")
-        
+        if results is not None:
+            print("\n" + "="*80)
+            print("EVALUATION COMPLETE")
+            print("="*80)
+            print("\nKey Takeaway:")
+            print(f"  Overall prediction accuracy (R²): {metrics['R²']:.4f}")
+            print(f"  Average error (sMAPE): {metrics['sMAPE (%)']:.2f}%")
+        else:
+            print("\n⚠ Evaluation could not be completed")
+            
+    except FileNotFoundError as e:
+        print(f"\n✗ Error: {e}")
+        print("\nMake sure you have:")
+        print("  1. results-pipeline/kpi-value-table.csv (actual data)")
+        print("  2. results-future/kpi-value-table-predicted.csv (predictions)")
     except Exception as e:
-        print(f"\n✗ Error during forecasting: {str(e)}")
+        print(f"\n✗ Error: {e}")
         import traceback
         traceback.print_exc()
-        raise
