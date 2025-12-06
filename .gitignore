@@ -1,3 +1,4 @@
 .vscode
 .venv
+.vite
 node_modules/*
