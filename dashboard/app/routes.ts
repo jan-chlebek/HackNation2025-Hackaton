@@ -5,4 +5,5 @@ export default [
   route("analysis", "routes/analysis.tsx"),
   route("correlations", "routes/correlations.tsx"),
   route("rankings", "routes/rankings.tsx"),
+  route("methodology", "routes/methodology.tsx"),
 ] satisfies RouteConfig;

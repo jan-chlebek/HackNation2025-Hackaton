@@ -19,6 +19,27 @@ interface AnalysisChartProps {
   height?: number;
 }
 
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    const data = payload[0].payload;
+    const title = (data.alternative_id && data.nazwa) 
+      ? `${data.alternative_id} - ${data.nazwa}`
+      : label;
+
+    return (
+      <div style={{ backgroundColor: "#fff", padding: "10px", border: "1px solid #d0d0d0", borderRadius: "4px", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>
+        <p style={{ fontWeight: "bold", color: "#1a2f3a", marginBottom: "5px", fontSize: "14px" }}>{title}</p>
+        {payload.map((entry: any, index: number) => (
+          <p key={index} style={{ color: entry.color, fontSize: "12px", margin: 0 }}>
+            {`${entry.name}: ${typeof entry.value === 'number' ? (Number.isInteger(entry.value) ? entry.value : entry.value.toFixed(3)) : entry.value}`}
+          </p>
+        ))}
+      </div>
+    );
+  }
+  return null;
+};
+
 export function AnalysisChart({
   data,
   type = "bar",
@@ -60,14 +81,7 @@ export function AnalysisChart({
             axisLine={false}
             tickLine={false}
           />
-          <Tooltip
-            contentStyle={{
-              backgroundColor: "#fff",
-              border: "1px solid #d0d0d0",
-              borderRadius: "4px",
-              boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
-            }}
-          />
+          <Tooltip content={<CustomTooltip />} />
           <Legend wrapperStyle={{ paddingTop: "20px" }} />
           {dataKeys.map((dk) => (
             type === "line" ? (

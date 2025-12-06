@@ -5,39 +5,28 @@ import { useMemo } from "react";
 
 interface ResultData {
   alternative_id: string;
+  nazwa: string;
+  ensemble_rank: number;
+  ensemble_score: number;
+  topsis_rank: number;
+  topsis_score: number;
+  vikor_rank: number;
+  vikor_score: number;
+  monte_carlo_rank: number;
+  monte_carlo_score: number;
   [key: string]: string | number;
 }
 
 export default function Analysis() {
-  const { data: ensembleData } = useCsvData<ResultData>("/data/results_ensemble.csv");
-  const { data: monteCarloData } = useCsvData<ResultData>("/data/results_monte_carlo.csv");
-  const { data: topsisData } = useCsvData<ResultData>("/data/results_topsis.csv");
-  const { data: vikorData } = useCsvData<ResultData>("/data/results_vikor.csv");
+  const { data } = useCsvData<ResultData>("/data/complete.csv");
 
-  const mergedData = useMemo(() => {
-    if (!ensembleData.length || !monteCarloData.length || !topsisData.length || !vikorData.length) {
-      return [];
-    }
-
-    const map = new Map<string, any>();
-
-    const process = (data: ResultData[], prefix: string) => {
-      data.forEach((item) => {
-        if (!item.alternative_id) return;
-        const existing = map.get(item.alternative_id) || { name: item.alternative_id };
-        existing[`${prefix}_score`] = item[`${prefix}_score`];
-        existing[`${prefix}_rank`] = item[`${prefix}_rank`];
-        map.set(item.alternative_id, existing);
-      });
-    };
-
-    process(ensembleData, "ensemble");
-    process(monteCarloData, "monte_carlo");
-    process(topsisData, "topsis");
-    process(vikorData, "vikor");
-
-    return Array.from(map.values());
-  }, [ensembleData, monteCarloData, topsisData, vikorData]);
+  const processedData = useMemo(() => {
+    if (!data || data.length === 0) return [];
+    return data.map(item => ({
+      ...item,
+      name: item.alternative_id // Map alternative_id to name for the chart
+    }));
+  }, [data]);
 
   return (
     <div className="space-y-8">
@@ -49,7 +38,7 @@ export default function Analysis() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         <DashboardCard title="Porównanie Wyników (Score)">
           <AnalysisChart
-            data={mergedData}
+            data={processedData}
             xKey="name"
             dataKeys={[
               { key: "ensemble_score", color: "#1a2f3a", name: "Ensemble" },
@@ -62,7 +51,7 @@ export default function Analysis() {
 
         <DashboardCard title="Porównanie Rankingów">
            <AnalysisChart
-            data={mergedData}
+            data={processedData}
             xKey="name"
             type="bar"
             dataKeys={[
@@ -76,35 +65,54 @@ export default function Analysis() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <MethodCard title="Ensemble" color="bg-pko-navy" data={ensembleData} prefix="ensemble" />
-        <MethodCard title="Monte Carlo" color="bg-pko-red" data={monteCarloData} prefix="monte_carlo" />
-        <MethodCard title="TOPSIS" color="bg-pko-gold" data={topsisData} prefix="topsis" />
-        <MethodCard title="VIKOR" color="bg-pko-black" data={vikorData} prefix="vikor" />
+        <MethodCard title="Ensemble" color="bg-pko-navy" data={processedData} prefix="ensemble" />
+        <MethodCard title="Monte Carlo" color="bg-pko-red" data={processedData} prefix="monte_carlo" />
+        <MethodCard title="TOPSIS" color="bg-pko-gold" data={processedData} prefix="topsis" />
+        <MethodCard title="VIKOR" color="bg-pko-black" data={processedData} prefix="vikor" />
       </div>
     </div>
   );
 }
 
 function MethodCard({ title, color, data, prefix }: { title: string, color: string, data: ResultData[], prefix: string }) {
-  const top3 = data.sort((a, b) => (Number(a[`${prefix}_rank`]) || 999) - (Number(b[`${prefix}_rank`]) || 999)).slice(0, 3);
+  // Create a copy before sorting to avoid mutating the original array
+  const sortedData = [...data].sort((a, b) => (Number(a[`${prefix}_rank`]) || 999) - (Number(b[`${prefix}_rank`]) || 999));
+  const top3 = sortedData.slice(0, 3);
+  const worst3 = sortedData.slice(-3);
 
   return (
     <div className="pko-card overflow-hidden">
       <div className={`${color} p-4 text-white`}>
         <h3 className="font-bold text-lg">{title}</h3>
       </div>
-      <div className="p-4">
-        <h4 className="text-sm font-semibold text-pko-navy mb-3">Top 3 Sektory:</h4>
-        <ul className="space-y-2">
-          {top3.map((item, i) => (
-            <li key={i} className="flex items-center justify-between text-sm">
-              <span className="text-pko-navy/80">{i + 1}. {item.alternative_id}</span>
-              <span className="font-mono font-bold text-pko-red">
-                {Number(item[`${prefix}_score`]).toFixed(3)}
-              </span>
-            </li>
-          ))}
-        </ul>
+      <div className="p-4 space-y-4">
+        <div>
+          <h4 className="text-sm font-semibold text-pko-navy mb-2">Top 3 Sektory:</h4>
+          <ul className="space-y-1">
+            {top3.map((item, i) => (
+              <li key={i} className="flex items-center justify-between text-xs">
+                <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.alternative_id} - ${item.nazwa}`}>
+                  {item.alternative_id} - {item.nazwa}
+                </span>
+                <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        
+        <div className="pt-2 border-t border-gray-100">
+          <h4 className="text-sm font-semibold text-pko-navy mb-2">Worst 3 Sektory:</h4>
+          <ul className="space-y-1">
+            {worst3.map((item, i) => (
+              <li key={i} className="flex items-center justify-between text-xs">
+                <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.alternative_id} - ${item.nazwa}`}>
+                  {item.alternative_id} - {item.nazwa}
+                </span>
+                <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );

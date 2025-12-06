@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { BarChart3, Home, PieChart, TrendingUp, Activity } from "lucide-react";
+import { BarChart3, Home, PieChart, TrendingUp, Activity, FileText } from "lucide-react";
 import { clsx } from "clsx";
 
 const navItems = [
@@ -7,6 +7,7 @@ const navItems = [
   { label: "Analiza Metod", href: "/analysis", icon: BarChart3 },
   { label: "Korelacje", href: "/correlations", icon: TrendingUp },
   { label: "Rankingi", href: "/rankings", icon: Activity },
+  { label: "Metodologia", href: "/methodology", icon: FileText },
 ];
 
 export function Sidebar() {
