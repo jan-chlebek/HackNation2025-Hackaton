@@ -22,6 +22,7 @@ class AnalysisConfig:
     vikor_weight: float = 0.33
     mc_weight: float = 0.34
     mc_noise_std: float = 0.05
+    mc_weight_variance: float = 0.15  # Variance for weight perturbation
     use_fuzzy_vikor: bool = True
     fuzzy_spread: float = 0.1
     vikor_v: float = 0.5  # Weight for strategy of maximum group utility (0-1)
@@ -37,6 +38,8 @@ class AnalysisConfig:
             raise ValueError("fuzzy_spread must be between 0 and 1")
         if not 0 <= self.vikor_v <= 1:
             raise ValueError("vikor_v must be between 0 and 1")
+        if not 0 <= self.mc_weight_variance <= 1:
+            raise ValueError("mc_weight_variance must be between 0 and 1")
 
 
 @dataclass
@@ -506,10 +509,11 @@ class MonteCarloAnalyzer:
     """
     Monte Carlo simulation for robust multi-criteria decision analysis.
     
-    Uses stochastic sampling to account for uncertainty in weights and data.
+    Uses CV-based weights with controlled perturbations to test robustness.
     """
     
-    def __init__(self, matrix: pd.DataFrame, directions: pd.Series, config: AnalysisConfig):
+    def __init__(self, matrix: pd.DataFrame, directions: pd.Series, config: AnalysisConfig, 
+                 base_weights: Optional[np.ndarray] = None):
         """
         Initialize Monte Carlo analyzer.
         
@@ -517,24 +521,65 @@ class MonteCarloAnalyzer:
             matrix: Decision matrix (alternatives × criteria)
             directions: Series indicating 'max' or 'min' for each criterion
             config: Configuration object with simulation parameters
+            base_weights: Base CV weights to perturb (if None, will calculate)
         """
         self.matrix = matrix
         self.directions = directions
         self.config = config
+        self.base_weights = base_weights if base_weights is not None else self._calculate_cv_weights()
     
-    def _generate_random_weights(self) -> np.ndarray:
-        """Generate random weights using Dirichlet distribution (sum to 1)."""
+    def _calculate_cv_weights(self) -> np.ndarray:
+        """Calculate weights based on coefficient of variation."""
         n_criteria = len(self.matrix.columns)
-        return np.random.dirichlet(np.ones(n_criteria))
+        weights = np.zeros(n_criteria)
+        
+        for i, col in enumerate(self.matrix.columns):
+            mean_val = self.matrix[col].mean()
+            std_val = self.matrix[col].std()
+            
+            if mean_val == 0:
+                cv = std_val if std_val > 0 else 1e-10
+            else:
+                cv = std_val / abs(mean_val)
+            
+            if cv == 0:
+                cv = 1e-10
+            
+            weights[i] = 1 / cv
+        
+        return weights / weights.sum()
+    
+    def _perturb_weights(self) -> np.ndarray:
+        """
+        Generate perturbed weights based on CV weights with controlled variance.
+        
+        Uses normal distribution around each base weight, then renormalizes.
+        """
+        n_criteria = len(self.base_weights)
+        
+        # Add Gaussian noise to each weight
+        perturbed = np.zeros(n_criteria)
+        for i in range(n_criteria):
+            # Sample from normal distribution centered at base weight
+            std = self.base_weights[i] * self.config.mc_weight_variance
+            perturbed[i] = max(0, np.random.normal(self.base_weights[i], std))
+        
+        # Renormalize to sum to 1
+        weight_sum = perturbed.sum()
+        if weight_sum > 0:
+            return perturbed / weight_sum
+        else:
+            # Fallback to base weights if all became zero
+            return self.base_weights.copy()
     
     def _add_noise(self) -> pd.DataFrame:
-        """Add random noise to matrix to simulate uncertainty."""
+        """Add random noise to matrix to simulate measurement uncertainty."""
         noise = np.random.normal(1, self.config.mc_noise_std, self.matrix.shape)
         return self.matrix * noise
     
     def simulate(self) -> pd.Series:
         """
-        Perform Monte Carlo simulation.
+        Perform Monte Carlo simulation with CV-based weight perturbations.
         
         Returns:
             Series of averaged scores across all simulations
@@ -543,14 +588,14 @@ class MonteCarloAnalyzer:
         accumulated_scores = np.zeros(n_alternatives)
         
         for iteration in range(self.config.n_simulations):
-            # Generate random weights
-            random_weights = self._generate_random_weights()
+            # Generate perturbed weights around CV-based weights
+            perturbed_weights = self._perturb_weights()
             
-            # Add stochastic noise
+            # Add stochastic noise to data
             noisy_matrix = self._add_noise()
             
             # Run TOPSIS with this iteration's parameters
-            topsis = TOPSISAnalyzer(noisy_matrix, self.directions, random_weights)
+            topsis = TOPSISAnalyzer(noisy_matrix, self.directions, perturbed_weights)
             iteration_scores = topsis.analyze()
             
             accumulated_scores += iteration_scores.values
@@ -614,9 +659,10 @@ class EnsembleAnalyzer:
             print("\nSkipping VIKOR analysis (disabled in config)...")
             vikor_scores = pd.Series(0, index=self.matrix.index, name='vikor_score')
         
-        # Run Monte Carlo simulation
-        print(f"\nRunning Monte Carlo simulation ({self.config.n_simulations} iterations)...")
-        mc_analyzer = MonteCarloAnalyzer(self.matrix, self.directions, self.config)
+        # Run Monte Carlo simulation with CV-based weights
+        print(f"\nRunning Monte Carlo simulation ({self.config.n_simulations} iterations, ±{self.config.mc_weight_variance*100}% variance)...")
+        mc_analyzer = MonteCarloAnalyzer(self.matrix, self.directions, self.config, 
+                                        base_weights=topsis_analyzer.weights)
         mc_scores = mc_analyzer.simulate()
         
         # Combine scores using weighted average
@@ -686,7 +732,86 @@ class DataLoader:
             raise ValueError("Decision matrix contains missing values")
         
         return matrix, directions
-
+    
+    @staticmethod
+    def calculate_temporal_weights(matrix: pd.DataFrame, 
+                                   weight_1yr: float = 0.66,
+                                   weight_2yr: float = 0.34) -> np.ndarray:
+        """
+        Calculate weights for criteria including temporal changes.
+        
+        Base indicators get CV-based weights. Change indicators get proportional weights:
+        - "(Δ% 1yr)" indicators get weight_1yr × base_weight
+        - "(Δ% 2yr)" indicators get weight_2yr × base_weight
+        
+        All weights are normalized to sum to 1.
+        
+        Args:
+            matrix: Decision matrix with columns including change indicators
+            weight_1yr: Multiplier for 1-year change weights (default: 0.66)
+            weight_2yr: Multiplier for 2-year change weights (default: 0.34)
+            
+        Returns:
+            Array of normalized weights summing to 1
+        """
+        n_criteria = len(matrix.columns)
+        weights = np.zeros(n_criteria)
+        
+        # First, identify base indicators and calculate their CV weights
+        base_weights_map = {}
+        
+        for i, col in enumerate(matrix.columns):
+            # Check if this is a change indicator
+            if '(Δ% 1yr)' in col or '(Δ% 2yr)' in col:
+                continue  # Skip change indicators in first pass
+            
+            # Calculate CV weight for base indicator
+            mean_val = matrix[col].mean()
+            std_val = matrix[col].std()
+            
+            if mean_val == 0:
+                cv = std_val if std_val > 0 else 1e-10
+            else:
+                cv = std_val / abs(mean_val)
+            
+            if cv == 0:
+                cv = 1e-10
+            
+            base_weight = 1 / cv
+            base_weights_map[col] = base_weight
+            weights[i] = base_weight
+        
+        # Second pass: assign weights to change indicators
+        for i, col in enumerate(matrix.columns):
+            if '(Δ% 1yr)' in col:
+                # Extract base indicator name
+                base_name = col.replace(' (Δ% 1yr)', '')
+                if base_name in base_weights_map:
+                    weights[i] = base_weights_map[base_name] * weight_1yr
+                else:
+                    # Fallback: calculate CV weight directly
+                    mean_val = matrix[col].mean()
+                    std_val = matrix[col].std()
+                    cv = std_val / abs(mean_val) if mean_val != 0 else (std_val if std_val > 0 else 1e-10)
+                    weights[i] = (1 / cv if cv != 0 else 1e10) * weight_1yr
+            
+            elif '(Δ% 2yr)' in col:
+                # Extract base indicator name
+                base_name = col.replace(' (Δ% 2yr)', '')
+                if base_name in base_weights_map:
+                    weights[i] = base_weights_map[base_name] * weight_2yr
+                else:
+                    # Fallback: calculate CV weight directly
+                    mean_val = matrix[col].mean()
+                    std_val = matrix[col].std()
+                    cv = std_val / abs(mean_val) if mean_val != 0 else (std_val if std_val > 0 else 1e-10)
+                    weights[i] = (1 / cv if cv != 0 else 1e10) * weight_2yr
+        
+        # Normalize all weights to sum to 1
+        weights_normalized = weights / weights.sum()
+        
+        return weights_normalized
+        
 
 class ResultsExporter:
     """Export analysis results to various formats."""
@@ -750,6 +875,7 @@ def run_analysis(filepath: str,
                 use_fuzzy_vikor: bool = True,
                 fuzzy_spread: float = 0.1,
                 vikor_v: float = 0.5,
+                mc_weight_variance: float = 0.15,
                 output_base: str = 'results') -> pd.DataFrame:
     """
     Main function to run complete ensemble analysis.
@@ -763,6 +889,7 @@ def run_analysis(filepath: str,
         use_fuzzy_vikor: Whether to use Fuzzy VIKOR
         fuzzy_spread: Spread for fuzzy numbers (0-1)
         vikor_v: VIKOR strategy weight (0-1)
+        mc_weight_variance: Variance for Monte Carlo weight perturbation (0-1)
         output_base: Base filename for output files
         
     Returns:
@@ -783,7 +910,8 @@ def run_analysis(filepath: str,
         mc_weight=mc_weight,
         use_fuzzy_vikor=use_fuzzy_vikor,
         fuzzy_spread=fuzzy_spread,
-        vikor_v=vikor_v
+        vikor_v=vikor_v,
+        mc_weight_variance=mc_weight_variance
     )
     
     analyzer = EnsembleAnalyzer(matrix, directions, config)
@@ -807,5 +935,6 @@ if __name__ == '__main__':
         use_fuzzy_vikor=True,
         fuzzy_spread=0.1,
         vikor_v=0.5,
+        mc_weight_variance=0.15,
         output_base='results/results'
     )
