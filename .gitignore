@@ -1,2 +1,5 @@
 .vscode
 .venv
+.vite
+__pycache__/
+node_modules/
