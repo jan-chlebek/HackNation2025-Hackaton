@@ -1,11 +1,12 @@
 """
-Time Series Forecasting for Multi-Criteria Categories.
+Time Series Forecasting for Multi-Criteria Categories with Monte Carlo Simulation.
 
 This module provides tools for predicting future values of categories using:
 1. Linear Regression with trend analysis
 2. ARIMA (AutoRegressive Integrated Moving Average)
 3. Exponential Smoothing (Holt's method)
-4. Ensemble forecasting combining multiple methods
+4. Monte Carlo simulation for probabilistic forecasting
+5. Ensemble forecasting combining multiple methods
 """
 
 import pandas as pd
@@ -23,6 +24,8 @@ class ForecastConfig:
     min_historical_years: int = 3
     ensemble_weights: Dict[str, float] = None
     confidence_level: float = 0.95
+    mc_simulations: int = 1000
+    mc_noise_std: float = 0.10  # 10% noise in Monte Carlo simulations
     
     def __post_init__(self):
         """Set default ensemble weights if not provided."""
@@ -37,6 +40,9 @@ class ForecastConfig:
         total_weight = sum(self.ensemble_weights.values())
         if not abs(total_weight - 1.0) < 0.01:
             raise ValueError(f"Ensemble weights must sum to 1.0, got {total_weight}")
+        
+        if self.mc_simulations < 1:
+            raise ValueError("mc_simulations must be positive")
 
 
 class LinearTrendForecaster:
@@ -57,6 +63,7 @@ class LinearTrendForecaster:
         self.data = data.values
         self.years = years.values
         self._coefficients = None
+        self._residual_std = None
         
     def fit(self):
         """Fit linear regression model."""
@@ -74,9 +81,16 @@ class LinearTrendForecaster:
                 X_with_intercept.T @ y,
                 rcond=None
             )[0]
+            
+            # Calculate residual standard deviation for uncertainty
+            predictions = X_with_intercept @ self._coefficients
+            residuals = y - predictions
+            self._residual_std = np.std(residuals)
+            
         except np.linalg.LinAlgError:
             # Fallback to simple mean if regression fails
             self._coefficients = np.array([np.mean(y), 0])
+            self._residual_std = np.std(y)
     
     def predict(self, future_years: np.ndarray) -> np.ndarray:
         """
@@ -95,6 +109,12 @@ class LinearTrendForecaster:
         predictions = X_future @ self._coefficients
         
         return predictions
+    
+    def get_residual_std(self) -> float:
+        """Get standard deviation of residuals for uncertainty estimation."""
+        if self._residual_std is None:
+            self.fit()
+        return self._residual_std
     
     def get_trend_info(self) -> Dict[str, float]:
         """Get information about the fitted trend."""
@@ -116,6 +136,7 @@ class LinearTrendForecaster:
             'intercept': intercept,
             'slope': slope,
             'r_squared': r_squared,
+            'residual_std': self._residual_std,
             'trend': 'increasing' if slope > 0 else 'decreasing' if slope < 0 else 'stable'
         }
 
@@ -287,9 +308,90 @@ class SimpleARIMAForecaster:
         return np.array(predictions)
 
 
+class MonteCarloForecaster:
+    """
+    Monte Carlo simulation for probabilistic forecasting.
+    
+    Generates multiple scenarios by adding stochastic noise to base forecasts.
+    """
+    
+    def __init__(self, base_forecaster: LinearTrendForecaster, config: ForecastConfig):
+        """
+        Initialize Monte Carlo forecaster.
+        
+        Args:
+            base_forecaster: Fitted base forecaster to use for mean prediction
+            config: Forecast configuration with MC parameters
+        """
+        self.base_forecaster = base_forecaster
+        self.config = config
+        
+    def simulate(self, future_years: np.ndarray) -> np.ndarray:
+        """
+        Run Monte Carlo simulations.
+        
+        Args:
+            future_years: Array of years to forecast
+            
+        Returns:
+            Array of shape (n_simulations, n_years) with forecasted values
+        """
+        # Get base prediction
+        base_prediction = self.base_forecaster.predict(future_years)
+        
+        # Get uncertainty from residuals
+        residual_std = self.base_forecaster.get_residual_std()
+        
+        # Initialize simulation array
+        n_years = len(future_years)
+        simulations = np.zeros((self.config.mc_simulations, n_years))
+        
+        for i in range(self.config.mc_simulations):
+            # Add multiplicative noise (geometric Brownian motion style)
+            # This prevents negative values for positive-valued series
+            noise_factor = np.random.normal(
+                1.0, 
+                self.config.mc_noise_std, 
+                n_years
+            )
+            
+            # Add trend uncertainty
+            trend_noise = np.random.normal(0, residual_std, n_years)
+            
+            # Combine base prediction with noise
+            simulations[i, :] = base_prediction * noise_factor + trend_noise
+            
+            # Ensure non-negative values
+            simulations[i, :] = np.maximum(simulations[i, :], 0)
+        
+        return simulations
+    
+    def get_statistics(self, simulations: np.ndarray) -> Dict[str, np.ndarray]:
+        """
+        Calculate statistics from Monte Carlo simulations.
+        
+        Args:
+            simulations: Array of shape (n_simulations, n_years)
+            
+        Returns:
+            Dictionary with statistical summaries
+        """
+        return {
+            'mean': np.mean(simulations, axis=0),
+            'median': np.median(simulations, axis=0),
+            'std': np.std(simulations, axis=0),
+            'percentile_5': np.percentile(simulations, 5, axis=0),
+            'percentile_25': np.percentile(simulations, 25, axis=0),
+            'percentile_75': np.percentile(simulations, 75, axis=0),
+            'percentile_95': np.percentile(simulations, 95, axis=0),
+            'min': np.min(simulations, axis=0),
+            'max': np.max(simulations, axis=0)
+        }
+
+
 class EnsembleForecaster:
     """
-    Ensemble forecasting combining multiple methods.
+    Ensemble forecasting combining multiple methods with Monte Carlo simulation.
     
     Combines linear trend, exponential smoothing, and ARIMA forecasts.
     """
@@ -311,10 +413,13 @@ class EnsembleForecaster:
         self.linear_forecaster = LinearTrendForecaster(data, years)
         self.exp_forecaster = ExponentialSmoothingForecaster(data)
         self.arima_forecaster = SimpleARIMAForecaster(data)
+        
+        # Initialize Monte Carlo forecaster
+        self.mc_forecaster = MonteCarloForecaster(self.linear_forecaster, config)
     
     def forecast(self, future_years: np.ndarray) -> pd.DataFrame:
         """
-        Generate ensemble forecast.
+        Generate ensemble forecast with Monte Carlo simulations.
         
         Args:
             future_years: Array of years to forecast
@@ -336,8 +441,11 @@ class EnsembleForecaster:
             self.config.ensemble_weights['arima'] * arima_pred
         )
         
-        # Calculate prediction intervals (simplified)
-        # Use standard deviation of individual forecasts as uncertainty measure
+        # Run Monte Carlo simulations
+        mc_simulations = self.mc_forecaster.simulate(future_years)
+        mc_stats = self.mc_forecaster.get_statistics(mc_simulations)
+        
+        # Calculate prediction intervals from individual method variance
         individual_forecasts = np.column_stack([linear_pred, exp_pred, arima_pred])
         forecast_std = np.std(individual_forecasts, axis=1)
         
@@ -355,12 +463,19 @@ class EnsembleForecaster:
             'exponential_forecast': exp_pred,
             'arima_forecast': arima_pred,
             'ensemble_forecast': ensemble_pred,
+            'mc_mean': mc_stats['mean'],
+            'mc_median': mc_stats['median'],
+            'mc_std': mc_stats['std'],
+            'mc_p5': mc_stats['percentile_5'],
+            'mc_p25': mc_stats['percentile_25'],
+            'mc_p75': mc_stats['percentile_75'],
+            'mc_p95': mc_stats['percentile_95'],
             'lower_bound': lower_bound,
             'upper_bound': upper_bound,
             'forecast_std': forecast_std
         })
         
-        return results
+        return results, mc_simulations
 
 
 class CategoryPredictor:
@@ -385,6 +500,9 @@ class CategoryPredictor:
         required_columns = {'kpi_id', 'cat_id', 'value', 'year', 'direction'}
         if not required_columns.issubset(df.columns):
             raise ValueError(f"DataFrame must contain columns: {required_columns}")
+        
+        # Storage for Monte Carlo simulations
+        self.mc_simulation_results = {}
     
     def _validate_historical_data(self, data: pd.Series) -> bool:
         """Check if there's enough historical data for forecasting."""
@@ -425,7 +543,15 @@ class CategoryPredictor:
         
         # Create and run ensemble forecaster
         forecaster = EnsembleForecaster(values, years, self.config)
-        forecast_df = forecaster.forecast(future_years)
+        forecast_df, mc_simulations = forecaster.forecast(future_years)
+        
+        # Store MC simulations
+        key = (cat_id, kpi_id)
+        self.mc_simulation_results[key] = {
+            'years': future_years,
+            'simulations': mc_simulations,
+            'direction': direction
+        }
         
         # Add metadata
         forecast_df['cat_id'] = cat_id
@@ -453,6 +579,7 @@ class CategoryPredictor:
         
         total_combinations = len(combinations)
         print(f"Forecasting {total_combinations} category-KPI combinations...")
+        print(f"Running {self.config.mc_simulations} Monte Carlo simulations per combination...")
         
         for idx, (_, row) in enumerate(combinations.iterrows(), 1):
             cat_id = row['cat_id']
@@ -474,6 +601,58 @@ class CategoryPredictor:
         
         return pd.concat(all_forecasts, ignore_index=True)
     
+    def generate_mc_scenarios_for_analysis(self, n_scenarios: int = 100) -> List[pd.DataFrame]:
+        """
+        Generate multiple complete forecast scenarios from Monte Carlo simulations.
+        
+        These scenarios can be used as input to analysis.py for ensemble analysis.
+        
+        Args:
+            n_scenarios: Number of scenarios to generate (sampled from MC simulations)
+            
+        Returns:
+            List of DataFrames, each representing one complete forecast scenario
+        """
+        if not self.mc_simulation_results:
+            raise ValueError("No Monte Carlo simulations available. Run predict_all_categories() first.")
+        
+        # Sample scenario indices
+        scenario_indices = np.random.choice(
+            self.config.mc_simulations, 
+            size=min(n_scenarios, self.config.mc_simulations),
+            replace=False
+        )
+        
+        scenarios = []
+        
+        for scenario_idx in scenario_indices:
+            scenario_data = []
+            
+            for (cat_id, kpi_id), mc_result in self.mc_simulation_results.items():
+                years = mc_result['years']
+                simulations = mc_result['simulations']
+                direction = mc_result['direction']
+                
+                # Extract this scenario's predictions
+                scenario_predictions = simulations[scenario_idx, :]
+                
+                # Create DataFrame for this category-KPI combination
+                for year, value in zip(years, scenario_predictions):
+                    scenario_data.append({
+                        'kpi_id': kpi_id,
+                        'cat_id': cat_id,
+                        'value': value,
+                        'direction': direction,
+                        'year': year
+                    })
+            
+            scenarios.append(pd.DataFrame(scenario_data))
+        
+        print(f"\n✓ Generated {len(scenarios)} complete forecast scenarios")
+        print(f"  Each scenario contains {len(self.mc_simulation_results)} category-KPI combinations")
+        
+        return scenarios
+    
     def get_forecast_summary(self, forecasts: pd.DataFrame) -> pd.DataFrame:
         """
         Generate summary statistics for forecasts.
@@ -486,6 +665,8 @@ class CategoryPredictor:
         """
         summary = forecasts.groupby(['cat_id', 'kpi_id']).agg({
             'ensemble_forecast': ['mean', 'min', 'max'],
+            'mc_mean': 'mean',
+            'mc_std': 'mean',
             'trend': 'first',
             'trend_strength': 'mean',
             'forecast_std': 'mean'
@@ -494,6 +675,7 @@ class CategoryPredictor:
         summary.columns = [
             'cat_id', 'kpi_id',
             'avg_forecast', 'min_forecast', 'max_forecast',
+            'avg_mc_forecast', 'avg_mc_uncertainty',
             'trend', 'avg_trend_strength', 'avg_uncertainty'
         ]
         
@@ -506,6 +688,7 @@ class ForecastExporter:
     @staticmethod
     def save_forecasts(forecasts: pd.DataFrame, 
                       summary: pd.DataFrame,
+                      mc_scenarios: Optional[List[pd.DataFrame]] = None,
                       base_filename: str = 'forecast'):
         """
         Save forecast results to CSV files.
@@ -513,6 +696,7 @@ class ForecastExporter:
         Args:
             forecasts: Detailed forecast DataFrame
             summary: Summary statistics DataFrame
+            mc_scenarios: List of Monte Carlo scenario DataFrames
             base_filename: Base name for output files
         """
         # Save detailed forecasts
@@ -524,51 +708,73 @@ class ForecastExporter:
         # Save ensemble forecasts in format compatible with analysis.py
         analysis_format = forecasts[['kpi_id', 'cat_id', 'ensemble_forecast', 'direction', 'year']].copy()
         analysis_format.rename(columns={'ensemble_forecast': 'value'}, inplace=True)
-        analysis_format.to_csv(f'{base_filename}_for_analysis.csv', index=False)
+        analysis_format.to_csv(f'{base_filename}_ensemble_for_analysis.csv', index=False)
+        
+        # Save Monte Carlo mean forecasts
+        mc_format = forecasts[['kpi_id', 'cat_id', 'mc_mean', 'direction', 'year']].copy()
+        mc_format.rename(columns={'mc_mean': 'value'}, inplace=True)
+        mc_format.to_csv(f'{base_filename}_mc_mean_for_analysis.csv', index=False)
         
         print(f"\n✓ Forecasts saved:")
         print(f"  • {base_filename}_detailed.csv (all methods + confidence intervals)")
         print(f"  • {base_filename}_summary.csv (summary statistics)")
-        print(f"  • {base_filename}_for_analysis.csv (ready for analysis.py)")
+        print(f"  • {base_filename}_ensemble_for_analysis.csv (ensemble predictions for analysis.py)")
+        print(f"  • {base_filename}_mc_mean_for_analysis.csv (MC mean predictions for analysis.py)")
+        
+        # Save Monte Carlo scenarios if provided
+        if mc_scenarios:
+            for idx, scenario in enumerate(mc_scenarios):
+                scenario_file = f'{base_filename}_mc_scenario_{idx+1:03d}.csv'
+                scenario.to_csv(scenario_file, index=False)
+            
+            print(f"  • {base_filename}_mc_scenario_001.csv to {base_filename}_mc_scenario_{len(mc_scenarios):03d}.csv")
+            print(f"    ({len(mc_scenarios)} Monte Carlo scenarios for ensemble analysis)")
     
     @staticmethod
     def print_forecast_summary(summary: pd.DataFrame, top_n: int = 10):
         """Print summary of forecasted categories."""
-        print(f"\n{'='*100}")
+        print(f"\n{'='*120}")
         print(f"FORECAST SUMMARY - TOP {top_n} BY AVERAGE FORECAST VALUE")
-        print(f"{'='*100}\n")
+        print(f"{'='*120}\n")
         
         # Sort by average forecast (descending)
         top_categories = summary.sort_values('avg_forecast', ascending=False).head(top_n)
         
-        print(top_categories[['cat_id', 'kpi_id', 'avg_forecast', 'trend', 
-                             'avg_trend_strength', 'avg_uncertainty']].to_string(index=False))
+        print(top_categories[['cat_id', 'kpi_id', 'avg_forecast', 'avg_mc_forecast', 
+                             'trend', 'avg_trend_strength', 'avg_mc_uncertainty']].to_string(index=False))
         
-        print(f"\n{'='*100}")
+        print(f"\n{'='*120}")
         
         # Print some interesting statistics
         print("\nOverall Statistics:")
         print(f"  • Categories with increasing trend: {(summary['trend'] == 'increasing').sum()}")
         print(f"  • Categories with decreasing trend: {(summary['trend'] == 'decreasing').sum()}")
         print(f"  • Categories with stable trend: {(summary['trend'] == 'stable').sum()}")
-        print(f"  • Average uncertainty (std): {summary['avg_uncertainty'].mean():.2f}")
+        print(f"  • Average ensemble uncertainty (std): {summary['avg_uncertainty'].mean():.2f}")
+        print(f"  • Average Monte Carlo uncertainty (std): {summary['avg_mc_uncertainty'].mean():.2f}")
 
 
 def predict_future_values(filepath: str,
                          forecast_years: int = 3,
                          min_historical_years: int = 3,
-                         output_base: str = 'forecast') -> Tuple[pd.DataFrame, pd.DataFrame]:
+                         mc_simulations: int = 1000,
+                         mc_noise_std: float = 0.10,
+                         n_scenarios_for_analysis: int = 100,
+                         output_base: str = 'forecast') -> Tuple[pd.DataFrame, pd.DataFrame, List[pd.DataFrame]]:
     """
-    Main function to predict future values for all categories.
+    Main function to predict future values for all categories with Monte Carlo simulation.
     
     Args:
         filepath: Path to input CSV file (must include 'year' column)
         forecast_years: Number of years to forecast ahead
         min_historical_years: Minimum years of historical data required
+        mc_simulations: Number of Monte Carlo simulations per category
+        mc_noise_std: Standard deviation of noise in Monte Carlo simulations
+        n_scenarios_for_analysis: Number of complete scenarios to generate for ensemble analysis
         output_base: Base filename for output files
         
     Returns:
-        Tuple of (detailed_forecasts, summary_statistics)
+        Tuple of (detailed_forecasts, summary_statistics, mc_scenarios)
     """
     # Load data
     print(f"Loading data from {filepath}...")
@@ -586,7 +792,9 @@ def predict_future_values(filepath: str,
     # Configure and run prediction
     config = ForecastConfig(
         forecast_years=forecast_years,
-        min_historical_years=min_historical_years
+        min_historical_years=min_historical_years,
+        mc_simulations=mc_simulations,
+        mc_noise_std=mc_noise_std
     )
     
     predictor = CategoryPredictor(df, config)
@@ -598,24 +806,38 @@ def predict_future_values(filepath: str,
     # Generate summary
     summary = predictor.get_forecast_summary(forecasts)
     
+    # Generate Monte Carlo scenarios for ensemble analysis
+    print(f"\nGenerating {n_scenarios_for_analysis} scenarios for ensemble analysis...")
+    mc_scenarios = predictor.generate_mc_scenarios_for_analysis(n_scenarios_for_analysis)
+    
     # Export results
     ForecastExporter.print_forecast_summary(summary)
-    ForecastExporter.save_forecasts(forecasts, summary, output_base)
+    ForecastExporter.save_forecasts(forecasts, summary, mc_scenarios, output_base)
     
-    return forecasts, summary
+    return forecasts, summary, mc_scenarios
 
 
 if __name__ == '__main__':
     # Example usage
     try:
-        forecasts, summary = predict_future_values(
+        forecasts, summary, scenarios = predict_future_values(
             filepath='data.csv',
             forecast_years=3,
             min_historical_years=3,
+            mc_simulations=1000,
+            mc_noise_std=0.10,
+            n_scenarios_for_analysis=100,
             output_base='forecast'
         )
         
         print("\n✓ Forecasting completed successfully!")
+        print(f"\nYou can now use the generated scenarios with analysis.py:")
+        print(f"  python analysis.py --input forecast_mc_scenario_001.csv")
+        print(f"  python analysis.py --input forecast_mc_scenario_002.csv")
+        print(f"  ... (run for all {len(scenarios)} scenarios)")
+        print(f"\nOr use the ensemble/MC mean predictions:")
+        print(f"  python analysis.py --input forecast_ensemble_for_analysis.csv")
+        print(f"  python analysis.py --input forecast_mc_mean_for_analysis.csv")
         
     except Exception as e:
         print(f"\n✗ Error: {str(e)}")

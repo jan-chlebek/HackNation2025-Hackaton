@@ -117,33 +117,33 @@ def create_test_files():
     """Create multiple test files for different scenarios."""
     
     # Scenario 1: Financial Sectors (default test file)
-    print("Generating data.csv (Financial Sectors)...")
+    print("Generating mockdata/data.csv (Financial Sectors)...")
     df1 = generate_mock_data('Financial Sectors', noise_level=0.15)
     df1 = add_realistic_correlations(df1)
-    df1.to_csv('data.csv', index=False)
-    print(f"✓ Created data.csv: {len(df1['kpi_id'].unique())} alternatives, {len(df1['cat_id'].unique())} criteria")
+    df1.to_csv('mockdata/data.csv', index=False)
+    print(f"✓ Created mockdata/data.csv: {len(df1['kpi_id'].unique())} alternatives, {len(df1['cat_id'].unique())} criteria")
     
     # Scenario 2: Investment Projects
     print("\nGenerating data_projects.csv (Investment Projects)...")
     df2 = generate_mock_data('Investment Projects', noise_level=0.12)
-    df2.to_csv('data_projects.csv', index=False)
-    print(f"✓ Created data_projects.csv: {len(df2['kpi_id'].unique())} alternatives, {len(df2['cat_id'].unique())} criteria")
+    df2.to_csv('mockdata/dataprojects.csv', index=False)
+    print(f"✓ Created mockdata/dataprojects.csv: {len(df2['kpi_id'].unique())} alternatives, {len(df2['cat_id'].unique())} criteria")
     
     # Scenario 3: Supplier Selection
-    print("\nGenerating data_suppliers.csv (Supplier Selection)...")
+    print("\nGenerating mockdata/datasuppliers.csv (Supplier Selection)...")
     df3 = generate_mock_data('Supplier Selection', noise_level=0.08)
-    df3.to_csv('data_suppliers.csv', index=False)
-    print(f"✓ Created data_suppliers.csv: {len(df3['kpi_id'].unique())} alternatives, {len(df3['cat_id'].unique())} criteria")
+    df3.to_csv('mockdata/datasuppliers.csv', index=False)
+    print(f"✓ Created mockdata/datasuppliers.csv: {len(df3['kpi_id'].unique())} alternatives, {len(df3['cat_id'].unique())} criteria")
     
     # Create a small test file for quick testing
-    print("\nGenerating data_small.csv (Small test set)...")
+    print("\nGenerating mockdata/datasmall.csv (Small test set)...")
     df_small = df1[df1['kpi_id'].isin(['Technology', 'Healthcare', 'Finance', 'Manufacturing'])].copy()
-    df_small.to_csv('data_small.csv', index=False)
-    print(f"✓ Created data_small.csv: {len(df_small['kpi_id'].unique())} alternatives (for quick testing)")
+    df_small.to_csv('mockdata/datasmall.csv', index=False)
+    print(f"✓ Created mockdata/datasmall.csv: {len(df_small['kpi_id'].unique())} alternatives (for quick testing)")
     
     # Print sample data
     print("\n" + "="*80)
-    print("SAMPLE DATA (data.csv - first 20 rows):")
+    print("SAMPLE DATA (mockdata/data.csv - first 20 rows):")
     print("="*80)
     print(df1.head(20).to_string(index=False))
     
@@ -169,6 +169,6 @@ if __name__ == '__main__':
     print("  python src/analysis.py")
     print("\nOr use different test files:")
     print("  - data.csv (Financial Sectors - default)")
-    print("  - data_projects.csv (Investment Projects)")
-    print("  - data_suppliers.csv (Supplier Selection)")
-    print("  - data_small.csv (Quick test - 4 alternatives)")
+    print("  - mockdata/data_projects.csv (Investment Projects)")
+    print("  - mockdata/data_suppliers.csv (Supplier Selection)")
+    print("  - mockdata/data_small.csv (Quick test - 4 alternatives)")

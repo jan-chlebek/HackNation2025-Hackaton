@@ -319,12 +319,22 @@ class FuzzyVIKORAnalyzer:
                 value = self.matrix.iloc[i, j]
                 spread = abs(value * self.fuzzy_spread)
                 
-                fuzzy_matrix[i, j] = FuzzyNumber(
-                    lower=max(0, value - spread),
-                    middle=value,
-                    upper=value + spread
-                )
-        
+                # Handle negative, zero, and positive values correctly
+                if value >= 0:
+                    # For non-negative values
+                    fuzzy_matrix[i, j] = FuzzyNumber(
+                        lower=max(0, value - spread),
+                        middle=value,
+                        upper=value + spread
+                    )
+                else:
+                    # For negative values, lower is more negative, upper is less negative
+                    fuzzy_matrix[i, j] = FuzzyNumber(
+                        lower=value - spread,  # More negative
+                        middle=value,
+                        upper=min(0, value + spread)  # Less negative or zero
+                    )
+    
         return fuzzy_matrix
     
     def _normalize_fuzzy_matrix(self, fuzzy_matrix: np.ndarray) -> np.ndarray:
@@ -349,19 +359,40 @@ class FuzzyVIKORAnalyzer:
                     else:
                         normalized[i, j] = FuzzyNumber(0, 0, 0)
             else:  # min
-                min_lower = min(fn.lower for fn in column if fn.lower > 0)
+                # For minimization criteria, use inverse normalization
+                # Find the minimum lower bound (best value)
+                valid_lowers = [fn.lower for fn in column if fn.lower > 0]
+                
+                if not valid_lowers:
+                    # All zeros, set to zero fuzzy numbers
+                    for i in range(fuzzy_matrix.shape[0]):
+                        normalized[i, j] = FuzzyNumber(0, 0, 0)
+                    continue
+                
+                min_lower = min(valid_lowers)
                 
                 for i in range(fuzzy_matrix.shape[0]):
                     fn = column[i]
-                    if fn.upper > 0:
-                        normalized[i, j] = FuzzyNumber(
-                            min_lower / fn.upper,
-                            min_lower / fn.middle if fn.middle > 0 else 0,
-                            min_lower / fn.lower if fn.lower > 0 else min_lower / 1e-10
-                        )
-                    else:
+                    
+                    # Handle zero or very small values
+                    if fn.upper < 1e-10:
                         normalized[i, j] = FuzzyNumber(0, 0, 0)
-        
+                    else:
+                        # Inverse normalization: min/value (smaller values become larger normalized values)
+                        # Need to reverse the order because division reverses the inequality
+                        lower_norm = min_lower / fn.upper if fn.upper > 0 else 0
+                        middle_norm = min_lower / fn.middle if fn.middle > 0 else 0
+                        upper_norm = min_lower / fn.lower if fn.lower > 0 else min_lower / 1e-10
+                        
+                        # Ensure proper ordering: lower <= middle <= upper
+                        values = sorted([lower_norm, middle_norm, upper_norm])
+                        
+                        normalized[i, j] = FuzzyNumber(
+                            lower=values[0],
+                            middle=values[1],
+                            upper=values[2]
+                        )
+    
         return normalized
     
     def _get_fuzzy_ideal_solutions(self, normalized_matrix: np.ndarray) -> Tuple[np.ndarray, np.ndarray]:
@@ -661,7 +692,7 @@ class ResultsExporter:
     """Export analysis results to various formats."""
     
     @staticmethod
-    def save_to_csv(results: pd.DataFrame, base_filename: str = 'results'):
+    def save_to_csv(results: pd.DataFrame, base_filename: str = 'results/results'):
         """
         Save analysis results to CSV files.
         
@@ -768,7 +799,7 @@ def run_analysis(filepath: str,
 if __name__ == '__main__':
     # Example usage with TOPSIS, Fuzzy VIKOR, and Monte Carlo
     results = run_analysis(
-        filepath='data.csv',
+        filepath='mockdata/data.csv',
         n_simulations=1000,
         topsis_weight=0.33,
         vikor_weight=0.33,
@@ -776,5 +807,5 @@ if __name__ == '__main__':
         use_fuzzy_vikor=True,
         fuzzy_spread=0.1,
         vikor_v=0.5,
-        output_base='results'
+        output_base='results/results'
     )
