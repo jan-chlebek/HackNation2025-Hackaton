@@ -16,7 +16,7 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent))
 
-from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter
+from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter, TOPSISAnalyzer
 
 
 def load_indicator_directions(input_dir: str = 'results-pipeline') -> dict:
@@ -308,7 +308,10 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
 def run_sector_analysis(year: int = 2024, 
                        typ: str = 'SEKCJA',
                        min_wskaznik_index: int = 1000,
-                       n_simulations: int = 1000) -> pd.DataFrame:
+                       n_simulations: int = 1000,
+                       mc_weight_variance: float = 0.15,
+                       temporal_weight_1yr: float = 0.66,
+                       temporal_weight_2yr: float = 0.34) -> pd.DataFrame:
     """
     Run complete sector analysis.
     
@@ -317,6 +320,9 @@ def run_sector_analysis(year: int = 2024,
         typ: PKD type level
         min_wskaznik_index: Minimum indicator index to include (default: 1000 for calculated ratios)
         n_simulations: Number of Monte Carlo simulations
+        mc_weight_variance: Variance for Monte Carlo weight perturbation (default: 0.15 = 15%)
+        temporal_weight_1yr: Weight multiplier for 1-year changes (default: 0.66)
+        temporal_weight_2yr: Weight multiplier for 2-year changes (default: 0.34)
         
     Returns:
         DataFrame with analysis results
@@ -357,7 +363,19 @@ def run_sector_analysis(year: int = 2024,
         
         raise
     
-    # Configure analysis
+    # Calculate temporal weights (current year gets CV weight, changes get proportional weights)
+    print(f"\nCalculating temporal weights:")
+    print(f"  • Current year indicators: CV-based weight (w)")
+    print(f"  • 1-year change indicators: {temporal_weight_1yr} × w")
+    print(f"  • 2-year change indicators: {temporal_weight_2yr} × w")
+    
+    temporal_weights = DataLoader.calculate_temporal_weights(
+        matrix, 
+        weight_1yr=temporal_weight_1yr,
+        weight_2yr=temporal_weight_2yr
+    )
+    
+    # Configure analysis with temporal weights and MC variance
     config = AnalysisConfig(
         n_simulations=n_simulations,
         topsis_weight=0.33,
@@ -365,16 +383,69 @@ def run_sector_analysis(year: int = 2024,
         mc_weight=0.34,
         use_fuzzy_vikor=True,
         fuzzy_spread=0.1,
-        vikor_v=0.5
+        vikor_v=0.5,
+        mc_weight_variance=mc_weight_variance
     )
     
-    # Run ensemble analysis
+    # Run ensemble analysis with custom weights
     print("\n" + "="*90)
     print(f"RUNNING ENSEMBLE ANALYSIS - Year {year}, Type {typ}, Indicators >= {min_wskaznik_index}")
+    print(f"Temporal weighting: 1yr={temporal_weight_1yr}, 2yr={temporal_weight_2yr}")
+    print(f"Monte Carlo weight variance: ±{mc_weight_variance*100}%")
     print("="*90)
     
-    analyzer = EnsembleAnalyzer(matrix, directions, config)
-    results = analyzer.analyze()
+    # Create TOPSIS analyzer with temporal weights
+    print("Running TOPSIS analysis with temporal weights...")
+    topsis_analyzer = TOPSISAnalyzer(matrix, directions, weights=temporal_weights)
+    topsis_scores = topsis_analyzer.analyze()
+    
+    # Print weight information
+    print("\nCriterion weights (temporal weighting applied):")
+    weights_info = topsis_analyzer.get_weights_info()
+    print(weights_info.to_string(index=False))
+    
+    # Run VIKOR with same temporal weights
+    if config.use_fuzzy_vikor:
+        print(f"\nRunning Fuzzy VIKOR analysis (v={config.vikor_v}, spread=±{config.fuzzy_spread*100}%)...")
+        from analysis import FuzzyVIKORAnalyzer
+        vikor_analyzer = FuzzyVIKORAnalyzer(
+            matrix, 
+            directions,
+            weights=temporal_weights,
+            v=config.vikor_v,
+            fuzzy_spread=config.fuzzy_spread
+        )
+        vikor_scores, vikor_details = vikor_analyzer.analyze()
+    else:
+        vikor_scores = pd.Series(0, index=matrix.index, name='vikor_score')
+    
+    # Run Monte Carlo with temporal weights as base
+    print(f"\nRunning Monte Carlo simulation ({config.n_simulations} iterations, ±{config.mc_weight_variance*100}% variance)...")
+    from analysis import MonteCarloAnalyzer
+    mc_analyzer = MonteCarloAnalyzer(matrix, directions, config, base_weights=temporal_weights)
+    mc_scores = mc_analyzer.simulate()
+    
+    # Combine scores using weighted average
+    ensemble_scores = (
+        config.topsis_weight * topsis_scores +
+        config.vikor_weight * vikor_scores +
+        config.mc_weight * mc_scores
+    )
+    
+    # Create results DataFrame
+    results = pd.DataFrame({
+        'alternative_id': matrix.index,
+        'topsis_score': topsis_scores.values,
+        'vikor_score': vikor_scores.values,
+        'monte_carlo_score': mc_scores.values,
+        'ensemble_score': ensemble_scores.values,
+        'topsis_rank': topsis_scores.rank(ascending=False),
+        'vikor_rank': vikor_scores.rank(ascending=False),
+        'monte_carlo_rank': mc_scores.rank(ascending=False),
+        'ensemble_rank': ensemble_scores.rank(ascending=False)
+    })
+    
+    results = results.sort_values('ensemble_rank')
     
     # Add sector names to results (from input directory)
     input_dir = 'results-pipeline'
@@ -408,19 +479,22 @@ def run_sector_analysis(year: int = 2024,
 
 
 if __name__ == '__main__':
-    # Run sector analysis for year 2024, DZIAŁ level, only calculated indicators (>= 1000)
+    # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
         year=2024,
-        typ='SEKCJA',
+        typ='DZIAŁ',
         min_wskaznik_index=1000,
-        n_simulations=1000
+        n_simulations=1000,
+        mc_weight_variance=0.15,  # 15% variance around temporal weights
+        temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
+        temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
     )
     
     print("\n" + "="*90)
     print("ANALYSIS COMPLETE")
     print("="*90)
     print("\nInput: results-pipeline/")
-    print("Output: results/2024/dział/")
+    print("Output: results/2024/sekcja/")
     print("\nFiles generated:")
     print("  • input_data.csv - Input data used for analysis")
     print("  • topsis.csv - TOPSIS rankings")
@@ -429,10 +503,20 @@ if __name__ == '__main__':
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
     print("\nAnalysis includes:")
-    print("  • Current year indicator values (1000-1007)")
-    print("  • 1-year percentage changes (Δ% 1yr)")
-    print("  • 2-year percentage changes (Δ% 2yr)")
+    print("  • Current year indicator values (1000-1007) - CV-based weights")
+    print("  • 1-year percentage changes (Δ% 1yr) - 66% of base weight")
+    print("  • 2-year percentage changes (Δ% 2yr) - 34% of base weight")
+    print("  • All weights normalized to sum to 1.0")
     print("  • Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("\nWeighting methodology:")
+    print("  • Base indicators: w = 1/CV (normalized)")
+    print("  • 1-year changes: 0.66 × w")
+    print("  • 2-year changes: 0.34 × w")
+    print("  • Final normalization: all weights sum to 1.0")
+    print("\nMonte Carlo method:")
+    print("  • Uses temporal weights as base")
+    print("  • Adds controlled randomization (±15% variance)")
+    print("  • Tests robustness across weight perturbations")
     print("\nDirection logic for percentage changes:")
     print("  • Maximize indicators: positive change is good → max")
     print("  • Minimize indicators: negative change is good → min")
