@@ -1,4 +1,5 @@
 import { Link } from "react-router";
+import { Github } from "lucide-react";
 
 export function Header() {
   return (
@@ -15,9 +16,14 @@ export function Header() {
         <div className="text-sm text-pko-navy/70">
           HackNation 2025
         </div>
-        <div className="w-8 h-8 rounded-full bg-pko-gray-light border border-pko-gray-medium flex items-center justify-center text-pko-navy font-medium text-sm">
-          JD
-        </div>
+        <a 
+          href="https://github.com/jan-chlebek/HackNation2025-Hackaton" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="text-pko-navy/70 hover:text-pko-navy transition-colors"
+        >
+          <Github size={24} />
+        </a>
       </div>
     </header>
   );

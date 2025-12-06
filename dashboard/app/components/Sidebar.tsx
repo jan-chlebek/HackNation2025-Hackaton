@@ -40,10 +40,12 @@ export function Sidebar() {
       
       <div className="mt-auto p-6 border-t border-white/10">
         <div className="text-xs text-white/50 uppercase tracking-wider font-semibold mb-2">
-          System
+          Chlebki & Friend
         </div>
-        <div className="text-sm text-white/80">
-          v1.0.0 Beta
+        <div className="text-sm text-white/80 flex flex-col gap-1">
+          <span>Jan Chlebek</span>
+          <span>Marta Chlebek</span>
+          <span>Patryk Hubicki</span>
         </div>
       </div>
     </aside>
