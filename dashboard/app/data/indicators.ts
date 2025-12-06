@@ -4,6 +4,7 @@ export interface IndicatorDefinition {
   name: string;
   preference: string;
   justification: string;
+  formula?: string;
 }
 
 export const indicators: IndicatorDefinition[] = [
@@ -187,55 +188,63 @@ export const indicators: IndicatorDefinition[] = [
     code: "Marża netto",
     name: "Marża netto",
     preference: "Im wyższa, tym lepiej",
-    justification: "Im większa marża, tym większy bufor na wahania kosztów."
+    justification: "Im większa marża, tym większy bufor na wahania kosztów.",
+    formula: "NP / PNPM"
   },
   {
     id: 1001,
     code: "Marża operacyjna",
     name: "Marża operacyjna",
     preference: "Im wyższa, tym lepiej",
-    justification: "Wysoka rentowność operacyjna istotna dla oceny ryzyka."
+    justification: "Wysoka rentowność operacyjna istotna dla oceny ryzyka.",
+    formula: "OP / PNPM"
   },
   {
     id: 1002,
     code: "Wskaźnik bieżącej płynności",
     name: "Wskaźnik bieżącej płynności",
     preference: "Optymalnie 1,5–2,5",
-    justification: "Za niski = ryzyko; zbyt wysoki = nieefektywność."
+    justification: "Za niski = ryzyko; zbyt wysoki = nieefektywność.",
+    formula: "(C + REC + INV) / STL"
   },
   {
     id: 1003,
     code: "Wskaźnik szybki",
     name: "Wskaźnik szybki",
     preference: "Im wyższy, tym lepiej (≥ 1)",
-    justification: "Bardziej konserwatywny miernik płynności."
+    justification: "Bardziej konserwatywny miernik płynności.",
+    formula: "(C + REC) / STL"
   },
   {
     id: 1004,
     code: "Wskaźnik zadłużenia",
     name: "Wskaźnik zadłużenia",
     preference: "Im niższy, tym lepiej",
-    justification: "Niższy lewar finansowy = mniejsze ryzyko."
+    justification: "Niższy lewar finansowy = mniejsze ryzyko.",
+    formula: "(STL + LTL) / PNPM"
   },
   {
     id: 1005,
     code: "Pokrycie odsetek",
     name: "Pokrycie odsetek",
     preference: "Im wyższe, tym lepiej (≥ 3)",
-    justification: "Wysoka zdolność do obsługi zadłużenia."
+    justification: "Wysoka zdolność do obsługi zadłużenia.",
+    formula: "OP / IP"
   },
   {
     id: 1006,
     code: "Rotacja należności",
     name: "Rotacja należności",
     preference: "Im wyższa, tym lepiej",
-    justification: "Szybkie odzyskiwanie należności zwiększa płynność."
+    justification: "Szybkie odzyskiwanie należności zwiększa płynność.",
+    formula: "PNPM / REC"
   },
   {
     id: 1007,
     code: "Cash flow margin",
     name: "Cash flow margin",
     preference: "Im wyższy, tym lepiej",
-    justification: "Wysoka konwersja przychodów w gotówkę obniża ryzyko kredytowe."
+    justification: "Wysoka konwersja przychodów w gotówkę obniża ryzyko kredytowe.",
+    formula: "CF / PNPM"
   }
 ];
