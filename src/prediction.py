@@ -821,13 +821,13 @@ if __name__ == '__main__':
     # Example usage
     try:
         forecasts, summary, scenarios = predict_future_values(
-            filepath='data.csv',
+            filepath='mockdata/data.csv',
             forecast_years=3,
             min_historical_years=3,
             mc_simulations=1000,
             mc_noise_std=0.10,
             n_scenarios_for_analysis=100,
-            output_base='forecast'
+            output_base='mock_prediction/forecast'
         )
         
         print("\n✓ Forecasting completed successfully!")
