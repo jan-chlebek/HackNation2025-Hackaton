@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    
+  --color-pko-navy: #1a2f3a;
+  --color-pko-red: #d93026;
+  --color-pko-gold: #c9a961;
+  --color-pko-black: #1a1a1a;
+  --color-pko-white: #ffffff;
+  --color-pko-gray-light: #f5f5f5;
+  --color-pko-gray-medium: #d0d0d0;
+}
+
+:root {
+  --pko-navy: #1a2f3a;
+  --pko-red: #d93026;
+  --pko-gold: #c9a961;
+  --pko-black: #1a1a1a;
+  --pko-white: #ffffff;
+  --pko-gray-light: #f5f5f5;
+  --pko-gray-medium: #d0d0d0;
+}
+
+html,
+body {
+  @apply bg-pko-gray-light text-pko-black font-sans;
+}
+
+.pko-gradient {
+  background: linear-gradient(135deg, var(--pko-navy) 0%, #2c4a5c 100%);
+}
+
+.pko-card {
+  @apply bg-white rounded-lg shadow-sm border border-pko-gray-medium/30;
+}
+
+.pko-header {
+  @apply text-pko-navy font-bold;
+}
