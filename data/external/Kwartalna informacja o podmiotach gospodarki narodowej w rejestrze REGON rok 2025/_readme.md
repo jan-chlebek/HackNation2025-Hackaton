@@ -1,0 +1,11 @@
+Source: https://stat.gov.pl/obszary-tematyczne/podmioty-gospodarcze-wyniki-finansowe/zmiany-strukturalne-grup-podmiotow/kwartalna-informacja-o-podmiotach-gospodarki-narodowej-w-rejestrze-regon-rok-2025,7,15.html
+Last update: 2025/10/16
+Formats: XLSX
+___
+
+
+Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON deklarujących prowadzenie działalności prezentuje dane o liczbie podmiotów gospodarki narodowej wpisanych w krajowym rejestrze urzędowym gospodarki narodowej REGON (bez osób fizycznych prowadzących wyłącznie indywidualne gospodarstwa rolne), dla których informacje zgłoszone do rejestru REGON wskazują na prowadzenie działalności.
+
+Dane w tablicach prezentowane są według Polskiej Klasyfikacji Działalności (PKD2007),  województw, szczególnych form prawnych, form własności oraz przedziałów przewidywanej liczby pracujących.
+
+W związku z wprowadzonymi od 1 grudnia 2014 r. zmianami przepisów prawnych regulujących sposób zasilania rejestru REGON informacjami o podmiotach podlegających wpisowi do Krajowego Rejestru Sądowego, istnieje możliwość wystąpienia w rejestrze REGON podmiotów, dla których nie wypełnione są informacje dotyczące przewidywanej liczby pracujących, adresu siedziby/zamieszkania, rodzaju przeważającej działalności oraz formy własności. Brak powyższych informacji dotyczy przede wszystkim podmiotów nowo zarejestrowanych w KRS, dla których brakujące dane powinny być uzupełniane w późniejszym czasie na podstawie informacji przekazywanych z Centralnego Rejestru Podatników Krajowej Ewidencji Podatników. W związku z powyższym prezentowane tablice zawierają dodatkowy wiersz lub kolumnę, w których podana jest liczba podmiotów, dla których w rejestrze REGON brak jest informacji o przewidywanej liczbie pracujących, adresie siedziby/zamieszkania, rodzaju przeważającej działalności lub formie własności. Z uwagi na to, że liczba podmiotów nowo zarejestrowanych prezentowana jest w tablicach zgodnie z zakresem danych wprowadzonych do rejestru REGON w momencie pierwszego wpisu, w tablicach tych występuje największa liczba podmiotów z niewypełnionymi danymi. Po uzupełnieniu tych danych informacjami z CRP KEP liczba ta zmniejsza się co jest widoczne w tablicach prezentujących dane według określonego stanu.
