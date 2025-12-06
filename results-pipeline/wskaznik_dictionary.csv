@@ -18,17 +18,14 @@ WSKAZNIK_INDEX;WSKAZNIK
 16;PNPM Przychody netto 
 17;POS Wynik na sprzedaży 
 18;PPO Pozostałe przychody operacyjne 
-19;Przych. fin. Przychody finansowe 
-20;REC Należności krótkoterminowe 
-21;STC Krótkoterminowe kredyty bankowe 
-22;STL Zobowiązania krótkoterminowe 
-23;TC Koszty ogółem 
-24;Upadłość
-1000;Marża netto (NP/PNPM)
-1001;Marża operacyjna (OP/PNPM)
-1002;Wskaźnik bieżącej płynności ((C+REC+INV)/STL)
-1003;Wskaźnik szybki ((C+REC)/STL)
-1004;Wskaźnik zadłużenia ((STL+LTL)/PNPM)
-1005;Pokrycie odsetek (OP/IP)
-1006;Rotacja należności (PNPM/REC)
-1007;Cash flow margin (CF/PNPM)
+19;Przewidywana liczba pracujących 0-9
+20;Przewidywana liczba pracujących 10-49
+21;Przewidywana liczba pracujących 250=>
+22;Przewidywana liczba pracujących 50-249
+23;Przewidywana liczba pracujących Ogółem
+24;Przych. fin. Przychody finansowe 
+25;REC Należności krótkoterminowe 
+26;STC Krótkoterminowe kredyty bankowe 
+27;STL Zobowiązania krótkoterminowe 
+28;TC Koszty ogółem 
+29;Upadłość
