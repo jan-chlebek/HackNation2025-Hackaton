@@ -44,14 +44,21 @@ export default function Home() {
               </div>
             </Link>
             
-            <div className="p-6 bg-gray-100 rounded-lg border border-gray-200">
-              <h3 className="text-xl font-semibold text-gray-700 mb-2">
+            <Link
+              to="/financial-indicators"
+              className="block p-6 bg-green-50 hover:bg-green-100 rounded-lg transition-colors border border-green-200"
+            >
+              <h3 className="text-xl font-semibold text-green-900 mb-2">
                 📈 Financial Indicators Analysis
               </h3>
-              <p className="text-gray-600">
-                Time series analysis and sector comparisons (Coming soon)
+              <p className="text-green-700">
+                Time series analysis (2005-2024), correlation matrix, profitability ratios, 
+                liquidity metrics, and comprehensive financial trend visualizations.
               </p>
-            </div>
+              <div className="mt-3 text-green-600 font-medium">
+                View Financial Analysis →
+              </div>
+            </Link>
           </div>
         </div>
         
