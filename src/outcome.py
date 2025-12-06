@@ -4,7 +4,7 @@ Sector Analysis using TOPSIS, VIKOR and Monte Carlo for SEKCJA level data.
 This script loads data from kpi-value-table.csv, filters by year and sector type,
 and performs multi-criteria decision analysis using only calculated indicators (ID >= 1000).
 
-Run from project root: python src/sector_analysis.py
+Run from project root: python src/outcome.py
 """
 
 import pandas as pd
@@ -17,6 +17,47 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent))
 
 from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter
+
+
+def load_indicator_directions(input_dir: str = 'results-pipeline') -> dict:
+    """
+    Load indicator optimization directions from wskaznik_dictionary_minmax.csv.
+    
+    Args:
+        input_dir: Directory containing the dictionary file
+        
+    Returns:
+        Dictionary mapping WSKAZNIK names to 'max' or 'min'
+    """
+    wskaznik_minmax = pd.read_csv(
+        os.path.join(input_dir, 'wskaznik_dictionary_minmax.csv'), 
+        sep=';'
+    )
+    
+    # Strip whitespace from column names
+    wskaznik_minmax.columns = wskaznik_minmax.columns.str.strip()
+    
+    # Create mapping from WSKAZNIK name to direction
+    direction_map = {}
+    for _, row in wskaznik_minmax.iterrows():
+        wskaznik_name = row['WSKAZNIK'].strip()
+        minmax_value = str(row['MinMax']).strip().lower()
+        
+        # Normalize to 'max' or 'min'
+        if minmax_value == 'max':
+            direction_map[wskaznik_name] = 'max'
+        elif minmax_value == 'min':
+            direction_map[wskaznik_name] = 'min'
+        else:
+            # Default to max if unclear
+            direction_map[wskaznik_name] = 'max'
+    
+    # Show distribution
+    max_count = sum(1 for d in direction_map.values() if d == 'max')
+    min_count = sum(1 for d in direction_map.values() if d == 'min')
+    print(f"  Loaded directions: {max_count} maximize, {min_count} minimize")
+    
+    return direction_map
 
 
 def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wskaznik_index: int = 1000) -> pd.DataFrame:
@@ -41,6 +82,9 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
+    
+    # Load indicator directions from wskaznik_dictionary_minmax.csv
+    indicator_directions = load_indicator_directions(input_dir)
     
     print(f"  Original data: {len(kpi_value_table)} rows")
     
@@ -77,28 +121,10 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
         'kpi_id': df_filtered['symbol'],  # Sectors (alternatives)
         'cat_id': df_filtered['WSKAZNIK'],  # Indicators (criteria)
         'value': df_filtered['wartosc'],
-        'direction': 'max'  # Default to max, will be customized per indicator
+        'direction': 'max'  # Default to max, will be loaded from dictionary
     })
     
-    # Define direction for each calculated indicator (1000+)
-    # All new calculated indicators are ratios/margins - context determines direction
-    indicator_directions = {
-        # Financial ratios - maximize
-        'Marża netto (NP/PNPM)': 'max',
-        'Marża operacyjna (OP/PNPM)': 'max',
-        'Cash flow margin (CF/PNPM)': 'max',
-        'Pokrycie odsetek (OP/IP)': 'max',
-        'Rotacja należności (PNPM/REC)': 'max',
-        
-        # Liquidity ratios - maximize
-        'Wskaźnik bieżącej płynności ((C+REC+INV)/STL)': 'max',
-        'Wskaźnik szybki ((C+REC)/STL)': 'max',
-        
-        # Debt ratio - minimize (lower is better)
-        'Wskaźnik zadłużenia ((STL+LTL)/PNPM)': 'min',
-    }
-    
-    # Apply directions
+    # Apply directions from wskaznik_dictionary_minmax.csv
     analysis_df['direction'] = analysis_df['cat_id'].map(indicator_directions)
     
     # Fill any unmapped directions with 'max' as default
@@ -298,7 +324,7 @@ if __name__ == '__main__':
     # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
         year=2024,
-        typ='SEKCJA',
+        typ='DZIAŁ',
         min_wskaznik_index=1000,
         n_simulations=1000
     )
@@ -315,12 +341,5 @@ if __name__ == '__main__':
     print("  • monte_carlo.csv - Monte Carlo rankings")
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
-    print("\nAnalysis uses only calculated financial ratios (indicators 1000-1007):")
-    print("  1000: Marża netto (Net Margin)")
-    print("  1001: Marża operacyjna (Operating Margin)")
-    print("  1002: Wskaźnik bieżącej płynności (Current Ratio)")
-    print("  1003: Wskaźnik szybki (Quick Ratio)")
-    print("  1004: Wskaźnik zadłużenia (Debt Ratio)")
-    print("  1005: Pokrycie odsetek (Interest Coverage)")
-    print("  1006: Rotacja należności (Receivables Turnover)")
-    print("  1007: Cash Flow Margin")
+    print("\nAnalysis uses calculated financial ratios (indicators 1000-1007)")
+    print("Directions loaded from wskaznik_dictionary_minmax.csv")
