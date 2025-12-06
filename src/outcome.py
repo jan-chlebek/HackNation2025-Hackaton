@@ -60,6 +60,69 @@ def load_indicator_directions(input_dir: str = 'results-pipeline') -> dict:
     return direction_map
 
 
+def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, min_wskaznik_index: int) -> pd.DataFrame:
+    """
+    Calculate percentage changes for the previous year and two years earlier.
+    
+    Args:
+        df_merged: Merged dataframe with all data
+        year: Current year to analyze
+        typ: PKD type to filter
+        min_wskaznik_index: Minimum indicator index
+        
+    Returns:
+        DataFrame with percentage change data
+    """
+    print(f"\nCalculating percentage changes for years {year-2}, {year-1}, {year}...")
+    
+    # Get data for current year and two previous years
+    df_years = df_merged[
+        (df_merged['rok'].isin([year-2, year-1, year])) & 
+        (df_merged['typ'] == typ) &
+        (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index)
+    ].copy()
+    
+    # Pivot to get values by year
+    pivot_data = df_years.pivot_table(
+        index=['symbol', 'WSKAZNIK'],
+        columns='rok',
+        values='wartosc',
+        aggfunc='first'
+    ).reset_index()
+    
+    pct_changes = []
+    
+    # Calculate percentage change from year-1 to year (1-year change)
+    if year in pivot_data.columns and (year-1) in pivot_data.columns:
+        df_1yr = pivot_data[['symbol', 'WSKAZNIK', year, year-1]].copy()
+        df_1yr = df_1yr.dropna(subset=[year, year-1])
+        
+        df_1yr['pct_change'] = ((df_1yr[year] - df_1yr[year-1]) / df_1yr[year-1].abs()) * 100
+        df_1yr['cat_id'] = df_1yr['WSKAZNIK'] + ' (Δ% 1yr)'
+        
+        pct_changes.append(df_1yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
+        print(f"  ✓ Calculated 1-year changes: {len(df_1yr)} records")
+    
+    # Calculate percentage change from year-2 to year (2-year change)
+    if year in pivot_data.columns and (year-2) in pivot_data.columns:
+        df_2yr = pivot_data[['symbol', 'WSKAZNIK', year, year-2]].copy()
+        df_2yr = df_2yr.dropna(subset=[year, year-2])
+        
+        df_2yr['pct_change'] = ((df_2yr[year] - df_2yr[year-2]) / df_2yr[year-2].abs()) * 100
+        df_2yr['cat_id'] = df_2yr['WSKAZNIK'] + ' (Δ% 2yr)'
+        
+        pct_changes.append(df_2yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
+        print(f"  ✓ Calculated 2-year changes: {len(df_2yr)} records")
+    
+    if pct_changes:
+        result = pd.concat(pct_changes, ignore_index=True)
+        result.columns = ['kpi_id', 'cat_id', 'value']
+        return result
+    else:
+        print("  ⚠ No historical data available for percentage changes")
+        return pd.DataFrame(columns=['kpi_id', 'cat_id', 'value'])
+
+
 def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wskaznik_index: int = 1000) -> pd.DataFrame:
     """
     Load and prepare data for sector analysis.
@@ -101,7 +164,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     # Merge with wskaznik dictionary to get indicator names
     df_merged = df_merged.merge(wskaznik_dictionary, on='WSKAZNIK_INDEX', how='left')
     
-    # Filter by year, type, and indicator index
+    # Filter by year, type, and indicator index for CURRENT YEAR data
     df_filtered = df_merged[
         (df_merged['rok'] == year) & 
         (df_merged['typ'] == typ) &
@@ -115,17 +178,41 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     if len(df_filtered) == 0:
         raise ValueError(f"No data found for year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}")
     
-    # Create analysis-ready format
-    # Use PKD symbol as alternative (kpi_id) and WSKAZNIK as criteria (cat_id)
+    # Create analysis-ready format for CURRENT YEAR values
     analysis_df = pd.DataFrame({
         'kpi_id': df_filtered['symbol'],  # Sectors (alternatives)
         'cat_id': df_filtered['WSKAZNIK'],  # Indicators (criteria)
         'value': df_filtered['wartosc'],
-        'direction': 'max'  # Default to max, will be loaded from dictionary
+        'direction': 'max'  # Will be loaded from dictionary
     })
     
+    # Calculate percentage changes and add as additional criteria
+    pct_change_df = calculate_percentage_changes(df_merged, year, typ, min_wskaznik_index)
+    
+    if len(pct_change_df) > 0:
+        # Add direction column to percentage changes (same as base indicator)
+        pct_change_df['direction'] = 'max'  # Will be set based on base indicator
+        
+        # Combine current year values with percentage changes
+        analysis_df = pd.concat([analysis_df, pct_change_df], ignore_index=True)
+        print(f"\n  ✓ Added {len(pct_change_df)} percentage change records")
+    
     # Apply directions from wskaznik_dictionary_minmax.csv
-    analysis_df['direction'] = analysis_df['cat_id'].map(indicator_directions)
+    # For percentage changes, use the same direction as the base indicator
+    def get_direction(cat_id):
+        # Extract base indicator name (remove " (Δ% 1yr)" or " (Δ% 2yr)")
+        base_indicator = cat_id.replace(' (Δ% 1yr)', '').replace(' (Δ% 2yr)', '')
+        direction = indicator_directions.get(base_indicator, 'max')
+        
+        # For percentage changes: 
+        # - If base is "max", positive change is good → max
+        # - If base is "min", positive change is bad → min (we want negative changes)
+        if '(Δ%' in cat_id and direction == 'min':
+            return 'min'  # Negative changes are good for minimization indicators
+        else:
+            return 'max'  # Positive changes are good for maximization indicators
+    
+    analysis_df['direction'] = analysis_df['cat_id'].apply(get_direction)
     
     # Fill any unmapped directions with 'max' as default
     analysis_df['direction'] = analysis_df['direction'].fillna('max')
@@ -321,10 +408,10 @@ def run_sector_analysis(year: int = 2024,
 
 
 if __name__ == '__main__':
-    # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
+    # Run sector analysis for year 2024, DZIAŁ level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
         year=2024,
-        typ='DZIAŁ',
+        typ='SEKCJA',
         min_wskaznik_index=1000,
         n_simulations=1000
     )
@@ -333,7 +420,7 @@ if __name__ == '__main__':
     print("ANALYSIS COMPLETE")
     print("="*90)
     print("\nInput: results-pipeline/")
-    print("Output: results/2024/sekcja/")
+    print("Output: results/2024/dział/")
     print("\nFiles generated:")
     print("  • input_data.csv - Input data used for analysis")
     print("  • topsis.csv - TOPSIS rankings")
@@ -341,5 +428,11 @@ if __name__ == '__main__':
     print("  • monte_carlo.csv - Monte Carlo rankings")
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
-    print("\nAnalysis uses calculated financial ratios (indicators 1000-1007)")
-    print("Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("\nAnalysis includes:")
+    print("  • Current year indicator values (1000-1007)")
+    print("  • 1-year percentage changes (Δ% 1yr)")
+    print("  • 2-year percentage changes (Δ% 2yr)")
+    print("  • Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("\nDirection logic for percentage changes:")
+    print("  • Maximize indicators: positive change is good → max")
+    print("  • Minimize indicators: negative change is good → min")
