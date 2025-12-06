@@ -3,12 +3,20 @@ Sector Analysis using TOPSIS, VIKOR and Monte Carlo for SEKCJA level data.
 
 This script loads data from kpi-value-table.csv, filters by year and sector type,
 and performs multi-criteria decision analysis using only calculated indicators (ID >= 1000).
+
+Run from project root: python src/sector_analysis.py
 """
 
 import pandas as pd
 import numpy as np
 import os
-from analysis import run_analysis, DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter
+import sys
+from pathlib import Path
+
+# Add src to path for imports
+sys.path.append(str(Path(__file__).parent))
+
+from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter
 
 
 def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wskaznik_index: int = 1000) -> pd.DataFrame:
@@ -23,16 +31,16 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     Returns:
         DataFrame in format ready for analysis (kpi_id, cat_id, value, direction)
     """
-    # Define paths
-    results_dir = '../results-pipeline'
+    # Define paths (relative to project root) - INPUT from results-pipeline
+    input_dir = 'results-pipeline'
     
     print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
-    # Read CSV files
-    kpi_value_table = pd.read_csv(os.path.join(results_dir, 'kpi-value-table.csv'), sep=';')
-    pkd_dictionary = pd.read_csv(os.path.join(results_dir, 'pkd_dictionary.csv'), sep=';')
-    pkd_typ_dictionary = pd.read_csv(os.path.join(results_dir, 'pkd_typ_dictionary.csv'), sep=';')
-    wskaznik_dictionary = pd.read_csv(os.path.join(results_dir, 'wskaznik_dictionary.csv'), sep=';')
+    # Read CSV files from results-pipeline
+    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
+    pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
+    pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
+    wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
     
     print(f"  Original data: {len(kpi_value_table)} rows")
     
@@ -139,11 +147,55 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     return analysis_df
 
 
+def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
+    """
+    Save results organized by year and type.
+    
+    Args:
+        results: Results DataFrame
+        year: Year of analysis
+        typ: PKD type
+    """
+    # Create directory structure: results/year/type/
+    output_dir = Path('results') / str(year) / typ.lower()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # TOPSIS results
+    topsis_df = results[['alternative_id', 'nazwa', 'topsis_score', 'topsis_rank']].copy()
+    topsis_df = topsis_df.sort_values('topsis_rank')
+    topsis_df.to_csv(output_dir / 'topsis.csv', index=False, sep=';', encoding='utf-8')
+    
+    # VIKOR results
+    vikor_df = results[['alternative_id', 'nazwa', 'vikor_score', 'vikor_rank']].copy()
+    vikor_df = vikor_df.sort_values('vikor_rank')
+    vikor_df.to_csv(output_dir / 'vikor.csv', index=False, sep=';', encoding='utf-8')
+    
+    # Monte Carlo results
+    mc_df = results[['alternative_id', 'nazwa', 'monte_carlo_score', 'monte_carlo_rank']].copy()
+    mc_df = mc_df.sort_values('monte_carlo_rank')
+    mc_df.to_csv(output_dir / 'monte_carlo.csv', index=False, sep=';', encoding='utf-8')
+    
+    # Ensemble results
+    ensemble_df = results[['alternative_id', 'nazwa', 'ensemble_score', 'ensemble_rank']].copy()
+    ensemble_df.to_csv(output_dir / 'ensemble.csv', index=False, sep=';', encoding='utf-8')
+    
+    # Complete results
+    results.to_csv(output_dir / 'complete.csv', index=False, sep=';', encoding='utf-8')
+    
+    print(f"\n✓ Results saved to: {output_dir}/")
+    print(f"  • topsis.csv")
+    print(f"  • vikor.csv")
+    print(f"  • monte_carlo.csv")
+    print(f"  • ensemble.csv")
+    print(f"  • complete.csv")
+    
+    return output_dir
+
+
 def run_sector_analysis(year: int = 2024, 
                        typ: str = 'SEKCJA',
                        min_wskaznik_index: int = 1000,
-                       n_simulations: int = 1000,
-                       output_base: str = 'results-analysis/sector_analysis') -> pd.DataFrame:
+                       n_simulations: int = 1000) -> pd.DataFrame:
     """
     Run complete sector analysis.
     
@@ -152,18 +204,20 @@ def run_sector_analysis(year: int = 2024,
         typ: PKD type level
         min_wskaznik_index: Minimum indicator index to include (default: 1000 for calculated ratios)
         n_simulations: Number of Monte Carlo simulations
-        output_base: Base filename for outputs
         
     Returns:
         DataFrame with analysis results
     """
-    os.makedirs(os.path.dirname(output_base), exist_ok=True)
     # Load and prepare data
     analysis_df = load_and_prepare_sector_data(year, typ, min_wskaznik_index)
     
-    # Save prepared data for reference
-    analysis_df.to_csv(f'{output_base}_input_data.csv', index=False)
-    print(f"\n✓ Saved input data to: {output_base}_input_data.csv")
+    # Create output directory
+    output_dir = Path('results') / str(year) / typ.lower()
+    output_dir.mkdir(parents=True, exist_ok=True)
+    
+    # Save prepared input data
+    analysis_df.to_csv(output_dir / 'input_data.csv', index=False, sep=';', encoding='utf-8')
+    print(f"\n✓ Saved input data to: {output_dir / 'input_data.csv'}")
     
     # Prepare decision matrix
     try:
@@ -209,10 +263,10 @@ def run_sector_analysis(year: int = 2024,
     analyzer = EnsembleAnalyzer(matrix, directions, config)
     results = analyzer.analyze()
     
-    # Add sector names to results
-    results_dir = '../results'
-    pkd_dictionary = pd.read_csv(os.path.join(results_dir, 'pkd_dictionary.csv'), sep=';')
-    pkd_typ_dictionary = pd.read_csv(os.path.join(results_dir, 'pkd_typ_dictionary.csv'), sep=';')
+    # Add sector names to results (from input directory)
+    input_dir = 'results-pipeline'
+    pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
+    pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     
     pkd_enhanced = pkd_dictionary.merge(pkd_typ_dictionary, on='TYP_INDEX', how='left')
     sector_names = pkd_enhanced[pkd_enhanced['typ'] == typ][['symbol', 'nazwa']]
@@ -226,13 +280,16 @@ def run_sector_analysis(year: int = 2024,
             'topsis_rank', 'vikor_rank', 'monte_carlo_rank']
     results = results[cols]
     
-    # Export results
-    ResultsExporter.print_summary(results, top_n=min(10, len(results)))
-    ResultsExporter.save_to_csv(results, output_base)
+    # Export results using custom saver
+    print("\n" + "="*90)
+    print("TOP 10 SECTORS - ENSEMBLE RANKING")
+    print("="*90)
+    top_10 = results.head(10)
+    print(top_10[['ensemble_rank', 'alternative_id', 'nazwa', 'ensemble_score']].to_string(index=False))
+    print("="*90)
     
-    # Save complete results with names
-    results.to_csv(f'{output_base}_complete.csv', index=False)
-    print(f"✓ Saved complete results to: {output_base}_complete.csv")
+    # Save results
+    save_results_by_year_type(results, year, typ)
     
     return results
 
@@ -241,22 +298,23 @@ if __name__ == '__main__':
     # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
         year=2024,
-        typ='DZIAŁ',
+        typ='SEKCJA',
         min_wskaznik_index=1000,
-        n_simulations=1000,
-        output_base='results-pipeline/sector_analysis_2024_ratios'
+        n_simulations=1000
     )
     
     print("\n" + "="*90)
     print("ANALYSIS COMPLETE")
     print("="*90)
+    print("\nInput: results-pipeline/")
+    print("Output: results/2024/sekcja/")
     print("\nFiles generated:")
-    print("  • sector_analysis_2024_ratios_input_data.csv - Input data used")
-    print("  • sector_analysis_2024_ratios_topsis.csv - TOPSIS rankings")
-    print("  • sector_analysis_2024_ratios_vikor.csv - VIKOR rankings")
-    print("  • sector_analysis_2024_ratios_monte_carlo.csv - Monte Carlo rankings")
-    print("  • sector_analysis_2024_ratios_ensemble.csv - Combined ensemble rankings")
-    print("  • sector_analysis_2024_ratios_complete.csv - Complete results with all scores")
+    print("  • input_data.csv - Input data used for analysis")
+    print("  • topsis.csv - TOPSIS rankings")
+    print("  • vikor.csv - VIKOR rankings")
+    print("  • monte_carlo.csv - Monte Carlo rankings")
+    print("  • ensemble.csv - Combined ensemble rankings")
+    print("  • complete.csv - Complete results with all scores and metadata")
     print("\nAnalysis uses only calculated financial ratios (indicators 1000-1007):")
     print("  1000: Marża netto (Net Margin)")
     print("  1001: Marża operacyjna (Operating Margin)")
