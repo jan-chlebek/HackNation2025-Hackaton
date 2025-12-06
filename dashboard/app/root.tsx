@@ -10,7 +10,13 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
+export const meta: Route.MetaFunction = () => [
+  { title: "Hacknation 2025 | PKO BP Analizy Sektorowe | Chlebki & Friend" },
+  { name: "description", content: "Analizy Sektorowe PKO BP" },
+];
+
 export const links: Route.LinksFunction = () => [
+  { rel: "icon", href: "/pko_logo.png", type: "image/png" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",

@@ -5,9 +5,11 @@ export function Header() {
   return (
     <header className="bg-white border-b border-pko-gray-medium/30 h-16 flex items-center px-6 sticky top-0 z-50">
       <div className="flex items-center gap-4">
-        <div className="w-8 h-8 bg-pko-navy rounded-sm flex items-center justify-center text-white font-bold text-xs">
-          PKO
-        </div>
+        <img 
+          src="/pko_logo.png" 
+          alt="PKO Bank Polski" 
+          className="h-8 w-auto"
+        />
         <h1 className="text-xl font-bold text-pko-navy tracking-tight">
           Analizy Sektorowe
         </h1>
