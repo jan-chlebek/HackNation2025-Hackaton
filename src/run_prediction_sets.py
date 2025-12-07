@@ -18,9 +18,11 @@ from outcome import run_sector_analysis
 from concurrent.futures import ProcessPoolExecutor, as_completed
 import multiprocessing as mp
 from typing import Tuple
+import shutil
+from pathlib import Path
 
 
-def run_credit_analysis(year: int, typ: str):
+def run_credit_analysis(year: int, typ: str, input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv'):
     """
     Run analysis for Credit Assessment indicators (1000-1013).
     
@@ -56,11 +58,13 @@ def run_credit_analysis(year: int, typ: str):
         mc_weight_variance=0.15,
         temporal_weight_1yr=0.3,
         temporal_weight_2yr=0.1,
+        input_dir=input_dir,
+        kpi_filename=kpi_filename,
         output_folder='results-credit'
     )
 
 
-def run_effectivity_analysis(year: int, typ: str):
+def run_effectivity_analysis(year: int, typ: str, input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv'):
     """
     Run analysis for Operational Efficiency indicators (1020-1029).
     
@@ -92,11 +96,13 @@ def run_effectivity_analysis(year: int, typ: str):
         mc_weight_variance=0.15,
         temporal_weight_1yr=0.3,
         temporal_weight_2yr=0.1,
+        input_dir=input_dir,
+        kpi_filename=kpi_filename,
         output_folder='results-effectivity'
     )
 
 
-def run_development_analysis(year: int, typ: str):
+def run_development_analysis(year: int, typ: str, input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv'):
     """
     Run analysis for Industry Development indicators (1040-1051).
     
@@ -130,11 +136,13 @@ def run_development_analysis(year: int, typ: str):
         mc_weight_variance=0.15,
         temporal_weight_1yr=0.3,
         temporal_weight_2yr=0.1,
+        input_dir=input_dir,
+        kpi_filename=kpi_filename,
         output_folder='results-development'
     )
 
 
-def run_polish_analysis(year: int, typ: str):
+def run_polish_analysis(year: int, typ: str, input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv'):
     """
     Run analysis for Polish Named indicators (1060-1067).
     
@@ -164,37 +172,39 @@ def run_polish_analysis(year: int, typ: str):
         mc_weight_variance=0.15,
         temporal_weight_1yr=0.3,
         temporal_weight_2yr=0.1,
+        input_dir=input_dir,
+        kpi_filename=kpi_filename,
         output_folder='results'
     )
 
 
-def run_single_analysis(args: Tuple[str, int, str]) -> Tuple[str, int, str, bool]:
+def run_single_analysis(args: Tuple[str, int, str, str, str]) -> Tuple[str, int, str, bool]:
     """
     Worker function to run a single analysis task.
     
     Args:
-        args: Tuple of (analysis_type, year, typ)
+        args: Tuple of (analysis_type, year, typ, input_dir, kpi_filename)
         
     Returns:
         Tuple of (analysis_type, year, typ, success)
     """
-    analysis_type, year, typ = args
+    analysis_type, year, typ, input_dir, kpi_filename = args
     try:
         if analysis_type == 'credit':
-            run_credit_analysis(year, typ)
+            run_credit_analysis(year, typ, input_dir, kpi_filename)
         elif analysis_type == 'effectivity':
-            run_effectivity_analysis(year, typ)
+            run_effectivity_analysis(year, typ, input_dir, kpi_filename)
         elif analysis_type == 'development':
-            run_development_analysis(year, typ)
+            run_development_analysis(year, typ, input_dir, kpi_filename)
         elif analysis_type == 'polish':
-            run_polish_analysis(year, typ)
+            run_polish_analysis(year, typ, input_dir, kpi_filename)
         return (analysis_type, year, typ, True)
     except Exception as e:
         print(f"\n⚠ Error in {analysis_type} analysis for {year}/{typ}: {e}")
         return (analysis_type, year, typ, False)
 
 
-def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA', max_workers: int = None):
+def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA', input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv', max_workers: int = None):
     """
     Run all 4 indicator sets for a range of years in parallel.
     
@@ -202,6 +212,8 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
         start_year: First year to analyze (default: 2013)
         end_year: Last year to analyze (default: 2024)
         typ: PKD type level - 'SEKCJA' or 'DZIAŁ' (default: 'SEKCJA')
+        input_dir: Directory containing input files (default: 'results-pipeline')
+        kpi_filename: Name of the KPI value table file (default: 'kpi-value-table.csv')
         max_workers: Maximum number of parallel workers (default: CPU count - 1)
     """
     if max_workers is None:
@@ -223,10 +235,10 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
     # Create list of all tasks
     tasks = []
     for year in range(start_year, end_year + 1):
-        tasks.append(('credit', year, typ))
-        tasks.append(('effectivity', year, typ))
-        tasks.append(('development', year, typ))
-        tasks.append(('polish', year, typ))
+        tasks.append(('credit', year, typ, input_dir, kpi_filename))
+        tasks.append(('effectivity', year, typ, input_dir, kpi_filename))
+        tasks.append(('development', year, typ, input_dir, kpi_filename))
+        tasks.append(('polish', year, typ, input_dir, kpi_filename))
     
     total_tasks = len(tasks)
     completed = 0
@@ -270,7 +282,7 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
     print(f"  results/YYYY/{typ.lower()}/")
 
 
-def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA'):
+def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA', input_dir: str = 'results-pipeline', kpi_filename: str = 'kpi-value-table.csv'):
     """
     Run all 4 indicator sets for a range of years sequentially (original implementation).
     
@@ -278,6 +290,8 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
         start_year: First year to analyze (default: 2013)
         end_year: Last year to analyze (default: 2024)
         typ: PKD type level - 'SEKCJA' or 'DZIAŁ' (default: 'SEKCJA')
+        input_dir: Directory containing input files (default: 'results-pipeline')
+        kpi_filename: Name of the KPI value table file (default: 'kpi-value-table.csv')
     """
     print("\n" + "="*90)
     print("RUNNING 4-SET ANALYSIS PIPELINE")
@@ -298,10 +312,10 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
         
         try:
             # Run all 4 sets for this year
-            run_credit_analysis(year, typ)
-            run_effectivity_analysis(year, typ)
-            run_development_analysis(year, typ)
-            run_polish_analysis(year, typ)
+            run_credit_analysis(year, typ, input_dir, kpi_filename)
+            run_effectivity_analysis(year, typ, input_dir, kpi_filename)
+            run_development_analysis(year, typ, input_dir, kpi_filename)
+            run_polish_analysis(year, typ, input_dir, kpi_filename)
             
             print(f"\n✓ Completed all 4 sets for year {year}")
             
@@ -324,20 +338,52 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
     print("  results/YYYY/sekcja/")
 
 
+def copy_input_to_pipeline(source_dir: str, source_filename: str) -> None:
+    """
+    Copy input file from source directory to results-pipeline.
+    This ensures all contextualizing files are in the same folder.
+    
+    Args:
+        source_dir: Source directory containing the input file
+        source_filename: Name of the input file to copy
+    """
+    source_path = Path(source_dir) / source_filename
+    dest_path = Path('results-pipeline') / source_filename
+    
+    if not source_path.exists():
+        print(f"\n⚠ Warning: Source file not found: {source_path}")
+        return
+    
+    # Create results-pipeline directory if it doesn't exist
+    dest_path.parent.mkdir(parents=True, exist_ok=True)
+    
+    # Copy the file
+    shutil.copy2(source_path, dest_path)
+    print(f"\n✓ Copied {source_path} → {dest_path}")
+    print(f"  File size: {source_path.stat().st_size:,} bytes")
+
+
 if __name__ == '__main__':
+    # Copy predicted data to results-pipeline for processing
+    print("\n" + "="*90)
+    print("PREPARING INPUT DATA")
+    print("="*90)
+    copy_input_to_pipeline('results-future', 'kpi-value-table-predicted.csv')
+    
     # Run for all years and both levels in parallel
+    # Now use results-pipeline as input_dir since we copied the file there
     
     # SEKCJA level (higher aggregation)
     print("\n" + "="*90)
     print("PROCESSING SEKCJA LEVEL")
     print("="*90)
-    run_all_sets(start_year=2013, end_year=2024, typ='SEKCJA')
+    run_all_sets(start_year=2025, end_year=2028, typ='SEKCJA', input_dir='results-pipeline', kpi_filename='kpi-value-table-predicted.csv')
     
     # DZIAŁ level (more detailed)
     print("\n" + "="*90)
     print("PROCESSING DZIAŁ LEVEL")
     print("="*90)
-    run_all_sets(start_year=2013, end_year=2024, typ='DZIAŁ')
+    run_all_sets(start_year=2025, end_year=2028, typ='DZIAŁ', input_dir='results-pipeline', kpi_filename='kpi-value-table-predicted.csv')
     
     print("\n" + "="*90)
     print("PIPELINE COMPLETE!")

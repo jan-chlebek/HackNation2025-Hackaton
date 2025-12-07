@@ -1,0 +1,190 @@
+kpi_id;cat_id;value;direction
+A;Sales Profitability (POS/PNPM);0.0623346565915117;max
+B;Sales Profitability (POS/PNPM);0.0549501395094513;max
+C;Sales Profitability (POS/PNPM);0.0571037234202225;max
+D;Sales Profitability (POS/PNPM);0.0415553575976798;max
+E;Sales Profitability (POS/PNPM);0.0616054214376124;max
+F;Sales Profitability (POS/PNPM);0.075711812585113;max
+G;Sales Profitability (POS/PNPM);0.0377369863922411;max
+H;Sales Profitability (POS/PNPM);0.0350478142086941;max
+I;Sales Profitability (POS/PNPM);0.0809761240427092;max
+J;Sales Profitability (POS/PNPM);0.097297337952613;max
+L;Sales Profitability (POS/PNPM);0.2501826650244599;max
+M;Sales Profitability (POS/PNPM);0.0554066830652991;max
+N;Sales Profitability (POS/PNPM);0.0426752965168339;max
+O;Sales Profitability (POS/PNPM);0.0701538231205644;max
+P;Sales Profitability (POS/PNPM);0.0480463941781456;max
+Q;Sales Profitability (POS/PNPM);-0.3224729099757938;max
+R;Sales Profitability (POS/PNPM);0.0456416391612203;max
+S;Sales Profitability (POS/PNPM);0.0110077636600793;max
+T;Sales Profitability (POS/PNPM);0.0769891799723665;max
+U;Sales Profitability (POS/PNPM);0.0480463941781456;max
+V;Sales Profitability (POS/PNPM);0.0480463941781456;max
+A;Cost Share Ratio (TC/PNPM);1.0075574391122422;max
+B;Cost Share Ratio (TC/PNPM);1.1505135833245688;max
+C;Cost Share Ratio (TC/PNPM);0.9849455304608088;max
+D;Cost Share Ratio (TC/PNPM);1.0306301398713655;max
+E;Cost Share Ratio (TC/PNPM);0.9782390787266432;max
+F;Cost Share Ratio (TC/PNPM);0.960146538841445;max
+G;Cost Share Ratio (TC/PNPM);0.9811870553737028;max
+H;Cost Share Ratio (TC/PNPM);1.0084375052202863;max
+I;Cost Share Ratio (TC/PNPM);0.9515371606880464;max
+J;Cost Share Ratio (TC/PNPM);0.9679857784125492;max
+L;Cost Share Ratio (TC/PNPM);1.0304094841780238;max
+M;Cost Share Ratio (TC/PNPM);1.0393295979142447;max
+N;Cost Share Ratio (TC/PNPM);1.0111473649190676;max
+O;Cost Share Ratio (TC/PNPM);0.9904445407351978;max
+P;Cost Share Ratio (TC/PNPM);0.9605498137728512;max
+Q;Cost Share Ratio (TC/PNPM);1.3747868816953417;max
+R;Cost Share Ratio (TC/PNPM);0.9800036588541324;max
+S;Cost Share Ratio (TC/PNPM);0.9981371165722088;max
+T;Cost Share Ratio (TC/PNPM);1.0266159221227182;max
+U;Cost Share Ratio (TC/PNPM);0.9605498137728512;max
+V;Cost Share Ratio (TC/PNPM);0.9605498137728512;max
+A;Receivables Turnover (PNPM/REC);8.114240870188686;max
+B;Receivables Turnover (PNPM/REC);8.805627831233847;max
+C;Receivables Turnover (PNPM/REC);7.054908664384819;max
+D;Receivables Turnover (PNPM/REC);6.00168911294841;max
+E;Receivables Turnover (PNPM/REC);6.546350950115556;max
+F;Receivables Turnover (PNPM/REC);4.751262429099412;max
+G;Receivables Turnover (PNPM/REC);10.216216429536932;max
+H;Receivables Turnover (PNPM/REC);5.936061130319999;max
+I;Receivables Turnover (PNPM/REC);13.986302110960686;max
+J;Receivables Turnover (PNPM/REC);4.228568240125072;max
+L;Receivables Turnover (PNPM/REC);0.9678214003153632;max
+M;Receivables Turnover (PNPM/REC);8.868339573857652;max
+N;Receivables Turnover (PNPM/REC);1.4943181141999469;max
+O;Receivables Turnover (PNPM/REC);4.093843345815418;max
+P;Receivables Turnover (PNPM/REC);6.550265299599222;max
+Q;Receivables Turnover (PNPM/REC);6.597352081370346;max
+R;Receivables Turnover (PNPM/REC);8.44744600911182;max
+S;Receivables Turnover (PNPM/REC);64.51961245883686;max
+T;Receivables Turnover (PNPM/REC);5.529829426098647;max
+U;Receivables Turnover (PNPM/REC);6.550265299599222;max
+V;Receivables Turnover (PNPM/REC);6.550265299599222;max
+A;Inventory Turnover (TC/INV);6.506801667282017;max
+B;Inventory Turnover (TC/INV);9.217827245751383;max
+C;Inventory Turnover (TC/INV);7.384020728077541;max
+D;Inventory Turnover (TC/INV);25.52917471150348;max
+E;Inventory Turnover (TC/INV);32.93149433381826;max
+F;Inventory Turnover (TC/INV);6.064165361034079;max
+G;Inventory Turnover (TC/INV);8.560910574117276;max
+H;Inventory Turnover (TC/INV);59.75483090567575;max
+I;Inventory Turnover (TC/INV);54.30316368119827;max
+J;Inventory Turnover (TC/INV);31.45238327599039;max
+L;Inventory Turnover (TC/INV);9.94201773506673;max
+M;Inventory Turnover (TC/INV);6.895857531550214;max
+N;Inventory Turnover (TC/INV);22.04948495695996;max
+O;Inventory Turnover (TC/INV);48.770824109374125;max
+P;Inventory Turnover (TC/INV);13.615491357036747;max
+Q;Inventory Turnover (TC/INV);177.14196157735088;max
+R;Inventory Turnover (TC/INV);72.07550188130597;max
+S;Inventory Turnover (TC/INV);370.1154295797949;max
+T;Inventory Turnover (TC/INV);27.24317746511327;max
+U;Inventory Turnover (TC/INV);13.615491357036747;max
+V;Inventory Turnover (TC/INV);13.615491357036747;max
+A;Current Asset Turnover (PNPM/(C+REC+INV));2.246504481482556;max
+B;Current Asset Turnover (PNPM/(C+REC+INV));2.9757539630074663;max
+C;Current Asset Turnover (PNPM/(C+REC+INV));2.995773061017508;max
+D;Current Asset Turnover (PNPM/(C+REC+INV));3.854215787366785;max
+E;Current Asset Turnover (PNPM/(C+REC+INV));3.16812975571523;max
+F;Current Asset Turnover (PNPM/(C+REC+INV));1.890640106772866;max
+G;Current Asset Turnover (PNPM/(C+REC+INV));3.96920894099577;max
+H;Current Asset Turnover (PNPM/(C+REC+INV));3.0099575310562683;max
+I;Current Asset Turnover (PNPM/(C+REC+INV));4.526065632291101;max
+J;Current Asset Turnover (PNPM/(C+REC+INV));2.5570436007944237;max
+L;Current Asset Turnover (PNPM/(C+REC+INV));0.607268584125081;max
+M;Current Asset Turnover (PNPM/(C+REC+INV));1.633088281775276;max
+N;Current Asset Turnover (PNPM/(C+REC+INV));1.008994177155668;max
+O;Current Asset Turnover (PNPM/(C+REC+INV));2.9624903396112683;max
+P;Current Asset Turnover (PNPM/(C+REC+INV));3.324366724517365;max
+Q;Current Asset Turnover (PNPM/(C+REC+INV));2.8152271405112046;max
+R;Current Asset Turnover (PNPM/(C+REC+INV));4.623989821273343;max
+S;Current Asset Turnover (PNPM/(C+REC+INV));21.2458275284333;max
+T;Current Asset Turnover (PNPM/(C+REC+INV));2.9992203661837493;max
+U;Current Asset Turnover (PNPM/(C+REC+INV));3.324366724517365;max
+V;Current Asset Turnover (PNPM/(C+REC+INV));3.324366724517365;max
+A;Investment Ratio (IO/PNPM);0.0355218184326287;max
+B;Investment Ratio (IO/PNPM);0.1308540266322437;max
+C;Investment Ratio (IO/PNPM);0.0406038684038709;max
+D;Investment Ratio (IO/PNPM);0.0532011891741489;max
+E;Investment Ratio (IO/PNPM);0.1205309245639727;max
+F;Investment Ratio (IO/PNPM);0.0333954769197561;max
+G;Investment Ratio (IO/PNPM);0.0140916420836573;max
+H;Investment Ratio (IO/PNPM);0.1091406787559085;max
+I;Investment Ratio (IO/PNPM);0.0578151010771658;max
+J;Investment Ratio (IO/PNPM);0.049156285672819;max
+L;Investment Ratio (IO/PNPM);0.0759208533979486;max
+M;Investment Ratio (IO/PNPM);0.1140616582841924;max
+N;Investment Ratio (IO/PNPM);0.0190029715303823;max
+O;Investment Ratio (IO/PNPM);0.1892623218094302;max
+P;Investment Ratio (IO/PNPM);0.0265982157147906;max
+Q;Investment Ratio (IO/PNPM);0.0260732818309419;max
+R;Investment Ratio (IO/PNPM);0.051984784445726;max
+S;Investment Ratio (IO/PNPM);0.0104518015794772;max
+T;Investment Ratio (IO/PNPM);0.0450123569078751;max
+U;Investment Ratio (IO/PNPM);0.0265982157147906;max
+V;Investment Ratio (IO/PNPM);0.0265982157147906;max
+A;Financial Revenue Share (Przych.fin./GS);0.0155793255394957;max
+B;Financial Revenue Share (Przych.fin./GS);0.0312218833484237;max
+C;Financial Revenue Share (Przych.fin./GS);0.0149788889980691;max
+D;Financial Revenue Share (Przych.fin./GS);0.0338810347270586;max
+E;Financial Revenue Share (Przych.fin./GS);0.0136250034301574;max
+F;Financial Revenue Share (Przych.fin./GS);0.0166387815008497;max
+G;Financial Revenue Share (Przych.fin./GS);0.0075426843307155;max
+H;Financial Revenue Share (Przych.fin./GS);0.0168941620708788;max
+I;Financial Revenue Share (Przych.fin./GS);0.0225445341582463;max
+J;Financial Revenue Share (Przych.fin./GS);0.0266179960364824;max
+L;Financial Revenue Share (Przych.fin./GS);0.1202309117603687;max
+M;Financial Revenue Share (Przych.fin./GS);0.0512975702458766;max
+N;Financial Revenue Share (Przych.fin./GS);0.0557847576977048;max
+O;Financial Revenue Share (Przych.fin./GS);0.0266307678330941;max
+P;Financial Revenue Share (Przych.fin./GS);0.0107676479462116;max
+Q;Financial Revenue Share (Przych.fin./GS);0.0086844421141334;max
+R;Financial Revenue Share (Przych.fin./GS);0.0074577733274918;max
+S;Financial Revenue Share (Przych.fin./GS);0.00398211483427;max
+T;Financial Revenue Share (Przych.fin./GS);0.0118715039576551;max
+U;Financial Revenue Share (Przych.fin./GS);0.0107676479462116;max
+V;Financial Revenue Share (Przych.fin./GS);0.0107676479462116;max
+A;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0916633741604109;max
+B;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+C;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0314046644116076;max
+D;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2240029817368617;max
+E;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0001048767697954;max
+F;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2996090244840406;max
+G;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.1572476724828904;max
+H;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0104098893949252;max
+I;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0108298538622128;max
+J;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.8145611702127659;max
+L;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.097898513582778;max
+M;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2230837789661318;max
+N;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3421558064365015;max
+O;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2009321595028483;max
+P;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-6.666666666666668;max
+Q;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.528553299492386;max
+R;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3634847080630213;max
+S;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3831341301460821;max
+T;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);2.096138691883372;max
+U;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3137931034482757;max
+V;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0310344827586206;max
+A;Average Firm Size (Pracujący/EN);50.00395100750691;max
+B;Average Firm Size (Pracujący/EN);13.915048543689322;max
+C;Average Firm Size (Pracujący/EN);24.28983443119103;max
+D;Average Firm Size (Pracujący/EN);31.85613119642192;max
+E;Average Firm Size (Pracujący/EN);8.058311484006293;max
+F;Average Firm Size (Pracujący/EN);106.80765286501732;max
+G;Average Firm Size (Pracujący/EN);64.07248289043714;max
+H;Average Firm Size (Pracujący/EN);66.91765033925087;max
+I;Average Firm Size (Pracujący/EN);97.89770354906057;max
+J;Average Firm Size (Pracujący/EN);90.42726063829788;max
+L;Average Firm Size (Pracujący/EN);163.01793951819582;max
+M;Average Firm Size (Pracujący/EN);150.0379679144385;max
+N;Average Firm Size (Pracujący/EN);129.02150185037712;max
+O;Average Firm Size (Pracujący/EN);62.582081822889705;max
+P;Average Firm Size (Pracujący/EN);26616.0;max
+Q;Average Firm Size (Pracujący/EN);287.80964467005083;max
+R;Average Firm Size (Pracujący/EN);146.8848934198332;max
+S;Average Firm Size (Pracujący/EN);309.1354581673307;max
+T;Average Firm Size (Pracujący/EN);1462.7848699763592;max
+U;Average Firm Size (Pracujący/EN);31.417241379310347;max
+V;Average Firm Size (Pracujący/EN);5.648275862068966;max

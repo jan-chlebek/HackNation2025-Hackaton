@@ -1,0 +1,295 @@
+kpi_id;cat_id;value;direction
+A;Net Profit Margin (NP/PNPM);0.0888528271232163;max
+B;Net Profit Margin (NP/PNPM);-0.005431089507999;max
+C;Net Profit Margin (NP/PNPM);0.0442520226740886;max
+D;Net Profit Margin (NP/PNPM);0.0155344909731065;max
+E;Net Profit Margin (NP/PNPM);0.0596950750999467;max
+F;Net Profit Margin (NP/PNPM);0.0692436337273011;max
+G;Net Profit Margin (NP/PNPM);0.0298822175218849;max
+H;Net Profit Margin (NP/PNPM);0.0379158638128211;max
+I;Net Profit Margin (NP/PNPM);0.0854016788408969;max
+J;Net Profit Margin (NP/PNPM);0.072543868841936;max
+L;Net Profit Margin (NP/PNPM);0.1372244076796748;max
+M;Net Profit Margin (NP/PNPM);0.0583044316491058;max
+N;Net Profit Margin (NP/PNPM);0.0795330822978049;max
+O;Net Profit Margin (NP/PNPM);0.0670707438629655;max
+P;Net Profit Margin (NP/PNPM);0.0445626867639237;max
+Q;Net Profit Margin (NP/PNPM);0.0987587215674416;max
+R;Net Profit Margin (NP/PNPM);0.0474182227500294;max
+S;Net Profit Margin (NP/PNPM);0.0115622584037114;max
+T;Net Profit Margin (NP/PNPM);0.0709805860332752;max
+U;Net Profit Margin (NP/PNPM);0.0445626867639237;max
+V;Net Profit Margin (NP/PNPM);0.0445626867639237;max
+A;Operating Margin (OP/PNPM);0.0895487255337737;max
+B;Operating Margin (OP/PNPM);0.0046897221974123;max
+C;Operating Margin (OP/PNPM);0.0557028480147206;max
+D;Operating Margin (OP/PNPM);0.0352537448498014;max
+E;Operating Margin (OP/PNPM);0.0765817285903874;max
+F;Operating Margin (OP/PNPM);0.0788189763385561;max
+G;Operating Margin (OP/PNPM);0.0369705405761054;max
+H;Operating Margin (OP/PNPM);0.0523206391289311;max
+I;Operating Margin (OP/PNPM);0.097600894375482;max
+J;Operating Margin (OP/PNPM);0.1036588787178812;max
+L;Operating Margin (OP/PNPM);0.2538713315415497;max
+M;Operating Margin (OP/PNPM);0.0625985753290469;max
+N;Operating Margin (OP/PNPM);0.0587732802828611;max
+O;Operating Margin (OP/PNPM);0.0876143167312646;max
+P;Operating Margin (OP/PNPM);0.058031460571585;max
+Q;Operating Margin (OP/PNPM);0.1247137714576585;max
+R;Operating Margin (OP/PNPM);0.0637492740471154;max
+S;Operating Margin (OP/PNPM);0.0165432923793636;max
+T;Operating Margin (OP/PNPM);0.0878735156244064;max
+U;Operating Margin (OP/PNPM);0.058031460571585;max
+V;Operating Margin (OP/PNPM);0.058031460571585;max
+A;Current Ratio (C+REC+INV)/STL;2.5286704327088425;max
+B;Current Ratio (C+REC+INV)/STL;1.2338550541409026;max
+C;Current Ratio (C+REC+INV)/STL;1.428234955058569;max
+D;Current Ratio (C+REC+INV)/STL;0.9775942794583654;max
+E;Current Ratio (C+REC+INV)/STL;1.5484331717276192;max
+F;Current Ratio (C+REC+INV)/STL;1.6572695179979609;max
+G;Current Ratio (C+REC+INV)/STL;1.3773227145724902;max
+H;Current Ratio (C+REC+INV)/STL;1.4135363843249842;max
+I;Current Ratio (C+REC+INV)/STL;1.1804836518184767;max
+J;Current Ratio (C+REC+INV)/STL;1.521091664547868;max
+L;Current Ratio (C+REC+INV)/STL;0.8860169249263389;max
+M;Current Ratio (C+REC+INV)/STL;1.2564543798424523;max
+N;Current Ratio (C+REC+INV)/STL;1.720117575438058;max
+O;Current Ratio (C+REC+INV)/STL;0.9192211501818894;max
+P;Current Ratio (C+REC+INV)/STL;1.2429462689271031;max
+Q;Current Ratio (C+REC+INV)/STL;1.990954007653173;max
+R;Current Ratio (C+REC+INV)/STL;1.3053607891897812;max
+S;Current Ratio (C+REC+INV)/STL;0.903647843850264;max
+T;Current Ratio (C+REC+INV)/STL;1.7176369286166588;max
+U;Current Ratio (C+REC+INV)/STL;1.2429462689271031;max
+V;Current Ratio (C+REC+INV)/STL;1.2429462689271031;max
+A;Quick Ratio (C+REC)/STL;1.649036925265714;max
+B;Quick Ratio (C+REC)/STL;0.7755819695711472;max
+C;Quick Ratio (C+REC)/STL;0.857508668628696;max
+D;Quick Ratio (C+REC)/STL;0.8254832376031022;max
+E;Quick Ratio (C+REC)/STL;1.4027098719464317;max
+F;Quick Ratio (C+REC)/STL;1.1611703549976262;max
+G;Quick Ratio (C+REC)/STL;0.750749939932258;max
+H;Quick Ratio (C+REC)/STL;1.3417332624192386;max
+I;Quick Ratio (C+REC)/STL;1.0868608905587105;max
+J;Quick Ratio (C+REC)/STL;1.4013875889438292;max
+L;Quick Ratio (C+REC)/STL;0.8302523820888802;max
+M;Quick Ratio (C+REC)/STL;0.9471960529611932;max
+N;Quick Ratio (C+REC)/STL;1.6405267885903867;max
+O;Quick Ratio (C+REC)/STL;0.8639183630139675;max
+P;Quick Ratio (C+REC)/STL;0.9514400294817978;max
+Q;Quick Ratio (C+REC)/STL;1.9474540736288064;max
+R;Quick Ratio (C+REC)/STL;1.2232902182938588;max
+S;Quick Ratio (C+REC)/STL;0.8518721552969911;max
+T;Quick Ratio (C+REC)/STL;1.5235081235296504;max
+U;Quick Ratio (C+REC)/STL;0.9514400294817978;max
+V;Quick Ratio (C+REC)/STL;0.9514400294817978;max
+A;Cash Ratio (C/STL);0.948950552411866;max
+B;Cash Ratio (C/STL);0.358615781866379;max
+C;Cash Ratio (C/STL);0.251027705272226;max
+D;Cash Ratio (C/STL);0.1976834241474401;max
+E;Cash Ratio (C/STL);0.6533401477338631;max
+F;Cash Ratio (C/STL);0.5017034732550006;max
+G;Cash Ratio (C/STL);0.2156319076329473;max
+H;Cash Ratio (C/STL);0.6249811279627535;max
+I;Cash Ratio (C/STL);0.70484808663179;max
+J;Cash Ratio (C/STL);0.4815732484428893;max
+L;Cash Ratio (C/STL);0.2743127806959443;max
+M;Cash Ratio (C/STL);0.715822309633346;max
+N;Cash Ratio (C/STL);0.4790681934308447;max
+O;Cash Ratio (C/STL);0.198728333169824;max
+P;Cash Ratio (C/STL);0.3206244780815985;max
+Q;Cash Ratio (C/STL);1.097872652367059;max
+R;Cash Ratio (C/STL);0.5087576843431008;max
+S;Cash Ratio (C/STL);0.5543076550586794;max
+T;Cash Ratio (C/STL);0.5919112764907583;max
+U;Cash Ratio (C/STL);0.3206244780815985;max
+V;Cash Ratio (C/STL);0.3206244780815985;max
+A;Short Debt Share (STL/(STL+LTL));0.709491685777027;max
+B;Short Debt Share (STL/(STL+LTL));0.6721091039392013;max
+C;Short Debt Share (STL/(STL+LTL));0.7651534322486543;max
+D;Short Debt Share (STL/(STL+LTL));0.5825171380324452;max
+E;Short Debt Share (STL/(STL+LTL));0.4878973104490174;max
+F;Short Debt Share (STL/(STL+LTL));0.8245622505632768;max
+G;Short Debt Share (STL/(STL+LTL));0.83853853776928;max
+H;Short Debt Share (STL/(STL+LTL));0.4819947115646267;max
+I;Short Debt Share (STL/(STL+LTL));0.4167317248342527;max
+J;Short Debt Share (STL/(STL+LTL));0.4457763919926178;max
+L;Short Debt Share (STL/(STL+LTL));0.5815640830485286;max
+M;Short Debt Share (STL/(STL+LTL));0.4688351783268519;max
+N;Short Debt Share (STL/(STL+LTL));0.5833025601139558;max
+O;Short Debt Share (STL/(STL+LTL));0.5215202998830362;max
+P;Short Debt Share (STL/(STL+LTL));0.8116340923762363;max
+Q;Short Debt Share (STL/(STL+LTL));0.6627134651110369;max
+R;Short Debt Share (STL/(STL+LTL));0.5632407139084602;max
+S;Short Debt Share (STL/(STL+LTL));0.4791945015838083;max
+T;Short Debt Share (STL/(STL+LTL));0.7469168671277271;max
+U;Short Debt Share (STL/(STL+LTL));0.8116340923762363;max
+V;Short Debt Share (STL/(STL+LTL));0.8116340923762363;max
+A;Long-term Debt Share (LTL/(STL+LTL));0.2905083142229729;max
+B;Long-term Debt Share (LTL/(STL+LTL));0.3278908960607988;max
+C;Long-term Debt Share (LTL/(STL+LTL));0.2348465677513457;max
+D;Long-term Debt Share (LTL/(STL+LTL));0.4174828619675548;max
+E;Long-term Debt Share (LTL/(STL+LTL));0.5121026895509825;max
+F;Long-term Debt Share (LTL/(STL+LTL));0.1754377494367231;max
+G;Long-term Debt Share (LTL/(STL+LTL));0.16146146223072;max
+H;Long-term Debt Share (LTL/(STL+LTL));0.5180052884353733;max
+I;Long-term Debt Share (LTL/(STL+LTL));0.5832682751657474;max
+J;Long-term Debt Share (LTL/(STL+LTL));0.5542236080073821;max
+L;Long-term Debt Share (LTL/(STL+LTL));0.4184359169514714;max
+M;Long-term Debt Share (LTL/(STL+LTL));0.5311648216731479;max
+N;Long-term Debt Share (LTL/(STL+LTL));0.4166974398860442;max
+O;Long-term Debt Share (LTL/(STL+LTL));0.4784797001169639;max
+P;Long-term Debt Share (LTL/(STL+LTL));0.1883659076237636;max
+Q;Long-term Debt Share (LTL/(STL+LTL));0.3372865348889631;max
+R;Long-term Debt Share (LTL/(STL+LTL));0.4367592860915398;max
+S;Long-term Debt Share (LTL/(STL+LTL));0.5208054984161916;max
+T;Long-term Debt Share (LTL/(STL+LTL));0.2530831328722729;max
+U;Long-term Debt Share (LTL/(STL+LTL));0.1883659076237636;max
+V;Long-term Debt Share (LTL/(STL+LTL));0.1883659076237636;max
+A;Interest Coverage (OP/IP);14.07839298300572;max
+B;Interest Coverage (OP/IP);0.4341289286533604;max
+C;Interest Coverage (OP/IP);6.864251398163509;max
+D;Interest Coverage (OP/IP);2.0433163639597183;max
+E;Interest Coverage (OP/IP);5.773483460364431;max
+F;Interest Coverage (OP/IP);9.5419600329868;max
+G;Interest Coverage (OP/IP);6.844529469770505;max
+H;Interest Coverage (OP/IP);3.65068376853582;max
+I;Interest Coverage (OP/IP);5.663154091648099;max
+J;Interest Coverage (OP/IP);4.031100986236945;max
+L;Interest Coverage (OP/IP);1.749436660908495;max
+M;Interest Coverage (OP/IP);2.280152617354742;max
+N;Interest Coverage (OP/IP);4.180486610286479;max
+O;Interest Coverage (OP/IP);2.7523888602949187;max
+P;Interest Coverage (OP/IP);7.754775280898876;max
+Q;Interest Coverage (OP/IP);13.337249636343293;max
+R;Interest Coverage (OP/IP);6.0597661392323365;max
+S;Interest Coverage (OP/IP);3.745837972773967;max
+T;Interest Coverage (OP/IP);9.31614981876762;max
+U;Interest Coverage (OP/IP);7.754775280898876;max
+V;Interest Coverage (OP/IP);7.754775280898876;max
+A;Financial Risk Ratio (OFE/OP);0.0192903549081268;max
+B;Financial Risk Ratio (OFE/OP);1.3668588773430976;max
+C;Financial Risk Ratio (OFE/OP);0.1035292365790234;max
+D;Financial Risk Ratio (OFE/OP);0.5710461313814158;max
+E;Financial Risk Ratio (OFE/OP);0.0281555383592972;max
+F;Financial Risk Ratio (OFE/OP);0.0550057289786775;max
+G;Financial Risk Ratio (OFE/OP);0.085442667301717;max
+H;Financial Risk Ratio (OFE/OP);0.1351140571020797;max
+I;Financial Risk Ratio (OFE/OP);0.0369134523183519;max
+J;Financial Risk Ratio (OFE/OP);0.0791393295024984;max
+L;Financial Risk Ratio (OFE/OP);0.2399661295549341;max
+M;Financial Risk Ratio (OFE/OP);0.1801924610988256;max
+N;Financial Risk Ratio (OFE/OP);0.1183337290757701;max
+O;Financial Risk Ratio (OFE/OP);0.075159972904218;max
+P;Financial Risk Ratio (OFE/OP);0.0600934545586264;max
+Q;Financial Risk Ratio (OFE/OP);0.0325684802214858;max
+R;Financial Risk Ratio (OFE/OP);0.0296121934866634;max
+S;Financial Risk Ratio (OFE/OP);0.0563859892628936;max
+T;Financial Risk Ratio (OFE/OP);0.0400527407919764;max
+U;Financial Risk Ratio (OFE/OP);0.0600934545586264;max
+V;Financial Risk Ratio (OFE/OP);0.0600934545586264;max
+A;Cash Flow Margin (CF/PNPM);0.134199799212176;max
+B;Cash Flow Margin (CF/PNPM);0.0974994961759432;max
+C;Cash Flow Margin (CF/PNPM);0.0879520855684138;max
+D;Cash Flow Margin (CF/PNPM);0.1005785345076677;max
+E;Cash Flow Margin (CF/PNPM);0.1637948301685756;max
+F;Cash Flow Margin (CF/PNPM);0.0967406695484168;max
+G;Cash Flow Margin (CF/PNPM);0.0492498170381636;max
+H;Cash Flow Margin (CF/PNPM);0.1178402783563401;max
+I;Cash Flow Margin (CF/PNPM);0.1464136062059092;max
+J;Cash Flow Margin (CF/PNPM);0.1794131660788512;max
+L;Cash Flow Margin (CF/PNPM);0.3737307953041008;max
+M;Cash Flow Margin (CF/PNPM);0.137747910772665;max
+N;Cash Flow Margin (CF/PNPM);0.1260988368985053;max
+O;Cash Flow Margin (CF/PNPM);0.1563201427573276;max
+P;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+Q;Cash Flow Margin (CF/PNPM);0.1403392210398447;max
+R;Cash Flow Margin (CF/PNPM);0.1004536311113067;max
+S;Cash Flow Margin (CF/PNPM);0.0291382387478999;max
+T;Cash Flow Margin (CF/PNPM);0.1208163156769382;max
+U;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+V;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+A;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.5110842149529837;max
+B;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2231030385865084;max
+C;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2799822229892814;max
+D;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.1819811566333496;max
+E;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3955433584457877;max
+F;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2421358342349958;max
+G;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2190226109038547;max
+H;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2273118341654284;max
+I;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3067676844169295;max
+J;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3062143862971951;max
+L;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0889733815372902;max
+M;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0993832615701797;max
+N;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0853686710239916;max
+O;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.1966211073087309;max
+P;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+Q;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.5678813223371758;max
+R;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3548506545354875;max
+S;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.264682059877513;max
+T;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.4800395075339949;max
+U;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+V;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+A;Bankruptcy Rate (Upadłość/EN);0.0014487027525352;max
+B;Bankruptcy Rate (Upadłość/EN);0.0066747572815533;max
+C;Bankruptcy Rate (Upadłość/EN);0.000130556050086;max
+D;Bankruptcy Rate (Upadłość/EN);0.0040998881848676;max
+E;Bankruptcy Rate (Upadłość/EN);0.0011536444677503;max
+F;Bankruptcy Rate (Upadłość/EN);0.0003525189078323;max
+G;Bankruptcy Rate (Upadłość/EN);0.0001356433812195;max
+H;Bankruptcy Rate (Upadłość/EN);0.0005111999256436;max
+I;Bankruptcy Rate (Upadłość/EN);0.0014352818371607;max
+J;Bankruptcy Rate (Upadłość/EN);0.0007313829787234;max
+L;Bankruptcy Rate (Upadłość/EN);0.0028190671450538;max
+M;Bankruptcy Rate (Upadłość/EN);0.0009803921568627;max
+N;Bankruptcy Rate (Upadłość/EN);0.0005152948892115;max
+O;Bankruptcy Rate (Upadłość/EN);0.0008137900421691;max
+P;Bankruptcy Rate (Upadłość/EN);1.8333333333333333;max
+Q;Bankruptcy Rate (Upadłość/EN);0.003489847715736;max
+R;Bankruptcy Rate (Upadłość/EN);0.0010194624652455;max
+S;Bankruptcy Rate (Upadłość/EN);0.0073041168658698;max
+T;Bankruptcy Rate (Upadłość/EN);0.0086682427107959;max
+U;Bankruptcy Rate (Upadłość/EN);0.0379310344827586;max
+V;Bankruptcy Rate (Upadłość/EN);0.0379310344827586;max
+A;Closure Rate (Zamknięte/EN);0.2242855261424996;max
+B;Closure Rate (Zamknięte/EN);0.0618932038834951;max
+C;Closure Rate (Zamknięte/EN);0.1937926532549996;max
+D;Closure Rate (Zamknięte/EN);0.1039880730525531;max
+E;Closure Rate (Zamknięte/EN);0.042999475616151;max
+F;Closure Rate (Zamknięte/EN);0.9663825150621717;max
+G;Closure Rate (Zamknięte/EN);0.5547197731056169;max
+H;Closure Rate (Zamknięte/EN);0.552978901384887;max
+I;Closure Rate (Zamknięte/EN);0.7698329853862212;max
+J;Closure Rate (Zamknięte/EN);0.4314494680851064;max
+L;Closure Rate (Zamknięte/EN);1.182214249103024;max
+M;Closure Rate (Zamknięte/EN);0.3490196078431372;max
+N;Closure Rate (Zamknięte/EN);0.8139785449946129;max
+O;Closure Rate (Zamknięte/EN);0.6482207590441667;max
+P;Closure Rate (Zamknięte/EN);20.0;max
+Q;Closure Rate (Zamknięte/EN);1.4321065989847717;max
+R;Closure Rate (Zamknięte/EN);0.6637627432808155;max
+S;Closure Rate (Zamknięte/EN);1.5776892430278884;max
+T;Closure Rate (Zamknięte/EN);7.281323877068558;max
+U;Closure Rate (Zamknięte/EN);2.7206896551724142;max
+V;Closure Rate (Zamknięte/EN);0.0103448275862068;max
+A;Profit Firms Share (PEN/EN);0.8651389437639931;max
+B;Profit Firms Share (PEN/EN);0.8173543689320389;max
+C;Profit Firms Share (PEN/EN);0.7906474393211085;max
+D;Profit Firms Share (PEN/EN);0.7517704062616474;max
+E;Profit Firms Share (PEN/EN);0.6764551651809125;max
+F;Profit Firms Share (PEN/EN);0.8549865401871556;max
+G;Profit Firms Share (PEN/EN);0.840199765706887;max
+H;Profit Firms Share (PEN/EN);0.7753508690398736;max
+I;Profit Firms Share (PEN/EN);0.7481732776617954;max
+J;Profit Firms Share (PEN/EN);0.7917553191489362;max
+L;Profit Firms Share (PEN/EN);0.7936955407483343;max
+M;Profit Firms Share (PEN/EN);0.8684491978609625;max
+N;Profit Firms Share (PEN/EN);0.8007214128448962;max
+O;Profit Firms Share (PEN/EN);0.816897240511948;max
+P;Profit Firms Share (PEN/EN);46.33333333333333;max
+Q;Profit Firms Share (PEN/EN);0.7668147208121828;max
+R;Profit Firms Share (PEN/EN);0.8238183503243744;max
+S;Profit Firms Share (PEN/EN);0.5232403718459495;max
+T;Profit Firms Share (PEN/EN);0.7446808510638298;max
+U;Profit Firms Share (PEN/EN);0.9586206896551724;max
+V;Profit Firms Share (PEN/EN);0.9586206896551724;max
