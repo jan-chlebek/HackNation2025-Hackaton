@@ -141,7 +141,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
     # Read CSV files from results-pipeline
-    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table-predicted.csv'), sep=';')
+    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
@@ -232,6 +232,48 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     
     if removed_inf > 0:
         print(f"  Removed {removed_inf} rows with infinite values")
+    
+    # Fill missing combinations with mean values per indicator
+    # Create complete matrix of all sectors × all indicators
+    all_sectors = analysis_df['kpi_id'].unique()
+    all_indicators = analysis_df['cat_id'].unique()
+    
+    # Check if any sectors are missing indicators
+    pivot_check = analysis_df.pivot_table(
+        index='kpi_id',
+        columns='cat_id',
+        values='value',
+        aggfunc='first'
+    )
+    
+    missing_count = pivot_check.isnull().sum().sum()
+    if missing_count > 0:
+        print(f"  ⚠ Found {missing_count} missing sector-indicator combinations")
+        print(f"  → Filling with indicator mean values...")
+        
+        # Fill missing values with mean for each indicator
+        for indicator in all_indicators:
+            indicator_mean = analysis_df[analysis_df['cat_id'] == indicator]['value'].mean()
+            indicator_direction = analysis_df[analysis_df['cat_id'] == indicator]['direction'].iloc[0]
+            
+            for sector in all_sectors:
+                # Check if this combination exists
+                exists = analysis_df[
+                    (analysis_df['kpi_id'] == sector) & 
+                    (analysis_df['cat_id'] == indicator)
+                ]
+                
+                if len(exists) == 0:
+                    # Add missing combination with mean value
+                    new_row = pd.DataFrame({
+                        'kpi_id': [sector],
+                        'cat_id': [indicator],
+                        'value': [indicator_mean],
+                        'direction': [indicator_direction]
+                    })
+                    analysis_df = pd.concat([analysis_df, new_row], ignore_index=True)
+        
+        print(f"  ✓ Filled {missing_count} missing values with indicator means")
     
     print(f"\nFinal analysis dataset: {len(analysis_df)} rows")
     print(f"Alternatives (sectors): {analysis_df['kpi_id'].nunique()}")
@@ -480,7 +522,7 @@ def run_sector_analysis(year: int = 2024,
 
 if __name__ == '__main__':
 
-    for x in range(2025, 2029):
+    for x in range(2021, 2023):
         results = run_sector_analysis(
             year=x,
             typ='SEKCJA',

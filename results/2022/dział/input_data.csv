@@ -2086,3 +2086,4 @@ kpi_id;cat_id;value;direction
 99;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-11.063462081524488;max
 99;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-13.637939945221705;max
 99;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);-1.6912619015167802;min
+90;Cash flow margin (CF/PNPM) (Δ% 2yr);41.427641762484484;max
