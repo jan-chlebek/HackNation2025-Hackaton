@@ -4,13 +4,13 @@ Evaluate prediction accuracy by comparing predicted values with actual values.
 This script compares predictions in results-future/ with actual values in results-pipeline/
 for overlapping years, using normalized metrics for better comparison.
 
-Run from project root: python src/evaluate_predictions.py
+Run from project root: python src/checking_predictions.py
 """
 
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from sklearn.metrics import r2_score, mean_squared_log_error
+from sklearn.metrics import r2_score
 
 
 def load_data():
@@ -28,40 +28,47 @@ def load_data():
     return actual, predicted
 
 
-def clean_comparison_data(comparison: pd.DataFrame) -> pd.DataFrame:
-    """Remove invalid values from comparison data."""
-    initial_len = len(comparison)
+def clean_comparison_data(actual_values, predicted_values):
+    """Remove invalid data points (NaN, Inf) from comparison."""
+    # Convert to numpy arrays if they aren't already
+    actual_values = np.array(actual_values)
+    predicted_values = np.array(predicted_values)
     
-    # Remove rows with NaN or infinite values in either actual or predicted
-    comparison = comparison[
-        np.isfinite(comparison['wartosc_actual']) & 
-        np.isfinite(comparison['wartosc_predicted'])
-    ]
+    # Create mask for valid data
+    valid_mask = (
+        np.isfinite(actual_values) & 
+        np.isfinite(predicted_values) &
+        (actual_values != 0) &  # Avoid division by zero
+        (predicted_values != 0)
+    )
     
-    removed = initial_len - len(comparison)
+    actual_clean = actual_values[valid_mask]
+    predicted_clean = predicted_values[valid_mask]
+    
+    removed = len(actual_values) - len(actual_clean)
     if removed > 0:
-        print(f"  Removed {removed} records with NaN or infinite values")
+        print(f"  ⚠ Removed {removed} invalid data points for metric calculation")
     
-    return comparison
+    return actual_clean, predicted_clean
 
 
 def calculate_metrics(actual_values, predicted_values):
-    """Calculate various accuracy metrics with safety checks."""
-    # Ensure no infinite values
-    mask = np.isfinite(actual_values) & np.isfinite(predicted_values)
-    actual_values = actual_values[mask]
-    predicted_values = predicted_values[mask]
+    """Calculate various accuracy metrics with robust error handling."""
+    # Clean data first
+    actual_clean, predicted_clean = clean_comparison_data(actual_values, predicted_values)
     
-    if len(actual_values) == 0:
-        return {key: np.nan for key in [
-            'MAE', 'RMSE', 'NRMSE (range)', 'NRMSE (mean)', 
-            'MAPE (%)', 'sMAPE (%)', 'R²', 'MASE', 'MedAE', 'MSLE', 'RMSLE'
-        ]}
+    if len(actual_clean) == 0:
+        print("  ⚠ No valid data points for metric calculation!")
+        return {
+            'MAE': np.nan, 'RMSE': np.nan, 'NRMSE (range)': np.nan,
+            'NRMSE (mean)': np.nan, 'MAPE (%)': np.nan, 'sMAPE (%)': np.nan,
+            'R²': np.nan, 'MASE': np.nan, 'MedAE': np.nan
+        }
     
     metrics = {}
     
     # Basic error metrics
-    error = predicted_values - actual_values
+    error = predicted_clean - actual_clean
     abs_error = np.abs(error)
     
     # Mean Absolute Error
@@ -71,73 +78,48 @@ def calculate_metrics(actual_values, predicted_values):
     metrics['RMSE'] = np.sqrt(np.mean(error ** 2))
     
     # Normalized RMSE (by range of actual values)
-    value_range = np.max(actual_values) - np.min(actual_values)
-    if value_range > 0 and np.isfinite(value_range):
+    value_range = actual_clean.max() - actual_clean.min()
+    if value_range > 0:
         metrics['NRMSE (range)'] = metrics['RMSE'] / value_range
     else:
         metrics['NRMSE (range)'] = np.nan
     
     # Normalized RMSE (by mean of actual values)
-    mean_val = np.mean(np.abs(actual_values))
-    if mean_val > 0 and np.isfinite(mean_val):
-        metrics['NRMSE (mean)'] = metrics['RMSE'] / mean_val
+    mean_actual = np.abs(np.mean(actual_clean))
+    if mean_actual > 0:
+        metrics['NRMSE (mean)'] = metrics['RMSE'] / mean_actual
     else:
         metrics['NRMSE (mean)'] = np.nan
     
-    # Mean Absolute Percentage Error (handle division by zero)
-    with np.errstate(divide='ignore', invalid='ignore'):
-        pct_error = (error / actual_values) * 100
-        pct_error = pct_error[np.isfinite(pct_error)]
-        if len(pct_error) > 0:
-            metrics['MAPE (%)'] = np.mean(np.abs(pct_error))
-        else:
-            metrics['MAPE (%)'] = np.nan
+    # Mean Absolute Percentage Error
+    pct_error = (error / actual_clean) * 100
+    metrics['MAPE (%)'] = np.mean(np.abs(pct_error))
     
     # Symmetric MAPE (handles zero values better)
-    denominator = np.abs(actual_values) + np.abs(predicted_values)
-    with np.errstate(divide='ignore', invalid='ignore'):
-        smape = 200 * abs_error / denominator
-        smape = smape[np.isfinite(smape)]
-        if len(smape) > 0:
-            metrics['sMAPE (%)'] = np.mean(smape)
-        else:
-            metrics['sMAPE (%)'] = np.nan
+    smape = 200 * abs_error / (np.abs(actual_clean) + np.abs(predicted_clean))
+    metrics['sMAPE (%)'] = np.mean(smape)
     
     # R-squared (coefficient of determination)
     try:
-        metrics['R²'] = r2_score(actual_values, predicted_values)
-        if not np.isfinite(metrics['R²']):
+        if len(actual_clean) > 1 and np.var(actual_clean) > 0:
+            metrics['R²'] = r2_score(actual_clean, predicted_clean)
+        else:
             metrics['R²'] = np.nan
     except:
         metrics['R²'] = np.nan
     
     # Mean Absolute Scaled Error (MASE) - scaled by naive forecast
-    try:
-        naive_error = np.mean(np.abs(np.diff(actual_values)))
-        if naive_error > 0 and np.isfinite(naive_error):
+    if len(actual_clean) > 1:
+        naive_error = np.mean(np.abs(np.diff(actual_clean)))
+        if naive_error > 0:
             metrics['MASE'] = metrics['MAE'] / naive_error
         else:
             metrics['MASE'] = np.nan
-    except:
+    else:
         metrics['MASE'] = np.nan
     
     # Median Absolute Error (more robust to outliers)
     metrics['MedAE'] = np.median(abs_error)
-    
-    # Mean Squared Logarithmic Error (for positive values only)
-    if (actual_values > 0).all() and (predicted_values > 0).all():
-        try:
-            metrics['MSLE'] = mean_squared_log_error(actual_values, predicted_values)
-            metrics['RMSLE'] = np.sqrt(metrics['MSLE'])
-            if not np.isfinite(metrics['MSLE']):
-                metrics['MSLE'] = np.nan
-                metrics['RMSLE'] = np.nan
-        except:
-            metrics['MSLE'] = np.nan
-            metrics['RMSLE'] = np.nan
-    else:
-        metrics['MSLE'] = np.nan
-        metrics['RMSLE'] = np.nan
     
     return metrics
 
@@ -154,7 +136,7 @@ def evaluate_accuracy(actual: pd.DataFrame, predicted: pd.DataFrame):
         print("\n⚠ No overlapping years found between actual and predicted data!")
         print(f"  Actual years: {sorted(actual_years)}")
         print(f"  Predicted years: {sorted(predicted_years)}")
-        return None
+        return None, None
     
     print(f"\nOverlapping years for comparison: {overlap_years}")
     
@@ -169,29 +151,29 @@ def evaluate_accuracy(actual: pd.DataFrame, predicted: pd.DataFrame):
     
     if len(comparison) == 0:
         print("⚠ No matching records found!")
-        return None
+        return None, None
     
-    # Clean data - remove infinite and NaN values
-    comparison = clean_comparison_data(comparison)
-    
-    if len(comparison) == 0:
-        print("⚠ No valid records after cleaning!")
-        return None
-    
-    print(f"Valid records for analysis: {len(comparison)}")
+    # Check for data quality issues
+    print(f"\nData quality check:")
+    print(f"  Records with NaN actual: {comparison['wartosc_actual'].isna().sum()}")
+    print(f"  Records with NaN predicted: {comparison['wartosc_predicted'].isna().sum()}")
+    print(f"  Records with Inf actual: {np.isinf(comparison['wartosc_actual']).sum()}")
+    print(f"  Records with Inf predicted: {np.isinf(comparison['wartosc_predicted']).sum()}")
+    print(f"  Records with zero actual: {(comparison['wartosc_actual'] == 0).sum()}")
+    print(f"  Records with zero predicted: {(comparison['wartosc_predicted'] == 0).sum()}")
     
     # Calculate error columns
     comparison['error'] = comparison['wartosc_predicted'] - comparison['wartosc_actual']
     comparison['abs_error'] = np.abs(comparison['error'])
     
-    # Percentage error (with safety)
     with np.errstate(divide='ignore', invalid='ignore'):
         comparison['pct_error'] = (comparison['error'] / comparison['wartosc_actual']) * 100
         comparison['abs_pct_error'] = np.abs(comparison['pct_error'])
         
         # Symmetric absolute percentage error
-        denominator = np.abs(comparison['wartosc_actual']) + np.abs(comparison['wartosc_predicted'])
-        comparison['smape'] = 200 * comparison['abs_error'] / denominator
+        comparison['smape'] = 200 * comparison['abs_error'] / (
+            np.abs(comparison['wartosc_actual']) + np.abs(comparison['wartosc_predicted'])
+        )
     
     # Replace infinite values with NaN
     comparison['pct_error'] = comparison['pct_error'].replace([np.inf, -np.inf], np.nan)
@@ -214,115 +196,69 @@ def evaluate_accuracy(actual: pd.DataFrame, predicted: pd.DataFrame):
     print(f"  Root Mean Squared Error (RMSE):         {overall_metrics['RMSE']:.4f}")
     
     print("\nNormalized Error Metrics:")
-    if np.isfinite(overall_metrics['NRMSE (range)']):
+    if not np.isnan(overall_metrics['NRMSE (range)']):
         print(f"  Normalized RMSE (by range):             {overall_metrics['NRMSE (range)']:.4f}")
     else:
-        print(f"  Normalized RMSE (by range):             N/A")
+        print(f"  Normalized RMSE (by range):             N/A (zero range)")
     
-    if np.isfinite(overall_metrics['NRMSE (mean)']):
+    if not np.isnan(overall_metrics['NRMSE (mean)']):
         print(f"  Normalized RMSE (by mean):              {overall_metrics['NRMSE (mean)']:.4f}")
     else:
-        print(f"  Normalized RMSE (by mean):              N/A")
+        print(f"  Normalized RMSE (by mean):              N/A (zero mean)")
     
     print("\nPercentage Error Metrics:")
-    if np.isfinite(overall_metrics['MAPE (%)']):
-        print(f"  Mean Absolute % Error (MAPE):           {overall_metrics['MAPE (%)']:.2f}%")
-    else:
-        print(f"  Mean Absolute % Error (MAPE):           N/A")
-    
-    if np.isfinite(overall_metrics['sMAPE (%)']):
-        print(f"  Symmetric MAPE (sMAPE):                 {overall_metrics['sMAPE (%)']:.2f}%")
-    else:
-        print(f"  Symmetric MAPE (sMAPE):                 N/A")
+    print(f"  Mean Absolute % Error (MAPE):           {overall_metrics['MAPE (%)']:.2f}%")
+    print(f"  Symmetric MAPE (sMAPE):                 {overall_metrics['sMAPE (%)']:.2f}%")
     
     print("\nGoodness-of-Fit Metrics:")
-    if np.isfinite(overall_metrics['R²']):
+    if not np.isnan(overall_metrics['R²']):
         print(f"  R-squared (R²):                         {overall_metrics['R²']:.4f}")
     else:
-        print(f"  R-squared (R²):                         N/A")
+        print(f"  R-squared (R²):                         N/A (insufficient variance)")
     
-    if np.isfinite(overall_metrics['MASE']):
+    if not np.isnan(overall_metrics['MASE']):
         print(f"  Mean Absolute Scaled Error (MASE):      {overall_metrics['MASE']:.4f}")
     else:
         print(f"  Mean Absolute Scaled Error (MASE):      N/A")
     
-    if not np.isnan(overall_metrics['RMSLE']) and np.isfinite(overall_metrics['RMSLE']):
-        print("\nLogarithmic Metrics (for positive values):")
-        print(f"  Root Mean Squared Log Error (RMSLE):    {overall_metrics['RMSLE']:.4f}")
-    
-    # Interpretation guide (only if we have valid metrics)
-    if np.isfinite(overall_metrics['R²']) or np.isfinite(overall_metrics['sMAPE (%)']):
-        print("\n" + "="*80)
-        print("INTERPRETATION GUIDE")
-        print("="*80)
-        
-        if np.isfinite(overall_metrics['R²']):
-            print("R² (closer to 1.0 is better):")
-            if overall_metrics['R²'] >= 0.9:
-                print("  ✓ Excellent fit (≥0.9)")
-            elif overall_metrics['R²'] >= 0.7:
-                print("  ✓ Good fit (0.7-0.9)")
-            elif overall_metrics['R²'] >= 0.5:
-                print("  ~ Moderate fit (0.5-0.7)")
-            else:
-                print("  ✗ Poor fit (<0.5)")
-        
-        if np.isfinite(overall_metrics['sMAPE (%)']):
-            print("\nsMAPE (closer to 0% is better):")
-            if overall_metrics['sMAPE (%)'] <= 10:
-                print("  ✓ Excellent accuracy (≤10%)")
-            elif overall_metrics['sMAPE (%)'] <= 20:
-                print("  ✓ Good accuracy (10-20%)")
-            elif overall_metrics['sMAPE (%)'] <= 30:
-                print("  ~ Moderate accuracy (20-30%)")
-            else:
-                print("  ✗ Poor accuracy (>30%)")
-    
-    # Metrics by year
+    # Interpretation guide
     print("\n" + "="*80)
-    print("ACCURACY BY YEAR")
+    print("INTERPRETATION GUIDE")
     print("="*80)
     
-    year_metrics = []
-    for year in overlap_years:
-        year_data = comparison[comparison['rok'] == year]
-        if len(year_data) > 0:
-            year_m = calculate_metrics(
-                year_data['wartosc_actual'].values,
-                year_data['wartosc_predicted'].values
-            )
-            year_metrics.append({
-                'Year': year,
-                'Records': len(year_data),
-                'MAE': year_m['MAE'] if np.isfinite(year_m['MAE']) else np.nan,
-                'RMSE': year_m['RMSE'] if np.isfinite(year_m['RMSE']) else np.nan,
-                'sMAPE (%)': year_m['sMAPE (%)'] if np.isfinite(year_m['sMAPE (%)']) else np.nan,
-                'R²': year_m['R²'] if np.isfinite(year_m['R²']) else np.nan
-            })
+    if not np.isnan(overall_metrics['R²']):
+        print("R² (closer to 1.0 is better):")
+        if overall_metrics['R²'] >= 0.9:
+            print("  ✓ Excellent fit (≥0.9)")
+        elif overall_metrics['R²'] >= 0.7:
+            print("  ✓ Good fit (0.7-0.9)")
+        elif overall_metrics['R²'] >= 0.5:
+            print("  ~ Moderate fit (0.5-0.7)")
+        else:
+            print("  ✗ Poor fit (<0.5)")
     
-    if year_metrics:
-        year_df = pd.DataFrame(year_metrics)
-        print(year_df.to_string(index=False))
+    print("\nsMAPE (closer to 0% is better):")
+    if overall_metrics['sMAPE (%)'] <= 10:
+        print("  ✓ Excellent accuracy (≤10%)")
+    elif overall_metrics['sMAPE (%)'] <= 20:
+        print("  ✓ Good accuracy (10-20%)")
+    elif overall_metrics['sMAPE (%)'] <= 30:
+        print("  ~ Moderate accuracy (20-30%)")
+    else:
+        print("  ✗ Poor accuracy (>30%)")
     
-    # Top 10 worst and best predictions (using sMAPE where available)
-    valid_smape = comparison.dropna(subset=['smape'])
-    
-    if len(valid_smape) > 0:
-        print("\n" + "="*80)
-        print("TOP 10 WORST PREDICTIONS (by sMAPE)")
-        print("="*80)
-        worst = valid_smape.nlargest(10, 'smape')[
-            ['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX', 'wartosc_actual', 'wartosc_predicted', 'smape']
-        ]
-        print(worst.to_string(index=False))
-        
-        print("\n" + "="*80)
-        print("TOP 10 BEST PREDICTIONS (by sMAPE)")
-        print("="*80)
-        best = valid_smape.nsmallest(10, 'smape')[
-            ['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX', 'wartosc_actual', 'wartosc_predicted', 'smape']
-        ]
-        print(best.to_string(index=False))
+    # Diagnostic info
+    print("\n" + "="*80)
+    print("DIAGNOSTIC INFORMATION")
+    print("="*80)
+    print(f"Valid comparison points: {len(comparison)}")
+    actual_clean, predicted_clean = clean_comparison_data(
+        comparison['wartosc_actual'].values,
+        comparison['wartosc_predicted'].values
+    )
+    print(f"Valid points for metrics: {len(actual_clean)}")
+    print(f"Data range (actual): [{comparison['wartosc_actual'].min():.2f}, {comparison['wartosc_actual'].max():.2f}]")
+    print(f"Data range (predicted): [{comparison['wartosc_predicted'].min():.2f}, {comparison['wartosc_predicted'].max():.2f}]")
     
     # Save detailed comparison
     output_dir = Path('results-future')
@@ -348,18 +284,13 @@ if __name__ == '__main__':
             print("\n" + "="*80)
             print("EVALUATION COMPLETE")
             print("="*80)
-            valid_r2 = np.isfinite(metrics['R²'])
-            valid_smape = np.isfinite(metrics['sMAPE (%)'])
-            
-            if valid_r2 or valid_smape:
-                print("\nKey Takeaway:")
-                if valid_r2:
-                    print(f"  Overall prediction accuracy (R²): {metrics['R²']:.4f}")
-                if valid_smape:
-                    print(f"  Average error (sMAPE): {metrics['sMAPE (%)']:.2f}%")
+            print("\nKey Takeaway:")
+            if not np.isnan(metrics['R²']):
+                print(f"  Overall prediction accuracy (R²): {metrics['R²']:.4f}")
             else:
-                print("\n⚠ Unable to calculate reliable accuracy metrics")
-                print("  This may be due to data quality issues or extreme values")
+                print(f"  Overall prediction accuracy (R²): N/A")
+            print(f"  Average error (sMAPE): {metrics['sMAPE (%)']:.2f}%")
+            print(f"  Mean Absolute Error: {metrics['MAE']:.4f}")
         else:
             print("\n⚠ Evaluation could not be completed")
             
