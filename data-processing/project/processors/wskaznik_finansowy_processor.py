@@ -58,6 +58,9 @@ class WskaznikFinansowyProcessor(DataProcessor):
         # Clean values
         df_transposed['wartosc'] = df_transposed['wartosc'].replace('bd', pd.NA)
         
+        # Strip whitespace from WSKAZNIK names
+        df_transposed['WSKAZNIK'] = df_transposed['WSKAZNIK'].str.strip()
+        
         # Rename to standard schema
         result = df_transposed.rename(columns={'symbol_2025': 'pkd_2025'})
         

@@ -41,7 +41,14 @@ class DataProcessor:
             Decimal or None
         """
         if isinstance(val, str):
-            val_clean = val.replace('\xa0', '').replace(' ', '').replace(',', '.')
+            # Remove common whitespace, separators, and footnote markers
+            val_clean = (val.replace('\xa0', '')
+                           .replace(' ', '')
+                           .replace(',', '.')
+                           .replace('*', '')  # Remove asterisks (footnote markers)
+                           .replace(')', '')  # Remove closing parentheses
+                           .strip())
+            
             if val_clean in ['', '-', '–', 'bd']:
                 return None
             try:
