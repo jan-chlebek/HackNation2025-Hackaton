@@ -721,6 +721,17 @@ class DataLoader:
         Returns:
             Tuple of (decision_matrix, directions)
         """
+        # Check for duplicates and aggregate if needed
+        duplicates = df.groupby(['kpi_id', 'cat_id']).size()
+        if (duplicates > 1).any():
+            print(f"  ⚠ Found {(duplicates > 1).sum()} duplicate (kpi_id, cat_id) pairs")
+            print(f"  → Aggregating duplicates using mean value...")
+            # Aggregate duplicates using mean
+            df = df.groupby(['kpi_id', 'cat_id'], as_index=False).agg({
+                'value': 'mean',
+                'direction': 'first'
+            })
+        
         # Pivot to create decision matrix
         matrix = df.pivot(index='kpi_id', columns='cat_id', values='value')
         

@@ -36,11 +36,46 @@ WSKAZNIK_INDEX;WSKAZNIK;MinMax
 34;TC Koszty ogółem;Min
 35;Upadłość;Min
 36;liczba firm i działalności gospodarczych Ogółem;Max
-1000;Marża netto (NP/PNPM);
-1001;Marża operacyjna (OP/PNPM);
-1002;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);
-1003;Wskaźnik szybki ((C+REC)/STL);
-1004;Wskaźnik zadłużenia ((STL+LTL)/PNPM);
-1005;Pokrycie odsetek (OP/IP);
-1006;Rotacja należności (PNPM/REC);
-1007;Cash flow margin (CF/PNPM);
+1000;Net Profit Margin (NP/PNPM);Max
+1001;Operating Margin (OP/PNPM);Max
+1002;Current Ratio (C+REC+INV)/STL;Max
+1003;Quick Ratio (C+REC)/STL;Max
+1004;Cash Ratio (C/STL);Max
+1005;Short Debt Share (STL/(STL+LTL));Min
+1006;Long-term Debt Share (LTL/(STL+LTL));Max
+1007;Interest Coverage (OP/IP);Max
+1008;Financial Risk Ratio (OFE/OP);Min
+1009;Cash Flow Margin (CF/PNPM);Max
+1010;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));Max
+1011;Bankruptcy Rate (Upadłość/EN);Min
+1012;Closure Rate (Zamknięte/EN);Min
+1013;Profit Firms Share (PEN/EN);Max
+1020;Sales Profitability (POS/PNPM);Max
+1022;Cost Share Ratio (TC/PNPM);Min
+1023;Receivables Turnover (PNPM/REC);Max
+1024;Inventory Turnover (TC/INV);Max
+1025;Current Asset Turnover (PNPM/(C+REC+INV));Max
+1026;Investment Ratio (IO/PNPM);Max
+1027;Financial Revenue Share (Przych.fin./GS);Max
+1028;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);Max
+1029;Average Firm Size (Pracujący/EN);Max
+1040;Investment Ratio (IO/PNPM);Max
+1041;Amortization Ratio (DEPR/PNPM);Min
+1042;Cash Flow Margin (CF/PNPM);Max
+1043;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));Max
+1044;Profit Firms Share (PEN/EN);Max
+1045;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);Max
+1046;New Firms Rate (Nowe/EN);Max
+1047;Closure Rate (Zamknięte/EN);Min
+1048;Suspension Rate (Zawieszone/EN);Min
+1049;Operating Margin (OP/PNPM);Max
+1050;POS Margin (POS/PNPM);Max
+1051;Bank Loans Ratio ((STC+LTC)/(STL+LTL));Max
+1060;Marża netto (NP/PNPM);Max
+1061;Marża operacyjna (OP/PNPM);Max
+1062;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);Max
+1063;Wskaźnik szybki ((C+REC)/STL);Max
+1064;Wskaźnik zadłużenia ((STL+LTL)/PNPM);Min
+1065;Pokrycie odsetek (OP/IP);Max
+1066;Rotacja należności (PNPM/REC);Max
+1067;Cash flow margin (CF/PNPM);Max

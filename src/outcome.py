@@ -127,6 +127,7 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
 def load_and_prepare_sector_data(year: int = 2024, 
                                  typ: str = 'SEKCJA', 
                                  min_wskaznik_index: int = None,
+                                 max_wskaznik_index: int = None,
                                  wskaznik_names: list = None,
                                  input_dir: str = 'results-pipeline',
                                  kpi_filename: str = 'kpi-value-table.csv') -> pd.DataFrame:
@@ -137,6 +138,7 @@ def load_and_prepare_sector_data(year: int = 2024,
         year: Year to filter (default: 2024)
         typ: PKD type to filter (default: 'SEKCJA')
         min_wskaznik_index: Minimum WSKAZNIK_INDEX to include (default: None, uses wskaznik_names instead)
+        max_wskaznik_index: Maximum WSKAZNIK_INDEX to include (default: None, no upper limit)
         wskaznik_names: List of indicator names to include (default: None, uses min_wskaznik_index)
         input_dir: Directory containing input files (default: 'results-pipeline')
         kpi_filename: Name of the KPI value table file (default: 'kpi-value-table.csv')
@@ -147,8 +149,13 @@ def load_and_prepare_sector_data(year: int = 2024,
     if min_wskaznik_index is None and wskaznik_names is None:
         min_wskaznik_index = 1000  # Default to calculated indicators
     
+    if max_wskaznik_index is None and wskaznik_names is None:
+        max_wskaznik_index = 1009  # Default to credit indicators (1000-1009)
+    
     if wskaznik_names:
         print(f"Loading data for year {year}, type {typ}, indicators: {wskaznik_names}...")
+    elif max_wskaznik_index:
+        print(f"Loading data for year {year}, type {typ}, indicators {min_wskaznik_index}-{max_wskaznik_index}...")
     else:
         print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
@@ -157,6 +164,10 @@ def load_and_prepare_sector_data(year: int = 2024,
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
+    
+    # Remove duplicate WSKAZNIK_INDEX entries (keep first occurrence)
+    # This handles cases where both Polish and English names exist for same indicator
+    wskaznik_dictionary = wskaznik_dictionary.drop_duplicates(subset=['WSKAZNIK_INDEX'], keep='first')
     
     # Load indicator directions from wskaznik_dictionary.csv
     indicator_directions = load_indicator_directions(input_dir)
@@ -184,6 +195,14 @@ def load_and_prepare_sector_data(year: int = 2024,
             (df_merged['WSKAZNIK'].isin(wskaznik_names))
         ].copy()
         print(f"  After filtering by year={year}, typ={typ}, indicators={wskaznik_names}: {len(df_filtered)} rows")
+    elif max_wskaznik_index:
+        df_filtered = df_merged[
+            (df_merged['rok'] == year) & 
+            (df_merged['typ'] == typ) &
+            (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index) &
+            (df_merged['WSKAZNIK_INDEX'] <= max_wskaznik_index)
+        ].copy()
+        print(f"  After filtering by year={year}, typ={typ}, WSKAZNIK_INDEX {min_wskaznik_index}-{max_wskaznik_index}: {len(df_filtered)} rows")
     else:
         df_filtered = df_merged[
             (df_merged['rok'] == year) & 
@@ -326,7 +345,7 @@ def load_and_prepare_sector_data(year: int = 2024,
     return analysis_df
 
 
-def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
+def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str, output_folder: str = 'results'):
     """
     Save results organized by year and type.
     
@@ -334,9 +353,10 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
         results: Results DataFrame
         year: Year of analysis
         typ: PKD type
+        output_folder: Base folder for output results (default: 'results')
     """
-    # Create directory structure: results/year/type/
-    output_dir = Path('results') / str(year) / typ.lower()
+    # Create directory structure: output_folder/year/type/
+    output_dir = Path(output_folder) / str(year) / typ.lower()
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # TOPSIS results
@@ -371,11 +391,12 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
     return output_dir
 
 
-def run_sector_analysis(year: int = 2024, 
-                       typ: str = 'SEKCJA',
+def run_sector_analysis(year: int, 
+                       typ: str,
                        min_wskaznik_index: int = None,
+                       max_wskaznik_index: int = None,
                        wskaznik_names: list = None,
-                       n_simulations: int = 1000,
+                       n_simulations: int = 10000,
                        mc_weight_variance: float = 0.15,
                        temporal_weight_1yr: float = 0.66,
                        temporal_weight_2yr: float = 0.34,
@@ -389,6 +410,7 @@ def run_sector_analysis(year: int = 2024,
         year: Year to analyze
         typ: PKD type level
         min_wskaznik_index: Minimum indicator index to include (default: None, uses wskaznik_names or 1000)
+        max_wskaznik_index: Maximum indicator index to include (default: None, uses 1009)
         wskaznik_names: List of indicator names to include (e.g., ['Marża netto (NP/PNPM)', 'Marża operacyjna (OP/PNPM)'])
         n_simulations: Number of Monte Carlo simulations
         mc_weight_variance: Variance for Monte Carlo weight perturbation (default: 0.15 = 15%)
@@ -402,7 +424,7 @@ def run_sector_analysis(year: int = 2024,
         DataFrame with analysis results
     """
     # Load and prepare data
-    analysis_df = load_and_prepare_sector_data(year, typ, min_wskaznik_index, wskaznik_names, input_dir, kpi_filename)
+    analysis_df = load_and_prepare_sector_data(year, typ, min_wskaznik_index, max_wskaznik_index, wskaznik_names, input_dir, kpi_filename)
     
     # Create output directory
     output_dir = Path(output_folder) / str(year) / typ.lower()
@@ -550,32 +572,44 @@ def run_sector_analysis(year: int = 2024,
     print("="*90)
     
     # Save results
-    save_results_by_year_type(results, year, typ)
+    save_results_by_year_type(results, year, typ, output_folder)
     
     return results
 
 
 if __name__ == '__main__':
 
-    for x in range(2021, 2023):
+    # Define the specific indicators to use
+    selected_indicators = [
+        'Marża netto (NP/PNPM)',
+        'Marża operacyjna (OP/PNPM)',
+        'Wskaźnik bieżącej płynności',
+        'Wskaźnik szybki ((C+REC)/STL)',
+        'Wskaźnik zadłużenia ((STL+LTL)/PNPM)',
+        'Pokrycie odsetek (OP/IP)',
+        'Rotacja należności (PNPM/REC)',
+        'Cash flow margin (CF/PNPM)'
+    ]
+
+    for x in range(2013, 2025):
         results = run_sector_analysis(
             year=x,
             typ='SEKCJA',
-            min_wskaznik_index=1000,
+            wskaznik_names=selected_indicators,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
-            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
-            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+            temporal_weight_1yr=0.3,  
+            temporal_weight_2yr=0.1,   
         )
 
         run_sector_analysis(
             year=x,
             typ='DZIAŁ',
-            min_wskaznik_index=1000,
+            wskaznik_names=selected_indicators,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
-            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
-            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+            temporal_weight_1yr=0.3,  
+            temporal_weight_2yr=0.1,   
         )
     
 
@@ -603,15 +637,23 @@ if __name__ == '__main__':
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
     print("\nAnalysis includes:")
-    print("  • Current year indicator values (1000-1007) - CV-based weights")
-    print("  • 1-year percentage changes (Δ% 1yr) - 66% of base weight")
-    print("  • 2-year percentage changes (Δ% 2yr) - 34% of base weight")
+    print("  • 8 selected financial indicators:")
+    print("    1. Marża netto (NP/PNPM)")
+    print("    2. Marża operacyjna (OP/PNPM)")
+    print("    3. Wskaźnik bieżącej płynności")
+    print("    4. Wskaźnik szybki ((C+REC)/STL)")
+    print("    5. Wskaźnik zadłużenia ((STL+LTL)/PNPM)")
+    print("    6. Pokrycie odsetek (OP/IP)")
+    print("    7. Rotacja należności (PNPM/REC)")
+    print("    8. Cash flow margin (CF/PNPM)")
+    print("  • 1-year percentage changes (Δ% 1yr) - 30% of base weight")
+    print("  • 2-year percentage changes (Δ% 2yr) - 10% of base weight")
     print("  • All weights normalized to sum to 1.0")
-    print("  • Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("  • Directions loaded from wskaznik_dictionary.csv")
     print("\nWeighting methodology:")
     print("  • Base indicators: w = 1/CV (normalized)")
-    print("  • 1-year changes: 0.66 × w")
-    print("  • 2-year changes: 0.34 × w")
+    print("  • 1-year changes: 0.30 × w")
+    print("  • 2-year changes: 0.10 × w")
     print("  • Final normalization: all weights sum to 1.0")
     print("\nMonte Carlo method:")
     print("  • Uses temporal weights as base")
