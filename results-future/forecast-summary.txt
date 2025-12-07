@@ -1,0 +1,24 @@
+FORECAST SUMMARY
+================================================================================
+
+Mode: FAST (WMA only)
+Forecast period: 2025 to 2028
+Total predictions: 208544
+
+Predictions per year:
+  2025: 52136 predictions
+  2026: 52136 predictions
+  2027: 52136 predictions
+  2028: 52136 predictions
+
+Unique indicators: 38
+Unique PKD categories: 1372
+
+Value statistics:
+  Mean: 3754.07
+  Median: 101.45
+  Std Dev: 69140.14
+  Min: -80969.25
+  Max: 6265780.08
+
+Missing values: 0
