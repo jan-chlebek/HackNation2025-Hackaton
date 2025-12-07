@@ -15,6 +15,12 @@
 
 ## Wprowadzenie
 
+### AI Usage disclosure
+W projekcie do przyśpieszenia pracy zespołu trzyosobowego wykorzystane zostały modele AI Gemini 3 Pro oraz Claude Sonnet 4.5 w GitHub Copilot (VS Code).
+Narzędzia zostały wykorzystane do stworzenia raportu/frontendu (React) oraz głównie optymalizacji kodu ETL i predykcyjnego (Python).
+Większość mapowań danych została wykonana ręcznie z zachowaniem najlepszych (możliwych w czasie dostarczenia) praktyk data engeneering. Dane zostały wielokrotnie przetestowane i zwalidowane zgodnie z wiedzą autorów rozwiązania. 
+
+
 ### Link - https://hacknation.janchlebek.com/
 
 System został zaprojektowany w celu kompleksowej analizy kondycji sektorów gospodarki polskiej oraz predykcji ich przyszłego stanu. Wykorzystuje dane finansowe oraz zaawansowane metody analityczne do oceny zdolności kredytowej, efektywności operacyjnej i potencjału rozwojowego różnych branż gospodarki.
