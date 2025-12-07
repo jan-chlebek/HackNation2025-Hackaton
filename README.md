@@ -15,6 +15,8 @@
 
 ## Wprowadzenie
 
+### Link - https://hacknation.janchlebek.com/
+
 System został zaprojektowany w celu kompleksowej analizy kondycji sektorów gospodarki polskiej oraz predykcji ich przyszłego stanu. Wykorzystuje dane finansowe oraz zaawansowane metody analityczne do oceny zdolności kredytowej, efektywności operacyjnej i potencjału rozwojowego różnych branż gospodarki.
 
 **Kluczowe cele systemu:**
@@ -1026,7 +1028,7 @@ HackNation2025-Hackaton/
 
 ```bash
 # Eksploracja i czyszczenie danych wejściowych
-jupyter notebook data-processing/data-processing.ipynb
+jupyter notebook data-processing/project/etl-pipeline-scalable.ipynb
 
 # Konstrukcja wskaźników złożonych (1000-1067)
 jupyter notebook data-processing/creating_complex_indicators.ipynb
@@ -1035,10 +1037,6 @@ jupyter notebook data-processing/creating_complex_indicators.ipynb
 ### 2. Predykcja szeregów czasowych (2025-2028)
 
 ```bash
-# Tryb FAST (WMA + Seasonal Naive, ~5 minut)
-python src/run_prediction.py --mode fast
-
-# Tryb ENSEMBLE (5 metod + korelacje, ~15 minut)
 python src/run_prediction.py
 ```
 
