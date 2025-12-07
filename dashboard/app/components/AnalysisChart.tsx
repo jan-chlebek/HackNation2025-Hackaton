@@ -17,6 +17,8 @@ interface AnalysisChartProps {
   xKey: string;
   dataKeys: { key: string; color: string; name?: string }[];
   height?: number;
+  xAxisLabel?: string;
+  yAxisLabel?: string;
 }
 
 const CustomTooltip = ({ active, payload, label }: any) => {
@@ -48,6 +50,8 @@ export function AnalysisChart({
   xKey,
   dataKeys,
   height = 400,
+  xAxisLabel,
+  yAxisLabel,
 }: AnalysisChartProps) {
   const ChartComponent = type === "line" ? LineChart : BarChart;
 
@@ -68,7 +72,7 @@ export function AnalysisChart({
             top: 20,
             right: 30,
             left: 20,
-            bottom: 5,
+            bottom: 25,
           }}
         >
           <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" vertical={false} />
@@ -77,11 +81,13 @@ export function AnalysisChart({
             tick={{ fill: "#1a2f3a", fontSize: 12 }}
             axisLine={{ stroke: "#d0d0d0" }}
             tickLine={false}
+            label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -5, fill: '#666', fontSize: 12 } : undefined}
           />
           <YAxis 
             tick={{ fill: "#1a2f3a", fontSize: 12 }}
             axisLine={false}
             tickLine={false}
+            label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft', fill: '#666', fontSize: 12 } : undefined}
           />
           <Tooltip content={<CustomTooltip />} />
           <Legend wrapperStyle={{ paddingTop: "20px" }} />

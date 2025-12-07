@@ -139,14 +139,20 @@ function YearComparison({ year, dataType, selectedSection }: { year: string, dat
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 h-[250px]">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={correlationData} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+            <BarChart data={correlationData} margin={{ top: 20, right: 30, left: 40, bottom: 25 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="name" stroke="#1a2f3a" fontSize={12} />
+              <XAxis 
+                dataKey="name" 
+                stroke="#1a2f3a" 
+                fontSize={12} 
+                label={{ value: 'Obszar analizy', position: 'insideBottom', offset: -5, fontSize: 12, fill: '#666' }}
+              />
               <YAxis 
                 stroke="#1a2f3a" 
                 domain={[-1, 1]} 
                 ticks={[-1, -0.5, 0, 0.5, 1]} 
                 fontSize={12} 
+                label={{ value: 'Korelacja Spearmana', angle: -90, position: 'insideLeft', fontSize: 12, fill: '#666', style: { textAnchor: 'middle' } }}
               />
               <Tooltip 
                 cursor={{ fill: 'transparent' }}

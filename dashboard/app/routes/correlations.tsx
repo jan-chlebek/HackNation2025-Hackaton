@@ -72,6 +72,33 @@ export default function Correlations() {
     }
   }, [pkdOptions, selectedPkd]);
 
+  // Handle keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (pkdOptions.length === 0) return;
+      
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        e.preventDefault();
+        const currentIndex = pkdOptions.findIndex(opt => opt.value === selectedPkd);
+        if (currentIndex === -1) return;
+
+        let newIndex = currentIndex;
+        if (e.key === "ArrowDown") {
+          newIndex = Math.min(currentIndex + 1, pkdOptions.length - 1);
+        } else {
+          newIndex = Math.max(currentIndex - 1, 0);
+        }
+
+        if (newIndex !== currentIndex) {
+          setSelectedPkd(pkdOptions[newIndex].value);
+        }
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [pkdOptions, selectedPkd]);
+
   // Filter and process data for selected PKD
   const chartData = useMemo(() => {
     if (selectedPkd === null || !kpiData.length) return [];
@@ -150,7 +177,32 @@ export default function Correlations() {
     <div className="space-y-8">
       <div>
         <h2 className="text-2xl font-bold text-pko-navy mb-2">Korelacje i Trendy</h2>
-        <p className="text-pko-navy/70">Analiza wskaźników finansowych w czasie.</p>
+        <div className="text-pko-navy/70 space-y-3">
+            <p>
+              Szczegółowa analiza wskaźników finansowych dla wybranego sektora (PKD). 
+              Pozwala zrozumieć dynamikę zmian przychodów, kosztów i zysków oraz powiązania między nimi.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                <strong className="block text-pko-navy mb-1">Wykres Trendów</strong>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Wizualizacja zmian kluczowych wartości w czasie</li>
+                  <li>Pozwala ocenić stabilność i kierunek rozwoju sektora</li>
+                  <li>Porównuje przychody, koszty i wynik finansowy</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                <strong className="block text-pko-navy mb-1">Macierz Korelacji</strong>
+                <ul className="list-disc list-inside space-y-1">
+                  <li><span className="text-green-600 font-bold">&gt; 0.7</span>: Silna korelacja dodatnia (wskaźniki rosną razem)</li>
+                  <li><span className="text-red-600 font-bold">&lt; -0.7</span>: Silna korelacja ujemna (jeden rośnie, drugi maleje)</li>
+                  <li>Wartości bliskie 0 oznaczają brak liniowej zależności</li>
+                </ul>
+              </div>
+            </div>
+        </div>
       </div>
 
       <div className="bg-white p-4 rounded-lg shadow-sm border border-pko-gray-medium/30">
@@ -164,6 +216,11 @@ export default function Correlations() {
             <option key={opt.value} value={opt.value}>{opt.label}</option>
           ))}
         </select>
+        <p className="text-xs text-gray-500 mt-2 flex items-center gap-1">
+          <span className="bg-gray-100 border border-gray-300 rounded px-1.5 py-0.5 font-mono text-[10px]">↓</span>
+          <span className="bg-gray-100 border border-gray-300 rounded px-1.5 py-0.5 font-mono text-[10px]">↑</span>
+          Użyj strzałek na klawiaturze, aby szybko zmieniać sektory
+        </p>
       </div>
 
       <DashboardCard title="Trendy Wskaźników Finansowych">
@@ -173,40 +230,73 @@ export default function Correlations() {
           type="line"
           height={500}
           dataKeys={chartKeys as any}
+          xAxisLabel="Rok"
+          yAxisLabel="Wartość (PLN)"
         />
         <p className="text-xs text-gray-500 mt-2">* Wyświetlono wybrane kluczowe wskaźniki. Nazwy mogą się różnić w zależności od danych.</p>
       </DashboardCard>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 gap-6">
         <DashboardCard title="Macierz Korelacji (Kluczowe Wskaźniki)">
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm text-left">
-              <thead className="text-xs text-pko-navy uppercase bg-pko-gray-light">
-                <tr>
-                  <th className="px-4 py-2">Wskaźnik 1</th>
-                  <th className="px-4 py-2">Wskaźnik 2</th>
-                  <th className="px-4 py-2 text-right">Korelacja</th>
-                </tr>
-              </thead>
-              <tbody>
-                {correlations.map((c, i) => (
-                  <tr key={i} className="border-b border-pko-gray-medium/20 hover:bg-pko-gray-light/50">
-                    <td className="px-4 py-2 font-medium">{c.indicator1}</td>
-                    <td className="px-4 py-2">{c.indicator2}</td>
-                    <td className="px-4 py-2 text-right font-mono">
-                      <span className={c.value > 0.7 ? "text-green-600 font-bold" : c.value < -0.7 ? "text-red-600 font-bold" : "text-gray-600"}>
-                        {c.value.toFixed(4)}
-                      </span>
-                    </td>
-                  </tr>
-                ))}
-                {correlations.length === 0 && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {/* Left Column */}
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm text-left">
+                <thead className="text-xs text-pko-navy uppercase bg-pko-gray-light">
                   <tr>
-                    <td colSpan={3} className="px-4 py-4 text-center text-gray-500">Brak danych do obliczenia korelacji dla wybranych wskaźników.</td>
+                    <th className="px-4 py-2">Wskaźnik 1</th>
+                    <th className="px-4 py-2">Wskaźnik 2</th>
+                    <th className="px-4 py-2 text-right">Korelacja</th>
                   </tr>
-                )}
-              </tbody>
-            </table>
+                </thead>
+                <tbody>
+                  {correlations.slice(0, Math.ceil(correlations.length / 2)).map((c, i) => (
+                    <tr key={i} className="border-b border-pko-gray-medium/20 hover:bg-pko-gray-light/50">
+                      <td className="px-4 py-2 font-medium">{c.indicator1}</td>
+                      <td className="px-4 py-2">{c.indicator2}</td>
+                      <td className="px-4 py-2 text-right font-mono">
+                        <span className={c.value > 0.7 ? "text-green-600 font-bold" : c.value < -0.7 ? "text-red-600 font-bold" : "text-gray-600"}>
+                          {c.value.toFixed(4)}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                  {correlations.length === 0 && (
+                    <tr>
+                      <td colSpan={3} className="px-4 py-4 text-center text-gray-500">Brak danych do obliczenia korelacji dla wybranych wskaźników.</td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+
+            {/* Right Column */}
+            <div className="overflow-x-auto">
+              {correlations.length > 0 && (
+                <table className="w-full text-sm text-left">
+                  <thead className="text-xs text-pko-navy uppercase bg-pko-gray-light">
+                    <tr>
+                      <th className="px-4 py-2">Wskaźnik 1</th>
+                      <th className="px-4 py-2">Wskaźnik 2</th>
+                      <th className="px-4 py-2 text-right">Korelacja</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {correlations.slice(Math.ceil(correlations.length / 2)).map((c, i) => (
+                      <tr key={i} className="border-b border-pko-gray-medium/20 hover:bg-pko-gray-light/50">
+                        <td className="px-4 py-2 font-medium">{c.indicator1}</td>
+                        <td className="px-4 py-2">{c.indicator2}</td>
+                        <td className="px-4 py-2 text-right font-mono">
+                          <span className={c.value > 0.7 ? "text-green-600 font-bold" : c.value < -0.7 ? "text-red-600 font-bold" : "text-gray-600"}>
+                            {c.value.toFixed(4)}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              )}
+            </div>
           </div>
         </DashboardCard>
       </div>

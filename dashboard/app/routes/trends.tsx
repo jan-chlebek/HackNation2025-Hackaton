@@ -273,9 +273,33 @@ export default function Trends() {
           <h2 className="text-2xl font-bold text-pko-navy mb-2">
             Trendy {dataType === 'sekcja' ? 'Sektorowe' : 'Działowe'} (Ensemble)
           </h2>
-          <p className="text-pko-navy/70">
-            Analiza zmian wyników metody Ensemble w czasie dla poszczególnych {dataType === 'sekcja' ? 'sekcji' : 'działów'}.
-          </p>
+          <div className="text-pko-navy/70 space-y-3">
+            <p>
+              Analiza zmian wyników metody Ensemble w czasie dla poszczególnych {dataType === 'sekcja' ? 'sekcji' : 'działów'}.
+              Wynik (Score) przyjmuje wartości od 0 do 1, gdzie wyższa wartość oznacza lepszą kondycję ekonomiczną.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+              <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                <strong className="block text-pko-navy mb-1">Jak czytać wykres?</strong>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Domyślnie widoczne są 3 najbardziej wpływowe sekcje/działy</li>
+                  <li>Linie ciągłe: dane historyczne (2013-2024)</li>
+                  <li>Obszar zacieniowany: prognoza (2024-2027)</li>
+                  <li>Linia przerywana (widoczny dla jednego sektora/działu): trend liniowy (kierunek zmian)</li>
+                </ul>
+              </div>
+              
+              <div className="bg-gray-50 p-3 rounded border border-gray-200">
+                <strong className="block text-pko-navy mb-1">Interpretacja</strong>
+                <ul className="list-disc list-inside space-y-1">
+                  <li>Nachylenie rosnące: Sektor rozwija względem całości gospodarki Polski</li>
+                  <li>Nachylenie spadkowe; 0: Kondycja sektora się pogarsza</li>
+                  <li>Porównuj sektory wybierając je z listy po prawej</li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div className="bg-white p-1 rounded-lg border border-gray-200 flex gap-1">
@@ -307,13 +331,23 @@ export default function Trends() {
           <DashboardCard title="Wykres Trendów">
             <div className="h-[600px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={displayData} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                <LineChart data={displayData} margin={{ top: 5, right: 30, left: 20, bottom: 20 }}>
                   <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
                   <ReferenceArea x1={2024} x2={2027} fill="#fee2e2" fillOpacity={0.3} />
                   <ReferenceLine x={2024} stroke="#ef4444" strokeDasharray="3 3" label={{ value: 'Prognoza', position: 'insideTopRight', fill: '#ef4444' }} />
-                  <XAxis dataKey="year" stroke="#1a2f3a" />
-                  <YAxis stroke="#1a2f3a" domain={[0, 1]} />
+                  <XAxis 
+                    dataKey="year" 
+                    stroke="#1a2f3a" 
+                    label={{ value: 'Rok', position: 'insideBottom', offset: -10, fill: '#666', fontSize: 12 }}
+                  />
+                  <YAxis 
+                    stroke="#1a2f3a" 
+                    domain={[0, 1]} 
+                    label={{ value: 'Wynik (Score)', angle: -90, position: 'insideLeft', fill: '#666', fontSize: 12 }}
+                  />
                   <Tooltip 
+                    shared={false}
+                    cursor={false}
                     contentStyle={{ 
                       backgroundColor: 'white', 
                       borderRadius: '8px', 
@@ -328,7 +362,46 @@ export default function Trends() {
                       name === 'trend' ? 'Trend Liniowy' : (sections.find(s => s.id === name)?.name || name)
                     ]}
                   />
-                  <Legend />
+                  <Legend 
+                    wrapperStyle={{ paddingTop: '20px' }} 
+                    content={(props) => {
+                      const { payload } = props;
+                      return (
+                        <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 pt-2 text-xs">
+                          {payload?.map((entry: any, index: number) => {
+                            const isTrend = entry.value === 'Trend Liniowy';
+                            const section = !isTrend ? sections.find(s => s.id === entry.value) : null;
+                            const title = isTrend ? 'Trend Liniowy' : (section ? `${section.id} - ${section.name}` : entry.value);
+                            
+                            return (
+                              <div 
+                                key={`item-${index}`} 
+                                className="flex items-center cursor-pointer group hover:bg-gray-50 px-2 py-1 rounded transition-colors" 
+                                title={title}
+                                onClick={() => {
+                                  if (isTrend) return;
+                                  if (singleSelectedId === entry.value) {
+                                    toggleAll(true);
+                                  } else {
+                                    showOnly([entry.value]);
+                                  }
+                                }}
+                              >
+                                {isTrend ? (
+                                   <div className="w-3 h-0 border-t-2 border-dashed border-gray-500 mr-1.5"></div>
+                                ) : (
+                                   <div className="w-2.5 h-2.5 rounded-full mr-1.5" style={{ backgroundColor: entry.color }}></div>
+                                )}
+                                <span className={`font-medium transition-colors ${singleSelectedId === entry.value ? 'text-pko-navy font-bold' : 'text-gray-600 group-hover:text-pko-navy'}`}>
+                                  {entry.value}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      );
+                    }}
+                  />
                   {singleSelectedId && (
                     <Line
                       type="monotone"

@@ -27,7 +27,7 @@ export default function Methodology() {
             <div>
               <h3 className="text-lg font-semibold text-pko-navy mb-4 flex items-center gap-2">
                 <Database className="w-5 h-5 text-pko-red" />
-                Identyfikacja źródeł
+                Identyfikacja źródeł (4h - 1 osoba)
               </h3>
               <ul className="list-disc list-inside space-y-2 text-pko-navy/80 ml-2">
                 <li>
@@ -49,7 +49,7 @@ export default function Methodology() {
             <div>
               <h3 className="text-lg font-semibold text-pko-navy mb-4 flex items-center gap-2">
                 <Server className="w-5 h-5 text-pko-red" />
-                Data Engineering
+                Data Engineering (12h - 1 osoba)
               </h3>
               <div className="flex flex-col md:flex-row gap-4 items-start md:items-center text-sm">
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
@@ -69,7 +69,7 @@ export default function Methodology() {
                 </div>
                 <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
-                  Wyznaczenie wskaźników i manualne dopasowanie kryteriów oceny
+                  Wyznaczenie wskaźników i manualne dopasowanie kryteriów oceny (tabela faktowa)
                 </div>
               </div>
             </div>
@@ -78,7 +78,7 @@ export default function Methodology() {
             <div>
               <h3 className="text-lg font-semibold text-pko-navy mb-4 flex items-center gap-2">
                 <BrainCircuit className="w-5 h-5 text-pko-red" />
-                Data Science
+                Data Science (15h - 1 osoba)
               </h3>
               <div className="flex flex-col md:flex-row gap-4 items-start md:items-center text-sm">
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
@@ -86,7 +86,7 @@ export default function Methodology() {
                 </div>
                 <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
-                  Wykonanie eksperymentów metodami wielokryterialnymi
+                  Wykonanie eksperymentów metodami wielokryterialnymi z wagami dobieranymi automatycznie współczynnikiem zmienności (odchylenie standardowe / średnia)
                 </div>
                 <div className="flex flex-col gap-1 justify-center">
                   <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
@@ -150,7 +150,7 @@ export default function Methodology() {
                             indicator.preference.toLowerCase().includes("wyższe") || indicator.preference.toLowerCase().includes("wyższy") || indicator.preference.toLowerCase().includes("więcej")
                               ? "bg-green-100 text-green-800"
                               : indicator.preference.toLowerCase().includes("niższe") || indicator.preference.toLowerCase().includes("niższy") || indicator.preference.toLowerCase().includes("minimalizować")
-                              ? "bg-blue-100 text-blue-800"
+                              ? "bg-red-100 text-red-800"
                               : "bg-gray-100 text-gray-800"
                           }`}>
                             {indicator.preference}
@@ -236,7 +236,7 @@ export default function Methodology() {
                             indicator.preference.toLowerCase().includes("wyższe") || indicator.preference.toLowerCase().includes("wyższy") || indicator.preference.toLowerCase().includes("więcej")
                               ? "bg-green-100 text-green-800"
                               : indicator.preference.toLowerCase().includes("niższe") || indicator.preference.toLowerCase().includes("niższy") || indicator.preference.toLowerCase().includes("minimalizować")
-                              ? "bg-blue-100 text-blue-800"
+                              ? "bg-red-100 text-red-800"
                               : "bg-gray-100 text-gray-800"
                           }`}>
                             {indicator.preference}

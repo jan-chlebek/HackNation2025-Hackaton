@@ -115,12 +115,28 @@ export default function Analysis() {
 
   return (
     <div className="space-y-8">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
-        <div>
+      <div className="flex flex-col gap-4">
+        <div className="w-full">
           <h2 className="text-2xl font-bold text-pko-navy mb-2">Analiza Metod Decyzyjnych</h2>
-          <p className="text-pko-navy/70">Porównanie wyników różnych metod wielokryterialnych.</p>
+          <div className="text-pko-navy/70 space-y-3 text-sm">
+            <p>
+              Analiza porównawcza pozwala zweryfikować stabilność rankingu poprzez zestawienie różnych podejść matematycznych.
+              Umożliwia to identyfikację sektorów, które są silne niezależnie od przyjętej metodyki oceny.
+              Wyniki można filtrować według <strong>kategorii danych</strong> (np. Kredytowe, Rozwojowe), <strong>roku</strong> (historyczne i prognozy) oraz poziomu agregacji (<strong>Sekcje/Działy</strong>).
+            </p>
+            <div className="bg-blue-50 p-3 rounded-md border border-blue-100 text-pko-navy space-y-2">
+              <p>
+                <strong className="font-semibold">Ensemble</strong> to metoda hybrydowa, agregująca wyniki trzech pozostałych metod (TOPSIS, VIKOR, Monte Carlo). 
+                Generuje ona główny ranking statystyczny, który jest najbardziej wiarygodny i odporny na specyfikę poszczególnych algorytmów.
+              </p>
+              <ul className="list-disc list-inside text-xs space-y-1 pt-1 border-t border-blue-200">
+                <li><strong className="font-semibold">Monte Carlo</strong>: metoda probabilistyczna (losowa), symulująca tysiące scenariuszy wag dla kryteriów.</li>
+                <li><strong className="font-semibold">TOPSIS i VIKOR</strong>: metody deterministyczne, optymalizujące ranking zgodnie z zadanym kierunkiem preferencji (odległość od ideału).</li>
+              </ul>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 items-end sm:items-center">
+        <div className="flex flex-col sm:flex-row gap-4 items-end sm:items-center justify-end">
           <div className="relative">
             <select
               value={selectedDataset}
@@ -230,7 +246,12 @@ export default function Analysis() {
         )}
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div className={`grid grid-cols-1 gap-4 ${
+        selectedCount === 1 ? '' :
+        selectedCount === 2 ? 'md:grid-cols-2' :
+        selectedCount === 3 ? 'md:grid-cols-2 lg:grid-cols-3' :
+        'md:grid-cols-2 lg:grid-cols-4'
+      }`}>
         {METHODS.filter(m => selectedMethods[m.id]).map(method => (
           <MethodCard 
             key={method.id}
@@ -246,44 +267,82 @@ export default function Analysis() {
 }
 
 function MethodCard({ title, color, data, prefix }: { title: string, color: string, data: ResultData[], prefix: string }) {
+  const [isExpanded, setIsExpanded] = useState(false);
   // Create a copy before sorting to avoid mutating the original array
   const sortedData = [...data].sort((a, b) => (Number(a[`${prefix}_rank`]) || 999) - (Number(b[`${prefix}_rank`]) || 999));
   const top3 = sortedData.slice(0, 3);
   const worst3 = sortedData.slice(-3);
 
   return (
-    <div className="pko-card overflow-hidden">
-      <div className={`${color} p-4 text-white`}>
+    <div className={`pko-card overflow-hidden flex flex-col transition-all duration-300 ${isExpanded ? 'row-span-2 h-[500px]' : ''}`}>
+      <div className={`${color} p-4 text-white flex justify-between items-center`}>
         <h3 className="font-bold text-lg">{title}</h3>
+        <button 
+          onClick={() => setIsExpanded(!isExpanded)}
+          className="text-white/80 hover:text-white text-xs bg-white/20 px-2 py-1 rounded transition-colors"
+        >
+          {isExpanded ? 'Zwiń' : 'Pełna tabela'}
+        </button>
       </div>
-      <div className="p-4 space-y-4">
-        <div>
-          <h4 className="text-sm font-semibold text-pko-navy mb-2">Top 3 Sektory:</h4>
-          <ul className="space-y-1">
-            {top3.map((item, i) => (
-              <li key={i} className="flex items-center justify-between text-xs">
-                <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.name || item.alternative_id} - ${item.nazwa}`}>
-                  {item.name || item.alternative_id} - {item.nazwa}
-                </span>
-                <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-        
-        <div className="pt-2 border-t border-gray-100">
-          <h4 className="text-sm font-semibold text-pko-navy mb-2">Worst 3 Sektory:</h4>
-          <ul className="space-y-1">
-            {worst3.map((item, i) => (
-              <li key={i} className="flex items-center justify-between text-xs">
-                <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.name || item.alternative_id} - ${item.nazwa}`}>
-                  {item.name || item.alternative_id} - {item.nazwa}
-                </span>
-                <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+      <div className="p-4 space-y-4 flex-1 overflow-hidden flex flex-col">
+        {isExpanded ? (
+          <div className="overflow-y-auto flex-1 pr-2 custom-scrollbar">
+            <table className="w-full text-xs text-left">
+              <thead className="sticky top-0 bg-white text-pko-navy font-bold border-b border-gray-200 shadow-sm z-10">
+                <tr>
+                  <th className="py-2 pl-1">Rank</th>
+                  <th className="py-2">Sektor</th>
+                  <th className="py-2 text-right pr-1">Score</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sortedData.map((item, i) => (
+                  <tr key={i} className="border-b border-gray-50 hover:bg-gray-50">
+                    <td className="py-2 pl-1 font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</td>
+                    <td className="py-2 px-2">
+                      <div className="truncate max-w-[180px]" title={`${item.name || item.alternative_id} - ${item.nazwa}`}>
+                        {item.name || item.alternative_id} - {item.nazwa}
+                      </div>
+                    </td>
+                    <td className="py-2 text-right font-mono pr-1">
+                      {Number(item[`${prefix}_score`]).toFixed(4)}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : (
+          <>
+            <div>
+              <h4 className="text-sm font-semibold text-pko-navy mb-2">Top 3 Sektory:</h4>
+              <ul className="space-y-1">
+                {top3.map((item, i) => (
+                  <li key={i} className="flex items-center justify-between text-xs">
+                    <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.name || item.alternative_id} - ${item.nazwa}`}>
+                      {item.name || item.alternative_id} - {item.nazwa}
+                    </span>
+                    <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="pt-2 border-t border-gray-100">
+              <h4 className="text-sm font-semibold text-pko-navy mb-2">Worst 3 Sektory:</h4>
+              <ul className="space-y-1">
+                {worst3.map((item, i) => (
+                  <li key={i} className="flex items-center justify-between text-xs">
+                    <span className="font-medium text-pko-navy truncate flex-1 mr-2" title={`${item.name || item.alternative_id} - ${item.nazwa}`}>
+                      {item.name || item.alternative_id} - {item.nazwa}
+                    </span>
+                    <span className="font-bold text-pko-navy/70">#{item[`${prefix}_rank`]}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
