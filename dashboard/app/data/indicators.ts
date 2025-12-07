@@ -5,6 +5,7 @@ export interface IndicatorDefinition {
   preference: string;
   justification: string;
   formula?: string;
+  datasets?: string[];
 }
 
 export const indicators: IndicatorDefinition[] = [
@@ -185,66 +186,317 @@ export const indicators: IndicatorDefinition[] = [
   },
   {
     id: 1000,
-    code: "Marża netto",
+    code: "Net Profit Margin",
     name: "Marża netto",
     preference: "Im wyższa, tym lepiej",
     justification: "Im większa marża, tym większy bufor na wahania kosztów.",
-    formula: "NP / PNPM"
+    formula: "NP / PNPM",
+    datasets: ["credit"]
   },
   {
     id: 1001,
-    code: "Marża operacyjna",
+    code: "Operating Margin",
     name: "Marża operacyjna",
     preference: "Im wyższa, tym lepiej",
     justification: "Wysoka rentowność operacyjna istotna dla oceny ryzyka.",
-    formula: "OP / PNPM"
+    formula: "OP / PNPM",
+    datasets: ["credit"]
   },
   {
     id: 1002,
-    code: "Wskaźnik bieżącej płynności",
+    code: "Current Ratio",
     name: "Wskaźnik bieżącej płynności",
     preference: "Optymalnie 1,5–2,5",
     justification: "Za niski = ryzyko; zbyt wysoki = nieefektywność.",
-    formula: "(C + REC + INV) / STL"
+    formula: "(C + REC + INV) / STL",
+    datasets: ["credit"]
   },
   {
     id: 1003,
-    code: "Wskaźnik szybki",
+    code: "Quick Ratio",
     name: "Wskaźnik szybki",
     preference: "Im wyższy, tym lepiej (≥ 1)",
     justification: "Bardziej konserwatywny miernik płynności.",
-    formula: "(C + REC) / STL"
+    formula: "(C + REC) / STL",
+    datasets: ["credit"]
   },
   {
     id: 1004,
-    code: "Wskaźnik zadłużenia",
-    name: "Wskaźnik zadłużenia",
-    preference: "Im niższy, tym lepiej",
-    justification: "Niższy lewar finansowy = mniejsze ryzyko.",
-    formula: "(STL + LTL) / PNPM"
+    code: "Cash Ratio",
+    name: "Wskaźnik gotówkowy",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Najbardziej konserwatywny miernik płynności.",
+    formula: "C / STL",
+    datasets: ["credit"]
   },
   {
     id: 1005,
-    code: "Pokrycie odsetek",
-    name: "Pokrycie odsetek",
-    preference: "Im wyższe, tym lepiej (≥ 3)",
-    justification: "Wysoka zdolność do obsługi zadłużenia.",
-    formula: "OP / IP"
+    code: "Short Debt Share",
+    name: "Udział długu krótkoterminowego",
+    preference: "Im niższy, tym lepiej",
+    justification: "Mniejsze uzależnienie od finansowania krótkoterminowego.",
+    formula: "STL / (STL + LTL)",
+    datasets: ["credit"]
   },
   {
     id: 1006,
-    code: "Rotacja należności",
-    name: "Rotacja należności",
-    preference: "Im wyższa, tym lepiej",
-    justification: "Szybkie odzyskiwanie należności zwiększa płynność.",
-    formula: "PNPM / REC"
+    code: "Long-term Debt Share",
+    name: "Udział długu długoterminowego",
+    preference: "Zależne od strategii",
+    justification: "Stabilne finansowanie, ale kosztowne.",
+    formula: "LTL / (STL + LTL)",
+    datasets: ["credit"]
   },
   {
     id: 1007,
-    code: "Cash flow margin",
-    name: "Cash flow margin",
+    code: "Interest Coverage",
+    name: "Pokrycie odsetek",
+    preference: "Im wyższe, tym lepiej (≥ 3)",
+    justification: "Wysoka zdolność do obsługi zadłużenia.",
+    formula: "OP / IP",
+    datasets: ["credit"]
+  },
+  {
+    id: 1008,
+    code: "Financial Risk Ratio",
+    name: "Wskaźnik ryzyka finansowego",
+    preference: "Im niższy, tym lepiej",
+    justification: "Mniejsze obciążenie kosztami finansowymi.",
+    formula: "OFE / OP",
+    datasets: ["credit"]
+  },
+  {
+    id: 1009,
+    code: "Cash Flow Margin",
+    name: "Marża przepływów pieniężnych",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Efektywność generowania gotówki ze sprzedaży.",
+    formula: "CF / PNPM",
+    datasets: ["credit"]
+  },
+  {
+    id: 1010,
+    code: "Operating Cash Coverage",
+    name: "Pokrycie gotówkowe operacyjne",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Zdolność do pokrycia zobowiązań z działalności operacyjnej.",
+    formula: "(OP + DEPR) / (STL + LTL)",
+    datasets: ["credit"]
+  },
+  {
+    id: 1011,
+    code: "Bankruptcy Rate",
+    name: "Wskaźnik upadłości",
+    preference: "Im niższy, tym lepiej",
+    justification: "Ryzyko systemowe w sektorze.",
+    formula: "Upadłość / EN",
+    datasets: ["credit"]
+  },
+  {
+    id: 1012,
+    code: "Closure Rate",
+    name: "Wskaźnik zamknięć",
+    preference: "Im niższy, tym lepiej",
+    justification: "Stabilność sektora.",
+    formula: "Zamknięte / EN",
+    datasets: ["credit"]
+  },
+  {
+    id: 1013,
+    code: "Profit Firms Share",
+    name: "Udział firm rentownych",
     preference: "Im wyższy, tym lepiej",
-    justification: "Wysoka konwersja przychodów w gotówkę obniża ryzyko kredytowe.",
-    formula: "CF / PNPM"
+    justification: "Ogólna kondycja sektora.",
+    formula: "PEN / EN",
+    datasets: ["credit"]
+  },
+  {
+    id: 1020,
+    code: "Sales Profitability",
+    name: "Rentowność sprzedaży",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Efektywność sprzedaży.",
+    formula: "POS / PNPM",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1022,
+    code: "Cost Share Ratio",
+    name: "Wskaźnik udziału kosztów",
+    preference: "Im niższy, tym lepiej",
+    justification: "Kontrola kosztów.",
+    formula: "TC / PNPM",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1023,
+    code: "Receivables Turnover",
+    name: "Rotacja należności",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Szybkość odzyskiwania należności.",
+    formula: "PNPM / REC",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1024,
+    code: "Inventory Turnover",
+    name: "Rotacja zapasów",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Efektywność zarządzania zapasami.",
+    formula: "TC / INV",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1025,
+    code: "Current Asset Turnover",
+    name: "Rotacja aktywów obrotowych",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Efektywność wykorzystania aktywów.",
+    formula: "PNPM / (C + REC + INV)",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1026,
+    code: "Investment Ratio",
+    name: "Wskaźnik inwestycji",
+    preference: "Im wyższy, tym lepiej (dla rozwoju)",
+    justification: "Skłonność do inwestowania.",
+    formula: "IO / PNPM",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1027,
+    code: "Financial Revenue Share",
+    name: "Udział przychodów finansowych",
+    preference: "Zależne od specyfiki",
+    justification: "Dywersyfikacja przychodów.",
+    formula: "Przych.fin. / GS",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1028,
+    code: "Net Firm Growth Rate",
+    name: "Wskaźnik wzrostu netto firm",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Dynamika rozwoju sektora.",
+    formula: "(Zarejestrowane - Zamknięte) / EN",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1029,
+    code: "Average Firm Size",
+    name: "Średnia wielkość firmy",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Skala działalności.",
+    formula: "Pracujący / EN",
+    datasets: ["effectivity"]
+  },
+  {
+    id: 1040,
+    code: "Investment Ratio",
+    name: "Wskaźnik inwestycji (Rozwój)",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Potencjał rozwojowy.",
+    formula: "IO / PNPM",
+    datasets: ["development"]
+  },
+  {
+    id: 1041,
+    code: "Amortization Ratio",
+    name: "Wskaźnik amortyzacji",
+    preference: "Im niższy, tym lepiej (nowoczesność)",
+    justification: "Stopień zużycia majątku.",
+    formula: "DEPR / PNPM",
+    datasets: ["development"]
+  },
+  {
+    id: 1042,
+    code: "Cash Flow Margin",
+    name: "Marża CF (Rozwój)",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Zdolność do samofinansowania rozwoju.",
+    formula: "CF / PNPM",
+    datasets: ["development"]
+  },
+  {
+    id: 1043,
+    code: "Operating Cash Coverage",
+    name: "Pokrycie gotówkowe (Rozwój)",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Bezpieczeństwo finansowe rozwoju.",
+    formula: "(OP + DEPR) / (STL + LTL)",
+    datasets: ["development"]
+  },
+  {
+    id: 1044,
+    code: "Profit Firms Share",
+    name: "Udział firm rentownych (Rozwój)",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Kondycja sektora sprzyjająca rozwojowi.",
+    formula: "PEN / EN",
+    datasets: ["development"]
+  },
+  {
+    id: 1045,
+    code: "Net Firm Growth Rate",
+    name: "Wzrost netto firm (Rozwój)",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Ekspansja sektora.",
+    formula: "(Zarejestrowane - Zamknięte) / EN",
+    datasets: ["development"]
+  },
+  {
+    id: 1046,
+    code: "New Firms Rate",
+    name: "Wskaźnik nowych firm",
+    preference: "Im wyższy, tym lepiej",
+    justification: "Atrakcyjność sektora dla nowych podmiotów.",
+    formula: "Nowe / EN",
+    datasets: ["development"]
+  },
+  {
+    id: 1047,
+    code: "Closure Rate",
+    name: "Wskaźnik zamknięć (Rozwój)",
+    preference: "Im niższy, tym lepiej",
+    justification: "Stabilność.",
+    formula: "Zamknięte / EN",
+    datasets: ["development"]
+  },
+  {
+    id: 1048,
+    code: "Suspension Rate",
+    name: "Wskaźnik zawieszeń",
+    preference: "Im niższy, tym lepiej",
+    justification: "Problemy w prowadzeniu działalności.",
+    formula: "Zawieszone / EN",
+    datasets: ["development"]
+  },
+  {
+    id: 1049,
+    code: "Operating Margin",
+    name: "Marża operacyjna (Rozwój)",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Efektywność operacyjna.",
+    formula: "OP / PNPM",
+    datasets: ["development"]
+  },
+  {
+    id: 1050,
+    code: "POS Margin",
+    name: "Marża ze sprzedaży (Rozwój)",
+    preference: "Im wyższa, tym lepiej",
+    justification: "Rentowność podstawowa.",
+    formula: "POS / PNPM",
+    datasets: ["development"]
+  },
+  {
+    id: 1051,
+    code: "Bank Loans Ratio",
+    name: "Wskaźnik kredytowania",
+    preference: "Im wyższy, tym lepiej (dostępność)",
+    justification: "Dostępność finansowania bankowego.",
+    formula: "(STC + LTC) / (STL + LTL)",
+    datasets: ["development"]
   }
 ];

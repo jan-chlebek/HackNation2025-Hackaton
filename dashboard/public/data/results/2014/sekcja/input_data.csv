@@ -1,5 +1,299 @@
 kpi_id;cat_id;value;direction
 A;Marża netto (NP/PNPM);0.1090111671271965;max
+A;Marża netto (NP/PNPM);0.1090111671271965;max
+B;Marża netto (NP/PNPM);-0.018036395988194;max
+B;Marża netto (NP/PNPM);-0.018036395988194;max
+C;Marża netto (NP/PNPM);0.0378484661621733;max
+C;Marża netto (NP/PNPM);0.0378484661621733;max
+D;Marża netto (NP/PNPM);0.116189935161319;max
+D;Marża netto (NP/PNPM);0.116189935161319;max
+E;Marża netto (NP/PNPM);0.0497660126653511;max
+E;Marża netto (NP/PNPM);0.0497660126653511;max
+F;Marża netto (NP/PNPM);0.0383004117215335;max
+F;Marża netto (NP/PNPM);0.0383004117215335;max
+G;Marża netto (NP/PNPM);0.0213499125424198;max
+G;Marża netto (NP/PNPM);0.0213499125424198;max
+H;Marża netto (NP/PNPM);0.0302258283085131;max
+H;Marża netto (NP/PNPM);0.0302258283085131;max
+I;Marża netto (NP/PNPM);0.0420576405044242;max
+I;Marża netto (NP/PNPM);0.0420576405044242;max
+J;Marża netto (NP/PNPM);0.0553402497814329;max
+J;Marża netto (NP/PNPM);0.0553402497814329;max
+L;Marża netto (NP/PNPM);0.0864419321323984;max
+L;Marża netto (NP/PNPM);0.0864419321323984;max
+M;Marża netto (NP/PNPM);0.0686228304479318;max
+M;Marża netto (NP/PNPM);0.0686228304479318;max
+N;Marża netto (NP/PNPM);0.0786010559642738;max
+N;Marża netto (NP/PNPM);0.0786010559642738;max
+O;Marża netto (NP/PNPM);0.0426068481347644;max
+O;Marża netto (NP/PNPM);0.0426068481347644;max
+P;Marża netto (NP/PNPM);0.0377266265837371;max
+P;Marża netto (NP/PNPM);0.0377266265837371;max
+Q;Marża netto (NP/PNPM);0.072896586191773;max
+Q;Marża netto (NP/PNPM);0.072896586191773;max
+R;Marża netto (NP/PNPM);0.0257789230927238;max
+R;Marża netto (NP/PNPM);0.0257789230927238;max
+S;Marża netto (NP/PNPM);0.0050503779469526;max
+S;Marża netto (NP/PNPM);0.0050503779469526;max
+T;Marża netto (NP/PNPM);0.0546539408418933;max
+T;Marża netto (NP/PNPM);0.0546539408418933;max
+U;Marża netto (NP/PNPM);0.0377266265837371;max
+U;Marża netto (NP/PNPM);0.0377266265837371;max
+V;Marża netto (NP/PNPM);0.0377266265837371;max
+V;Marża netto (NP/PNPM);0.0377266265837371;max
+A;Marża operacyjna (OP/PNPM);0.1844554241167017;max
+A;Marża operacyjna (OP/PNPM);0.1844554241167017;max
+B;Marża operacyjna (OP/PNPM);0.0470057602541479;max
+B;Marża operacyjna (OP/PNPM);0.0470057602541479;max
+C;Marża operacyjna (OP/PNPM);0.0520119894735833;max
+C;Marża operacyjna (OP/PNPM);0.0520119894735833;max
+D;Marża operacyjna (OP/PNPM);0.0869445430114795;max
+D;Marża operacyjna (OP/PNPM);0.0869445430114795;max
+E;Marża operacyjna (OP/PNPM);0.0688642673669082;max
+E;Marża operacyjna (OP/PNPM);0.0688642673669082;max
+F;Marża operacyjna (OP/PNPM);0.045620922281938;max
+F;Marża operacyjna (OP/PNPM);0.045620922281938;max
+G;Marża operacyjna (OP/PNPM);0.0271860551672164;max
+G;Marża operacyjna (OP/PNPM);0.0271860551672164;max
+H;Marża operacyjna (OP/PNPM);0.0519810307635394;max
+H;Marża operacyjna (OP/PNPM);0.0519810307635394;max
+I;Marża operacyjna (OP/PNPM);0.0751654397987241;max
+I;Marża operacyjna (OP/PNPM);0.0751654397987241;max
+J;Marża operacyjna (OP/PNPM);0.0976023521781354;max
+J;Marża operacyjna (OP/PNPM);0.0976023521781354;max
+L;Marża operacyjna (OP/PNPM);0.0724932819592181;max
+L;Marża operacyjna (OP/PNPM);0.0724932819592181;max
+M;Marża operacyjna (OP/PNPM);0.0803579101174846;max
+M;Marża operacyjna (OP/PNPM);0.0803579101174846;max
+N;Marża operacyjna (OP/PNPM);0.0789883661319757;max
+N;Marża operacyjna (OP/PNPM);0.0789883661319757;max
+O;Marża operacyjna (OP/PNPM);0.0563571136231018;max
+O;Marża operacyjna (OP/PNPM);0.0563571136231018;max
+P;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+P;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+Q;Marża operacyjna (OP/PNPM);0.0812500637475393;max
+Q;Marża operacyjna (OP/PNPM);0.0812500637475393;max
+R;Marża operacyjna (OP/PNPM);0.0466683079789892;max
+R;Marża operacyjna (OP/PNPM);0.0466683079789892;max
+S;Marża operacyjna (OP/PNPM);0.0159987057226831;max
+S;Marża operacyjna (OP/PNPM);0.0159987057226831;max
+T;Marża operacyjna (OP/PNPM);0.067938440641789;max
+T;Marża operacyjna (OP/PNPM);0.067938440641789;max
+U;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+U;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+V;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+V;Marża operacyjna (OP/PNPM);0.0494050206266734;max
+A;Wskaźnik szybki ((C+REC)/STL);2.58937511904438;max
+A;Wskaźnik szybki ((C+REC)/STL);2.58937511904438;max
+B;Wskaźnik szybki ((C+REC)/STL);0.4696937716481744;max
+B;Wskaźnik szybki ((C+REC)/STL);0.4696937716481744;max
+C;Wskaźnik szybki ((C+REC)/STL);0.9463657195738816;max
+C;Wskaźnik szybki ((C+REC)/STL);0.9463657195738816;max
+D;Wskaźnik szybki ((C+REC)/STL);1.158976334953588;max
+D;Wskaźnik szybki ((C+REC)/STL);1.158976334953588;max
+E;Wskaźnik szybki ((C+REC)/STL);1.337156873167203;max
+E;Wskaźnik szybki ((C+REC)/STL);1.337156873167203;max
+F;Wskaźnik szybki ((C+REC)/STL);1.0338392533255782;max
+F;Wskaźnik szybki ((C+REC)/STL);1.0338392533255782;max
+G;Wskaźnik szybki ((C+REC)/STL);0.7360278468015594;max
+G;Wskaźnik szybki ((C+REC)/STL);0.7360278468015594;max
+H;Wskaźnik szybki ((C+REC)/STL);1.2705997264836764;max
+H;Wskaźnik szybki ((C+REC)/STL);1.2705997264836764;max
+I;Wskaźnik szybki ((C+REC)/STL);0.8014187952034579;max
+I;Wskaźnik szybki ((C+REC)/STL);0.8014187952034579;max
+J;Wskaźnik szybki ((C+REC)/STL);1.2314013065380158;max
+J;Wskaźnik szybki ((C+REC)/STL);1.2314013065380158;max
+L;Wskaźnik szybki ((C+REC)/STL);1.012380240425164;max
+L;Wskaźnik szybki ((C+REC)/STL);1.012380240425164;max
+M;Wskaźnik szybki ((C+REC)/STL);1.249394389426629;max
+M;Wskaźnik szybki ((C+REC)/STL);1.249394389426629;max
+N;Wskaźnik szybki ((C+REC)/STL);1.3446729615566562;max
+N;Wskaźnik szybki ((C+REC)/STL);1.3446729615566562;max
+O;Wskaźnik szybki ((C+REC)/STL);0.9877223430130908;max
+O;Wskaźnik szybki ((C+REC)/STL);0.9877223430130908;max
+P;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+P;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+Q;Wskaźnik szybki ((C+REC)/STL);1.2948952573787087;max
+Q;Wskaźnik szybki ((C+REC)/STL);1.2948952573787087;max
+R;Wskaźnik szybki ((C+REC)/STL);0.9892755862549604;max
+R;Wskaźnik szybki ((C+REC)/STL);0.9892755862549604;max
+S;Wskaźnik szybki ((C+REC)/STL);0.941416651872892;max
+S;Wskaźnik szybki ((C+REC)/STL);0.941416651872892;max
+T;Wskaźnik szybki ((C+REC)/STL);1.2876652039403;max
+T;Wskaźnik szybki ((C+REC)/STL);1.2876652039403;max
+U;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+U;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+V;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+V;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+A;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3467253613545211;max
+A;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3467253613545211;max
+B;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5364108489215146;max
+B;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5364108489215146;max
+C;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.309897436891176;max
+C;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.309897436891176;max
+D;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4788931292071205;max
+D;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4788931292071205;max
+E;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5745066686556867;max
+E;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5745066686556867;max
+F;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5485488890335453;max
+F;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5485488890335453;max
+G;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2254574135381755;max
+G;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2254574135381755;max
+H;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5775284929065608;max
+H;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5775284929065608;max
+I;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.8413445924001299;max
+I;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.8413445924001299;max
+J;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.7361835475786613;max
+J;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.7361835475786613;max
+L;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.6798812214375958;max
+L;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.6798812214375958;max
+M;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.1042080783710404;max
+M;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.1042080783710404;max
+N;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5556966584148493;max
+N;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5556966584148493;max
+O;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.6729429791347702;max
+O;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.6729429791347702;max
+P;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+P;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3652886998561855;max
+Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3652886998561855;max
+R;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4691701102283733;max
+R;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4691701102283733;max
+S;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2898525063140959;max
+S;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2898525063140959;max
+T;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3069963738675916;max
+T;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3069963738675916;max
+U;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+U;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+V;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+V;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
+A;Pokrycie odsetek (OP/IP);27.70557565439455;max
+A;Pokrycie odsetek (OP/IP);27.70557565439455;max
+B;Pokrycie odsetek (OP/IP);2.9321276412882;max
+B;Pokrycie odsetek (OP/IP);2.9321276412882;max
+C;Pokrycie odsetek (OP/IP);7.759955036464331;max
+C;Pokrycie odsetek (OP/IP);7.759955036464331;max
+D;Pokrycie odsetek (OP/IP);7.139934990614842;max
+D;Pokrycie odsetek (OP/IP);7.139934990614842;max
+E;Pokrycie odsetek (OP/IP);5.083450089718064;max
+E;Pokrycie odsetek (OP/IP);5.083450089718064;max
+F;Pokrycie odsetek (OP/IP);3.667420916104255;max
+F;Pokrycie odsetek (OP/IP);3.667420916104255;max
+G;Pokrycie odsetek (OP/IP);6.332750829544344;max
+G;Pokrycie odsetek (OP/IP);6.332750829544344;max
+H;Pokrycie odsetek (OP/IP);4.109634488630988;max
+H;Pokrycie odsetek (OP/IP);4.109634488630988;max
+I;Pokrycie odsetek (OP/IP);2.594450644212236;max
+I;Pokrycie odsetek (OP/IP);2.594450644212236;max
+J;Pokrycie odsetek (OP/IP);2.5413139118931154;max
+J;Pokrycie odsetek (OP/IP);2.5413139118931154;max
+L;Pokrycie odsetek (OP/IP);1.5285355419479307;max
+L;Pokrycie odsetek (OP/IP);1.5285355419479307;max
+M;Pokrycie odsetek (OP/IP);3.261328667109153;max
+M;Pokrycie odsetek (OP/IP);3.261328667109153;max
+N;Pokrycie odsetek (OP/IP);4.60025730213942;max
+N;Pokrycie odsetek (OP/IP);4.60025730213942;max
+O;Pokrycie odsetek (OP/IP);3.0605578647705856;max
+O;Pokrycie odsetek (OP/IP);3.0605578647705856;max
+P;Pokrycie odsetek (OP/IP);7.832270720941637;max
+P;Pokrycie odsetek (OP/IP);7.832270720941637;max
+Q;Pokrycie odsetek (OP/IP);6.508169934640523;max
+Q;Pokrycie odsetek (OP/IP);6.508169934640523;max
+R;Pokrycie odsetek (OP/IP);2.6087959783534327;max
+R;Pokrycie odsetek (OP/IP);2.6087959783534327;max
+S;Pokrycie odsetek (OP/IP);1.6124648971827158;max
+S;Pokrycie odsetek (OP/IP);1.6124648971827158;max
+T;Pokrycie odsetek (OP/IP);9.705474705474709;max
+T;Pokrycie odsetek (OP/IP);9.705474705474709;max
+U;Pokrycie odsetek (OP/IP);7.832270720941637;max
+U;Pokrycie odsetek (OP/IP);7.832270720941637;max
+V;Pokrycie odsetek (OP/IP);7.832270720941637;max
+V;Pokrycie odsetek (OP/IP);7.832270720941637;max
+A;Rotacja należności (PNPM/REC);2.7170500073623742;max
+A;Rotacja należności (PNPM/REC);2.7170500073623742;max
+B;Rotacja należności (PNPM/REC);7.210603927401546;max
+B;Rotacja należności (PNPM/REC);7.210603927401546;max
+C;Rotacja należności (PNPM/REC);6.6146472483290495;max
+C;Rotacja należności (PNPM/REC);6.6146472483290495;max
+D;Rotacja należności (PNPM/REC);7.249841868398133;max
+D;Rotacja należności (PNPM/REC);7.249841868398133;max
+E;Rotacja należności (PNPM/REC);6.316618184954053;max
+E;Rotacja należności (PNPM/REC);6.316618184954053;max
+F;Rotacja należności (PNPM/REC);4.256353116819104;max
+F;Rotacja należności (PNPM/REC);4.256353116819104;max
+G;Rotacja należności (PNPM/REC);9.617250074910062;max
+G;Rotacja należności (PNPM/REC);9.617250074910062;max
+H;Rotacja należności (PNPM/REC);5.986880038974437;max
+H;Rotacja należności (PNPM/REC);5.986880038974437;max
+I;Rotacja należności (PNPM/REC);12.00305165768515;max
+I;Rotacja należności (PNPM/REC);12.00305165768515;max
+J;Rotacja należności (PNPM/REC);4.875599532001052;max
+J;Rotacja należności (PNPM/REC);4.875599532001052;max
+L;Rotacja należności (PNPM/REC);1.963455309303208;max
+L;Rotacja należności (PNPM/REC);1.963455309303208;max
+M;Rotacja należności (PNPM/REC);7.398439390539548;max
+M;Rotacja należności (PNPM/REC);7.398439390539548;max
+N;Rotacja należności (PNPM/REC);4.068276345955676;max
+N;Rotacja należności (PNPM/REC);4.068276345955676;max
+O;Rotacja należności (PNPM/REC);3.829863621325557;max
+O;Rotacja należności (PNPM/REC);3.829863621325557;max
+P;Rotacja należności (PNPM/REC);7.121221801198449;max
+P;Rotacja należności (PNPM/REC);7.121221801198449;max
+Q;Rotacja należności (PNPM/REC);5.905849045238239;max
+Q;Rotacja należności (PNPM/REC);5.905849045238239;max
+R;Rotacja należności (PNPM/REC);7.445545749912188;max
+R;Rotacja należności (PNPM/REC);7.445545749912188;max
+S;Rotacja należności (PNPM/REC);30.11476519150088;max
+S;Rotacja należności (PNPM/REC);30.11476519150088;max
+T;Rotacja należności (PNPM/REC);6.108287898542136;max
+T;Rotacja należności (PNPM/REC);6.108287898542136;max
+U;Rotacja należności (PNPM/REC);7.121221801198449;max
+U;Rotacja należności (PNPM/REC);7.121221801198449;max
+V;Rotacja należności (PNPM/REC);7.121221801198449;max
+V;Rotacja należności (PNPM/REC);7.121221801198449;max
+A;Cash flow margin (CF/PNPM);0.1719529313753167;max
+A;Cash flow margin (CF/PNPM);0.1719529313753167;max
+B;Cash flow margin (CF/PNPM);0.1359055841889733;max
+B;Cash flow margin (CF/PNPM);0.1359055841889733;max
+C;Cash flow margin (CF/PNPM);0.080003041664752;max
+C;Cash flow margin (CF/PNPM);0.080003041664752;max
+D;Cash flow margin (CF/PNPM);0.2251958526212683;max
+D;Cash flow margin (CF/PNPM);0.2251958526212683;max
+E;Cash flow margin (CF/PNPM);0.1767824760235405;max
+E;Cash flow margin (CF/PNPM);0.1767824760235405;max
+F;Cash flow margin (CF/PNPM);0.0739343558808401;max
+F;Cash flow margin (CF/PNPM);0.0739343558808401;max
+G;Cash flow margin (CF/PNPM);0.039985909531613;max
+G;Cash flow margin (CF/PNPM);0.039985909531613;max
+H;Cash flow margin (CF/PNPM);0.1101938464624071;max
+H;Cash flow margin (CF/PNPM);0.1101938464624071;max
+I;Cash flow margin (CF/PNPM);0.1538292534891888;max
+I;Cash flow margin (CF/PNPM);0.1538292534891888;max
+J;Cash flow margin (CF/PNPM);0.2349472297059165;max
+J;Cash flow margin (CF/PNPM);0.2349472297059165;max
+L;Cash flow margin (CF/PNPM);0.2361992786350599;max
+L;Cash flow margin (CF/PNPM);0.2361992786350599;max
+M;Cash flow margin (CF/PNPM);0.1516467498979357;max
+M;Cash flow margin (CF/PNPM);0.1516467498979357;max
+N;Cash flow margin (CF/PNPM);0.1451048461877929;max
+N;Cash flow margin (CF/PNPM);0.1451048461877929;max
+O;Cash flow margin (CF/PNPM);0.1130139860363594;max
+O;Cash flow margin (CF/PNPM);0.1130139860363594;max
+P;Cash flow margin (CF/PNPM);0.0846320068430748;max
+P;Cash flow margin (CF/PNPM);0.0846320068430748;max
+Q;Cash flow margin (CF/PNPM);0.123170445620799;max
+Q;Cash flow margin (CF/PNPM);0.123170445620799;max
+R;Cash flow margin (CF/PNPM);0.0968801797777545;max
+R;Cash flow margin (CF/PNPM);0.0968801797777545;max
+S;Cash flow margin (CF/PNPM);0.0428864181774058;max
+S;Cash flow margin (CF/PNPM);0.0428864181774058;max
+T;Cash flow margin (CF/PNPM);0.1025625477521617;max
+T;Cash flow margin (CF/PNPM);0.1025625477521617;max
+U;Cash flow margin (CF/PNPM);0.0846320068430748;max
+U;Cash flow margin (CF/PNPM);0.0846320068430748;max
+V;Cash flow margin (CF/PNPM);0.0846320068430748;max
+V;Cash flow margin (CF/PNPM);0.0846320068430748;max
+A;Marża netto (NP/PNPM);0.1090111671271965;max
 B;Marża netto (NP/PNPM);-0.018036395988194;max
 C;Marża netto (NP/PNPM);0.0378484661621733;max
 D;Marża netto (NP/PNPM);0.116189935161319;max
@@ -41,27 +335,6 @@ S;Marża operacyjna (OP/PNPM);0.0159987057226831;max
 T;Marża operacyjna (OP/PNPM);0.067938440641789;max
 U;Marża operacyjna (OP/PNPM);0.0494050206266734;max
 V;Marża operacyjna (OP/PNPM);0.0494050206266734;max
-A;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);3.324322807542652;max
-B;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.715728891175764;max
-C;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.4474838909843617;max
-D;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.4413545611978194;max
-E;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.4572781651157305;max
-F;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.3698678138497793;max
-G;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2745293142614478;max
-H;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.3426946235118689;max
-I;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.885676714008981;max
-J;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.3479274391277605;max
-L;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.0243958742476476;max
-M;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.539653126562535;max
-N;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.5059561436926208;max
-O;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.0558139834964548;max
-P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.200261081946043;max
-Q;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.3624912390000778;max
-R;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.0526706724652166;max
-S;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.0010248051256396;max
-T;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.532781898437601;max
-U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.200261081946043;max
-V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.200261081946043;max
 A;Wskaźnik szybki ((C+REC)/STL);2.58937511904438;max
 B;Wskaźnik szybki ((C+REC)/STL);0.4696937716481744;max
 C;Wskaźnik szybki ((C+REC)/STL);0.9463657195738816;max
@@ -76,430 +349,976 @@ L;Wskaźnik szybki ((C+REC)/STL);1.012380240425164;max
 M;Wskaźnik szybki ((C+REC)/STL);1.249394389426629;max
 N;Wskaźnik szybki ((C+REC)/STL);1.3446729615566562;max
 O;Wskaźnik szybki ((C+REC)/STL);0.9877223430130908;max
-P;Wskaźnik szybki ((C+REC)/STL);0.931795850762191;max
+P;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
 Q;Wskaźnik szybki ((C+REC)/STL);1.2948952573787087;max
 R;Wskaźnik szybki ((C+REC)/STL);0.9892755862549604;max
 S;Wskaźnik szybki ((C+REC)/STL);0.941416651872892;max
 T;Wskaźnik szybki ((C+REC)/STL);1.2876652039403;max
-U;Wskaźnik szybki ((C+REC)/STL);0.931795850762191;max
-V;Wskaźnik szybki ((C+REC)/STL);0.931795850762191;max
-A;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3467253613545211;max
-B;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5364108489215146;max
-C;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.309897436891176;max
-D;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4788931292071205;max
-E;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5745066686556867;max
-F;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5485488890335453;max
-G;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2254574135381755;max
-H;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5775284929065608;max
-I;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.8413445924001299;max
-J;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.7361835475786613;max
-L;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.6798812214375958;max
-M;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.1042080783710404;max
-N;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5556966584148493;max
-O;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.6729429791347702;max
-P;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
-Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3652886998561855;max
-R;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4691701102283733;max
-S;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2898525063140959;max
-T;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3069963738675916;max
-U;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
-V;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.280448512203535;max
-A;Pokrycie odsetek (OP/IP);27.70557565439455;max
-B;Pokrycie odsetek (OP/IP);2.9321276412882;max
-C;Pokrycie odsetek (OP/IP);7.759955036464331;max
-D;Pokrycie odsetek (OP/IP);7.139934990614842;max
-E;Pokrycie odsetek (OP/IP);5.083450089718064;max
-F;Pokrycie odsetek (OP/IP);3.667420916104255;max
-G;Pokrycie odsetek (OP/IP);6.332750829544344;max
-H;Pokrycie odsetek (OP/IP);4.109634488630988;max
-I;Pokrycie odsetek (OP/IP);2.5944506442122357;max
-J;Pokrycie odsetek (OP/IP);2.5413139118931154;max
-L;Pokrycie odsetek (OP/IP);1.5285355419479307;max
-M;Pokrycie odsetek (OP/IP);3.261328667109153;max
-N;Pokrycie odsetek (OP/IP);4.60025730213942;max
-O;Pokrycie odsetek (OP/IP);3.0605578647705856;max
-P;Pokrycie odsetek (OP/IP);7.832270720941637;max
-Q;Pokrycie odsetek (OP/IP);6.508169934640523;max
-R;Pokrycie odsetek (OP/IP);2.6087959783534327;max
-S;Pokrycie odsetek (OP/IP);1.6124648971827158;max
-T;Pokrycie odsetek (OP/IP);9.705474705474709;max
-U;Pokrycie odsetek (OP/IP);7.832270720941637;max
-V;Pokrycie odsetek (OP/IP);7.832270720941637;max
-A;Rotacja należności (PNPM/REC);2.7170500073623742;max
-B;Rotacja należności (PNPM/REC);7.210603927401546;max
-C;Rotacja należności (PNPM/REC);6.6146472483290495;max
-D;Rotacja należności (PNPM/REC);7.249841868398133;max
-E;Rotacja należności (PNPM/REC);6.316618184954053;max
-F;Rotacja należności (PNPM/REC);4.256353116819104;max
-G;Rotacja należności (PNPM/REC);9.617250074910062;max
-H;Rotacja należności (PNPM/REC);5.986880038974437;max
-I;Rotacja należności (PNPM/REC);12.00305165768515;max
-J;Rotacja należności (PNPM/REC);4.875599532001052;max
-L;Rotacja należności (PNPM/REC);1.963455309303208;max
-M;Rotacja należności (PNPM/REC);7.398439390539548;max
-N;Rotacja należności (PNPM/REC);4.068276345955676;max
-O;Rotacja należności (PNPM/REC);3.829863621325557;max
-P;Rotacja należności (PNPM/REC);7.121221801198449;max
-Q;Rotacja należności (PNPM/REC);5.905849045238239;max
-R;Rotacja należności (PNPM/REC);7.445545749912188;max
-S;Rotacja należności (PNPM/REC);30.11476519150088;max
-T;Rotacja należności (PNPM/REC);6.108287898542136;max
-U;Rotacja należności (PNPM/REC);7.121221801198449;max
-V;Rotacja należności (PNPM/REC);7.121221801198449;max
-A;Cash flow margin (CF/PNPM);0.1719529313753167;max
-B;Cash flow margin (CF/PNPM);0.1359055841889733;max
-C;Cash flow margin (CF/PNPM);0.080003041664752;max
-D;Cash flow margin (CF/PNPM);0.2251958526212683;max
-E;Cash flow margin (CF/PNPM);0.1767824760235405;max
-F;Cash flow margin (CF/PNPM);0.0739343558808401;max
-G;Cash flow margin (CF/PNPM);0.039985909531613;max
-H;Cash flow margin (CF/PNPM);0.1101938464624071;max
-I;Cash flow margin (CF/PNPM);0.1538292534891888;max
-J;Cash flow margin (CF/PNPM);0.2349472297059165;max
-L;Cash flow margin (CF/PNPM);0.2361992786350599;max
-M;Cash flow margin (CF/PNPM);0.1516467498979357;max
-N;Cash flow margin (CF/PNPM);0.1451048461877929;max
-O;Cash flow margin (CF/PNPM);0.1130139860363594;max
-P;Cash flow margin (CF/PNPM);0.0846320068430748;max
-Q;Cash flow margin (CF/PNPM);0.123170445620799;max
-R;Cash flow margin (CF/PNPM);0.0968801797777545;max
-S;Cash flow margin (CF/PNPM);0.0428864181774058;max
-T;Cash flow margin (CF/PNPM);0.1025625477521617;max
-U;Cash flow margin (CF/PNPM);0.0846320068430748;max
-V;Cash flow margin (CF/PNPM);0.0846320068430748;max
+U;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+V;Wskaźnik szybki ((C+REC)/STL);0.9345189635327475;max
+A;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.8223024543549836;max
+B;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.1270249949177551;max
+C;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2594884055831674;max
+D;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4904274926442753;max
+E;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.720796461324255;max
+F;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3851291111342961;max
+G;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.1769849484862421;max
+H;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5898393172886898;max
+I;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4671203351800472;max
+J;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4551515316595;max
+L;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4175606375504697;max
+M;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.910158436382904;max
+N;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5585771190307739;max
+O;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2271750062546013;max
+P;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2973667218775441;max
+Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.6484892142356514;max
+R;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3627020570791905;max
+S;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.6432951922921744;max
+T;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4139645062327677;max
+U;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2973667218775441;max
+V;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2973667218775441;max
+A;Pokrycie odsetek (OP/IP);0.6007065260697495;max
+B;Pokrycie odsetek (OP/IP);0.754494836781228;max
+C;Pokrycie odsetek (OP/IP);0.7102253249774;max
+D;Pokrycie odsetek (OP/IP);0.4308238315073552;max
+E;Pokrycie odsetek (OP/IP);0.4470803300466229;max
+F;Pokrycie odsetek (OP/IP);0.6602316223778041;max
+G;Pokrycie odsetek (OP/IP);0.824972431267358;max
+H;Pokrycie odsetek (OP/IP);0.4248461996976141;max
+I;Pokrycie odsetek (OP/IP);0.2962102216504614;max
+J;Pokrycie odsetek (OP/IP);0.358909024585978;max
+L;Pokrycie odsetek (OP/IP);0.5097005841439797;max
+M;Pokrycie odsetek (OP/IP);0.3608336952971276;max
+N;Pokrycie odsetek (OP/IP);0.5626991637991399;max
+O;Pokrycie odsetek (OP/IP);0.510166778393525;max
+P;Pokrycie odsetek (OP/IP);0.7858671432038299;max
+Q;Pokrycie odsetek (OP/IP);0.7170938739040599;max
+R;Pokrycie odsetek (OP/IP);0.4568788812882237;max
+S;Pokrycie odsetek (OP/IP);0.3842821571102091;max
+T;Pokrycie odsetek (OP/IP);0.6103579047167574;max
+U;Pokrycie odsetek (OP/IP);0.7858671432038299;max
+V;Pokrycie odsetek (OP/IP);0.7858671432038299;max
+A;Rotacja należności (PNPM/REC);0.3992934739302505;max
+B;Rotacja należności (PNPM/REC);0.2455051632187721;max
+C;Rotacja należności (PNPM/REC);0.2897746750226001;max
+D;Rotacja należności (PNPM/REC);0.5691761684926446;max
+E;Rotacja należności (PNPM/REC);0.5529196699533772;max
+F;Rotacja należności (PNPM/REC);0.339768377622196;max
+G;Rotacja należności (PNPM/REC);0.175027568732642;max
+H;Rotacja należności (PNPM/REC);0.5751538003023859;max
+I;Rotacja należności (PNPM/REC);0.7037897783495385;max
+J;Rotacja należności (PNPM/REC);0.641090975414022;max
+L;Rotacja należności (PNPM/REC);0.4902994158560203;max
+M;Rotacja należności (PNPM/REC);0.6391663047028724;max
+N;Rotacja należności (PNPM/REC);0.4373008362008602;max
+O;Rotacja należności (PNPM/REC);0.4898332216064749;max
+P;Rotacja należności (PNPM/REC);0.21413285679617;max
+Q;Rotacja należności (PNPM/REC);0.2829061260959401;max
+R;Rotacja należności (PNPM/REC);0.5431211187117763;max
+S;Rotacja należności (PNPM/REC);0.6157178428897909;max
+T;Rotacja należności (PNPM/REC);0.3896420952832424;max
+U;Rotacja należności (PNPM/REC);0.21413285679617;max
+V;Rotacja należności (PNPM/REC);0.21413285679617;max
+A;Cash flow margin (CF/PNPM);27.70557565439455;max
+B;Cash flow margin (CF/PNPM);2.9321276412882;max
+C;Cash flow margin (CF/PNPM);7.759955036464331;max
+D;Cash flow margin (CF/PNPM);7.139934990614842;max
+E;Cash flow margin (CF/PNPM);5.083450089718064;max
+F;Cash flow margin (CF/PNPM);3.667420916104255;max
+G;Cash flow margin (CF/PNPM);6.332750829544344;max
+H;Cash flow margin (CF/PNPM);4.109634488630988;max
+I;Cash flow margin (CF/PNPM);2.5944506442122357;max
+J;Cash flow margin (CF/PNPM);2.5413139118931154;max
+L;Cash flow margin (CF/PNPM);1.5285355419479307;max
+M;Cash flow margin (CF/PNPM);3.261328667109153;max
+N;Cash flow margin (CF/PNPM);4.60025730213942;max
+O;Cash flow margin (CF/PNPM);3.0605578647705856;max
+P;Cash flow margin (CF/PNPM);7.832270720941637;max
+Q;Cash flow margin (CF/PNPM);6.508169934640523;max
+R;Cash flow margin (CF/PNPM);2.6087959783534327;max
+S;Cash flow margin (CF/PNPM);1.6124648971827158;max
+T;Cash flow margin (CF/PNPM);9.705474705474709;max
+U;Cash flow margin (CF/PNPM);7.832270720941637;max
+V;Cash flow margin (CF/PNPM);7.832270720941637;max
+A;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.94819387615092;min
+A;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);10.31514999424434;max
+A;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-11.668121353334678;max
 A;Cash flow margin (CF/PNPM) (Δ% 1yr);-11.668121353334678;max
+A;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-6.214113629340905;min
+A;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-3.107403083069448;max
+A;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);11.495183999587896;max
+A;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-57.79713328820719;min
+A;Inventory Turnover (TC/INV) (Δ% 1yr);-6.1009522940342436;max
+A;Investment Ratio (IO/PNPM) (Δ% 1yr);-8.853170899502674;max
 A;Marża netto (NP/PNPM) (Δ% 1yr);-11.728656061908485;max
 A;Marża operacyjna (OP/PNPM) (Δ% 1yr);39.110058162186974;max
+A;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);31.23357412202983;max
 A;Pokrycie odsetek (OP/IP) (Δ% 1yr);67.92971521980066;max
+A;Profit Firms Share (PEN/EN) (Δ% 1yr);0.384535364013717;max
+A;Receivables Turnover (PNPM/REC) (Δ% 1yr);-7.835004052916399;max
 A;Rotacja należności (PNPM/REC) (Δ% 1yr);-7.835004052916399;max
+A;Sales Profitability (POS/PNPM) (Δ% 1yr);70.29741449602886;max
 A;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);9.946522183485522;max
 A;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);10.996114269900344;max
 A;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-1.4270926585729105;min
+B;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);53.3473323793783;min
+B;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);7.1123171339203495;max
+B;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-2.238998128759614;max
 B;Cash flow margin (CF/PNPM) (Δ% 1yr);-2.238998128759614;max
+B;Cost Share Ratio (TC/PNPM) (Δ% 1yr);18.36593218472453;min
+B;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);1.9590096928328673;max
+B;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-4.296883101223446;max
+B;Financial Risk Ratio (OFE/OP) (Δ% 1yr);560.3824608922213;min
+B;Inventory Turnover (TC/INV) (Δ% 1yr);9.40085987588524;max
+B;Investment Ratio (IO/PNPM) (Δ% 1yr);16.46818113787486;max
 B;Marża netto (NP/PNPM) (Δ% 1yr);-141.05665938635767;max
 B;Marża operacyjna (OP/PNPM) (Δ% 1yr);-44.018512459207905;max
+B;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-20.562478251727807;max
 B;Pokrycie odsetek (OP/IP) (Δ% 1yr);-57.05299923008661;max
+B;Profit Firms Share (PEN/EN) (Δ% 1yr);1.761798469387749;max
+B;Receivables Turnover (PNPM/REC) (Δ% 1yr);-4.5100406287198505;max
 B;Rotacja należności (PNPM/REC) (Δ% 1yr);-4.5100406287198505;max
+B;Sales Profitability (POS/PNPM) (Δ% 1yr);-57.60138851993404;max
 B;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-22.886069144202132;max
 B;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);-26.486506024723727;max
 B;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);29.391268976809492;min
+C;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.6293298051724506;min
+C;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.6148524967445921;max
+C;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-2.524873727654452;max
 C;Cash flow margin (CF/PNPM) (Δ% 1yr);-2.524873727654452;max
+C;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.008981510225503414;min
+C;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-2.3884981422818496;max
+C;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-0.9418439407500598;max
+C;Financial Risk Ratio (OFE/OP) (Δ% 1yr);34.29923577441172;min
+C;Inventory Turnover (TC/INV) (Δ% 1yr);0.37711408693827203;max
+C;Investment Ratio (IO/PNPM) (Δ% 1yr);13.395744598824127;max
 C;Marża netto (NP/PNPM) (Δ% 1yr);-6.523294064083784;max
 C;Marża operacyjna (OP/PNPM) (Δ% 1yr);0.7437011955924764;max
+C;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-1.4128819944007212;max
 C;Pokrycie odsetek (OP/IP) (Δ% 1yr);10.899854933215046;max
+C;Profit Firms Share (PEN/EN) (Δ% 1yr);2.6706438612122145;max
+C;Receivables Turnover (PNPM/REC) (Δ% 1yr);-0.7669650734160336;max
 C;Rotacja należności (PNPM/REC) (Δ% 1yr);-0.7669650734160336;max
+C;Sales Profitability (POS/PNPM) (Δ% 1yr);2.3672326035514666;max
 C;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);3.7840906115609902;max
 C;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);5.359624515089588;max
 C;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);1.674092424056779;min
+D;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.394278616486208;min
+D;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.4115140976000773;max
+D;Cash Flow Margin (CF/PNPM) (Δ% 1yr);42.80619246040403;max
 D;Cash flow margin (CF/PNPM) (Δ% 1yr);42.80619246040403;max
+D;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.9341305671595785;min
+D;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-14.8073503755589;max
+D;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);103.4422910989364;max
+D;Financial Risk Ratio (OFE/OP) (Δ% 1yr);575.1987851744882;min
+D;Inventory Turnover (TC/INV) (Δ% 1yr);-10.653565512055648;max
+D;Investment Ratio (IO/PNPM) (Δ% 1yr);25.387055067072794;max
 D;Marża netto (NP/PNPM) (Δ% 1yr);34.486070536181714;max
 D;Marża operacyjna (OP/PNPM) (Δ% 1yr);16.716935455870676;max
+D;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-10.566587873992708;max
 D;Pokrycie odsetek (OP/IP) (Δ% 1yr);0.8727351304201093;max
+D;Profit Firms Share (PEN/EN) (Δ% 1yr);-2.483582679109265;max
+D;Receivables Turnover (PNPM/REC) (Δ% 1yr);-10.814992659519412;max
 D;Rotacja należności (PNPM/REC) (Δ% 1yr);-10.814992659519412;max
+D;Sales Profitability (POS/PNPM) (Δ% 1yr);6.703650506588403;max
 D;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);9.27542027515999;max
 D;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);10.049188841157557;max
 D;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);26.504537732329258;min
+E;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.7231406966716117;min
+E;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.8257518361408713;max
+E;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-14.947724427260797;max
 E;Cash flow margin (CF/PNPM) (Δ% 1yr);-14.947724427260797;max
+E;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.8623916740570152;min
+E;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);1.3027579014541573;max
+E;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-14.923932176215782;max
+E;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-71.37037034532696;min
+E;Inventory Turnover (TC/INV) (Δ% 1yr);-0.5548135352385777;max
+E;Investment Ratio (IO/PNPM) (Δ% 1yr);24.118308380713742;max
 E;Marża netto (NP/PNPM) (Δ% 1yr);-29.220023367135955;max
 E;Marża operacyjna (OP/PNPM) (Δ% 1yr);-29.221192920423373;max
+E;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-14.811552012771296;max
 E;Pokrycie odsetek (OP/IP) (Δ% 1yr);-22.111066806424567;max
+E;Profit Firms Share (PEN/EN) (Δ% 1yr);2.963148645547219;max
+E;Receivables Turnover (PNPM/REC) (Δ% 1yr);1.675411940580996;max
 E;Rotacja należności (PNPM/REC) (Δ% 1yr);1.675411940580996;max
+E;Sales Profitability (POS/PNPM) (Δ% 1yr);0.6947738164790589;max
 E;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-5.4382416963435;max
 E;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);-5.435756604455215;max
 E;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);0.9984337099702991;min
+F;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-21.665184655203582;min
+F;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.48654254927184;max
+F;Cash Flow Margin (CF/PNPM) (Δ% 1yr);13.467276572740616;max
 F;Cash flow margin (CF/PNPM) (Δ% 1yr);13.467276572740616;max
+F;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.5136919378243752;min
+F;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);5.178662975589645;max
+F;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);7.842462371201201;max
+F;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-23.15261968587301;min
+F;Inventory Turnover (TC/INV) (Δ% 1yr);13.769993457662903;max
+F;Investment Ratio (IO/PNPM) (Δ% 1yr);0.20548775701159133;max
 F;Marża netto (NP/PNPM) (Δ% 1yr);79.60828308838224;max
 F;Marża operacyjna (OP/PNPM) (Δ% 1yr);30.199961550828082;max
+F;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);16.51158745722768;max
 F;Pokrycie odsetek (OP/IP) (Δ% 1yr);64.67662002652096;max
+F;Profit Firms Share (PEN/EN) (Δ% 1yr);4.506864651235041;max
+F;Receivables Turnover (PNPM/REC) (Δ% 1yr);4.05155949009893;max
 F;Rotacja należności (PNPM/REC) (Δ% 1yr);4.05155949009893;max
+F;Sales Profitability (POS/PNPM) (Δ% 1yr);33.20481922902985;max
 F;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);1.5791271538169418;max
 F;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);4.932030527372869;max
 F;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-5.734938424959006;min
+G;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.957203252162548;min
+G;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);4.108152223551314;max
+G;Cash Flow Margin (CF/PNPM) (Δ% 1yr);2.480334616646852;max
 G;Cash flow margin (CF/PNPM) (Δ% 1yr);2.480334616646852;max
+G;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.10884404299924155;min
+G;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-1.3984462367772728;max
+G;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);16.7784678673865;max
+G;Financial Risk Ratio (OFE/OP) (Δ% 1yr);11.202025142575474;min
+G;Inventory Turnover (TC/INV) (Δ% 1yr);-4.4792953092020635;max
+G;Investment Ratio (IO/PNPM) (Δ% 1yr);0.6793922564948154;max
 G;Marża netto (NP/PNPM) (Δ% 1yr);2.294331768053447;max
 G;Marża operacyjna (OP/PNPM) (Δ% 1yr);-1.0281051225952782;max
+G;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-0.4123002109508122;max
 G;Pokrycie odsetek (OP/IP) (Δ% 1yr);6.785707893988581;max
+G;Profit Firms Share (PEN/EN) (Δ% 1yr);1.8826259875944718;max
+G;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.118232647270511;max
 G;Rotacja należności (PNPM/REC) (Δ% 1yr);2.118232647270511;max
+G;Sales Profitability (POS/PNPM) (Δ% 1yr);10.771496051058522;max
 G;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);2.6830225914558503;max
 G;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.46398750811030276;max
 G;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);1.0345840865555396;min
+H;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.2366577988403895;min
+H;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.4406869404316136;max
+H;Cash Flow Margin (CF/PNPM) (Δ% 1yr);5.424870501003909;max
 H;Cash flow margin (CF/PNPM) (Δ% 1yr);5.424870501003909;max
+H;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.5686002107000268;min
+H;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-4.6034087426751675;max
+H;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-33.15475039890228;max
+H;Financial Risk Ratio (OFE/OP) (Δ% 1yr);24.885346389777617;min
+H;Inventory Turnover (TC/INV) (Δ% 1yr);-6.024857364534627;max
+H;Investment Ratio (IO/PNPM) (Δ% 1yr);16.499621807248232;max
 H;Marża netto (NP/PNPM) (Δ% 1yr);5.872926057610515;max
 H;Marża operacyjna (OP/PNPM) (Δ% 1yr);16.99918593464061;max
+H;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);0.16717955708146737;max
 H;Pokrycie odsetek (OP/IP) (Δ% 1yr);28.777900739752415;max
+H;Profit Firms Share (PEN/EN) (Δ% 1yr);3.5920313664952213;max
+H;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.4764215031496495;max
 H;Rotacja należności (PNPM/REC) (Δ% 1yr);-1.4764215031496495;max
+H;Sales Profitability (POS/PNPM) (Δ% 1yr);29.910706491487566;max
 H;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);3.6898033086743367;max
 H;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);3.635309452064408;max
 H;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);9.713142610394137;min
+I;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.0890268439223554;min
+I;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.6815463598611278;max
+I;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-2.7244064739858125;max
 I;Cash flow margin (CF/PNPM) (Δ% 1yr);-2.7244064739858125;max
+I;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-3.0653304209463874;min
+I;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-0.836885024790591;max
+I;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-59.87262345710109;max
+I;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-68.19319789373449;min
+I;Inventory Turnover (TC/INV) (Δ% 1yr);11.949265819055508;max
+I;Investment Ratio (IO/PNPM) (Δ% 1yr);-18.044988218131337;max
 I;Marża netto (NP/PNPM) (Δ% 1yr);45.11810980801003;max
 I;Marża operacyjna (OP/PNPM) (Δ% 1yr);36.28641055164822;max
-I;Pokrycie odsetek (OP/IP) (Δ% 1yr);44.12157213067568;max
+I;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);16.68104743429614;max
+I;Pokrycie odsetek (OP/IP) (Δ% 1yr);44.1215721306757;max
+I;Profit Firms Share (PEN/EN) (Δ% 1yr);9.356521739130432;max
+I;Receivables Turnover (PNPM/REC) (Δ% 1yr);7.900689999831781;max
 I;Rotacja należności (PNPM/REC) (Δ% 1yr);7.900689999831781;max
+I;Sales Profitability (POS/PNPM) (Δ% 1yr);35.21243034694491;max
 I;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);2.1838451046644933;max
 I;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);3.983767997277343;max
 I;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-1.3529896230841454;min
+J;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.832941143183706;min
+J;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);12.352111602308627;max
+J;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-6.57846604195018;max
 J;Cash flow margin (CF/PNPM) (Δ% 1yr);-6.57846604195018;max
+J;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4040183822380463;min
+J;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.995704450947905;max
+J;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-25.99971150743079;max
+J;Financial Risk Ratio (OFE/OP) (Δ% 1yr);55.18909140931798;min
+J;Inventory Turnover (TC/INV) (Δ% 1yr);2.061416006573985;max
+J;Investment Ratio (IO/PNPM) (Δ% 1yr);-12.501110497510382;max
 J;Marża netto (NP/PNPM) (Δ% 1yr);-19.511258753749924;max
 J;Marża operacyjna (OP/PNPM) (Δ% 1yr);-0.08491169583831205;max
+J;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-4.170672659295355;max
 J;Pokrycie odsetek (OP/IP) (Δ% 1yr);19.542088219980233;max
+J;Profit Firms Share (PEN/EN) (Δ% 1yr);-0.3630975981302564;max
+J;Receivables Turnover (PNPM/REC) (Δ% 1yr);-4.203263906342055;max
 J;Rotacja należności (PNPM/REC) (Δ% 1yr);-4.203263906342055;max
+J;Sales Profitability (POS/PNPM) (Δ% 1yr);11.057583769269314;max
 J;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);23.025815995972806;max
 J;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);24.647323660124098;max
 J;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);3.2410305402431563;min
+L;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-2.029568290474171;min
+L;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-3.488073982076708;max
+L;Cash Flow Margin (CF/PNPM) (Δ% 1yr);2.026481349581122;max
 L;Cash flow margin (CF/PNPM) (Δ% 1yr);2.026481349581122;max
+L;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-4.219641946403786;min
+L;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-10.087543664293099;max
+L;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-16.834134515251655;max
+L;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-29.56786943066553;min
+L;Inventory Turnover (TC/INV) (Δ% 1yr);4.450500159946268;max
+L;Investment Ratio (IO/PNPM) (Δ% 1yr);8.292198428865998;max
 L;Marża netto (NP/PNPM) (Δ% 1yr);23.804177885668302;max
 L;Marża operacyjna (OP/PNPM) (Δ% 1yr);25.278753393745852;max
+L;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);8.459598396188548;max
 L;Pokrycie odsetek (OP/IP) (Δ% 1yr);26.228591046472545;max
+L;Profit Firms Share (PEN/EN) (Δ% 1yr);-1.11695446882534;max
+L;Receivables Turnover (PNPM/REC) (Δ% 1yr);-2.3542127996534314;max
 L;Rotacja należności (PNPM/REC) (Δ% 1yr);-2.3542127996534314;max
+L;Sales Profitability (POS/PNPM) (Δ% 1yr);0.12803610168063567;max
 L;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);2.392934242075398;max
 L;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);2.6522839862635856;max
 L;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);9.33439671715322;min
+M;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.91991944862735;min
+M;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.609794576590498;max
+M;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-4.750782885305711;max
 M;Cash flow margin (CF/PNPM) (Δ% 1yr);-4.750782885305711;max
+M;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.883940733713903;min
+M;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-1.8145620673385168;max
+M;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);2.5957562102126275;max
+M;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-19.579071320013043;min
+M;Inventory Turnover (TC/INV) (Δ% 1yr);-7.957889964021825;max
+M;Investment Ratio (IO/PNPM) (Δ% 1yr);5.955068800125895;max
 M;Marża netto (NP/PNPM) (Δ% 1yr);-4.795787070892822;max
 M;Marża operacyjna (OP/PNPM) (Δ% 1yr);-13.846036797869132;max
+M;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-12.159147568021671;max
 M;Pokrycie odsetek (OP/IP) (Δ% 1yr);-15.489306860837551;max
+M;Profit Firms Share (PEN/EN) (Δ% 1yr);0.20210414212641145;max
+M;Receivables Turnover (PNPM/REC) (Δ% 1yr);21.248317133301068;max
 M;Rotacja należności (PNPM/REC) (Δ% 1yr);21.248317133301068;max
+M;Sales Profitability (POS/PNPM) (Δ% 1yr);-2.0760924932488516;max
 M;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);4.934073699718583;max
 M;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);3.629004409805265;max
 M;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);5.475167399456945;min
+N;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.44212453565267185;min
+N;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-6.0522411557112505;max
+N;Cash Flow Margin (CF/PNPM) (Δ% 1yr);33.289161874027464;max
 N;Cash flow margin (CF/PNPM) (Δ% 1yr);33.289161874027464;max
+N;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-3.4083467011768613;min
+N;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);1.934791170167107;max
+N;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);9.082139165583186;max
+N;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-40.71013326234523;min
+N;Inventory Turnover (TC/INV) (Δ% 1yr);5.236010829808992;max
+N;Investment Ratio (IO/PNPM) (Δ% 1yr);5.296304003108836;max
 N;Marża netto (NP/PNPM) (Δ% 1yr);78.02815019060938;max
 N;Marża operacyjna (OP/PNPM) (Δ% 1yr);68.77578096223601;max
+N;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);47.143077854075095;max
 N;Pokrycie odsetek (OP/IP) (Δ% 1yr);49.60881172375995;max
+N;Profit Firms Share (PEN/EN) (Δ% 1yr);1.781103885157622;max
+N;Receivables Turnover (PNPM/REC) (Δ% 1yr);-5.3188010633791185;max
 N;Rotacja należności (PNPM/REC) (Δ% 1yr);-5.3188010633791185;max
+N;Sales Profitability (POS/PNPM) (Δ% 1yr);30.312962235026784;max
 N;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);15.56620202662929;max
 N;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);16.52799742717315;max
 N;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-6.366324024659503;min
+O;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-7.992825517507576;min
+O;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.045921427553037755;max
+O;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-3.0671938136561048;max
 O;Cash flow margin (CF/PNPM) (Δ% 1yr);-3.0671938136561048;max
+O;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.7510277347941606;min
+O;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);5.332530537007576;max
+O;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.55666526231201;max
+O;Financial Risk Ratio (OFE/OP) (Δ% 1yr);85.36838425838536;min
+O;Inventory Turnover (TC/INV) (Δ% 1yr);5.477127682939572;max
+O;Investment Ratio (IO/PNPM) (Δ% 1yr);6.427683519514668;max
 O;Marża netto (NP/PNPM) (Δ% 1yr);0.005310848015393213;max
 O;Marża operacyjna (OP/PNPM) (Δ% 1yr);-7.762109280791946;max
+O;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-4.9816551082335225;max
 O;Pokrycie odsetek (OP/IP) (Δ% 1yr);7.552525111111365;max
+O;Profit Firms Share (PEN/EN) (Δ% 1yr);2.196600515222159;max
+O;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.7143702514999037;max
 O;Rotacja należności (PNPM/REC) (Δ% 1yr);2.7143702514999037;max
+O;Sales Profitability (POS/PNPM) (Δ% 1yr);-4.094159872755868;max
 O;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);18.673394397391288;max
 O;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);18.746662712072407;max
 O;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-3.032881346822332;min
+P;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.456776382458787;min
+P;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.40216771515506927;max
+P;Cash Flow Margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
 P;Cash flow margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
+P;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.683553055382609;min
+P;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.209178190417974;max
+P;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-2.3180095320434373;max
+P;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-4.635281350655544;min
+P;Inventory Turnover (TC/INV) (Δ% 1yr);1.9144289621564485;max
+P;Investment Ratio (IO/PNPM) (Δ% 1yr);11.887658324935657;max
 P;Marża netto (NP/PNPM) (Δ% 1yr);31.554521703827827;max
 P;Marża operacyjna (OP/PNPM) (Δ% 1yr);19.564400513956414;max
+P;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);5.299901001386247;max
 P;Pokrycie odsetek (OP/IP) (Δ% 1yr);25.78630233499915;max
+P;Profit Firms Share (PEN/EN) (Δ% 1yr);6.976744186046512;max
+P;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
 P;Rotacja należności (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
-P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.3261582147460407;max
-P;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.6292200538684913;max
+P;Sales Profitability (POS/PNPM) (Δ% 1yr);16.82010556448994;max
+P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.2170922746552;max
+P;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.7694608442086305;max
 P;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);7.940436836348545;min
+Q;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.7494479749146645;min
+Q;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);7.749308477864732;max
+Q;Cash Flow Margin (CF/PNPM) (Δ% 1yr);22.819632413537555;max
 Q;Cash flow margin (CF/PNPM) (Δ% 1yr);22.819632413537555;max
+Q;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-5.6102820290841064;min
+Q;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);11.441323525129379;max
+Q;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);18.357945158176747;max
+Q;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-17.872010513958088;min
+Q;Inventory Turnover (TC/INV) (Δ% 1yr);27.797048429881766;max
+Q;Investment Ratio (IO/PNPM) (Δ% 1yr);-5.928109706079684;max
 Q;Marża netto (NP/PNPM) (Δ% 1yr);59.182549158785704;max
 Q;Marża operacyjna (OP/PNPM) (Δ% 1yr);40.2853024119954;max
+Q;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);33.28049594328729;max
 Q;Pokrycie odsetek (OP/IP) (Δ% 1yr);72.18280040019222;max
+Q;Profit Firms Share (PEN/EN) (Δ% 1yr);3.7790295027471235;max
+Q;Receivables Turnover (PNPM/REC) (Δ% 1yr);4.818264516473866;max
 Q;Rotacja należności (PNPM/REC) (Δ% 1yr);4.818264516473866;max
+Q;Sales Profitability (POS/PNPM) (Δ% 1yr);25.84647139929982;max
 Q;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);2.0921839607634762;max
 Q;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);3.2506094032766915;max
 Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-7.755373403780633;min
+R;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.5159826457230432;min
+R;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-8.26852616137664;max
+R;Cash Flow Margin (CF/PNPM) (Δ% 1yr);-6.252819525060516;max
 R;Cash flow margin (CF/PNPM) (Δ% 1yr);-6.252819525060516;max
+R;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.6303939534494846;min
+R;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);2.5516226175344983;max
+R;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-30.889340035644064;max
+R;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-17.910220307870027;min
+R;Inventory Turnover (TC/INV) (Δ% 1yr);-3.6358735790319208;max
+R;Investment Ratio (IO/PNPM) (Δ% 1yr);-2.591867566263511;max
 R;Marża netto (NP/PNPM) (Δ% 1yr);-15.0596752264639;max
 R;Marża operacyjna (OP/PNPM) (Δ% 1yr);-15.743737047033992;max
+R;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-10.69813566185519;max
 R;Pokrycie odsetek (OP/IP) (Δ% 1yr);-9.501233877245065;max
+R;Profit Firms Share (PEN/EN) (Δ% 1yr);-1.5973111227010988;max
+R;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.9900614549587585;max
 R;Rotacja należności (PNPM/REC) (Δ% 1yr);-3.9900614549587585;max
+R;Sales Profitability (POS/PNPM) (Δ% 1yr);-16.638259437392946;max
 R;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-12.155051542727668;max
 R;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);-12.526259865506592;max
 R;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);3.0859466680510295;min
+S;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.713964202972367;min
+S;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);11.774142179164825;max
+S;Cash Flow Margin (CF/PNPM) (Δ% 1yr);4.203732683750323;max
 S;Cash flow margin (CF/PNPM) (Δ% 1yr);4.203732683750323;max
+S;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.0114664378916571;min
+S;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);6.50505297417483;max
+S;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-29.179544308728563;max
+S;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-21.50481559814939;min
+S;Inventory Turnover (TC/INV) (Δ% 1yr);-19.240102333038315;max
+S;Investment Ratio (IO/PNPM) (Δ% 1yr);7.470003359594421;max
 S;Marża netto (NP/PNPM) (Δ% 1yr);-24.684136544135978;max
 S;Marża operacyjna (OP/PNPM) (Δ% 1yr);2.7317311115200313;max
+S;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);-5.183317117362725;max
 S;Pokrycie odsetek (OP/IP) (Δ% 1yr);-18.21655993394984;max
+S;Profit Firms Share (PEN/EN) (Δ% 1yr);11.072862880091797;max
+S;Receivables Turnover (PNPM/REC) (Δ% 1yr);24.63538118124303;max
 S;Rotacja należności (PNPM/REC) (Δ% 1yr);24.63538118124303;max
+S;Sales Profitability (POS/PNPM) (Δ% 1yr);-61.2860132502958;max
 S;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-0.5449207052491954;max
 S;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);-2.0905503569391506;max
 S;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);12.120487338341068;min
+T;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.173558457219244;min
+T;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);15.919049418236142;max
+T;Cash Flow Margin (CF/PNPM) (Δ% 1yr);50.670235433011754;max
 T;Cash flow margin (CF/PNPM) (Δ% 1yr);50.670235433011754;max
+T;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4806805155887481;min
+T;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);2.5262731698054552;max
+T;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-4.710984747379408;max
+T;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-54.39098668807524;min
+T;Inventory Turnover (TC/INV) (Δ% 1yr);15.878225132488167;max
+T;Investment Ratio (IO/PNPM) (Δ% 1yr);35.07357404435324;max
 T;Marża netto (NP/PNPM) (Δ% 1yr);171.9244609085748;max
 T;Marża operacyjna (OP/PNPM) (Δ% 1yr);119.06511595890339;max
+T;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);62.63719722402743;max
 T;Pokrycie odsetek (OP/IP) (Δ% 1yr);134.83662651075372;max
+T;Profit Firms Share (PEN/EN) (Δ% 1yr);-0.9019785335574814;max
+T;Receivables Turnover (PNPM/REC) (Δ% 1yr);-4.039489362891283;max
 T;Rotacja należności (PNPM/REC) (Δ% 1yr);-4.039489362891283;max
+T;Sales Profitability (POS/PNPM) (Δ% 1yr);5.674714022293275;max
 T;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);12.23110413524034;max
 T;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);15.466914110694116;max
 T;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);-5.002660728711816;min
+U;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.456776382458787;min
+U;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.40216771515506927;max
+U;Cash Flow Margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
 U;Cash flow margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
+U;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.683553055382609;min
+U;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.209178190417974;max
+U;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-2.3180095320434373;max
+U;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-4.635281350655544;min
+U;Inventory Turnover (TC/INV) (Δ% 1yr);1.9144289621564485;max
+U;Investment Ratio (IO/PNPM) (Δ% 1yr);11.887658324935657;max
 U;Marża netto (NP/PNPM) (Δ% 1yr);31.554521703827827;max
 U;Marża operacyjna (OP/PNPM) (Δ% 1yr);19.564400513956414;max
+U;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);5.299901001386247;max
 U;Pokrycie odsetek (OP/IP) (Δ% 1yr);25.78630233499915;max
+U;Profit Firms Share (PEN/EN) (Δ% 1yr);2.6976744186046515;max
+U;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
 U;Rotacja należności (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
-U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.3261582147460407;max
-U;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.6292200538684913;max
+U;Sales Profitability (POS/PNPM) (Δ% 1yr);16.82010556448994;max
+U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.2170922746552;max
+U;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.7694608442086305;max
 U;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);7.940436836348545;min
+V;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.456776382458787;min
+V;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.40216771515506927;max
+V;Cash Flow Margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
 V;Cash flow margin (CF/PNPM) (Δ% 1yr);13.829858973015893;max
+V;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.683553055382609;min
+V;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.209178190417974;max
+V;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-2.3180095320434373;max
+V;Financial Risk Ratio (OFE/OP) (Δ% 1yr);-4.635281350655544;min
+V;Inventory Turnover (TC/INV) (Δ% 1yr);1.9144289621564485;max
+V;Investment Ratio (IO/PNPM) (Δ% 1yr);11.887658324935657;max
 V;Marża netto (NP/PNPM) (Δ% 1yr);31.554521703827827;max
 V;Marża operacyjna (OP/PNPM) (Δ% 1yr);19.564400513956414;max
+V;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 1yr);5.299901001386247;max
 V;Pokrycie odsetek (OP/IP) (Δ% 1yr);25.78630233499915;max
+V;Profit Firms Share (PEN/EN) (Δ% 1yr);2.6976744186046515;max
+V;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
 V;Rotacja należności (PNPM/REC) (Δ% 1yr);-3.7997006876227797;max
-V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.3261582147460407;max
-V;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.6292200538684913;max
+V;Sales Profitability (POS/PNPM) (Δ% 1yr);16.82010556448994;max
+V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 1yr);-1.2170922746552;max
+V;Wskaźnik szybki ((C+REC)/STL) (Δ% 1yr);0.7694608442086305;max
 V;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 1yr);7.940436836348545;min
+A;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);103864.18305255429;min
+A;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);12.229497731010671;max
+A;Cash Flow Margin (CF/PNPM) (Δ% 2yr);90020.24568835595;max
 A;Cash flow margin (CF/PNPM) (Δ% 2yr);90020.24568835595;max
+A;Cost Share Ratio (TC/PNPM) (Δ% 2yr);91361.18922022598;min
+A;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90591158098943;max
+A;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-28.414489601138836;max
+A;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-1.06029923712234;min
+A;Inventory Turnover (TC/INV) (Δ% 2yr);-4.963461242385138;max
+A;Investment Ratio (IO/PNPM) (Δ% 2yr);86439.48405159333;max
 A;Marża netto (NP/PNPM) (Δ% 2yr);83284.23790777271;max
 A;Marża operacyjna (OP/PNPM) (Δ% 2yr);151715.6002407032;max
+A;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);40.4983282870422;max
 A;Pokrycie odsetek (OP/IP) (Δ% 2yr);105.20105488265459;max
+A;Profit Firms Share (PEN/EN) (Δ% 2yr);-3.7875979684876304;max
+A;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.91810434527153;max
 A;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.91810434527153;max
+A;Sales Profitability (POS/PNPM) (Δ% 2yr);205093.74150992103;max
 A;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);12.8329418139912;max
 A;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);16.277753340798657;max
 A;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);98873.34308657431;min
+B;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);165976.46207441034;min
+B;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.8505867957259237;max
+B;Cash Flow Margin (CF/PNPM) (Δ% 2yr);64968.912522861305;max
 B;Cash flow margin (CF/PNPM) (Δ% 2yr);64968.912522861305;max
+B;Cost Share Ratio (TC/PNPM) (Δ% 2yr);120956.04966561873;min
+B;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90426570785706;max
+B;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-51.917872781948084;max
+B;Financial Risk Ratio (OFE/OP) (Δ% 2yr);282.12512597589875;min
+B;Inventory Turnover (TC/INV) (Δ% 2yr);25.941798620705885;max
+B;Investment Ratio (IO/PNPM) (Δ% 2yr);116849.31821797985;max
 B;Marża netto (NP/PNPM) (Δ% 2yr);-16778.704508026774;max
 B;Marża operacyjna (OP/PNPM) (Δ% 2yr);28575.18643888427;max
+B;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-52.725092936326355;max
 B;Pokrycie odsetek (OP/IP) (Δ% 2yr);-78.76686387522271;max
+B;Profit Firms Share (PEN/EN) (Δ% 2yr);1.594483947425119;max
+B;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.91954989845799;max
 B;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.91954989845799;max
+B;Sales Profitability (POS/PNPM) (Δ% 2yr);19417.174618675206;max
 B;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-26.013632372966995;max
 B;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-22.493005914776703;max
 B;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);149056.38346298502;min
+C;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);101718.9668321604;min
+C;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.1060274742676635;max
+C;Cash Flow Margin (CF/PNPM) (Δ% 2yr);98150.04731233924;max
 C;Cash flow margin (CF/PNPM) (Δ% 2yr);98150.04731233924;max
+C;Cost Share Ratio (TC/PNPM) (Δ% 2yr);98953.47033220423;min
+C;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90477357138123;max
+C;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-33.26868341997102;max
+C;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-11.686770829595792;min
+C;Inventory Turnover (TC/INV) (Δ% 2yr);-1.4941976069481484;max
+C;Investment Ratio (IO/PNPM) (Δ% 2yr);120990.10688759836;max
 C;Marża netto (NP/PNPM) (Δ% 2yr);100189.13671153816;max
 C;Marża operacyjna (OP/PNPM) (Δ% 2yr);113244.94019468997;max
+C;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);5.352758011674908;max
 C;Pokrycie odsetek (OP/IP) (Δ% 2yr);48.42780026611283;max
+C;Profit Firms Share (PEN/EN) (Δ% 2yr);5.082550965637102;max
+C;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90162544766058;max
 C;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90162544766058;max
+C;Sales Profitability (POS/PNPM) (Δ% 2yr);112166.64258075866;max
 C;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);3.9822540184531947;max
 C;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);6.481324490225653;max
 C;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);103212.23943350135;min
+D;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);119060.99218652942;min
+D;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);2.8603742345616885;max
+D;Cash Flow Margin (CF/PNPM) (Δ% 2yr);167389.60312997797;max
 D;Cash flow margin (CF/PNPM) (Δ% 2yr);167389.60312997797;max
+D;Cost Share Ratio (TC/PNPM) (Δ% 2yr);101813.89387651047;min
+D;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.91551645740655;max
+D;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);215.17490847438245;max
+D;Financial Risk Ratio (OFE/OP) (Δ% 2yr);761.2090109061163;min
+D;Inventory Turnover (TC/INV) (Δ% 2yr);-12.038243035915647;max
+D;Investment Ratio (IO/PNPM) (Δ% 2yr);138387.96379281417;max
 D;Marża netto (NP/PNPM) (Δ% 2yr);165826.21072819442;max
 D;Marża operacyjna (OP/PNPM) (Δ% 2yr);121410.54453004221;max
+D;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-13.088115017918122;max
 D;Pokrycie odsetek (OP/IP) (Δ% 2yr);-1.6209207541279806;max
+D;Profit Firms Share (PEN/EN) (Δ% 2yr);0.7238744838423958;max
+D;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90677197333099;max
 D;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90677197333099;max
+D;Sales Profitability (POS/PNPM) (Δ% 2yr);102110.07478671007;max
 D;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);12.02881123038715;max
 D;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);12.621993487462829;max
 D;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);138582.09625204062;min
+E;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);103201.90784445197;min
+E;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.6010653928039581;max
+E;Cash Flow Margin (CF/PNPM) (Δ% 2yr);101439.77644074363;max
 E;Cash flow margin (CF/PNPM) (Δ% 2yr);101439.77644074363;max
+E;Cost Share Ratio (TC/PNPM) (Δ% 2yr);98519.71150212988;min
+E;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90682651584665;max
+E;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-42.34268574712199;max
+E;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-68.35276891825355;min
+E;Inventory Turnover (TC/INV) (Δ% 2yr);-5.714453518713857;max
+E;Investment Ratio (IO/PNPM) (Δ% 2yr);113777.83009042007;max
 E;Marża netto (NP/PNPM) (Δ% 2yr);112501.39425534644;max
 E;Marża operacyjna (OP/PNPM) (Δ% 2yr);114098.09169236926;max
+E;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);1.2986249332661066;max
 E;Pokrycie odsetek (OP/IP) (Δ% 2yr);36.93414081664727;max
+E;Profit Firms Share (PEN/EN) (Δ% 2yr);0.7548450138429006;max
+E;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.89827168275276;max
 E;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.89827168275276;max
+E;Sales Profitability (POS/PNPM) (Δ% 2yr);105952.48827663386;max
 E;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-4.974261070233419;max
 E;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-4.750948028683206;max
 E;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);105736.48342331359;min
+F;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);84846.84087017093;min
+F;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);7.196098476638022;max
+F;Cash Flow Margin (CF/PNPM) (Δ% 2yr);150201.00614943917;max
 F;Cash flow margin (CF/PNPM) (Δ% 2yr);150201.00614943917;max
+F;Cost Share Ratio (TC/PNPM) (Δ% 2yr);96392.2391887885;min
+F;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90448464196015;max
+F;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);16.3452919919718;max
+F;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-50.859868889502266;min
+F;Inventory Turnover (TC/INV) (Δ% 2yr);8.215203041470867;max
+F;Investment Ratio (IO/PNPM) (Δ% 2yr);101382.73541020138;max
 F;Marża netto (NP/PNPM) (Δ% 2yr);401316.593039284;max
 F;Marża operacyjna (OP/PNPM) (Δ% 2yr);211068.33604222265;max
+F;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);34.63242052074452;max
 F;Pokrycie odsetek (OP/IP) (Δ% 2yr);129.2857101245924;max
+F;Profit Firms Share (PEN/EN) (Δ% 2yr);7.30022876685125;max
+F;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90663425287444;max
 F;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90663425287444;max
+F;Sales Profitability (POS/PNPM) (Δ% 2yr);198856.58395691638;max
 F;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);3.1030096503334934;max
 F;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);9.289118105581446;max
 F;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);110649.7955051959;min
+G;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);106583.94835143941;min
+G;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.4393126902345554;max
+G;Cash Flow Margin (CF/PNPM) (Δ% 2yr);108696.45831704252;max
 G;Cash flow margin (CF/PNPM) (Δ% 2yr);108696.45831704252;max
+G;Cost Share Ratio (TC/PNPM) (Δ% 2yr);99374.98444865238;min
+G;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90192930428691;max
+G;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-8.778821290826926;max
+G;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-1.197928285523669;min
+G;Inventory Turnover (TC/INV) (Δ% 2yr);-5.691235014357202;max
+G;Investment Ratio (IO/PNPM) (Δ% 2yr);97232.2268774009;max
 G;Marża netto (NP/PNPM) (Δ% 2yr);120758.63588256843;max
 G;Marża operacyjna (OP/PNPM) (Δ% 2yr);109791.86368436542;max
+G;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);7.004768801835598;max
 G;Pokrycie odsetek (OP/IP) (Δ% 2yr);45.88309219046447;max
+G;Profit Firms Share (PEN/EN) (Δ% 2yr);4.536460437552468;max
+G;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.89583483242076;max
 G;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.89583483242076;max
+G;Sales Profitability (POS/PNPM) (Δ% 2yr);122200.5206635183;max
 G;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);2.9440438619008877;max
 G;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);0.49678508311473585;max
 G;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);101719.74809613562;min
+H;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);103303.71613446018;min
+H;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);14.71138843343839;max
+H;Cash Flow Margin (CF/PNPM) (Δ% 2yr);107789.92818042525;max
 H;Cash flow margin (CF/PNPM) (Δ% 2yr);107789.92818042525;max
+H;Cost Share Ratio (TC/PNPM) (Δ% 2yr);98662.6745410027;min
+H;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90967497968357;max
+H;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-50.51011063066368;max
+H;Financial Risk Ratio (OFE/OP) (Δ% 2yr);35.26268573520752;min
+H;Inventory Turnover (TC/INV) (Δ% 2yr);-5.106025536498048;max
+H;Investment Ratio (IO/PNPM) (Δ% 2yr);124735.84614597153;max
 H;Marża netto (NP/PNPM) (Δ% 2yr);115978.82349090408;max
 H;Marża operacyjna (OP/PNPM) (Δ% 2yr);134098.7183720482;max
+H;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);1.8671366175410313;max
 H;Pokrycie odsetek (OP/IP) (Δ% 2yr);57.272760508675916;max
+H;Profit Firms Share (PEN/EN) (Δ% 2yr);11.854750728029659;max
+H;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90561555025229;max
 H;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90561555025229;max
+H;Sales Profitability (POS/PNPM) (Δ% 2yr);166797.28797061904;max
 H;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);10.482091831276355;max
 H;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);10.883153087052087;max
 H;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);113742.5117131448;min
+I;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);96712.32478664198;min
+I;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);4.184659538972511;max
+I;Cash Flow Margin (CF/PNPM) (Δ% 2yr);83832.18716462087;max
 I;Cash flow margin (CF/PNPM) (Δ% 2yr);83832.18716462087;max
+I;Cost Share Ratio (TC/PNPM) (Δ% 2yr);96557.70706076233;min
+I;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90069545353157;max
+I;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-71.46185790631411;max
+I;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-46.74622661958849;min
+I;Inventory Turnover (TC/INV) (Δ% 2yr);-7.362861733520089;max
+I;Investment Ratio (IO/PNPM) (Δ% 2yr);81493.80362680457;max
 I;Marża netto (NP/PNPM) (Δ% 2yr);73441.08257999776;max
 I;Marża operacyjna (OP/PNPM) (Δ% 2yr);107834.41759282259;max
-I;Pokrycie odsetek (OP/IP) (Δ% 2yr);21.028641465350773;max
+I;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);4.0359035160958125;max
+I;Pokrycie odsetek (OP/IP) (Δ% 2yr);21.02864146535079;max
+I;Profit Firms Share (PEN/EN) (Δ% 2yr);12.239945652173914;max
+I;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.8881545275455;max
 I;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.8881545275455;max
+I;Sales Profitability (POS/PNPM) (Δ% 2yr);126522.96356711676;max
 I;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);16.241261108580552;max
 I;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);15.81649674917894;max
 I;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);98149.71703720422;min
+J;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);94971.11744932173;min
+J;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);21.7639382102185;max
+J;Cash Flow Margin (CF/PNPM) (Δ% 2yr);91517.80848045844;max
 J;Cash flow margin (CF/PNPM) (Δ% 2yr);91517.80848045844;max
+J;Cost Share Ratio (TC/PNPM) (Δ% 2yr);97117.6886304954;min
+J;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90812513737342;max
+J;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-44.10690410851373;max
+J;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-7.8207837000247595;min
+J;Inventory Turnover (TC/INV) (Δ% 2yr);8.292585378259616;max
+J;Investment Ratio (IO/PNPM) (Δ% 2yr);83500.25337552508;max
 J;Marża netto (NP/PNPM) (Δ% 2yr);71159.16424888276;max
 J;Marża operacyjna (OP/PNPM) (Δ% 2yr);116001.14212843892;max
+J;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-16.67036117819769;max
 J;Pokrycie odsetek (OP/IP) (Δ% 2yr);-1.8225437051741782;max
+J;Profit Firms Share (PEN/EN) (Δ% 2yr);7.13003430612341;max
+J;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90593794963304;max
 J;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90593794963304;max
+J;Sales Profitability (POS/PNPM) (Δ% 2yr);114140.95922306192;max
 J;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);8.389023751972063;max
 J;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);10.61256057969762;max
 J;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);123963.03234471739;min
+L;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);90832.48117907833;min
+L;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);2.600368573574959;max
+L;Cash Flow Margin (CF/PNPM) (Δ% 2yr);68295.00564896295;max
 L;Cash flow margin (CF/PNPM) (Δ% 2yr);68295.00564896295;max
+L;Cost Share Ratio (TC/PNPM) (Δ% 2yr);94456.99880199556;min
+L;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.89303207707303;max
+L;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-32.603524792443125;max
+L;Financial Risk Ratio (OFE/OP) (Δ% 2yr);5.735256042374486;min
+L;Inventory Turnover (TC/INV) (Δ% 2yr);16.51414212961213;max
+L;Investment Ratio (IO/PNPM) (Δ% 2yr);76376.10554702653;max
 L;Marża netto (NP/PNPM) (Δ% 2yr);57167.10948963266;max
 L;Marża operacyjna (OP/PNPM) (Δ% 2yr);72598.33274686532;max
+L;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-22.721628110976457;max
 L;Pokrycie odsetek (OP/IP) (Δ% 2yr);-0.39476666796306076;max
+L;Profit Firms Share (PEN/EN) (Δ% 2yr);5.181795794507601;max
+L;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.89053116229468;max
 L;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.89053116229468;max
+L;Sales Profitability (POS/PNPM) (Δ% 2yr);67792.44150704442;max
 L;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);1.408456448666702;max
 L;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);1.5916646467068345;max
 L;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);97955.98310433677;min
+M;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);113435.78956985241;min
+M;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.6514728170289223;max
+M;Cash Flow Margin (CF/PNPM) (Δ% 2yr);106427.6797216036;max
 M;Cash flow margin (CF/PNPM) (Δ% 2yr);106427.6797216036;max
+M;Cost Share Ratio (TC/PNPM) (Δ% 2yr);95701.4782786594;min
+M;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90379801196488;max
+M;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-25.652446360112453;max
+M;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-50.3517143426084;min
+M;Inventory Turnover (TC/INV) (Δ% 2yr);-15.690976145788134;max
+M;Investment Ratio (IO/PNPM) (Δ% 2yr);108480.99516524508;max
 M;Marża netto (NP/PNPM) (Δ% 2yr);157575.68044835556;max
 M;Marża operacyjna (OP/PNPM) (Δ% 2yr);103861.14326162514;max
+M;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);2.482587178703316;max
 M;Pokrycie odsetek (OP/IP) (Δ% 2yr);20.589488296835764;max
+M;Profit Firms Share (PEN/EN) (Δ% 2yr);-0.2557570313911915;max
+M;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.88178459777885;max
 M;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.88178459777885;max
+M;Sales Profitability (POS/PNPM) (Δ% 2yr);98991.46855822761;max
 M;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);5.218511778762668;max
 M;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);3.1758656424639238;max
 M;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);104296.09948301838;min
+N;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);96196.88803619443;min
+N;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);8.95471403822336;max
+N;Cash Flow Margin (CF/PNPM) (Δ% 2yr);93987.24750804047;max
 N;Cash flow margin (CF/PNPM) (Δ% 2yr);93987.24750804047;max
+N;Cost Share Ratio (TC/PNPM) (Δ% 2yr);94020.93821071683;min
+N;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.89876760347593;max
+N;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-58.956169273367166;max
+N;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-49.54329797487236;min
+N;Inventory Turnover (TC/INV) (Δ% 2yr);-5.48256787532107;max
+N;Investment Ratio (IO/PNPM) (Δ% 2yr);102435.49153445051;max
 N;Marża netto (NP/PNPM) (Δ% 2yr);88754.67031707396;max
 N;Marża operacyjna (OP/PNPM) (Δ% 2yr);278164.8828611716;max
+N;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);63.24220542679605;max
 N;Pokrycie odsetek (OP/IP) (Δ% 2yr);196.5243288162806;max
+N;Profit Firms Share (PEN/EN) (Δ% 2yr);0.4506806048578625;max
+N;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.89562311460381;max
 N;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.89562311460381;max
+N;Sales Profitability (POS/PNPM) (Δ% 2yr);159996.86794455297;max
 N;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);2.971338188960486;max
 N;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);2.8724724083304145;max
 N;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);105674.59807327161;min
+O;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);88979.18634484638;min
+O;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);4.801713913942711;max
+O;Cash Flow Margin (CF/PNPM) (Δ% 2yr);93459.57571255798;max
 O;Cash flow margin (CF/PNPM) (Δ% 2yr);93459.57571255798;max
+O;Cost Share Ratio (TC/PNPM) (Δ% 2yr);99517.71910852562;min
+O;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.86881359065987;max
+O;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);15.62521890363431;max
+O;Financial Risk Ratio (OFE/OP) (Δ% 2yr);22.538189272175178;min
+O;Inventory Turnover (TC/INV) (Δ% 2yr);5.219325499149685;max
+O;Investment Ratio (IO/PNPM) (Δ% 2yr);106989.53729305087;max
 O;Marża netto (NP/PNPM) (Δ% 2yr);115283.14117770635;max
 O;Marża operacyjna (OP/PNPM) (Δ% 2yr);83282.32126386635;max
+O;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-16.737888324278654;max
 O;Pokrycie odsetek (OP/IP) (Δ% 2yr);20.654621200674175;max
+O;Profit Firms Share (PEN/EN) (Δ% 2yr);4.525084821659224;max
+O;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.86208318986691;max
 O;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.86208318986691;max
+O;Sales Profitability (POS/PNPM) (Δ% 2yr);65758.70018749054;max
 O;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-16.280135825888532;max
 O;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-17.389873664987167;max
 O;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);102934.6095302261;min
+P;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);74143.35740295914;min
+P;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.590528148626531;max
+P;Cash Flow Margin (CF/PNPM) (Δ% 2yr);87207.32028165374;max
 P;Cash flow margin (CF/PNPM) (Δ% 2yr);87207.32028165377;max
+P;Cost Share Ratio (TC/PNPM) (Δ% 2yr);72382.08414451443;min
+P;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.87310787731802;max
+P;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-30.50201012662665;max
+P;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-34.00802824216472;min
+P;Inventory Turnover (TC/INV) (Δ% 2yr);-5.6829032231925645;max
+P;Investment Ratio (IO/PNPM) (Δ% 2yr);82757.54830347263;max
 P;Marża netto (NP/PNPM) (Δ% 2yr);99653.39967593606;max
 P;Marża operacyjna (OP/PNPM) (Δ% 2yr);92891.99993676401;max
+P;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);14.637836978671888;max
 P;Pokrycie odsetek (OP/IP) (Δ% 2yr);63.24354368653522;max
+P;Profit Firms Share (PEN/EN) (Δ% 2yr);9.523809523809524;max
+P;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
 P;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
-P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.386614130557438;max
-P;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.139787345058217;max
+P;Sales Profitability (POS/PNPM) (Δ% 2yr);92849.46902917902;max
+P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.523067057834821;max
+P;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.315762320161245;max
 P;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);74715.62021767635;min
+Q;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);102200.03683590938;min
+Q;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);24.84292272108644;max
+Q;Cash Flow Margin (CF/PNPM) (Δ% 2yr);100780.26238406044;max
 Q;Cash flow margin (CF/PNPM) (Δ% 2yr);100780.26238406044;max
+Q;Cost Share Ratio (TC/PNPM) (Δ% 2yr);100106.52236317289;min
+Q;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.89458411012542;max
+Q;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);32.692840130466145;max
+Q;Financial Risk Ratio (OFE/OP) (Δ% 2yr);0.6046195715267133;min
+Q;Inventory Turnover (TC/INV) (Δ% 2yr);10.392461120889163;max
+Q;Investment Ratio (IO/PNPM) (Δ% 2yr);136233.91484161984;max
 Q;Marża netto (NP/PNPM) (Δ% 2yr);98821.38303406116;max
 Q;Marża operacyjna (OP/PNPM) (Δ% 2yr);95032.09650104606;max
+Q;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-9.499082314149438;max
 Q;Pokrycie odsetek (OP/IP) (Δ% 2yr);-15.05552054323972;max
+Q;Profit Firms Share (PEN/EN) (Δ% 2yr);1.7662413700568516;max
+Q;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.9014559891476;max
 Q;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.9014559891476;max
+Q;Sales Profitability (POS/PNPM) (Δ% 2yr);-97373.04400889867;max
 Q;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-10.772631359048024;max
 Q;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-10.562298036641566;max
 Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);107188.17463936978;min
+R;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);104385.5653581182;min
+R;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);7.464667352945312;max
+R;Cash Flow Margin (CF/PNPM) (Δ% 2yr);96334.29204566339;max
 R;Cash flow margin (CF/PNPM) (Δ% 2yr);96334.29204566339;max
+R;Cost Share Ratio (TC/PNPM) (Δ% 2yr);100528.59650328752;min
+R;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.90228109714546;max
+R;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-60.74661608679932;max
+R;Financial Risk Ratio (OFE/OP) (Δ% 2yr);0.0734248108721187;min
+R;Inventory Turnover (TC/INV) (Δ% 2yr);-9.893761811159873;max
+R;Investment Ratio (IO/PNPM) (Δ% 2yr);95452.53247315691;max
 R;Marża netto (NP/PNPM) (Δ% 2yr);89546.29928709097;max
 R;Marża operacyjna (OP/PNPM) (Δ% 2yr);98653.74618254209;max
+R;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-11.405704658916196;max
 R;Pokrycie odsetek (OP/IP) (Δ% 2yr);14.140350538624658;max
+R;Profit Firms Share (PEN/EN) (Δ% 2yr);-1.0633126677047364;max
+R;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90605660347781;max
 R;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90605660347781;max
+R;Sales Profitability (POS/PNPM) (Δ% 2yr);87237.2286252468;max
 R;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-4.154912296997333;max
 R;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-4.666032876200253;max
 R;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);114665.63423940456;min
+S;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);104745.22110345979;min
+S;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);21.05242039676031;max
+S;Cash Flow Margin (CF/PNPM) (Δ% 2yr);94719.72136209704;max
 S;Cash flow margin (CF/PNPM) (Δ% 2yr);94719.72136209704;max
+S;Cost Share Ratio (TC/PNPM) (Δ% 2yr);101712.487620354;min
+S;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.89002873060332;max
+S;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-29.088995522308615;max
+S;Financial Risk Ratio (OFE/OP) (Δ% 2yr);109.50835986632642;min
+S;Inventory Turnover (TC/INV) (Δ% 2yr);-28.05762002849244;max
+S;Investment Ratio (IO/PNPM) (Δ% 2yr);196673.79334317477;max
 S;Marża netto (NP/PNPM) (Δ% 2yr);39198.478152449585;max
 S;Marża operacyjna (OP/PNPM) (Δ% 2yr);81369.04899797599;max
+S;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);-34.32900197636879;max
 S;Pokrycie odsetek (OP/IP) (Δ% 2yr);-44.504158626103994;max
+S;Profit Firms Share (PEN/EN) (Δ% 2yr);-2.679810149689664;max
+S;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90133086458395;max
 S;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90133086458395;max
+S;Sales Profitability (POS/PNPM) (Δ% 2yr);-843235.4878612276;max
 S;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);-20.55679431792432;max
 S;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);-22.315043241496827;max
 S;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);143540.08834688645;min
+T;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);77183.20870763925;min
+T;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.809926285907568;max
+T;Cash Flow Margin (CF/PNPM) (Δ% 2yr);95439.19267710696;max
 T;Cash flow margin (CF/PNPM) (Δ% 2yr);95439.19267710696;max
+T;Cost Share Ratio (TC/PNPM) (Δ% 2yr);97133.32890167416;min
+T;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.88324760471923;max
+T;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-44.49507308725477;max
+T;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-64.99260416421257;min
+T;Inventory Turnover (TC/INV) (Δ% 2yr);52.259789302974966;max
+T;Investment Ratio (IO/PNPM) (Δ% 2yr);75824.57047415871;max
 T;Marża netto (NP/PNPM) (Δ% 2yr);138379.11196577616;max
 T;Marża operacyjna (OP/PNPM) (Δ% 2yr);122598.67004440377;max
+T;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);26.359042748499018;max
 T;Pokrycie odsetek (OP/IP) (Δ% 2yr);109.06332948217774;max
+T;Profit Firms Share (PEN/EN) (Δ% 2yr);13.978716383435069;max
+T;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.90212075710599;max
 T;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.90212075710599;max
+T;Sales Profitability (POS/PNPM) (Δ% 2yr);94298.73687516546;max
 T;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);10.44018314154521;max
 T;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);18.11231948095925;max
 T;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);80101.02086779225;min
+U;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);74143.35740295914;min
+U;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.590528148626531;max
+U;Cash Flow Margin (CF/PNPM) (Δ% 2yr);87207.32028165374;max
 U;Cash flow margin (CF/PNPM) (Δ% 2yr);87207.32028165377;max
+U;Cost Share Ratio (TC/PNPM) (Δ% 2yr);72382.08414451443;min
+U;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.87310787731802;max
+U;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-30.50201012662665;max
+U;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-34.00802824216472;min
+U;Inventory Turnover (TC/INV) (Δ% 2yr);-5.6829032231925645;max
+U;Investment Ratio (IO/PNPM) (Δ% 2yr);82757.54830347263;max
 U;Marża netto (NP/PNPM) (Δ% 2yr);99653.39967593606;max
 U;Marża operacyjna (OP/PNPM) (Δ% 2yr);92891.99993676401;max
+U;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);14.637836978671888;max
 U;Pokrycie odsetek (OP/IP) (Δ% 2yr);63.24354368653522;max
+U;Profit Firms Share (PEN/EN) (Δ% 2yr);2.952380952380962;max
+U;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
 U;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
-U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.386614130557438;max
-U;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.139787345058217;max
+U;Sales Profitability (POS/PNPM) (Δ% 2yr);92849.46902917902;max
+U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.523067057834821;max
+U;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.315762320161245;max
 U;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);74715.62021767635;min
+V;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);74143.35740295914;min
+V;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.590528148626531;max
+V;Cash Flow Margin (CF/PNPM) (Δ% 2yr);87207.32028165374;max
 V;Cash flow margin (CF/PNPM) (Δ% 2yr);87207.32028165377;max
+V;Cost Share Ratio (TC/PNPM) (Δ% 2yr);72382.08414451443;min
+V;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-99.87310787731802;max
+V;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-30.50201012662665;max
+V;Financial Risk Ratio (OFE/OP) (Δ% 2yr);-34.00802824216472;min
+V;Inventory Turnover (TC/INV) (Δ% 2yr);-5.6829032231925645;max
+V;Investment Ratio (IO/PNPM) (Δ% 2yr);82757.54830347263;max
 V;Marża netto (NP/PNPM) (Δ% 2yr);99653.39967593606;max
 V;Marża operacyjna (OP/PNPM) (Δ% 2yr);92891.99993676401;max
+V;Operating Cash Coverage ((OP+DEPR)/(STL+LTL)) (Δ% 2yr);14.637836978671888;max
 V;Pokrycie odsetek (OP/IP) (Δ% 2yr);63.24354368653522;max
+V;Profit Firms Share (PEN/EN) (Δ% 2yr);2.952380952380962;max
+V;Receivables Turnover (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
 V;Rotacja należności (PNPM/REC) (Δ% 2yr);-99.86638418138868;max
-V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.386614130557438;max
-V;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.139787345058217;max
+V;Sales Profitability (POS/PNPM) (Δ% 2yr);92849.46902917902;max
+V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL) (Δ% 2yr);7.523067057834821;max
+V;Wskaźnik szybki ((C+REC)/STL) (Δ% 2yr);8.315762320161245;max
 V;Wskaźnik zadłużenia ((STL+LTL)/PNPM) (Δ% 2yr);74715.62021767635;min

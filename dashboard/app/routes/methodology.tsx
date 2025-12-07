@@ -180,6 +180,7 @@ export default function Methodology() {
                     <tr>
                       <th scope="col" className="px-6 py-3 font-bold">Kod</th>
                       <th scope="col" className="px-6 py-3 font-bold">Nazwa Wskaźnika</th>
+                      <th scope="col" className="px-6 py-3 font-bold">Zastosowanie</th>
                       <th scope="col" className="px-6 py-3 font-bold">Preferencja (Ocena)</th>
                       <th scope="col" className="px-6 py-3 font-bold">Uzasadnienie Kredytowe</th>
                     </tr>
@@ -206,6 +207,20 @@ export default function Methodology() {
                               </div>
                             </div>
                           )}
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex flex-wrap gap-1">
+                            {indicator.datasets?.map(ds => (
+                              <span key={ds} className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider border ${
+                                ds === 'credit' ? 'bg-red-50 text-red-700 border-red-200' :
+                                ds === 'development' ? 'bg-amber-50 text-amber-700 border-amber-200' :
+                                ds === 'effectivity' ? 'bg-emerald-50 text-emerald-700 border-emerald-200' :
+                                'bg-gray-50 text-gray-600 border-gray-200'
+                              }`}>
+                                {ds === 'credit' ? 'Ryzyko' : ds === 'development' ? 'Rozwój' : ds === 'effectivity' ? 'Efektywność' : ds}
+                              </span>
+                            ))}
+                          </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <span className={`px-2 py-1 rounded-full text-xs font-semibold ${
