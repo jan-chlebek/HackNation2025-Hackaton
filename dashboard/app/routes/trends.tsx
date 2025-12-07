@@ -346,6 +346,7 @@ export default function Trends() {
                     label={{ value: 'Wynik (Score)', angle: -90, position: 'insideLeft', fill: '#666', fontSize: 12 }}
                   />
                   <Tooltip 
+                    itemSorter={(item) => (typeof item.value === 'number' ? -item.value : 0)}
                     shared={false}
                     cursor={false}
                     contentStyle={{ 
