@@ -27,7 +27,7 @@
 		{
 			"label": "dump-analysis-data",
 			"type": "shell",
-			"command": "Copy-Item \"results/2024/dział/complete.csv\" -Destination \"dashboard/public/data/dzial_complete.csv\" -Force; Copy-Item \"results/2024/sekcja/complete.csv\" -Destination \"dashboard/public/data/sekcja_complete.csv\" -Force; Copy-Item \"results-pipeline/pkd_dictionary.csv\" -Destination \"dashboard/public/data/pkd_dictionary.csv\" -Force",
+			"command": "python data-processing/aggregate_trends.py; if (!(Test-Path 'dashboard/public/data/results')) { New-Item -ItemType Directory -Force -Path 'dashboard/public/data/results' }; Copy-Item \"results/*\" -Destination \"dashboard/public/data/results\" -Recurse -Force; Copy-Item \"results-pipeline/pkd_dictionary.csv\" -Destination \"dashboard/public/data/pkd_dictionary.csv\" -Force; Copy-Item \"results-pipeline/pkd_typ_dictionary.csv\" -Destination \"dashboard/public/data/pkd_typ_dictionary.csv\" -Force",
 			"group": "build"
 		}
 	]

@@ -5,9 +5,10 @@ import { clsx } from "clsx";
 const navItems = [
   { label: "Dashboard", href: "/", icon: Home },
   { label: "Analiza Metod", href: "/analysis", icon: BarChart3 },
-  { label: "Korelacje", href: "/correlations", icon: TrendingUp },
-  { label: "Rankingi", href: "/rankings", icon: Activity },
-  { label: "Metodologia", href: "/methodology", icon: FileText },
+  { label: "Trendy", href: "/trends", icon: TrendingUp },
+  { label: "Korelacje", href: "/correlations", icon: Activity },
+  { label: "Rankingi", href: "/rankings", icon: FileText },
+  { label: "Metodologia", href: "/methodology", icon: PieChart },
 ];
 
 export function Sidebar() {
