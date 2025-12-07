@@ -1,0 +1,253 @@
+kpi_id;cat_id;value;direction
+A;Investment Ratio (IO/PNPM);0.0355218184326287;max
+B;Investment Ratio (IO/PNPM);0.1308540266322437;max
+C;Investment Ratio (IO/PNPM);0.0406038684038709;max
+D;Investment Ratio (IO/PNPM);0.0532011891741489;max
+E;Investment Ratio (IO/PNPM);0.1205309245639727;max
+F;Investment Ratio (IO/PNPM);0.0333954769197561;max
+G;Investment Ratio (IO/PNPM);0.0140916420836573;max
+H;Investment Ratio (IO/PNPM);0.1091406787559085;max
+I;Investment Ratio (IO/PNPM);0.0578151010771658;max
+J;Investment Ratio (IO/PNPM);0.049156285672819;max
+L;Investment Ratio (IO/PNPM);0.0759208533979486;max
+M;Investment Ratio (IO/PNPM);0.1140616582841924;max
+N;Investment Ratio (IO/PNPM);0.0190029715303823;max
+O;Investment Ratio (IO/PNPM);0.1892623218094302;max
+P;Investment Ratio (IO/PNPM);0.0265982157147906;max
+Q;Investment Ratio (IO/PNPM);0.0260732818309419;max
+R;Investment Ratio (IO/PNPM);0.051984784445726;max
+S;Investment Ratio (IO/PNPM);0.0104518015794772;max
+T;Investment Ratio (IO/PNPM);0.0450123569078751;max
+U;Investment Ratio (IO/PNPM);0.0265982157147906;max
+V;Investment Ratio (IO/PNPM);0.0265982157147906;max
+A;Amortization Ratio (DEPR/PNPM);0.0372589779746486;max
+B;Amortization Ratio (DEPR/PNPM);0.0857177948872539;max
+C;Amortization Ratio (DEPR/PNPM);0.0298182676136283;max
+D;Amortization Ratio (DEPR/PNPM);0.0476593328553235;max
+E;Amortization Ratio (DEPR/PNPM);0.0886792216530507;max
+F;Amortization Ratio (DEPR/PNPM);0.0149013104835804;max
+G;Amortization Ratio (DEPR/PNPM);0.0108072710819247;max
+H;Amortization Ratio (DEPR/PNPM);0.0585234179829802;max
+I;Amortization Ratio (DEPR/PNPM);0.0401746768148722;max
+J;Amortization Ratio (DEPR/PNPM);0.0729510055206851;max
+L;Amortization Ratio (DEPR/PNPM);0.0304698000722771;max
+M;Amortization Ratio (DEPR/PNPM);0.0407100701571748;max
+N;Amortization Ratio (DEPR/PNPM);0.0255520099785256;max
+O;Amortization Ratio (DEPR/PNPM);0.0508321793076642;max
+P;Amortization Ratio (DEPR/PNPM);0.0241610319053065;max
+Q;Amortization Ratio (DEPR/PNPM);0.0281684983026392;max
+R;Amortization Ratio (DEPR/PNPM);0.0406275643580466;max
+S;Amortization Ratio (DEPR/PNPM);0.0122267042757029;max
+T;Amortization Ratio (DEPR/PNPM);0.0368834977484053;max
+U;Amortization Ratio (DEPR/PNPM);0.0241610319053065;max
+V;Amortization Ratio (DEPR/PNPM);0.0241610319053065;max
+A;Cash Flow Margin (CF/PNPM);0.134199799212176;max
+B;Cash Flow Margin (CF/PNPM);0.0974994961759432;max
+C;Cash Flow Margin (CF/PNPM);0.0879520855684138;max
+D;Cash Flow Margin (CF/PNPM);0.1005785345076677;max
+E;Cash Flow Margin (CF/PNPM);0.1637948301685756;max
+F;Cash Flow Margin (CF/PNPM);0.0967406695484168;max
+G;Cash Flow Margin (CF/PNPM);0.0492498170381636;max
+H;Cash Flow Margin (CF/PNPM);0.1178402783563401;max
+I;Cash Flow Margin (CF/PNPM);0.1464136062059092;max
+J;Cash Flow Margin (CF/PNPM);0.1794131660788512;max
+L;Cash Flow Margin (CF/PNPM);0.3737307953041008;max
+M;Cash Flow Margin (CF/PNPM);0.137747910772665;max
+N;Cash Flow Margin (CF/PNPM);0.1260988368985053;max
+O;Cash Flow Margin (CF/PNPM);0.1563201427573276;max
+P;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+Q;Cash Flow Margin (CF/PNPM);0.1403392210398447;max
+R;Cash Flow Margin (CF/PNPM);0.1004536311113067;max
+S;Cash Flow Margin (CF/PNPM);0.0291382387478999;max
+T;Cash Flow Margin (CF/PNPM);0.1208163156769382;max
+U;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+V;Cash Flow Margin (CF/PNPM);0.0967738545070934;max
+A;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.5110842149529837;max
+B;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2231030385865084;max
+C;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2799822229892814;max
+D;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.1819811566333496;max
+E;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3955433584457877;max
+F;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2421358342349958;max
+G;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2190226109038547;max
+H;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2273118341654284;max
+I;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3067676844169295;max
+J;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3062143862971951;max
+L;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0889733815372902;max
+M;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0993832615701797;max
+N;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.0853686710239916;max
+O;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.1966211073087309;max
+P;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+Q;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.5678813223371758;max
+R;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.3548506545354875;max
+S;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.264682059877513;max
+T;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.4800395075339949;max
+U;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+V;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));0.2756472812124544;max
+A;Profit Firms Share (PEN/EN);0.8651389437639931;max
+B;Profit Firms Share (PEN/EN);0.8173543689320389;max
+C;Profit Firms Share (PEN/EN);0.7906474393211085;max
+D;Profit Firms Share (PEN/EN);0.7517704062616474;max
+E;Profit Firms Share (PEN/EN);0.6764551651809125;max
+F;Profit Firms Share (PEN/EN);0.8549865401871556;max
+G;Profit Firms Share (PEN/EN);0.840199765706887;max
+H;Profit Firms Share (PEN/EN);0.7753508690398736;max
+I;Profit Firms Share (PEN/EN);0.7481732776617954;max
+J;Profit Firms Share (PEN/EN);0.7917553191489362;max
+L;Profit Firms Share (PEN/EN);0.7936955407483343;max
+M;Profit Firms Share (PEN/EN);0.8684491978609625;max
+N;Profit Firms Share (PEN/EN);0.8007214128448962;max
+O;Profit Firms Share (PEN/EN);0.816897240511948;max
+P;Profit Firms Share (PEN/EN);46.33333333333333;max
+Q;Profit Firms Share (PEN/EN);0.7668147208121828;max
+R;Profit Firms Share (PEN/EN);0.8238183503243744;max
+S;Profit Firms Share (PEN/EN);0.5232403718459495;max
+T;Profit Firms Share (PEN/EN);0.7446808510638298;max
+U;Profit Firms Share (PEN/EN);0.9586206896551724;max
+V;Profit Firms Share (PEN/EN);0.9586206896551724;max
+A;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0916633741604109;max
+B;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+C;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0314046644116076;max
+D;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2240029817368617;max
+E;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0001048767697954;max
+F;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2996090244840406;max
+G;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.1572476724828904;max
+H;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0104098893949252;max
+I;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.0108298538622128;max
+J;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.8145611702127659;max
+L;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-0.097898513582778;max
+M;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2230837789661318;max
+N;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3421558064365015;max
+O;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.2009321595028483;max
+P;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);-6.666666666666668;max
+Q;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.528553299492386;max
+R;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3634847080630213;max
+S;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3831341301460821;max
+T;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);2.096138691883372;max
+U;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.3137931034482757;max
+V;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0310344827586206;max
+A;New Firms Rate (Nowe/EN);2.265639404714869;max
+B;New Firms Rate (Nowe/EN);0.5121359223300971;max
+C;New Firms Rate (Nowe/EN);1.3424129131802267;max
+D;New Firms Rate (Nowe/EN);3.609392471114425;max
+E;New Firms Rate (Nowe/EN);0.3389617199790246;max
+F;New Firms Rate (Nowe/EN);10.503877707986156;max
+G;New Firms Rate (Nowe/EN);3.107478882791788;max
+H;New Firms Rate (Nowe/EN);4.494330328097407;max
+I;New Firms Rate (Nowe/EN);6.969337160751565;max
+J;New Firms Rate (Nowe/EN);7.384640957446808;max
+L;New Firms Rate (Nowe/EN);11.503331624807792;max
+M;New Firms Rate (Nowe/EN);5.488146167557932;max
+N;New Firms Rate (Nowe/EN);8.635218063428116;max
+O;New Firms Rate (Nowe/EN);7.159354886439299;max
+P;New Firms Rate (Nowe/EN);161.0;max
+Q;New Firms Rate (Nowe/EN);17.929568527918786;max
+R;New Firms Rate (Nowe/EN);6.406487488415199;max
+S;New Firms Rate (Nowe/EN);17.836653386454184;max
+T;New Firms Rate (Nowe/EN);112.85736800630416;max
+U;New Firms Rate (Nowe/EN);1.4689655172413794;max
+V;New Firms Rate (Nowe/EN);0.3413793103448276;max
+A;Closure Rate (Zamknięte/EN);0.2242855261424996;max
+B;Closure Rate (Zamknięte/EN);0.0618932038834951;max
+C;Closure Rate (Zamknięte/EN);0.1937926532549996;max
+D;Closure Rate (Zamknięte/EN);0.1039880730525531;max
+E;Closure Rate (Zamknięte/EN);0.042999475616151;max
+F;Closure Rate (Zamknięte/EN);0.9663825150621717;max
+G;Closure Rate (Zamknięte/EN);0.5547197731056169;max
+H;Closure Rate (Zamknięte/EN);0.552978901384887;max
+I;Closure Rate (Zamknięte/EN);0.7698329853862212;max
+J;Closure Rate (Zamknięte/EN);0.4314494680851064;max
+L;Closure Rate (Zamknięte/EN);1.182214249103024;max
+M;Closure Rate (Zamknięte/EN);0.3490196078431372;max
+N;Closure Rate (Zamknięte/EN);0.8139785449946129;max
+O;Closure Rate (Zamknięte/EN);0.6482207590441667;max
+P;Closure Rate (Zamknięte/EN);20.0;max
+Q;Closure Rate (Zamknięte/EN);1.4321065989847717;max
+R;Closure Rate (Zamknięte/EN);0.6637627432808155;max
+S;Closure Rate (Zamknięte/EN);1.5776892430278884;max
+T;Closure Rate (Zamknięte/EN);7.281323877068558;max
+U;Closure Rate (Zamknięte/EN);2.7206896551724142;max
+V;Closure Rate (Zamknięte/EN);0.0103448275862068;max
+A;Suspension Rate (Zawieszone/EN);5.789016199130779;max
+B;Suspension Rate (Zawieszone/EN);1.9720873786407769;max
+C;Suspension Rate (Zawieszone/EN);3.995383063319684;max
+D;Suspension Rate (Zawieszone/EN);1.847558702944465;max
+E;Suspension Rate (Zawieszone/EN);0.8341898269533298;max
+F;Suspension Rate (Zawieszone/EN);28.885207024740417;max
+G;Suspension Rate (Zawieszone/EN);10.07452987237191;max
+H;Suspension Rate (Zawieszone/EN);13.962357096384425;max
+I;Suspension Rate (Zawieszone/EN);27.654358037578287;max
+J;Suspension Rate (Zawieszone/EN);13.069082446808512;max
+L;Suspension Rate (Zawieszone/EN);24.14761660686828;max
+M;Suspension Rate (Zawieszone/EN);5.995187165775401;max
+N;Suspension Rate (Zawieszone/EN);22.135522555862654;max
+O;Suspension Rate (Zawieszone/EN);14.941703040615522;max
+P;Suspension Rate (Zawieszone/EN);77.66666666666666;max
+Q;Suspension Rate (Zawieszone/EN);40.70685279187818;max
+R;Suspension Rate (Zawieszone/EN);16.205468025949955;max
+S;Suspension Rate (Zawieszone/EN);47.36653386454184;max
+T;Suspension Rate (Zawieszone/EN);135.92750197005515;max
+U;Suspension Rate (Zawieszone/EN);61.54137931034484;max
+V;Suspension Rate (Zawieszone/EN);0.0;max
+A;Operating Margin (OP/PNPM);0.0895487255337737;max
+B;Operating Margin (OP/PNPM);0.0046897221974123;max
+C;Operating Margin (OP/PNPM);0.0557028480147206;max
+D;Operating Margin (OP/PNPM);0.0352537448498014;max
+E;Operating Margin (OP/PNPM);0.0765817285903874;max
+F;Operating Margin (OP/PNPM);0.0788189763385561;max
+G;Operating Margin (OP/PNPM);0.0369705405761054;max
+H;Operating Margin (OP/PNPM);0.0523206391289311;max
+I;Operating Margin (OP/PNPM);0.097600894375482;max
+J;Operating Margin (OP/PNPM);0.1036588787178812;max
+L;Operating Margin (OP/PNPM);0.2538713315415497;max
+M;Operating Margin (OP/PNPM);0.0625985753290469;max
+N;Operating Margin (OP/PNPM);0.0587732802828611;max
+O;Operating Margin (OP/PNPM);0.0876143167312646;max
+P;Operating Margin (OP/PNPM);0.058031460571585;max
+Q;Operating Margin (OP/PNPM);0.1247137714576585;max
+R;Operating Margin (OP/PNPM);0.0637492740471154;max
+S;Operating Margin (OP/PNPM);0.0165432923793636;max
+T;Operating Margin (OP/PNPM);0.0878735156244064;max
+U;Operating Margin (OP/PNPM);0.058031460571585;max
+V;Operating Margin (OP/PNPM);0.058031460571585;max
+A;POS Margin (POS/PNPM);0.0623346565915117;max
+B;POS Margin (POS/PNPM);0.0549501395094513;max
+C;POS Margin (POS/PNPM);0.0571037234202225;max
+D;POS Margin (POS/PNPM);0.0415553575976798;max
+E;POS Margin (POS/PNPM);0.0616054214376124;max
+F;POS Margin (POS/PNPM);0.075711812585113;max
+G;POS Margin (POS/PNPM);0.0377369863922411;max
+H;POS Margin (POS/PNPM);0.0350478142086941;max
+I;POS Margin (POS/PNPM);0.0809761240427092;max
+J;POS Margin (POS/PNPM);0.097297337952613;max
+L;POS Margin (POS/PNPM);0.2501826650244599;max
+M;POS Margin (POS/PNPM);0.0554066830652991;max
+N;POS Margin (POS/PNPM);0.0426752965168339;max
+O;POS Margin (POS/PNPM);0.0701538231205644;max
+P;POS Margin (POS/PNPM);0.0480463941781456;max
+Q;POS Margin (POS/PNPM);-0.3224729099757938;max
+R;POS Margin (POS/PNPM);0.0456416391612203;max
+S;POS Margin (POS/PNPM);0.0110077636600793;max
+T;POS Margin (POS/PNPM);0.0769891799723665;max
+U;POS Margin (POS/PNPM);0.0480463941781456;max
+V;POS Margin (POS/PNPM);0.0480463941781456;max
+A;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3608433464208865;max
+B;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2349183233222625;max
+C;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3294994300536052;max
+D;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4697090437909132;max
+E;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4647540434969249;max
+F;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1896434622390314;max
+G;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2225367026056333;max
+H;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3869364689228029;max
+I;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5946282557223441;max
+J;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4511547131492807;max
+L;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.7067910185692611;max
+M;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4956511528917124;max
+N;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1479572625134705;max
+O;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.6079672966593797;max
+P;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2506644269009558;max
+Q;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4304066816425834;max
+R;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3792265034643081;max
+S;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4839477507441089;max
+T;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3374145952357089;max
+U;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2506644269009558;max
+V;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2506644269009558;max
