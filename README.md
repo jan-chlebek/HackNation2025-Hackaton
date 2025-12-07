@@ -9,7 +9,7 @@
 6. [Ensemble i agregacja wyników](#ensemble-i-agregacja-wyników)
 7. [System predykcji](#system-predykcji)
 8. [Uzasadnienie rozwiązań](#uzasadnienie-rozwiązań)
-9. [Jak uruchomić poszczególne części programu](#uruchomienie-programu)
+9. [Jak uruchomić poszczególne części programu](#jak-uruchomić-poszczególne-części-programu)
 
 ---
 
