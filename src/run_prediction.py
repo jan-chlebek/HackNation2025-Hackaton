@@ -2,8 +2,8 @@
 Advanced Financial Indicator Forecasting with Multi-Model Ensemble.
 
 Features:
-- Multiple forecasting models with ensemble approach
-- Cross-indicator correlations for improved accuracy
+- FAST MODE: Single method (WMA) for quick predictions
+- ENSEMBLE MODE: Multiple methods with correlations for accuracy
 - Multiprocessing for faster execution
 - Complete coverage of all PKD×WSKAZNIK combinations
 
@@ -26,7 +26,11 @@ END_YEAR = 2024
 FORECAST_YEARS = 4
 MAX_WORKERS = mp.cpu_count() - 1  # Leave one CPU free
 
+# FAST MODE: Use single fast method (WMA) instead of ensemble
+FAST_MODE = True  # Set to False for ensemble methods (slower but more accurate)
+
 print(f"Using {MAX_WORKERS} CPU cores for parallel processing")
+print(f"Mode: {'FAST (WMA only)' if FAST_MODE else 'ENSEMBLE (5 methods + correlations)'}")
 
 
 def parse_polish_number(value):
@@ -64,6 +68,10 @@ def load_and_prepare_data():
 
 def calculate_correlations(df: pd.DataFrame) -> pd.DataFrame:
     """Calculate correlation matrix between indicators."""
+    if FAST_MODE:
+        print("\nSkipping correlation calculation (FAST MODE)")
+        return pd.DataFrame()  # Return empty dataframe in fast mode
+    
     print("\nCalculating cross-indicator correlations...")
     
     # Pivot to get indicators as columns
@@ -85,6 +93,9 @@ def calculate_correlations(df: pd.DataFrame) -> pd.DataFrame:
 def get_correlated_features(wskaznik_idx: int, corr_matrix: pd.DataFrame, 
                             threshold: float = 0.7, max_features: int = 5) -> List[int]:
     """Get top correlated indicators for a given indicator."""
+    if FAST_MODE or corr_matrix.empty:
+        return []
+    
     if wskaznik_idx not in corr_matrix.columns:
         return []
     
@@ -216,6 +227,26 @@ def correlation_based_forecast(pkd_idx: float, wskaznik_idx: int,
     return None
 
 
+def fast_forecast(series: pd.Series) -> float:
+    """
+    Fast forecasting method using only WMA.
+    
+    This is 5x faster than ensemble but still reasonably accurate.
+    """
+    # Use weighted moving average (best balance of speed/accuracy)
+    forecast = weighted_moving_average(series, window=3)
+    
+    # Bounds check: clip to reasonable range (mean ± 3 std devs)
+    if len(series) >= 3:
+        series_mean = series.mean()
+        series_std = series.std()
+        lower_bound = series_mean - 3 * series_std
+        upper_bound = series_mean + 3 * series_std
+        forecast = np.clip(forecast, lower_bound, upper_bound)
+    
+    return forecast
+
+
 def ensemble_forecast(series: pd.Series, pkd_idx: float, wskaznik_idx: int,
                      corr_matrix: pd.DataFrame, df_full: pd.DataFrame) -> float:
     """
@@ -305,10 +336,13 @@ def forecast_single_category(args: Tuple) -> List[Dict]:
         for year_ahead in range(1, FORECAST_YEARS + 1):
             forecast_year = END_YEAR + year_ahead
             
-            # Generate forecast using ensemble
-            forecast_value = ensemble_forecast(
-                forecast_series, pkd_idx, wskaznik_idx, corr_matrix, df_full
-            )
+            # Generate forecast using selected method
+            if FAST_MODE:
+                forecast_value = fast_forecast(forecast_series)
+            else:
+                forecast_value = ensemble_forecast(
+                    forecast_series, pkd_idx, wskaznik_idx, corr_matrix, df_full
+                )
             
             # Add to results
             results.append({
@@ -480,6 +514,7 @@ def save_predictions(forecast_df: pd.DataFrame):
     with open(summary_file, 'w', encoding='utf-8') as f:
         f.write("FORECAST SUMMARY\n")
         f.write("=" * 80 + "\n\n")
+        f.write(f"Mode: {'FAST (WMA only)' if FAST_MODE else 'ENSEMBLE (5 methods)'}\n")
         f.write(f"Forecast period: {END_YEAR + 1} to {END_YEAR + FORECAST_YEARS}\n")
         f.write(f"Total predictions: {len(forecast_df)}\n\n")
         
@@ -507,18 +542,23 @@ def save_predictions(forecast_df: pd.DataFrame):
 
 if __name__ == '__main__':
     print("="*80)
-    print("ADVANCED FINANCIAL FORECASTING SYSTEM")
+    print("FINANCIAL FORECASTING SYSTEM")
     print("="*80)
     print(f"\nConfiguration:")
+    print(f"  Mode: {'FAST (WMA only)' if FAST_MODE else 'ENSEMBLE (5 methods + correlations)'}")
     print(f"  Historical data: {START_YEAR}-{END_YEAR}")
     print(f"  Forecast horizon: {FORECAST_YEARS} years")
     print(f"  CPU cores: {MAX_WORKERS}")
-    print(f"  Methods: Exponential Smoothing, Linear Trend, WMA, Seasonal Naive, Correlation-based")
+    
+    if FAST_MODE:
+        print(f"  Method: Weighted Moving Average (fast)")
+    else:
+        print(f"  Methods: Exponential Smoothing, Linear Trend, WMA, Seasonal Naive, Correlation-based")
     
     # Load data
     df = load_and_prepare_data()
     
-    # Calculate correlations
+    # Calculate correlations (skipped in fast mode)
     corr_matrix = calculate_correlations(df)
     
     # Forecast ALL combinations
@@ -533,4 +573,7 @@ if __name__ == '__main__':
     print("\nNext steps:")
     print("  1. Review predictions in: results-future/kpi-value-table-predicted.csv")
     print("  2. Run analysis: python src/outcome.py results-future")
-    print("  3. Compare with historical: python src/checking_predictions.py")
+    
+    if FAST_MODE:
+        print("\nNote: FAST_MODE was used. For better accuracy, set FAST_MODE = False")
+        print("      (this will take longer but use 5 methods + correlations)")

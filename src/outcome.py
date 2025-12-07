@@ -141,7 +141,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
     # Read CSV files from results-pipeline
-    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
+    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table-predicted.csv'), sep=';')
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
@@ -481,7 +481,7 @@ def run_sector_analysis(year: int = 2024,
 if __name__ == '__main__':
     # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
-        year=2024,
+        year=2025,
         typ='DZIAŁ',
         min_wskaznik_index=1000,
         n_simulations=1000,
