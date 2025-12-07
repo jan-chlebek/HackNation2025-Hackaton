@@ -32,6 +32,8 @@ interface PkdTypDictionaryItem {
 
 export default function Analysis() {
   const [dataType, setDataType] = useState<'dzial' | 'sekcja'>('sekcja');
+  const [selectedYear, setSelectedYear] = useState<string>('2024');
+  const [selectedDataset, setSelectedDataset] = useState<string>('results');
   const [selectedPkdTyp, setSelectedPkdTyp] = useState<string>('1'); // Default to DZIAŁ (1)
   const [selectedMethods, setSelectedMethods] = useState<Record<string, boolean>>({
     ensemble: true,
@@ -40,7 +42,16 @@ export default function Analysis() {
     vikor: true,
   });
 
-  const { data } = useCsvData<ResultData>(dataType === 'dzial' ? "/data/dzial_complete.csv" : "/data/sekcja_complete.csv", { delimiter: ";", dynamicTyping: false });
+  const YEARS = Array.from({ length: 2028 - 2013 + 1 }, (_, i) => (2013 + i).toString());
+  
+  const DATASETS = [
+    { id: 'results', label: 'Ogólne' },
+    { id: 'results-credit', label: 'Kredytowe' },
+    { id: 'results-development', label: 'Rozwojowe' },
+    { id: 'results-effectivity', label: 'Efektywność' },
+  ];
+
+  const { data } = useCsvData<ResultData>(`/data/${selectedDataset}/${selectedYear}/${dataType === 'dzial' ? 'dział' : 'sekcja'}/complete.csv`, { delimiter: ";", dynamicTyping: false });
   const { data: pkdData } = useCsvData<PkdDictionaryItem>("/data/pkd_dictionary.csv", { delimiter: ";", dynamicTyping: false });
   const { data: pkdTypData } = useCsvData<PkdTypDictionaryItem>("/data/pkd_typ_dictionary.csv", { delimiter: ";", dynamicTyping: false });
 
@@ -48,7 +59,7 @@ export default function Analysis() {
     { id: 'ensemble', label: 'Ensemble', color: '#1a2f3a', bgClass: 'bg-pko-navy' },
     { id: 'monte_carlo', label: 'Monte Carlo', color: '#d93026', bgClass: 'bg-pko-red' },
     { id: 'topsis', label: 'TOPSIS', color: '#c9a961', bgClass: 'bg-pko-gold' },
-    { id: 'vikor', label: 'VIKOR', color: '#1a1a1a', bgClass: 'bg-pko-black' },
+    { id: 'vikor', label: 'VIKOR', color: '#16a34a', bgClass: 'bg-green-600' },
   ];
 
   const toggleMethod = (methodId: string) => {
@@ -110,26 +121,21 @@ export default function Analysis() {
           <p className="text-pko-navy/70">Porównanie wyników różnych metod wielokryterialnych.</p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 items-end sm:items-center">
-          {dataType === 'dzial' && pkdTypData && (
-            <div className="relative min-w-[140px]">
-              <select
-                value={selectedPkdTyp}
-                onChange={(e) => setSelectedPkdTyp(e.target.value)}
-                className="appearance-none w-full bg-white border border-pko-navy/20 text-pko-navy text-sm font-medium rounded-lg focus:ring-2 focus:ring-pko-red focus:border-transparent block px-4 py-2 pr-8 shadow-sm cursor-pointer"
-              >
-                {pkdTypData.map((typ) => (
-                  <option key={typ.TYP_INDEX} value={typ.TYP_INDEX}>
-                    {typ.typ}
-                  </option>
-                ))}
-              </select>
-              <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-pko-navy">
-                <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
-                </svg>
-              </div>
+          <div className="relative">
+            <select
+              value={selectedDataset}
+              onChange={(e) => setSelectedDataset(e.target.value)}
+              className="appearance-none bg-white border border-gray-300 text-pko-navy text-sm rounded-lg focus:ring-pko-red focus:border-pko-red block w-full px-4 py-2 pr-8 cursor-pointer hover:bg-gray-50"
+            >
+              {DATASETS.map(dataset => (
+                <option key={dataset.id} value={dataset.id}>{dataset.label}</option>
+              ))}
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-pko-navy">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
             </div>
-          )}
+          </div>
+
           <div className="flex flex-wrap gap-3 bg-white px-3 py-2 rounded-lg shadow-sm border border-gray-100">
             {METHODS.map(method => (
               <label key={method.id} className="inline-flex items-center cursor-pointer select-none">
@@ -145,12 +151,37 @@ export default function Analysis() {
               </label>
             ))}
           </div>
-          <div className="inline-flex rounded-md shadow-sm" role="group">
+
+          <div className="relative">
+            <select
+              value={selectedYear}
+              onChange={(e) => setSelectedYear(e.target.value)}
+              className="appearance-none bg-white border border-gray-300 text-pko-navy text-sm rounded-lg focus:ring-pko-red focus:border-pko-red block w-full px-4 py-2 pr-8 cursor-pointer hover:bg-gray-50"
+            >
+              <optgroup label="Dane historyczne">
+                {YEARS.filter(y => parseInt(y) <= 2024).map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
+              </optgroup>
+              <optgroup label="Prognoza">
+                {YEARS.filter(y => parseInt(y) > 2024).map(year => (
+                  <option key={year} value={year}>{year}</option>
+                ))}
+              </optgroup>
+            </select>
+            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-pko-navy">
+              <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+            </div>
+          </div>
+
+          <div className="inline-flex rounded-md shadow-sm isolate">
             <button
               type="button"
               onClick={() => setDataType('sekcja')}
-              className={`px-4 py-2 text-sm font-medium border border-pko-navy/20 rounded-l-lg hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-pko-red focus:text-pko-navy ${
-                dataType === 'sekcja' ? 'bg-pko-navy text-white hover:bg-pko-navy/90' : 'bg-white text-pko-navy'
+              className={`relative inline-flex items-center px-4 py-2 text-sm font-medium border focus:z-10 focus:ring-2 focus:ring-pko-red rounded-l-lg ${
+                dataType === 'sekcja'
+                  ? 'bg-pko-navy text-white border-pko-navy z-10'
+                  : 'bg-white text-pko-navy border-gray-300 hover:bg-gray-50'
               }`}
             >
               Sekcje
@@ -158,8 +189,10 @@ export default function Analysis() {
             <button
               type="button"
               onClick={() => setDataType('dzial')}
-              className={`px-4 py-2 text-sm font-medium border border-l-0 border-pko-navy/20 rounded-r-lg hover:bg-gray-50 focus:z-10 focus:ring-2 focus:ring-pko-red focus:text-pko-navy ${
-                dataType === 'dzial' ? 'bg-pko-navy text-white hover:bg-pko-navy/90' : 'bg-white text-pko-navy'
+              className={`relative inline-flex items-center px-4 py-2 text-sm font-medium border focus:z-10 focus:ring-2 focus:ring-pko-red rounded-r-lg -ml-px ${
+                dataType === 'dzial'
+                  ? 'bg-pko-navy text-white border-pko-navy z-10'
+                  : 'bg-white text-pko-navy border-gray-300 hover:bg-gray-50'
               }`}
             >
               Działy
