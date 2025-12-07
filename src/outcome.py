@@ -149,6 +149,9 @@ def load_and_prepare_sector_data(year: int = 2024,
     if min_wskaznik_index is None and wskaznik_names is None:
         min_wskaznik_index = 1000  # Default to calculated indicators
     
+    if max_wskaznik_index is None and wskaznik_names is None:
+        max_wskaznik_index = 1009  # Default to credit indicators (1000-1009)
+    
     if wskaznik_names:
         print(f"Loading data for year {year}, type {typ}, indicators: {wskaznik_names}...")
     elif max_wskaznik_index:
@@ -388,12 +391,12 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str, output
     return output_dir
 
 
-def run_sector_analysis(year: int = 2024, 
-                       typ: str = 'SEKCJA',
+def run_sector_analysis(year: int, 
+                       typ: str,
                        min_wskaznik_index: int = None,
                        max_wskaznik_index: int = None,
                        wskaznik_names: list = None,
-                       n_simulations: int = 1000,
+                       n_simulations: int = 10000,
                        mc_weight_variance: float = 0.15,
                        temporal_weight_1yr: float = 0.66,
                        temporal_weight_2yr: float = 0.34,
@@ -407,7 +410,7 @@ def run_sector_analysis(year: int = 2024,
         year: Year to analyze
         typ: PKD type level
         min_wskaznik_index: Minimum indicator index to include (default: None, uses wskaznik_names or 1000)
-        max_wskaznik_index: Maximum indicator index to include (default: None, no upper limit)
+        max_wskaznik_index: Maximum indicator index to include (default: None, uses 1009)
         wskaznik_names: List of indicator names to include (e.g., ['Marża netto (NP/PNPM)', 'Marża operacyjna (OP/PNPM)'])
         n_simulations: Number of Monte Carlo simulations
         mc_weight_variance: Variance for Monte Carlo weight perturbation (default: 0.15 = 15%)
@@ -576,11 +579,23 @@ def run_sector_analysis(year: int = 2024,
 
 if __name__ == '__main__':
 
+    # Define the specific indicators to use
+    selected_indicators = [
+        'Marża netto (NP/PNPM)',
+        'Marża operacyjna (OP/PNPM)',
+        'Wskaźnik bieżącej płynności',
+        'Wskaźnik szybki ((C+REC)/STL)',
+        'Wskaźnik zadłużenia ((STL+LTL)/PNPM)',
+        'Pokrycie odsetek (OP/IP)',
+        'Rotacja należności (PNPM/REC)',
+        'Cash flow margin (CF/PNPM)'
+    ]
+
     for x in range(2013, 2025):
         results = run_sector_analysis(
             year=x,
             typ='SEKCJA',
-            min_wskaznik_index=1000,
+            wskaznik_names=selected_indicators,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
             temporal_weight_1yr=0.3,  
@@ -590,7 +605,7 @@ if __name__ == '__main__':
         run_sector_analysis(
             year=x,
             typ='DZIAŁ',
-            min_wskaznik_index=1000,
+            wskaznik_names=selected_indicators,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
             temporal_weight_1yr=0.3,  
@@ -622,15 +637,23 @@ if __name__ == '__main__':
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
     print("\nAnalysis includes:")
-    print("  • Current year indicator values (1000-1007) - CV-based weights")
-    print("  • 1-year percentage changes (Δ% 1yr) - 66% of base weight")
-    print("  • 2-year percentage changes (Δ% 2yr) - 34% of base weight")
+    print("  • 8 selected financial indicators:")
+    print("    1. Marża netto (NP/PNPM)")
+    print("    2. Marża operacyjna (OP/PNPM)")
+    print("    3. Wskaźnik bieżącej płynności")
+    print("    4. Wskaźnik szybki ((C+REC)/STL)")
+    print("    5. Wskaźnik zadłużenia ((STL+LTL)/PNPM)")
+    print("    6. Pokrycie odsetek (OP/IP)")
+    print("    7. Rotacja należności (PNPM/REC)")
+    print("    8. Cash flow margin (CF/PNPM)")
+    print("  • 1-year percentage changes (Δ% 1yr) - 30% of base weight")
+    print("  • 2-year percentage changes (Δ% 2yr) - 10% of base weight")
     print("  • All weights normalized to sum to 1.0")
-    print("  • Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("  • Directions loaded from wskaznik_dictionary.csv")
     print("\nWeighting methodology:")
     print("  • Base indicators: w = 1/CV (normalized)")
-    print("  • 1-year changes: 0.66 × w")
-    print("  • 2-year changes: 0.34 × w")
+    print("  • 1-year changes: 0.30 × w")
+    print("  • 2-year changes: 0.10 × w")
     print("  • Final normalization: all weights sum to 1.0")
     print("\nMonte Carlo method:")
     print("  • Uses temporal weights as base")

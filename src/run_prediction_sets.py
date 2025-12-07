@@ -1,13 +1,15 @@
 """
-Run sector analysis for 3 indicator sets based on creating_complex_indicators.ipynb divisions:
+Run sector analysis for 4 indicator sets based on creating_complex_indicators.ipynb divisions:
 - Zestaw 1: Credit Assessment (Zdolność kredytowa) - indicators 1000-1013
 - Zestaw 2: Operational Efficiency (Efektywność operacyjna) - indicators 1020-1029
-- Zestaw 3: Industry Development (Rozwój branży) - indicators 1040-1043
+- Zestaw 3: Industry Development (Rozwój branży) - indicators 1040-1051
+- Zestaw 4: Polish Named Indicators - indicators 1060-1067
 
 Each set saves results to a separate folder:
 - results-credit/
 - results-effectivity/
 - results-development/
+- results/ (Polish named indicators - standard output)
 
 Run from project root: python src/run_prediction_sets.py
 """
@@ -96,18 +98,26 @@ def run_effectivity_analysis(year: int, typ: str):
 
 def run_development_analysis(year: int, typ: str):
     """
-    Run analysis for Industry Development indicators (1040-1043).
+    Run analysis for Industry Development indicators (1040-1051).
     
     Indicators:
-    - 1040: Amortization Ratio (Wskaźnik amortyzacji)
-    - 1041: New Firms Rate (Wskaźnik nowych firm)
-    - 1042: Suspension Rate (Wskaźnik zawieszeń)
-    - 1043: Bank Loans Ratio (Wskaźnik kredytów bankowych)
+    - 1040: Investment Ratio (IO/PNPM)
+    - 1041: Amortization Ratio (DEPR/PNPM)
+    - 1042: Cash Flow Margin (CF/PNPM)
+    - 1043: Operating Cash Coverage ((OP+DEPR)/(STL+LTL))
+    - 1044: Profit Firms Share (PEN/EN)
+    - 1045: Net Firm Growth Rate
+    - 1046: New Firms Rate (Nowe/EN)
+    - 1047: Closure Rate (Zamknięte/EN)
+    - 1048: Suspension Rate (Zawieszone/EN)
+    - 1049: Operating Margin (OP/PNPM)
+    - 1050: POS Margin (POS/PNPM)
+    - 1051: Bank Loans Ratio ((STC+LTC)/(STL+LTL))
     """
     print("\n" + "="*90)
     print("ZESTAW 3: INDUSTRY DEVELOPMENT (ROZWÓJ BRANŻY)")
     print("="*90)
-    print("Indicators: 1040-1043 (4 indicators)")
+    print("Indicators: 1040-1051 (12 indicators)")
     print("Output folder: results-development/")
     print("="*90)
     
@@ -115,12 +125,46 @@ def run_development_analysis(year: int, typ: str):
         year=year,
         typ=typ,
         min_wskaznik_index=1040,
-        max_wskaznik_index=1043,
+        max_wskaznik_index=1051,
         n_simulations=1000,
         mc_weight_variance=0.15,
         temporal_weight_1yr=0.3,
         temporal_weight_2yr=0.1,
         output_folder='results-development'
+    )
+
+
+def run_polish_analysis(year: int, typ: str):
+    """
+    Run analysis for Polish Named indicators (1060-1067).
+    
+    Indicators:
+    - 1060: Marża netto (NP/PNPM)
+    - 1061: Marża operacyjna (OP/PNPM)
+    - 1062: Wskaźnik bieżącej płynności ((C+REC+INV)/STL)
+    - 1063: Wskaźnik szybki ((C+REC)/STL)
+    - 1064: Wskaźnik zadłużenia ((STL+LTL)/PNPM)
+    - 1065: Pokrycie odsetek (OP/IP)
+    - 1066: Rotacja należności (PNPM/REC)
+    - 1067: Cash flow margin (CF/PNPM)
+    """
+    print("\n" + "="*90)
+    print("ZESTAW 4: POLISH NAMED INDICATORS")
+    print("="*90)
+    print("Indicators: 1060-1067 (8 indicators)")
+    print("Output folder: results/")
+    print("="*90)
+    
+    return run_sector_analysis(
+        year=year,
+        typ=typ,
+        min_wskaznik_index=1060,
+        max_wskaznik_index=1067,
+        n_simulations=1000,
+        mc_weight_variance=0.15,
+        temporal_weight_1yr=0.3,
+        temporal_weight_2yr=0.1,
+        output_folder='results'
     )
 
 
@@ -142,6 +186,8 @@ def run_single_analysis(args: Tuple[str, int, str]) -> Tuple[str, int, str, bool
             run_effectivity_analysis(year, typ)
         elif analysis_type == 'development':
             run_development_analysis(year, typ)
+        elif analysis_type == 'polish':
+            run_polish_analysis(year, typ)
         return (analysis_type, year, typ, True)
     except Exception as e:
         print(f"\n⚠ Error in {analysis_type} analysis for {year}/{typ}: {e}")
@@ -150,7 +196,7 @@ def run_single_analysis(args: Tuple[str, int, str]) -> Tuple[str, int, str, bool
 
 def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA', max_workers: int = None):
     """
-    Run all 3 indicator sets for a range of years in parallel.
+    Run all 4 indicator sets for a range of years in parallel.
     
     Args:
         start_year: First year to analyze (default: 2013)
@@ -162,7 +208,7 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
         max_workers = max(1, mp.cpu_count() - 1)
     
     print("\n" + "="*90)
-    print("RUNNING 3-SET ANALYSIS PIPELINE (PARALLEL)")
+    print("RUNNING 4-SET ANALYSIS PIPELINE (PARALLEL)")
     print("="*90)
     print(f"Years: {start_year}-{end_year}")
     print(f"Type: {typ}")
@@ -170,7 +216,8 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
     print("\nSets:")
     print("  1. Credit Assessment (1000-1013) → results-credit/")
     print("  2. Operational Efficiency (1020-1029) → results-effectivity/")
-    print("  3. Industry Development (1040-1043) → results-development/")
+    print("  3. Industry Development (1040-1051) → results-development/")
+    print("  4. Polish Named (1060-1067) → results/")
     print("="*90)
     
     # Create list of all tasks
@@ -179,6 +226,7 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
         tasks.append(('credit', year, typ))
         tasks.append(('effectivity', year, typ))
         tasks.append(('development', year, typ))
+        tasks.append(('polish', year, typ))
     
     total_tasks = len(tasks)
     completed = 0
@@ -214,15 +262,17 @@ def run_all_sets(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJ
     print("  • results-credit/")
     print("  • results-effectivity/")
     print("  • results-development/")
+    print("  • results/")
     print("\nEach folder contains subdirectories by year and type:")
     print(f"  results-credit/YYYY/{typ.lower()}/")
     print(f"  results-effectivity/YYYY/{typ.lower()}/")
     print(f"  results-development/YYYY/{typ.lower()}/")
+    print(f"  results/YYYY/{typ.lower()}/")
 
 
 def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: str = 'SEKCJA'):
     """
-    Run all 3 indicator sets for a range of years sequentially (original implementation).
+    Run all 4 indicator sets for a range of years sequentially (original implementation).
     
     Args:
         start_year: First year to analyze (default: 2013)
@@ -230,14 +280,15 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
         typ: PKD type level - 'SEKCJA' or 'DZIAŁ' (default: 'SEKCJA')
     """
     print("\n" + "="*90)
-    print("RUNNING 3-SET ANALYSIS PIPELINE")
+    print("RUNNING 4-SET ANALYSIS PIPELINE")
     print("="*90)
     print(f"Years: {start_year}-{end_year}")
     print(f"Type: {typ}")
     print("\nSets:")
     print("  1. Credit Assessment (1000-1013) → results-credit/")
     print("  2. Operational Efficiency (1020-1029) → results-effectivity/")
-    print("  3. Industry Development (1040-1043) → results-development/")
+    print("  3. Industry Development (1040-1051) → results-development/")
+    print("  4. Polish Named (1060-1067) → results/")
     print("="*90)
     
     for year in range(start_year, end_year + 1):
@@ -246,12 +297,13 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
         print(f"{'#'*90}")
         
         try:
-            # Run all 3 sets for this year
+            # Run all 4 sets for this year
             run_credit_analysis(year, typ)
             run_effectivity_analysis(year, typ)
             run_development_analysis(year, typ)
+            run_polish_analysis(year, typ)
             
-            print(f"\n✓ Completed all 3 sets for year {year}")
+            print(f"\n✓ Completed all 4 sets for year {year}")
             
         except Exception as e:
             print(f"\n⚠ Error processing year {year}: {e}")
@@ -264,10 +316,12 @@ def run_all_sets_sequential(start_year: int = 2013, end_year: int = 2024, typ: s
     print("  • results-credit/")
     print("  • results-effectivity/")
     print("  • results-development/")
+    print("  • results/")
     print("\nEach folder contains subdirectories by year and type:")
     print("  results-credit/YYYY/sekcja/")
     print("  results-effectivity/YYYY/sekcja/")
     print("  results-development/YYYY/sekcja/")
+    print("  results/YYYY/sekcja/")
 
 
 if __name__ == '__main__':
