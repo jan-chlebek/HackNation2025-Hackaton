@@ -33,10 +33,8 @@ class MonthlyInfoProcessorTabl5(DataProcessor):
                     break
             
             if target_sheet is None:
-                raise ValueError(
-                    f"Sheet '{sheet_name}' not found in '{file}'. "
-                    f"Available: {xl.sheet_names}"
-                )
+                print(f"  ⚠ Skipping '{file}': Sheet '{sheet_name}' not found. Available: {xl.sheet_names}")
+                continue
             
             # Find header row
             df_temp = pd.read_excel(file_path, sheet_name=target_sheet, header=None)
@@ -59,8 +57,14 @@ class MonthlyInfoProcessorTabl5(DataProcessor):
         # # Filter and clean
         df_all.loc[df_all['Sekcja PKD'].isna() & df_all['Dział PKD'].isna(), 'Sekcja PKD'] = 'OG'
         
-        # Format PKD codes
-        df_all['PKD_2007'] = df_all['Dział PKD'].where(df_all['Dział PKD'].notna(), df_all['Sekcja PKD'])
+        # Format PKD codes - convert Dział PKD to zero-padded strings
+        df_all['Dział_formatted'] = df_all['Dział PKD'].apply(
+            lambda x: f"{int(x):02d}" if pd.notna(x) else None
+        )
+        df_all['PKD_2007'] = df_all['Dział_formatted'].where(
+            df_all['Dział_formatted'].notna(), 
+            df_all['Sekcja PKD']
+        )
         
         df_all = df_all[df_all.iloc[:, 3] == 'b']
 

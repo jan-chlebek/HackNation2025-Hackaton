@@ -30,58 +30,58 @@ def get_data_sources_config():
     base_path = os.path.join('..', '..', 'data')
     
     data_sources = [
-        # {
-        #     'processor_class': UpadlosciProcessor,
-        #     'name': 'Upadłości (KRZ_PKD)',
-        #     'kwargs': {
-        #         'file_path': os.path.join(base_path, 'krz_pkd.csv')
-        #     }
-        # },
-        # {
-        #     'processor_class': WskaznikFinansowyProcessor,
-        #     'name': 'Wskaźniki Finansowe',
-        #     'kwargs': {
-        #         'file_path': os.path.join(base_path, 'wsk_fin.csv')
-        #     }
-        # },
-        # {
-        #     'processor_class': QuarterlyInfoProcessorTabl4,
-        #     'name': 'Dane Kwartalne - Pracujący',
-        #     'kwargs': {
-        #         'folder_path': os.path.join(
-        #             base_path, 
-        #             'external', 
-        #             '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
-        #         ),
-        #         'sheet_name': 'Tabl 4',
-        #         'wskaznik_prefix': 'Przewidywana liczba pracujących'
-        #     }
-        # },
-        # {
-        #     'processor_class': QuarterlyInfoProcessorTabl5,
-        #     'name': 'Dane Kwartalne - liczba firm vs działalności gospodarczych',
-        #     'kwargs': {
-        #         'folder_path': os.path.join(
-        #             base_path, 
-        #             'external', 
-        #             '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
-        #         ),
-        #         'sheet_name': 'Tabl 5'
-        #     }
-        # },
-        # {
-        #     'processor_class': QuarterlyInfoProcessorTabl7,
-        #     'name': 'Dane Kwartalne - liczba nowych firm w roku',
-        #     'kwargs': {
-        #         'folder_path': os.path.join(
-        #             base_path, 
-        #             'external', 
-        #             '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
-        #         ),
-        #         'sheet_name': 'Tabl 7',
-        #         'wskaznik_prefix': 'Liczba nowych firm'
-        #     }
-        # }
+        {
+            'processor_class': UpadlosciProcessor,
+            'name': 'Upadłości (KRZ_PKD)',
+            'kwargs': {
+                'file_path': os.path.join(base_path, 'krz_pkd.csv')
+            }
+        },
+        {
+            'processor_class': WskaznikFinansowyProcessor,
+            'name': 'Wskaźniki Finansowe',
+            'kwargs': {
+                'file_path': os.path.join(base_path, 'wsk_fin.csv')
+            }
+        },
+        {
+            'processor_class': QuarterlyInfoProcessorTabl4,
+            'name': 'Dane Kwartalne - Pracujący',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'Tabl 4',
+                'wskaznik_prefix': 'Przewidywana liczba pracujących'
+            }
+        },
+        {
+            'processor_class': QuarterlyInfoProcessorTabl5,
+            'name': 'Dane Kwartalne - liczba firm vs działalności gospodarczych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'Tabl 5'
+            }
+        },
+        {
+            'processor_class': QuarterlyInfoProcessorTabl7,
+            'name': 'Dane Kwartalne - liczba nowych firm w roku',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'Tabl 7',
+                'wskaznik_prefix': 'Liczba nowych firm'
+            }
+        },
                 {
             'processor_class': MonthlyInfoProcessorTabl5,
             'name': 'Dane Miesięczne - liczba firm zarejestrowanych',
@@ -91,7 +91,34 @@ def get_data_sources_config():
                     'external', 
                     '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
                 ),
-                'sheet_name': 'T5'
+                'sheet_name': 'T5',
+                'wskaznik_prefix': 'Liczba firm zarejestrowanych'
+            }
+        },
+        {
+            'processor_class': MonthlyInfoProcessorTabl5,
+            'name': 'Dane Miesięczne - liczba firm zamkniętych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'T7',
+                'wskaznik_prefix': 'Liczba firm zamkniętych'
+            }
+        },
+        {
+            'processor_class': MonthlyInfoProcessorTabl5,
+            'name': 'Dane Miesięczne - liczba firm z zawieszoną działalnością',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'T11',
+                'wskaznik_prefix': 'Liczba firm z zawieszoną działalnością'
             }
         },
         

@@ -10,6 +10,56 @@ from pkd_mapper import PKDMapper
 from processors.data_processor import DataProcessor
 
 
+# Manual mapping of WSKAZNIK to MinMax attribute
+WSKAZNIK_MINMAX_MAPPING = {
+    "C Środki pieniężne i pap. wart.": "Max",
+    "CF Nadwyżka finansowa": "Max",
+    "DEPR Amortyzacja": "Min",
+    "EN Liczba jednostek gospodarczych": "Max",
+    "GS (I) Przychody netto ze sprzedaży i zrównane z nimi": "Max",
+    "GS Przychody ogółem": "Max",
+    "INV Zapasy": "Min",
+    "IO Wartość nakładów inwestycyjnych": "Min",
+    "IP Odsetki do zapłacenia": "Min",
+    "LTC Długoterminowe kredyty bankowe": "Min",
+    "LTL Zobowiązania długoterminowe": "Min",
+    "NP Wynik finansowy netto (zysk netto)": "Max",
+    "NWC Kapitał obrotowy": "Max",
+    "OFE Pozostałe koszty finansowe": "Min",
+    "OP Wynik na działalności operacyjnej": "Max",
+    "PEN Liczba rentownych jednostek gospodarczych": "Max",
+    "PNPM Przychody netto": "Max",
+    "POS Wynik na sprzedaży": "Max",
+    "PPO Pozostałe przychody operacyjne": "Max",
+    "Przych. fin. Przychody finansowe": "Max",
+    "REC Należności krótkoterminowe": "Min",
+    "STC Krótkoterminowe kredyty bankowe": "Min",
+    "STL Zobowiązania krótkoterminowe": "Min",
+    "TC Koszty ogółem": "Min",
+    "Upadłość": "Min",
+    "Marża netto (NP/PNPM": "Max",
+    "Marża operacyjna (OP/PNPM": "Max",
+    "Wskaźnik bieżącej płynności ((C+REC+INV)/STL": "Max",
+    "Wskaźnik szybki ((C+REC)/STL": "Max",
+    "Wskaźnik zadłużenia ((STL+LTL)/PNPM)": "Min",
+    "Pokrycie odsetek (OP/IP)": "Max",
+    "Rotacja należności (PNPM/REC)": "Max",
+    "Cash flow margin (CF/PNPM)": "Max",
+    "Liczba firm z zawieszoną działalnością Ogółem": "Min",
+    "Liczba firm zamkniętych Ogółem": "Min",
+    "Liczba firm zarejestrowanych Ogółem": "Max",
+    "Liczba nowych firm Ogółem": "Max",
+    "Osoby fizyczne prowadzące dzałalność gospodarczą": "Max",
+    "Osoby prawne/jednostki organizacyjne niemające osobowości prawnej": "Max",
+    "Przewidywana liczba pracujących 0-9": "Max",
+    "Przewidywana liczba pracujących 10-49": "Max",
+    "Przewidywana liczba pracujących 250=>": "Max",
+    "Przewidywana liczba pracujących 50-249": "Max",
+    "Przewidywana liczba pracujących Ogółem": "Max",
+    "liczba firm i działalności gospodarczych Ogółem": "Max",
+}
+
+
 class ETLPipeline:
     """Main ETL pipeline orchestrator."""
     
@@ -93,6 +143,18 @@ class ETLPipeline:
             {"WSKAZNIK_INDEX": idx, "WSKAZNIK": value}
             for value, idx in wskaznik_dict.items()
         ]).sort_values("WSKAZNIK_INDEX").reset_index(drop=True)
+        
+        # Add MinMax attribute to WSKAZNIK dictionary
+        wskaznik_dictionary_table["MinMax"] = wskaznik_dictionary_table["WSKAZNIK"].map(
+            WSKAZNIK_MINMAX_MAPPING
+        )
+        
+        # Check for unmapped indicators
+        unmapped_wskaznik = wskaznik_dictionary_table[
+            wskaznik_dictionary_table["MinMax"].isna()
+        ]["WSKAZNIK"].tolist()
+        if unmapped_wskaznik:
+            print(f"Warning: The following indicators have no MinMax mapping: {unmapped_wskaznik}")
         
         combined_data["WSKAZNIK_INDEX"] = combined_data["WSKAZNIK"].map(wskaznik_dict)
         combined_data.drop(columns=["WSKAZNIK"], inplace=True)

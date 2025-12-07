@@ -52,6 +52,7 @@ class QuarterlyInfoProcessorTabl5(DataProcessor):
             
             # Rename columns with proper names
             rename_mapping = {
+                'Unnamed: 3': 'liczba firm i działalności gospodarczych Ogółem',
                 'Unnamed: 4': 'Osoby prawne/jednostki organizacyjne niemające osobowości prawnej',
                 'Unnamed: 5': 'Osoby fizyczne prowadzące dzałalność gospodarczą'
             }

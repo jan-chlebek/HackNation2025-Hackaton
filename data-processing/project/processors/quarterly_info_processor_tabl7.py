@@ -54,7 +54,7 @@ class QuarterlyInfoProcessorTabl7(DataProcessor):
             # Rename columns with proper names
             
             df = df[['Sekcja', 'Dział', 'Podklasa', 'Ogółem']]
-            
+
             df['Source_File'] = file
             all_data.append(df)
 
