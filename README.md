@@ -277,6 +277,42 @@ def safe_divide(numerator, denominator, fill_value=0):
 - **VIKOR** - kompromis z uwzględnieniem wag
 - **Monte Carlo** - probabilistyczna ocena stabilności
 
+---
+
+## Jak obliczane są wagi wskaźników?
+
+**Metoda**: Odwrotność współczynnika zmienności
+
+### Wzór (3 kroki):
+
+```python
+# 1. Dla każdego wskaźnika oblicz współczynnik zmienności
+c_v = odchylenie_standardowe / średnia
+
+# 2. Oblicz odwrotność
+odwrotnosc = 1 / c_v
+
+# 3. Normalizuj do sumy = 1
+waga = odwrotnosc / suma_wszystkich_odwrotnosci
+```
+
+### Logika:
+
+- **Wskaźnik STABILNY** (mała zmienność) → **duża waga** ✅
+- **Wskaźnik CHAOTYCZNY** (duża zmienność) → **mała waga** ❌
+
+### Przykład:
+
+```
+Wskaźnik A: c_v = 0.2  →  waga = 1/0.2 = 5.0  →  62.5% (główny wpływ)
+Wskaźnik B: c_v = 0.5  →  waga = 1/0.5 = 2.0  →  25.0%
+Wskaźnik C: c_v = 1.0  →  waga = 1/1.0 = 1.0  →  12.5% (mały wpływ)
+```
+
+**Dlaczego tak?** Stabilne wskaźniki dają bardziej wiarygodne informacje o sektorze.
+
+---
+
 ### 1. TOPSIS (Technique for Order of Preference by Similarity to Ideal Solution)
 
 #### Algorytm TOPSIS
