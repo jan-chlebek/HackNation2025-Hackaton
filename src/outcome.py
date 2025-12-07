@@ -19,27 +19,28 @@ sys.path.append(str(Path(__file__).parent))
 from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter, TOPSISAnalyzer
 
 
-def load_indicator_directions(input_dir: str = 'results-pipeline') -> dict:
+def load_indicator_directions(input_dir: str = 'results-pipeline', filename: str = 'wskaznik_dictionary.csv') -> dict:
     """
-    Load indicator optimization directions from wskaznik_dictionary_minmax.csv.
+    Load indicator optimization directions from wskaznik_dictionary.csv.
     
     Args:
         input_dir: Directory containing the dictionary file
+        filename: Name of the wskaznik dictionary file
         
     Returns:
         Dictionary mapping WSKAZNIK names to 'max' or 'min'
     """
-    wskaznik_minmax = pd.read_csv(
-        os.path.join(input_dir, 'wskaznik_dictionary_minmax.csv'), 
+    wskaznik_dict = pd.read_csv(
+        os.path.join(input_dir, filename), 
         sep=';'
     )
     
     # Strip whitespace from column names
-    wskaznik_minmax.columns = wskaznik_minmax.columns.str.strip()
+    wskaznik_dict.columns = wskaznik_dict.columns.str.strip()
     
     # Create mapping from WSKAZNIK name to direction
     direction_map = {}
-    for _, row in wskaznik_minmax.iterrows():
+    for _, row in wskaznik_dict.iterrows():
         wskaznik_name = row['WSKAZNIK'].strip()
         minmax_value = str(row['MinMax']).strip().lower()
         
@@ -123,30 +124,49 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
         return pd.DataFrame(columns=['kpi_id', 'cat_id', 'value'])
 
 
-def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wskaznik_index: int = 1000) -> pd.DataFrame:
+def load_and_prepare_sector_data(year: int = 2024, 
+                                 typ: str = 'SEKCJA', 
+                                 min_wskaznik_index: int = None,
+                                 max_wskaznik_index: int = None,
+                                 wskaznik_names: list = None,
+                                 input_dir: str = 'results-pipeline',
+                                 kpi_filename: str = 'kpi-value-table.csv') -> pd.DataFrame:
     """
     Load and prepare data for sector analysis.
     
     Args:
         year: Year to filter (default: 2024)
         typ: PKD type to filter (default: 'SEKCJA')
-        min_wskaznik_index: Minimum WSKAZNIK_INDEX to include (default: 1000)
+        min_wskaznik_index: Minimum WSKAZNIK_INDEX to include (default: None, uses wskaznik_names instead)
+        max_wskaznik_index: Maximum WSKAZNIK_INDEX to include (default: None, no upper limit)
+        wskaznik_names: List of indicator names to include (default: None, uses min_wskaznik_index)
+        input_dir: Directory containing input files (default: 'results-pipeline')
+        kpi_filename: Name of the KPI value table file (default: 'kpi-value-table.csv')
         
     Returns:
         DataFrame in format ready for analysis (kpi_id, cat_id, value, direction)
     """
-    # Define paths (relative to project root) - INPUT from results-pipeline
-    input_dir = 'results-pipeline'
+    if min_wskaznik_index is None and wskaznik_names is None:
+        min_wskaznik_index = 1000  # Default to calculated indicators
     
-    print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
+    if wskaznik_names:
+        print(f"Loading data for year {year}, type {typ}, indicators: {wskaznik_names}...")
+    elif max_wskaznik_index:
+        print(f"Loading data for year {year}, type {typ}, indicators {min_wskaznik_index}-{max_wskaznik_index}...")
+    else:
+        print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
-    # Read CSV files from results-pipeline
-    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
+    # Read CSV files from input directory
+    kpi_value_table = pd.read_csv(os.path.join(input_dir, kpi_filename), sep=';')
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
     
-    # Load indicator directions from wskaznik_dictionary_minmax.csv
+    # Remove duplicate WSKAZNIK_INDEX entries (keep first occurrence)
+    # This handles cases where both Polish and English names exist for same indicator
+    wskaznik_dictionary = wskaznik_dictionary.drop_duplicates(subset=['WSKAZNIK_INDEX'], keep='first')
+    
+    # Load indicator directions from wskaznik_dictionary.csv
     indicator_directions = load_indicator_directions(input_dir)
     
     print(f"  Original data: {len(kpi_value_table)} rows")
@@ -164,19 +184,37 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     # Merge with wskaznik dictionary to get indicator names
     df_merged = df_merged.merge(wskaznik_dictionary, on='WSKAZNIK_INDEX', how='left')
     
-    # Filter by year, type, and indicator index for CURRENT YEAR data
-    df_filtered = df_merged[
-        (df_merged['rok'] == year) & 
-        (df_merged['typ'] == typ) &
-        (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index)
-    ].copy()
-    
-    print(f"  After filtering by year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}: {len(df_filtered)} rows")
+    # Filter by year, type, and indicator (by index or names) for CURRENT YEAR data
+    if wskaznik_names:
+        df_filtered = df_merged[
+            (df_merged['rok'] == year) & 
+            (df_merged['typ'] == typ) &
+            (df_merged['WSKAZNIK'].isin(wskaznik_names))
+        ].copy()
+        print(f"  After filtering by year={year}, typ={typ}, indicators={wskaznik_names}: {len(df_filtered)} rows")
+    elif max_wskaznik_index:
+        df_filtered = df_merged[
+            (df_merged['rok'] == year) & 
+            (df_merged['typ'] == typ) &
+            (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index) &
+            (df_merged['WSKAZNIK_INDEX'] <= max_wskaznik_index)
+        ].copy()
+        print(f"  After filtering by year={year}, typ={typ}, WSKAZNIK_INDEX {min_wskaznik_index}-{max_wskaznik_index}: {len(df_filtered)} rows")
+    else:
+        df_filtered = df_merged[
+            (df_merged['rok'] == year) & 
+            (df_merged['typ'] == typ) &
+            (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index)
+        ].copy()
+        print(f"  After filtering by year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}: {len(df_filtered)} rows")
     print(f"  Unique sectors: {df_filtered['symbol'].nunique()}")
     print(f"  Unique indicators: {df_filtered['WSKAZNIK'].nunique()}")
     
     if len(df_filtered) == 0:
-        raise ValueError(f"No data found for year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}")
+        if wskaznik_names:
+            raise ValueError(f"No data found for year={year}, typ={typ}, indicators={wskaznik_names}")
+        else:
+            raise ValueError(f"No data found for year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}")
     
     # Create analysis-ready format for CURRENT YEAR values
     analysis_df = pd.DataFrame({
@@ -187,7 +225,9 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     })
     
     # Calculate percentage changes and add as additional criteria
-    pct_change_df = calculate_percentage_changes(df_merged, year, typ, min_wskaznik_index)
+    # Use min_wskaznik_index if provided, otherwise get min index from filtered indicators
+    min_idx_for_pct = min_wskaznik_index if min_wskaznik_index else df_filtered['WSKAZNIK_INDEX'].min()
+    pct_change_df = calculate_percentage_changes(df_merged, year, typ, min_idx_for_pct)
     
     if len(pct_change_df) > 0:
         # Add direction column to percentage changes (same as base indicator)
@@ -302,7 +342,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     return analysis_df
 
 
-def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
+def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str, output_folder: str = 'results'):
     """
     Save results organized by year and type.
     
@@ -310,9 +350,10 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
         results: Results DataFrame
         year: Year of analysis
         typ: PKD type
+        output_folder: Base folder for output results (default: 'results')
     """
-    # Create directory structure: results/year/type/
-    output_dir = Path('results') / str(year) / typ.lower()
+    # Create directory structure: output_folder/year/type/
+    output_dir = Path(output_folder) / str(year) / typ.lower()
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # TOPSIS results
@@ -349,31 +390,41 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
 
 def run_sector_analysis(year: int = 2024, 
                        typ: str = 'SEKCJA',
-                       min_wskaznik_index: int = 1000,
+                       min_wskaznik_index: int = None,
+                       max_wskaznik_index: int = None,
+                       wskaznik_names: list = None,
                        n_simulations: int = 1000,
                        mc_weight_variance: float = 0.15,
                        temporal_weight_1yr: float = 0.66,
-                       temporal_weight_2yr: float = 0.34) -> pd.DataFrame:
+                       temporal_weight_2yr: float = 0.34,
+                       input_dir: str = 'results-pipeline',
+                       kpi_filename: str = 'kpi-value-table.csv',
+                       output_folder: str = 'results') -> pd.DataFrame:
     """
     Run complete sector analysis.
     
     Args:
         year: Year to analyze
         typ: PKD type level
-        min_wskaznik_index: Minimum indicator index to include (default: 1000 for calculated ratios)
+        min_wskaznik_index: Minimum indicator index to include (default: None, uses wskaznik_names or 1000)
+        max_wskaznik_index: Maximum indicator index to include (default: None, no upper limit)
+        wskaznik_names: List of indicator names to include (e.g., ['Marża netto (NP/PNPM)', 'Marża operacyjna (OP/PNPM)'])
         n_simulations: Number of Monte Carlo simulations
         mc_weight_variance: Variance for Monte Carlo weight perturbation (default: 0.15 = 15%)
         temporal_weight_1yr: Weight multiplier for 1-year changes (default: 0.66)
         temporal_weight_2yr: Weight multiplier for 2-year changes (default: 0.34)
+        input_dir: Directory containing input files (default: 'results-pipeline')
+        kpi_filename: Name of the KPI value table file (default: 'kpi-value-table.csv')
+        output_folder: Base folder for output results (default: 'results')
         
     Returns:
         DataFrame with analysis results
     """
     # Load and prepare data
-    analysis_df = load_and_prepare_sector_data(year, typ, min_wskaznik_index)
+    analysis_df = load_and_prepare_sector_data(year, typ, min_wskaznik_index, max_wskaznik_index, wskaznik_names, input_dir, kpi_filename)
     
     # Create output directory
-    output_dir = Path('results') / str(year) / typ.lower()
+    output_dir = Path(output_folder) / str(year) / typ.lower()
     output_dir.mkdir(parents=True, exist_ok=True)
     
     # Save prepared input data
@@ -431,7 +482,11 @@ def run_sector_analysis(year: int = 2024,
     
     # Run ensemble analysis with custom weights
     print("\n" + "="*90)
-    print(f"RUNNING ENSEMBLE ANALYSIS - Year {year}, Type {typ}, Indicators >= {min_wskaznik_index}")
+    if wskaznik_names:
+        print(f"RUNNING ENSEMBLE ANALYSIS - Year {year}, Type {typ}, Indicators: {wskaznik_names}")
+    else:
+        indicator_filter = min_wskaznik_index if min_wskaznik_index else 1000
+        print(f"RUNNING ENSEMBLE ANALYSIS - Year {year}, Type {typ}, Indicators >= {indicator_filter}")
     print(f"Temporal weighting: 1yr={temporal_weight_1yr}, 2yr={temporal_weight_2yr}")
     print(f"Monte Carlo weight variance: ±{mc_weight_variance*100}%")
     print("="*90)
@@ -490,7 +545,6 @@ def run_sector_analysis(year: int = 2024,
     results = results.sort_values('ensemble_rank')
     
     # Add sector names to results (from input directory)
-    input_dir = 'results-pipeline'
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     
@@ -515,22 +569,22 @@ def run_sector_analysis(year: int = 2024,
     print("="*90)
     
     # Save results
-    save_results_by_year_type(results, year, typ)
+    save_results_by_year_type(results, year, typ, output_folder)
     
     return results
 
 
 if __name__ == '__main__':
 
-    for x in range(2021, 2023):
+    for x in range(2013, 2025):
         results = run_sector_analysis(
             year=x,
             typ='SEKCJA',
             min_wskaznik_index=1000,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
-            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
-            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+            temporal_weight_1yr=0.3,  
+            temporal_weight_2yr=0.1,   
         )
 
         run_sector_analysis(
@@ -539,8 +593,8 @@ if __name__ == '__main__':
             min_wskaznik_index=1000,
             n_simulations=1000,
             mc_weight_variance=0.15,  # 15% variance around temporal weights
-            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
-            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+            temporal_weight_1yr=0.3,  
+            temporal_weight_2yr=0.1,   
         )
     
 

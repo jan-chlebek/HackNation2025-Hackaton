@@ -10,7 +10,8 @@ from processors import (
     WskaznikFinansowyProcessor,
     QuarterlyInfoProcessorTabl4,
     QuarterlyInfoProcessorTabl5,
-    QuarterlyInfoProcessorTabl7
+    QuarterlyInfoProcessorTabl7,
+    MonthlyInfoProcessorTabl5
 )
 
 
@@ -70,7 +71,7 @@ def get_data_sources_config():
         },
         {
             'processor_class': QuarterlyInfoProcessorTabl7,
-            'name': 'Dane Kwartalne - liczba firm vs działalności gospodarczych',
+            'name': 'Dane Kwartalne - liczba nowych firm w roku',
             'kwargs': {
                 'folder_path': os.path.join(
                     base_path, 
@@ -80,30 +81,46 @@ def get_data_sources_config():
                 'sheet_name': 'Tabl 7',
                 'wskaznik_prefix': 'Liczba nowych firm'
             }
-        }
-        # =============================================================
-        # ADD NEW DATA SOURCES BELOW THIS LINE
-        # =============================================================
-        # 
-        # Example: Add another CSV file with custom processor
-        # {
-        #     'processor_class': CustomProcessor,  # Create new processor class
-        #     'name': 'New KPI Source',
-        #     'kwargs': {
-        #         'file_path': os.path.join(base_path, 'new_kpi_file.csv')
-        #     }
-        # },
-        #
-        # Example: Add another quarterly-style data source
-        # {
-        #     'processor_class': QuarterlyInfoProcessor,
-        #     'name': 'Inne Dane Kwartalne',
-        #     'kwargs': {
-        #         'folder_path': os.path.join(base_path, 'external', 'Other_Folder'),
-        #         'sheet_name': 'Data Sheet',
-        #         'wskaznik_prefix': 'Custom Indicator'
-        #     }
-        # },
+        },
+                {
+            'processor_class': MonthlyInfoProcessorTabl5,
+            'name': 'Dane Miesięczne - liczba firm zarejestrowanych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'T5',
+                'wskaznik_prefix': 'Liczba firm zarejestrowanych'
+            }
+        },
+        {
+            'processor_class': MonthlyInfoProcessorTabl5,
+            'name': 'Dane Miesięczne - liczba firm zamkniętych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'T7',
+                'wskaznik_prefix': 'Liczba firm zamkniętych'
+            }
+        },
+        {
+            'processor_class': MonthlyInfoProcessorTabl5,
+            'name': 'Dane Miesięczne - liczba firm z zawieszoną działalnością',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Miesięczna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'T11',
+                'wskaznik_prefix': 'Liczba firm z zawieszoną działalnością'
+            }
+        },
         
     ]
     

@@ -1,35 +1,81 @@
-WSKAZNIK_INDEX;WSKAZNIK
-0;C Środki pieniężne i pap. wart. 
-1;CF Nadwyżka finansowa 
-2;DEPR Amortyzacja 
-3;EN Liczba jednostek gospodarczych 
-4;GS (I) Przychody netto ze sprzedaży i zrównane z nimi 
-5;GS Przychody ogółem 
-6;INV Zapasy 
-7;IO Wartość nakładów inwestycyjnych 
-8;IP Odsetki do zapłacenia 
-9;LTC Długoterminowe kredyty bankowe 
-10;LTL Zobowiązania długoterminowe 
-11;Liczba nowych firm Ogółem
-12;NP Wynik finansowy netto (zysk netto) 
-13;NWC Kapitał obrotowy 
-14;OFE Pozostałe koszty finansowe 
-15;OP Wynik na działalności operacyjnej 
-16;Osoby fizyczne prowadzące dzałalność gospodarczą
-17;Osoby prawne/jednostki organizacyjne niemające osobowości prawnej
-18;PEN Liczba rentownych jednostek gospodarczych 
-19;PNPM Przychody netto 
-20;POS Wynik na sprzedaży 
-21;PPO Pozostałe przychody operacyjne 
-22;Przewidywana liczba pracujących 0-9
-23;Przewidywana liczba pracujących 10-49
-24;Przewidywana liczba pracujących 250=>
-25;Przewidywana liczba pracujących 50-249
-26;Przewidywana liczba pracujących Ogółem
-27;Przych. fin. Przychody finansowe 
-28;REC Należności krótkoterminowe 
-29;STC Krótkoterminowe kredyty bankowe 
-30;STL Zobowiązania krótkoterminowe 
-31;TC Koszty ogółem 
-32;Unnamed: 3
-33;Upadłość
+WSKAZNIK_INDEX;WSKAZNIK;MinMax
+0;C Środki pieniężne i pap. wart.;Max
+1;CF Nadwyżka finansowa;Max
+2;DEPR Amortyzacja;Min
+3;EN Liczba jednostek gospodarczych;Max
+4;GS (I) Przychody netto ze sprzedaży i zrównane z nimi;Max
+5;GS Przychody ogółem;Max
+6;INV Zapasy;Min
+7;IO Wartość nakładów inwestycyjnych;Min
+8;IP Odsetki do zapłacenia;Min
+9;LTC Długoterminowe kredyty bankowe;Min
+10;LTL Zobowiązania długoterminowe;Min
+11;Liczba firm z zawieszoną działalnością Ogółem;Min
+12;Liczba firm zamkniętych Ogółem;Min
+13;Liczba firm zarejestrowanych Ogółem;Max
+14;Liczba nowych firm Ogółem;Max
+15;NP Wynik finansowy netto (zysk netto);Max
+16;NWC Kapitał obrotowy;Max
+17;OFE Pozostałe koszty finansowe;Min
+18;OP Wynik na działalności operacyjnej;Max
+19;Osoby fizyczne prowadzące dzałalność gospodarczą;Max
+20;Osoby prawne/jednostki organizacyjne niemające osobowości prawnej;Max
+21;PEN Liczba rentownych jednostek gospodarczych;Max
+22;PNPM Przychody netto;Max
+23;POS Wynik na sprzedaży;Max
+24;PPO Pozostałe przychody operacyjne;Max
+25;Przewidywana liczba pracujących 0-9;Max
+26;Przewidywana liczba pracujących 10-49;Max
+27;Przewidywana liczba pracujących 250=>;Max
+28;Przewidywana liczba pracujących 50-249;Max
+29;Przewidywana liczba pracujących Ogółem;Max
+30;Przych. fin. Przychody finansowe;Max
+31;REC Należności krótkoterminowe;Min
+32;STC Krótkoterminowe kredyty bankowe;Min
+33;STL Zobowiązania krótkoterminowe;Min
+34;TC Koszty ogółem;Min
+35;Upadłość;Min
+36;liczba firm i działalności gospodarczych Ogółem;Max
+1000;Marża netto (NP/PNPM);
+1001;Marża operacyjna (OP/PNPM);
+1002;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);
+1003;Wskaźnik szybki ((C+REC)/STL);
+1004;Wskaźnik zadłużenia ((STL+LTL)/PNPM);
+1005;Pokrycie odsetek (OP/IP);
+1006;Rotacja należności (PNPM/REC);
+1007;Cash flow margin (CF/PNPM);
+1000;Marża netto (NP/PNPM);Max
+1001;Marża operacyjna (OP/PNPM);Max
+1002;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);Max
+1003;Wskaźnik szybki ((C+REC)/STL);Max
+1004;Wskaźnik zadłużenia ((STL+LTL)/PNPM);Min
+1005;Pokrycie odsetek (OP/IP);Max
+1006;Rotacja należności (PNPM/REC);Max
+1007;Cash flow margin (CF/PNPM);Max
+1000;Net Profit Margin (NP/PNPM);Max
+1001;Operating Margin (OP/PNPM);Max
+1002;Current Ratio (C+REC+INV)/STL;Max
+1003;Quick Ratio (C+REC)/STL;Max
+1004;Cash Ratio (C/STL);Max
+1005;Short Debt Share (STL/(STL+LTL));Min
+1006;Long-term Debt Share (LTL/(STL+LTL));Max
+1007;Interest Coverage (OP/IP);Max
+1008;Financial Risk Ratio (OFE/OP);Min
+1009;Cash Flow Margin (CF/PNPM);Max
+1010;Operating Cash Coverage ((OP+DEPR)/(STL+LTL));Max
+1011;Bankruptcy Rate (Upadłość/EN);Min
+1012;Closure Rate (Zamknięte/EN);Min
+1013;Profit Firms Share (PEN/EN);Max
+1020;Sales Profitability (POS/PNPM);Max
+1022;Cost Share Ratio (TC/PNPM);Min
+1023;Receivables Turnover (PNPM/REC);Max
+1024;Inventory Turnover (TC/INV);Max
+1025;Current Asset Turnover (PNPM/(C+REC+INV));Max
+1026;Investment Ratio (IO/PNPM);Max
+1027;Financial Revenue Share (Przych.fin./GS);Max
+1028;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);Max
+1029;Average Firm Size (Pracujący/EN);Max
+1040;Amortization Ratio (DEPR/PNPM);Min
+1041;New Firms Rate (Nowe/EN);Max
+1042;Suspension Rate (Zawieszone/EN);Min
+1043;Bank Loans Ratio ((STC+LTC)/(STL+LTL));Max

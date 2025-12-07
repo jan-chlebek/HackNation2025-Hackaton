@@ -1,0 +1,1045 @@
+kpi_id;cat_id;value;direction
+01;Amortization Ratio (DEPR/PNPM);0.039255102897942;max
+02;Amortization Ratio (DEPR/PNPM);0.0436935645029975;max
+03;Amortization Ratio (DEPR/PNPM);0.0646452430315595;max
+05;Amortization Ratio (DEPR/PNPM);0.153053919605901;max
+06;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+07;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+08;Amortization Ratio (DEPR/PNPM);0.0579392225910546;max
+09;Amortization Ratio (DEPR/PNPM);0.0522636909960761;max
+10;Amortization Ratio (DEPR/PNPM);0.0237094758143057;max
+11;Amortization Ratio (DEPR/PNPM);0.0267400828948558;max
+12;Amortization Ratio (DEPR/PNPM);0.0275408622172857;max
+13;Amortization Ratio (DEPR/PNPM);0.0366330546560807;max
+14;Amortization Ratio (DEPR/PNPM);0.0167052867752042;max
+15;Amortization Ratio (DEPR/PNPM);0.0314561246335938;max
+16;Amortization Ratio (DEPR/PNPM);0.0477131802204326;max
+17;Amortization Ratio (DEPR/PNPM);0.0456734182620168;max
+18;Amortization Ratio (DEPR/PNPM);0.0481874427556997;max
+19;Amortization Ratio (DEPR/PNPM);0.0102980818921656;max
+20;Amortization Ratio (DEPR/PNPM);0.0415114598117805;max
+21;Amortization Ratio (DEPR/PNPM);0.0351316298167811;max
+22;Amortization Ratio (DEPR/PNPM);0.0427193117275917;max
+23;Amortization Ratio (DEPR/PNPM);0.0538471310021961;max
+24;Amortization Ratio (DEPR/PNPM);0.0315375267952509;max
+25;Amortization Ratio (DEPR/PNPM);0.0317296062338859;max
+26;Amortization Ratio (DEPR/PNPM);0.0175312112647573;max
+27;Amortization Ratio (DEPR/PNPM);0.0428413908962202;max
+28;Amortization Ratio (DEPR/PNPM);0.0359137113371398;max
+29;Amortization Ratio (DEPR/PNPM);0.0364516369166421;max
+30;Amortization Ratio (DEPR/PNPM);0.0288667789268847;max
+31;Amortization Ratio (DEPR/PNPM);0.0305241311477109;max
+32;Amortization Ratio (DEPR/PNPM);0.0359237943645267;max
+33;Amortization Ratio (DEPR/PNPM);0.018315319829708;max
+35;Amortization Ratio (DEPR/PNPM);0.0541978961099282;max
+36;Amortization Ratio (DEPR/PNPM);0.133781263073792;max
+37;Amortization Ratio (DEPR/PNPM);0.1587992112303501;max
+38;Amortization Ratio (DEPR/PNPM);0.0513158663517156;max
+39;Amortization Ratio (DEPR/PNPM);0.0489257727785328;max
+41;Amortization Ratio (DEPR/PNPM);0.0106956951396027;max
+42;Amortization Ratio (DEPR/PNPM);0.0207384189735549;max
+43;Amortization Ratio (DEPR/PNPM);0.0177382896512867;max
+46;Amortization Ratio (DEPR/PNPM);0.0091493875852256;max
+47;Amortization Ratio (DEPR/PNPM);0.0130947655069822;max
+49;Amortization Ratio (DEPR/PNPM);0.0700755578145024;max
+50;Amortization Ratio (DEPR/PNPM);0.0178769420780059;max
+51;Amortization Ratio (DEPR/PNPM);0.0098990262052623;max
+52;Amortization Ratio (DEPR/PNPM);0.0678331090730355;max
+53;Amortization Ratio (DEPR/PNPM);0.0442070983683089;max
+55;Amortization Ratio (DEPR/PNPM);0.0492725813962622;max
+56;Amortization Ratio (DEPR/PNPM);0.031397546976709;max
+58;Amortization Ratio (DEPR/PNPM);0.0286383066898949;max
+59;Amortization Ratio (DEPR/PNPM);0.0526473201170845;max
+60;Amortization Ratio (DEPR/PNPM);0.1189234419962377;max
+61;Amortization Ratio (DEPR/PNPM);0.1714677253650371;max
+62;Amortization Ratio (DEPR/PNPM);0.023315917779484;max
+63;Amortization Ratio (DEPR/PNPM);0.055077809764007;max
+64;Amortization Ratio (DEPR/PNPM);0.0375173471938489;max
+65;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+66;Amortization Ratio (DEPR/PNPM);0.0162608639109974;max
+68;Amortization Ratio (DEPR/PNPM);0.0417154820175716;max
+69;Amortization Ratio (DEPR/PNPM);0.0130723795659931;max
+70;Amortization Ratio (DEPR/PNPM);0.0209280371712533;max
+71;Amortization Ratio (DEPR/PNPM);0.0194663996790777;max
+72;Amortization Ratio (DEPR/PNPM);0.0592052562195589;max
+73;Amortization Ratio (DEPR/PNPM);0.0141311602728989;max
+74;Amortization Ratio (DEPR/PNPM);0.0226007264345788;max
+75;Amortization Ratio (DEPR/PNPM);0.0276060528465693;max
+77;Amortization Ratio (DEPR/PNPM);0.239072935247157;max
+78;Amortization Ratio (DEPR/PNPM);0.0052385692038803;max
+79;Amortization Ratio (DEPR/PNPM);0.0049989430139585;max
+80;Amortization Ratio (DEPR/PNPM);0.0086410577487557;max
+81;Amortization Ratio (DEPR/PNPM);0.0172576866952868;max
+82;Amortization Ratio (DEPR/PNPM);0.0298901552086282;max
+84;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+85;Amortization Ratio (DEPR/PNPM);0.0302025782688766;max
+86;Amortization Ratio (DEPR/PNPM);0.0407002045905089;max
+87;Amortization Ratio (DEPR/PNPM);0.0274603859006144;max
+88;Amortization Ratio (DEPR/PNPM);0.0028018339276617;max
+90;Amortization Ratio (DEPR/PNPM);0.0213597740698262;max
+91;Amortization Ratio (DEPR/PNPM);0.0712431214382521;max
+92;Amortization Ratio (DEPR/PNPM);0.003885260654928;max
+93;Amortization Ratio (DEPR/PNPM);0.1027962950857725;max
+94;Amortization Ratio (DEPR/PNPM);0.1399602949517867;max
+95;Amortization Ratio (DEPR/PNPM);0.0156880380316073;max
+96;Amortization Ratio (DEPR/PNPM);0.0533297499729787;max
+97;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+98;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+99;Amortization Ratio (DEPR/PNPM);0.0247650311141951;max
+01;New Firms Rate (Nowe/EN);2.908469945355191;max
+02;New Firms Rate (Nowe/EN);1.0374015748031495;max
+03;New Firms Rate (Nowe/EN);1.7241379310344829;max
+05;New Firms Rate (Nowe/EN);0.3571428571428571;max
+06;New Firms Rate (Nowe/EN);0.5;max
+07;New Firms Rate (Nowe/EN);0.0;max
+08;New Firms Rate (Nowe/EN);0.4666666666666667;max
+09;New Firms Rate (Nowe/EN);0.515625;max
+10;New Firms Rate (Nowe/EN);0.7428856714927609;max
+11;New Firms Rate (Nowe/EN);0.7222222222222222;max
+12;New Firms Rate (Nowe/EN);0.25;max
+13;New Firms Rate (Nowe/EN);1.1828571428571428;max
+14;New Firms Rate (Nowe/EN);1.9801324503311255;max
+15;New Firms Rate (Nowe/EN);1.329268292682927;max
+16;New Firms Rate (Nowe/EN);1.806734992679356;max
+17;New Firms Rate (Nowe/EN);0.3508771929824561;max
+18;New Firms Rate (Nowe/EN);1.4755043227665705;max
+19;New Firms Rate (Nowe/EN);0.0833333333333333;max
+20;New Firms Rate (Nowe/EN);0.4048865619546248;max
+21;New Firms Rate (Nowe/EN);0.3033707865168539;max
+22;New Firms Rate (Nowe/EN);0.3414454277286136;max
+23;New Firms Rate (Nowe/EN);0.7763532763532763;max
+24;New Firms Rate (Nowe/EN);0.2527881040892193;max
+25;New Firms Rate (Nowe/EN);1.994785399117529;max
+26;New Firms Rate (Nowe/EN);0.5251572327044025;max
+27;New Firms Rate (Nowe/EN);0.3083164300202839;max
+28;New Firms Rate (Nowe/EN);0.3459958932238193;max
+29;New Firms Rate (Nowe/EN);0.1869747899159664;max
+30;New Firms Rate (Nowe/EN);1.5846994535519126;max
+31;New Firms Rate (Nowe/EN);2.466666666666667;max
+32;New Firms Rate (Nowe/EN);3.006802721088435;max
+33;New Firms Rate (Nowe/EN);3.8517241379310345;max
+35;New Firms Rate (Nowe/EN);3.359030837004405;max
+36;New Firms Rate (Nowe/EN);0.0447058823529411;max
+37;New Firms Rate (Nowe/EN);0.3358024691358025;max
+38;New Firms Rate (Nowe/EN);0.4642375168690958;max
+39;New Firms Rate (Nowe/EN);1.2424242424242424;max
+41;New Firms Rate (Nowe/EN);8.612315010570825;max
+42;New Firms Rate (Nowe/EN);1.66005291005291;max
+43;New Firms Rate (Nowe/EN);20.43772798332465;max
+46;New Firms Rate (Nowe/EN);1.97325172843704;max
+47;New Firms Rate (Nowe/EN);5.173009805550939;max
+49;New Firms Rate (Nowe/EN);4.388518518518518;max
+50;New Firms Rate (Nowe/EN);2.68;max
+51;New Firms Rate (Nowe/EN);14.9;max
+52;New Firms Rate (Nowe/EN);2.837342497136312;max
+53;New Firms Rate (Nowe/EN);31.8125;max
+55;New Firms Rate (Nowe/EN);2.747005988023952;max
+56;New Firms Rate (Nowe/EN);10.441176470588236;max
+58;New Firms Rate (Nowe/EN);2.0;max
+59;New Firms Rate (Nowe/EN);29.4;max
+60;New Firms Rate (Nowe/EN);0.3285714285714285;max
+61;New Firms Rate (Nowe/EN);1.4832535885167464;max
+62;New Firms Rate (Nowe/EN);7.639218009478673;max
+63;New Firms Rate (Nowe/EN);5.55;max
+64;New Firms Rate (Nowe/EN);10.025454545454544;max
+65;New Firms Rate (Nowe/EN);56.0;max
+66;New Firms Rate (Nowe/EN);8.984615384615385;max
+68;New Firms Rate (Nowe/EN);5.574866310160428;max
+69;New Firms Rate (Nowe/EN);6.5563139931740615;max
+70;New Firms Rate (Nowe/EN);9.278350515463918;max
+71;New Firms Rate (Nowe/EN);5.381111111111111;max
+72;New Firms Rate (Nowe/EN);1.3276353276353277;max
+73;New Firms Rate (Nowe/EN);9.79690949227373;max
+74;New Firms Rate (Nowe/EN);30.11111111111111;max
+75;New Firms Rate (Nowe/EN);13.457142857142856;max
+77;New Firms Rate (Nowe/EN);7.048192771084337;max
+78;New Firms Rate (Nowe/EN);2.798994974874372;max
+79;New Firms Rate (Nowe/EN);8.197802197802197;max
+80;New Firms Rate (Nowe/EN);2.628175519630485;max
+81;New Firms Rate (Nowe/EN);10.842217484008527;max
+82;New Firms Rate (Nowe/EN);14.056689342403628;max
+84;New Firms Rate (Nowe/EN);107.0;max
+85;New Firms Rate (Nowe/EN);17.034358047016276;max
+86;New Firms Rate (Nowe/EN);6.430342384887839;max
+87;New Firms Rate (Nowe/EN);3.2641509433962264;max
+88;New Firms Rate (Nowe/EN);9.7;max
+90;New Firms Rate (Nowe/EN);97.625;max
+91;New Firms Rate (Nowe/EN);2.2972972972972974;max
+92;New Firms Rate (Nowe/EN);1.4;max
+93;New Firms Rate (Nowe/EN);15.533333333333331;max
+94;New Firms Rate (Nowe/EN);7465.5;max
+95;New Firms Rate (Nowe/EN);14.216216216216216;max
+96;New Firms Rate (Nowe/EN);89.97887323943662;max
+97;New Firms Rate (Nowe/EN);0.0;max
+98;New Firms Rate (Nowe/EN);0.0;max
+99;New Firms Rate (Nowe/EN);0.58;max
+01;Suspension Rate (Zawieszone/EN);6.258196721311475;max
+02;Suspension Rate (Zawieszone/EN);5.448818897637795;max
+03;Suspension Rate (Zawieszone/EN);7.379310344827586;max
+05;Suspension Rate (Zawieszone/EN);0.5;max
+06;Suspension Rate (Zawieszone/EN);3.5;max
+07;Suspension Rate (Zawieszone/EN);1.6666666666666667;max
+08;Suspension Rate (Zawieszone/EN);2.041025641025641;max
+09;Suspension Rate (Zawieszone/EN);2.328125;max
+10;Suspension Rate (Zawieszone/EN);1.6669995007488767;max
+11;Suspension Rate (Zawieszone/EN);1.212962962962963;max
+12;Suspension Rate (Zawieszone/EN);0.1666666666666666;max
+13;Suspension Rate (Zawieszone/EN);5.642857142857143;max
+14;Suspension Rate (Zawieszone/EN);12.602649006622515;max
+15;Suspension Rate (Zawieszone/EN);7.804878048780488;max
+16;Suspension Rate (Zawieszone/EN);7.950219619326501;max
+17;Suspension Rate (Zawieszone/EN);1.3157894736842106;max
+18;Suspension Rate (Zawieszone/EN);6.786743515850144;max
+19;Suspension Rate (Zawieszone/EN);0.8055555555555556;max
+20;Suspension Rate (Zawieszone/EN);0.9668411867364748;max
+21;Suspension Rate (Zawieszone/EN);0.449438202247191;max
+22;Suspension Rate (Zawieszone/EN);1.1002949852507375;max
+23;Suspension Rate (Zawieszone/EN);4.051282051282051;max
+24;Suspension Rate (Zawieszone/EN);0.6654275092936803;max
+25;Suspension Rate (Zawieszone/EN);5.763337344564781;max
+26;Suspension Rate (Zawieszone/EN);2.0220125786163523;max
+27;Suspension Rate (Zawieszone/EN);0.9148073022312372;max
+28;Suspension Rate (Zawieszone/EN);0.7854209445585215;max
+29;Suspension Rate (Zawieszone/EN);0.4705882352941176;max
+30;Suspension Rate (Zawieszone/EN);4.92896174863388;max
+31;Suspension Rate (Zawieszone/EN);8.565217391304348;max
+32;Suspension Rate (Zawieszone/EN);12.35374149659864;max
+33;Suspension Rate (Zawieszone/EN);11.397701149425288;max
+35;Suspension Rate (Zawieszone/EN);1.894273127753304;max
+36;Suspension Rate (Zawieszone/EN);0.12;max
+37;Suspension Rate (Zawieszone/EN);0.5802469135802469;max
+38;Suspension Rate (Zawieszone/EN);1.3346828609986503;max
+39;Suspension Rate (Zawieszone/EN);2.303030303030303;max
+41;Suspension Rate (Zawieszone/EN);28.664904862579284;max
+42;Suspension Rate (Zawieszone/EN);4.141534391534392;max
+43;Suspension Rate (Zawieszone/EN);64.26524231370506;max
+46;Suspension Rate (Zawieszone/EN);6.4190184744418;max
+47;Suspension Rate (Zawieszone/EN);18.77796243975403;max
+49;Suspension Rate (Zawieszone/EN);16.46037037037037;max
+50;Suspension Rate (Zawieszone/EN);26.16;max
+51;Suspension Rate (Zawieszone/EN);14.8;max
+52;Suspension Rate (Zawieszone/EN);5.985108820160367;max
+53;Suspension Rate (Zawieszone/EN);72.875;max
+55;Suspension Rate (Zawieszone/EN);25.255988023952096;max
+56;Suspension Rate (Zawieszone/EN);29.511764705882356;max
+58;Suspension Rate (Zawieszone/EN);6.948616600790514;max
+59;Suspension Rate (Zawieszone/EN);76.05;max
+60;Suspension Rate (Zawieszone/EN);0.4571428571428571;max
+61;Suspension Rate (Zawieszone/EN);7.339712918660287;max
+62;Suspension Rate (Zawieszone/EN);14.984004739336491;max
+63;Suspension Rate (Zawieszone/EN);14.9875;max
+64;Suspension Rate (Zawieszone/EN);11.687272727272727;max
+65;Suspension Rate (Zawieszone/EN);226.0;max
+66;Suspension Rate (Zawieszone/EN);32.243589743589745;max
+68;Suspension Rate (Zawieszone/EN);6.468983957219251;max
+69;Suspension Rate (Zawieszone/EN);13.523321956769056;max
+70;Suspension Rate (Zawieszone/EN);25.24742268041237;max
+71;Suspension Rate (Zawieszone/EN);18.92;max
+72;Suspension Rate (Zawieszone/EN);3.1794871794871797;max
+73;Suspension Rate (Zawieszone/EN);26.578366445916117;max
+74;Suspension Rate (Zawieszone/EN);92.80246913580248;max
+75;Suspension Rate (Zawieszone/EN);20.542857142857144;max
+77;Suspension Rate (Zawieszone/EN);20.329317269076306;max
+78;Suspension Rate (Zawieszone/EN);3.949748743718593;max
+79;Suspension Rate (Zawieszone/EN);31.593406593406595;max
+80;Suspension Rate (Zawieszone/EN);3.2979214780600463;max
+81;Suspension Rate (Zawieszone/EN);28.247334754797443;max
+82;Suspension Rate (Zawieszone/EN);27.011337868480727;max
+84;Suspension Rate (Zawieszone/EN);86.0;max
+85;Suspension Rate (Zawieszone/EN);41.365280289330926;max
+86;Suspension Rate (Zawieszone/EN);16.403778040141678;max
+87;Suspension Rate (Zawieszone/EN);6.264150943396227;max
+88;Suspension Rate (Zawieszone/EN);27.73333333333333;max
+90;Suspension Rate (Zawieszone/EN);383.0;max
+91;Suspension Rate (Zawieszone/EN);12.27027027027027;max
+92;Suspension Rate (Zawieszone/EN);6.5;max
+93;Suspension Rate (Zawieszone/EN);31.961111111111112;max
+94;Suspension Rate (Zawieszone/EN);131.5;max
+95;Suspension Rate (Zawieszone/EN);69.60810810810811;max
+96;Suspension Rate (Zawieszone/EN);182.81690140845072;max
+97;Suspension Rate (Zawieszone/EN);0.0;max
+98;Suspension Rate (Zawieszone/EN);0.0;max
+99;Suspension Rate (Zawieszone/EN);0.0;max
+01;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.45365426037553;max
+02;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.0304085372886931;max
+03;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2366523683490006;max
+05;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.240726143283558;max
+06;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+07;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+08;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2670703730268669;max
+09;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3330739950104164;max
+10;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3584901625693593;max
+11;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2645340421312264;max
+12;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.390402637466881;max
+13;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4635364170961409;max
+14;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3262532755691918;max
+15;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4143090932659277;max
+16;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5182294654902387;max
+17;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5377716818816389;max
+18;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3650266053177726;max
+19;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1332143932229178;max
+20;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.424368403257203;max
+21;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3407683470919825;max
+22;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.394126159289514;max
+23;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4042495827448966;max
+24;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.410475734798957;max
+25;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2592309965789071;max
+26;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1920461168974241;max
+27;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4139856345257733;max
+28;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2916140346457078;max
+29;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2615786602859189;max
+30;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1857137671666851;max
+31;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4143986269223865;max
+32;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.513947097313882;max
+33;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1790128269545079;max
+35;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5370546584489502;max
+36;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5685192925885012;max
+37;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.6555634889936207;max
+38;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2973329195494623;max
+39;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4538277299742749;max
+41;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2112613641389358;max
+42;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1342569750056859;max
+43;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1948963907656169;max
+46;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2405094420482012;max
+47;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2080852615899602;max
+49;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3665873877071515;max
+50;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4415006153463224;max
+51;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1916980220929998;max
+52;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4270931905012496;max
+53;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1036071932764239;max
+55;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.6510578212882122;max
+56;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4366545778921661;max
+58;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2212719222718419;max
+59;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2748331940761192;max
+60;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4049685248349536;max
+61;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5152239161400052;max
+62;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2041319092747069;max
+63;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5654287483904618;max
+64;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.7257126972561494;max
+65;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+66;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3813523018456659;max
+68;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.479100031028586;max
+69;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2476693300206104;max
+70;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.154601521654921;max
+71;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2477978893373696;max
+72;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2030250202810497;max
+73;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.0876662118366328;max
+74;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.281176818232187;max
+75;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.6343145573613559;max
+77;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.7883591440764762;max
+78;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1488682464627029;max
+79;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.0809899004561864;max
+80;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.0742753833715445;max
+81;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1514001090350399;max
+82;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2843251242811551;max
+84;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+85;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4312313932139042;max
+86;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.38482391507537;max
+87;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.7818118345260953;max
+88;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2081142743775419;max
+90;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.0563987258759602;max
+91;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4352696431429029;max
+92;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.3018794479280377;max
+93;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5363131636977838;max
+94;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.5126107702794819;max
+95;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.1687011049891936;max
+96;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.4684484912115563;max
+97;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+98;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+99;Bank Loans Ratio ((STC+LTC)/(STL+LTL));0.2472152443167297;max
+01;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);20.58779687032773;min
+01;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.9736801415889275;max
+01;New Firms Rate (Nowe/EN) (Δ% 1yr);-6.699848142435225;max
+01;Suspension Rate (Zawieszone/EN) (Δ% 1yr);5.916836682551637;min
+02;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);20.10269277325769;min
+02;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.67704345082355;max
+02;New Firms Rate (Nowe/EN) (Δ% 1yr);-30.467566049533172;max
+02;Suspension Rate (Zawieszone/EN) (Δ% 1yr);0.7242691545516782;min
+03;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.404132265161255;min
+03;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-46.223685784648374;max
+03;New Firms Rate (Nowe/EN) (Δ% 1yr);14.942528735632191;max
+03;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-4.54623434551381;min
+05;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);50.32323884266212;min
+05;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);25.453167439720314;max
+05;New Firms Rate (Nowe/EN) (Δ% 1yr);24.99999999999999;max
+05;Suspension Rate (Zawieszone/EN) (Δ% 1yr);16.66666666666669;min
+06;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+06;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+06;New Firms Rate (Nowe/EN) (Δ% 1yr);-24.999999999999993;max
+06;Suspension Rate (Zawieszone/EN) (Δ% 1yr);50.00000000000002;min
+07;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+07;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+07;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-72.22222222222221;min
+08;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.50925780665586;min
+08;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.941261595239204;max
+08;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.55345911949686;max
+08;Suspension Rate (Zawieszone/EN) (Δ% 1yr);3.733446041138324;min
+09;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-16.170775120478112;min
+09;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.142824817830478;max
+09;New Firms Rate (Nowe/EN) (Δ% 1yr);-13.662790697674417;max
+09;Suspension Rate (Zawieszone/EN) (Δ% 1yr);11.750000000000016;min
+10;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.596360227442222;min
+10;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.18944373573061;max
+10;New Firms Rate (Nowe/EN) (Δ% 1yr);3.3512492767125486;max
+10;Suspension Rate (Zawieszone/EN) (Δ% 1yr);10.818527290703402;min
+11;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);2.695240729277087;min
+11;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.925622302461488;max
+11;New Firms Rate (Nowe/EN) (Δ% 1yr);26.10229276895943;max
+11;Suspension Rate (Zawieszone/EN) (Δ% 1yr);12.122626828509189;min
+12;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-3.863303568830988;min
+12;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);116.40661529017477;max
+12;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.750000000000007;max
+12;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.333333333333325;min
+13;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);9.642123589234146;min
+13;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.5653870325819355;max
+13;New Firms Rate (Nowe/EN) (Δ% 1yr);-16.266829119707587;max
+13;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-3.778707168537665;min
+14;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.1054670630753374;min
+14;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-3.8704954899451347;max
+14;New Firms Rate (Nowe/EN) (Δ% 1yr);-19.864091435685527;max
+14;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.673746649596092;min
+15;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+15;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+15;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.72035002792776;max
+15;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.343702132673494;min
+16;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);17.75414377869463;min
+16;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.7888103809030786;max
+16;New Firms Rate (Nowe/EN) (Δ% 1yr);-21.58614856818264;max
+16;Suspension Rate (Zawieszone/EN) (Δ% 1yr);16.493373489405936;min
+17;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.126774853425895;min
+17;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.8746700082564793;max
+17;New Firms Rate (Nowe/EN) (Δ% 1yr);-4.761904761904762;max
+17;Suspension Rate (Zawieszone/EN) (Δ% 1yr);4.529616724738681;min
+18;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.788277741180351;min
+18;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.7453312433796431;max
+18;New Firms Rate (Nowe/EN) (Δ% 1yr);-3.1056043532531517;max
+18;Suspension Rate (Zawieszone/EN) (Δ% 1yr);0.8964580530816825;min
+19;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+19;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+19;New Firms Rate (Nowe/EN) (Δ% 1yr);-47.22222222222222;max
+19;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.325396825396835;min
+20;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);14.598966366374755;min
+20;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.261801642134302;max
+20;New Firms Rate (Nowe/EN) (Δ% 1yr);-12.248321008277815;max
+20;Suspension Rate (Zawieszone/EN) (Δ% 1yr);2.969510709792837;min
+21;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.307444232961862;min
+21;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.832790069434171;max
+21;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.123595505617991;max
+21;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.893410264196788;min
+22;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);13.155125799996863;min
+22;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);14.410891159008528;max
+22;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.7137458388124776;max
+22;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.393466246227916;min
+23;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.696345670178138;min
+23;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.3454775505491905;max
+23;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.284737729182165;max
+23;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.8855369946826395;min
+24;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);20.839132306694943;min
+24;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);13.95162308918172;max
+24;New Firms Rate (Nowe/EN) (Δ% 1yr);1.4869888475836341;max
+24;Suspension Rate (Zawieszone/EN) (Δ% 1yr);4.403281630560197;min
+25;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);13.325881571349854;min
+25;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-8.762247073366124;max
+25;New Firms Rate (Nowe/EN) (Δ% 1yr);-14.79193438756455;max
+25;Suspension Rate (Zawieszone/EN) (Δ% 1yr);12.132163986061787;min
+26;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.2137507340694804;min
+26;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.399286382351342;max
+26;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.528767761472173;max
+26;Suspension Rate (Zawieszone/EN) (Δ% 1yr);4.508515299272146;min
+27;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);26.344825148095047;min
+27;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-10.241138924103357;max
+27;New Firms Rate (Nowe/EN) (Δ% 1yr);-27.165828850280754;max
+27;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.911737295104418;min
+28;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);14.126997103315638;min
+28;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.423359836446004;max
+28;New Firms Rate (Nowe/EN) (Δ% 1yr);8.676742855219324;max
+28;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.419778802170551;min
+29;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);12.17899734552038;min
+29;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-3.6235603088479715;max
+29;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.934873949579812;max
+29;Suspension Rate (Zawieszone/EN) (Δ% 1yr);7.075873827791969;min
+30;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.265106288874224;min
+30;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-28.2705752322169;max
+30;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.6393442622950858;max
+30;Suspension Rate (Zawieszone/EN) (Δ% 1yr);11.179588315049928;min
+31;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.669326442373338;min
+31;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.1355772394130496;max
+31;New Firms Rate (Nowe/EN) (Δ% 1yr);-4.248744689069128;max
+31;Suspension Rate (Zawieszone/EN) (Δ% 1yr);12.988691714390885;min
+32;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.133251269490319;min
+32;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.25041941394413697;max
+32;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.420665563522713;max
+32;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.585578872302783;min
+33;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.710253436203775;min
+33;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.42045388004845524;max
+33;New Firms Rate (Nowe/EN) (Δ% 1yr);-6.985196092086682;max
+33;Suspension Rate (Zawieszone/EN) (Δ% 1yr);7.868338557993727;min
+35;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);19.997897530654182;min
+35;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);24.04265343991274;max
+35;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.949347275338466;max
+35;Suspension Rate (Zawieszone/EN) (Δ% 1yr);3.8342307064774053;min
+36;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.9472742158325527;min
+36;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.101728171193594;max
+36;New Firms Rate (Nowe/EN) (Δ% 1yr);-41.60294117647063;max
+36;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.723404255319155;min
+37;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-7.194751448602197;min
+37;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.5071043904466443;max
+37;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.542386831275709;max
+37;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.928170594837265;min
+38;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-4.431085794359121;min
+38;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.231788703541849;max
+38;New Firms Rate (Nowe/EN) (Δ% 1yr);10.388725509589575;max
+38;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-0.7822313106909592;min
+39;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);38.989401136934696;min
+39;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-28.092792437242846;max
+39;New Firms Rate (Nowe/EN) (Δ% 1yr);-17.17171717171717;max
+39;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-13.636363636363624;min
+41;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);12.882081788786138;min
+41;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-15.952734964867442;max
+41;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.1184585765777635;max
+41;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.552513706238578;min
+42;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);13.302065020084866;min
+42;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);23.92814684830408;max
+42;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.563746800131972;max
+42;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.28783242006233;min
+43;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);15.186116325852932;min
+43;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.5057144814104901;max
+43;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.870361601798182;max
+43;Suspension Rate (Zawieszone/EN) (Δ% 1yr);13.256144152808055;min
+46;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);7.610591955059378;min
+46;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.3807819625750185;max
+46;New Firms Rate (Nowe/EN) (Δ% 1yr);-3.871143935671776;max
+46;Suspension Rate (Zawieszone/EN) (Δ% 1yr);7.689171295766261;min
+47;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.912088001950693;min
+47;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-8.422309117021875;max
+47;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.840541640221145;max
+47;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.37770847571621;min
+49;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);29.089454714259226;min
+49;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.223497955390757;max
+49;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.7757353960464715;max
+49;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.768039787563981;min
+50;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);17.080232536397244;min
+50;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-14.987468114782928;max
+50;New Firms Rate (Nowe/EN) (Δ% 1yr);-69.91836734693878;max
+50;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-6.873786407766986;min
+51;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);50.064372476791796;min
+51;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-29.11829963386522;max
+51;New Firms Rate (Nowe/EN) (Δ% 1yr);17.95833333333335;max
+51;Suspension Rate (Zawieszone/EN) (Δ% 1yr);20.68669527896996;min
+52;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.442035503083688;min
+52;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-13.116395356011608;max
+52;New Firms Rate (Nowe/EN) (Δ% 1yr);-13.549720790377986;max
+52;Suspension Rate (Zawieszone/EN) (Δ% 1yr);13.060840327996365;min
+53;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.4052726175744538;min
+53;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-39.63112280078717;max
+53;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.6829268292682927;max
+53;Suspension Rate (Zawieszone/EN) (Δ% 1yr);14.876847290640393;min
+55;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.5197853966596504;min
+55;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.6254358980438617;max
+55;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.556103872656703;max
+55;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-0.8100682145542304;min
+56;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.9552525790250008;min
+56;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.619434530792166;max
+56;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.9676684444366765;max
+56;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-4.717968065582552;min
+58;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.4845402509276395;min
+58;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);38.69598884288005;max
+58;New Firms Rate (Nowe/EN) (Δ% 1yr);-3.3457249070631856;max
+58;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.57213438735177;min
+59;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-10.116411957341882;min
+59;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.738198654421603;max
+59;New Firms Rate (Nowe/EN) (Δ% 1yr);3.434704830053676;max
+59;Suspension Rate (Zawieszone/EN) (Δ% 1yr);15.020507562163546;min
+60;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.683741694844607;min
+60;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-27.094000709799758;max
+60;New Firms Rate (Nowe/EN) (Δ% 1yr);-27.0982142857143;max
+60;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-9.841269841269854;min
+61;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.5167179299679667;min
+61;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);4.4795785774185015;max
+61;New Firms Rate (Nowe/EN) (Δ% 1yr);-24.164478181098676;max
+61;Suspension Rate (Zawieszone/EN) (Δ% 1yr);3.4762567661851143;min
+62;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.972896658278012;min
+62;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-17.71967174949813;max
+62;New Firms Rate (Nowe/EN) (Δ% 1yr);-16.694059820152894;max
+62;Suspension Rate (Zawieszone/EN) (Δ% 1yr);28.702972434762756;min
+63;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.1657401645219196;min
+63;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.493955958573553;max
+63;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.6974169741697396;max
+63;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.245561239843536;min
+64;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-16.571604720737447;min
+64;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.5108644309029224;max
+64;New Firms Rate (Nowe/EN) (Δ% 1yr);-61.884632364998694;max
+64;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-1.1021393677354194;min
+65;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+65;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+65;New Firms Rate (Nowe/EN) (Δ% 1yr);-21.12676056338028;max
+65;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-1.3100436681222707;min
+66;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.1866816341540412;min
+66;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.783661300482603;max
+66;New Firms Rate (Nowe/EN) (Δ% 1yr);6.552107550793488;max
+66;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-6.873062665526056;min
+68;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.45286911871605;min
+68;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-6.1770687938779;max
+68;New Firms Rate (Nowe/EN) (Δ% 1yr);3.8698979875450497;max
+68;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.258079578987983;min
+69;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.315872877888377;min
+69;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.67631172451382;max
+69;New Firms Rate (Nowe/EN) (Δ% 1yr);-9.404862048652575;max
+69;Suspension Rate (Zawieszone/EN) (Δ% 1yr);3.406986624741547;min
+70;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-14.252162998659635;min
+70;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);44.10806892416442;max
+70;New Firms Rate (Nowe/EN) (Δ% 1yr);0.0593435105736001;max
+70;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.011804436185189;min
+71;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-2.1978842052468304;min
+71;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.932202952265258;max
+71;New Firms Rate (Nowe/EN) (Δ% 1yr);-5.969297961125157;max
+71;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.121165839378918;min
+72;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.460118599315868;min
+72;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-21.099448211501503;max
+72;New Firms Rate (Nowe/EN) (Δ% 1yr);-16.188384344808927;max
+72;Suspension Rate (Zawieszone/EN) (Δ% 1yr);7.2483735170302435;min
+73;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-15.39598418715234;min
+73;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-11.75863408557979;max
+73;New Firms Rate (Nowe/EN) (Δ% 1yr);3.2440070745828087;max
+73;Suspension Rate (Zawieszone/EN) (Δ% 1yr);12.5972789957412;min
+74;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-9.144020098167108;min
+74;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);20.11459858948751;max
+74;New Firms Rate (Nowe/EN) (Δ% 1yr);-5.763148822638908;max
+74;Suspension Rate (Zawieszone/EN) (Δ% 1yr);8.240776429069312;min
+75;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-18.764630895773188;min
+75;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.8498372496425772;max
+75;New Firms Rate (Nowe/EN) (Δ% 1yr);0.928571428571412;max
+75;Suspension Rate (Zawieszone/EN) (Δ% 1yr);15.734406438631801;min
+77;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.156671464271135;min
+77;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.21888420742312356;max
+77;New Firms Rate (Nowe/EN) (Δ% 1yr);-24.819277108433738;max
+77;Suspension Rate (Zawieszone/EN) (Δ% 1yr);7.160908073321191;min
+78;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-10.962177077229533;min
+78;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-3.968405094676248;max
+78;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.211942063257453;max
+78;Suspension Rate (Zawieszone/EN) (Δ% 1yr);20.934407069695883;min
+79;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-9.95079079579809;min
+79;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-55.98702838576843;max
+79;New Firms Rate (Nowe/EN) (Δ% 1yr);1.3211507593529876;max
+79;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-2.0359485475764503;min
+80;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.28372764193628464;min
+80;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.085125665668195;max
+80;New Firms Rate (Nowe/EN) (Δ% 1yr);29.644899793852808;max
+80;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.159370206166448;min
+81;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.869917223327728;min
+81;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-7.164645180244501;max
+81;New Firms Rate (Nowe/EN) (Δ% 1yr);-9.561560775767788;max
+81;Suspension Rate (Zawieszone/EN) (Δ% 1yr);3.614053616130263;min
+82;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-8.745060197421378;min
+82;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);21.88236938647546;max
+82;New Firms Rate (Nowe/EN) (Δ% 1yr);1.5205341395817382;max
+82;Suspension Rate (Zawieszone/EN) (Δ% 1yr);9.288540465700578;min
+84;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+84;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+84;New Firms Rate (Nowe/EN) (Δ% 1yr);-61.92170818505338;max
+84;Suspension Rate (Zawieszone/EN) (Δ% 1yr);11.688311688311687;min
+85;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);14.10256054616763;min
+85;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-7.621901773350142;max
+85;New Firms Rate (Nowe/EN) (Δ% 1yr);-6.691009734970221;max
+85;Suspension Rate (Zawieszone/EN) (Δ% 1yr);2.072502328485392;min
+86;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-4.775230399158908;min
+86;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);6.226346600215914;max
+86;New Firms Rate (Nowe/EN) (Δ% 1yr);1.945212831296597;max
+86;Suspension Rate (Zawieszone/EN) (Δ% 1yr);2.8183902458564054;min
+87;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.17474469735658854;min
+87;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.573578424777745;max
+87;New Firms Rate (Nowe/EN) (Δ% 1yr);17.338759403132322;max
+87;Suspension Rate (Zawieszone/EN) (Δ% 1yr);5.039116428900141;min
+88;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-40.24992956461147;min
+88;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.751107092156156;max
+88;New Firms Rate (Nowe/EN) (Δ% 1yr);16.23966942148759;max
+88;Suspension Rate (Zawieszone/EN) (Δ% 1yr);2.5414364640883935;min
+90;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-26.345505342988503;min
+90;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-23.432015489351112;max
+90;New Firms Rate (Nowe/EN) (Δ% 1yr);-9.91926182237601;max
+90;Suspension Rate (Zawieszone/EN) (Δ% 1yr);4.967454607742377;min
+91;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+91;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+91;New Firms Rate (Nowe/EN) (Δ% 1yr);-13.567032378913565;max
+91;Suspension Rate (Zawieszone/EN) (Δ% 1yr);5.7302200159343055;min
+92;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+92;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+92;New Firms Rate (Nowe/EN) (Δ% 1yr);23.19999999999998;max
+92;Suspension Rate (Zawieszone/EN) (Δ% 1yr);21.186440677966107;min
+93;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);2.439014686882038;min
+93;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-12.70907103660964;max
+93;New Firms Rate (Nowe/EN) (Δ% 1yr);1.329379787496884;max
+93;Suspension Rate (Zawieszone/EN) (Δ% 1yr);4.556794712928551;min
+94;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+94;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+94;New Firms Rate (Nowe/EN) (Δ% 1yr);190.59945504087196;max
+94;Suspension Rate (Zawieszone/EN) (Δ% 1yr);-4.363636363636364;min
+95;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+95;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+95;New Firms Rate (Nowe/EN) (Δ% 1yr);1.0755908262833398;max
+95;Suspension Rate (Zawieszone/EN) (Δ% 1yr);10.443526155456933;min
+96;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-3.304963688521592;min
+96;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);11.518975374548566;max
+96;New Firms Rate (Nowe/EN) (Δ% 1yr);-9.484999449611067;max
+96;Suspension Rate (Zawieszone/EN) (Δ% 1yr);5.323275794808752;min
+97;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+97;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+98;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+98;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+99;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.631882193743161;min
+99;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.0549826817523686;max
+99;New Firms Rate (Nowe/EN) (Δ% 1yr);581.5;max
+01;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);15.870440540425346;min
+01;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.905757291526923;max
+01;New Firms Rate (Nowe/EN) (Δ% 2yr);-4.112177370732983;max
+01;Suspension Rate (Zawieszone/EN) (Δ% 2yr);15.302719137449014;min
+02;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);36.85454755967142;min
+02;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);40.013530755367306;max
+02;New Firms Rate (Nowe/EN) (Δ% 2yr);-17.44502865018697;max
+02;Suspension Rate (Zawieszone/EN) (Δ% 2yr);5.7040726487616515;min
+03;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);2.4075252414583606;min
+03;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-58.23085698640139;max
+03;New Firms Rate (Nowe/EN) (Δ% 2yr);-3.448275862068964;max
+03;Suspension Rate (Zawieszone/EN) (Δ% 2yr);4.883598809732193;min
+05;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);113.25035036487576;min
+05;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);16.403233510721492;max
+05;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-12.499999999999995;min
+06;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+06;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+06;New Firms Rate (Nowe/EN) (Δ% 2yr);-50.0;max
+06;Suspension Rate (Zawieszone/EN) (Δ% 2yr);0.0;min
+07;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+07;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+07;New Firms Rate (Nowe/EN) (Δ% 2yr);-100.0;max
+07;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-66.66666666666666;min
+08;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-1.050832174138418;min
+08;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);9.460665646108378;max
+08;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.641025641025644;max
+08;Suspension Rate (Zawieszone/EN) (Δ% 2yr);15.229075229075226;min
+09;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-42.752706879306515;min
+09;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-17.18133656733465;max
+09;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.494791666666671;max
+09;Suspension Rate (Zawieszone/EN) (Δ% 2yr);3.277725563909785;min
+10;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.795658595143395;min
+10;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-1.5524100169331625;max
+10;New Firms Rate (Nowe/EN) (Δ% 2yr);-3.4248627059410937;max
+10;Suspension Rate (Zawieszone/EN) (Δ% 2yr);24.976894519811975;min
+11;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.542231140871878;min
+11;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.021439274129337;max
+11;New Firms Rate (Nowe/EN) (Δ% 2yr);25.841750841750837;max
+11;Suspension Rate (Zawieszone/EN) (Δ% 2yr);32.84832451499118;min
+12;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-22.662661075940797;min
+12;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);30.638135140312496;max
+12;New Firms Rate (Nowe/EN) (Δ% 2yr);0.0;max
+12;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-50.00000000000002;min
+13;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);14.193327073535803;min
+13;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-7.05434542294856;max
+13;New Firms Rate (Nowe/EN) (Δ% 2yr);-28.98376623376624;max
+13;Suspension Rate (Zawieszone/EN) (Δ% 2yr);3.5176917989418084;min
+14;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-17.684571769894404;min
+14;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-10.297619709146186;max
+14;New Firms Rate (Nowe/EN) (Δ% 2yr);-30.2479414947089;max
+14;Suspension Rate (Zawieszone/EN) (Δ% 2yr);16.167534809376725;min
+15;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.0;min
+15;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.0;max
+15;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.496515679442508;max
+15;Suspension Rate (Zawieszone/EN) (Δ% 2yr);19.97135515396605;min
+16;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);48.41333515222118;min
+16;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);5.297262660889592;max
+16;New Firms Rate (Nowe/EN) (Δ% 2yr);-33.37132347583726;max
+16;Suspension Rate (Zawieszone/EN) (Δ% 2yr);37.923967767517404;min
+17;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);29.653051145405264;min
+17;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);18.646309393221095;max
+17;New Firms Rate (Nowe/EN) (Δ% 2yr);-17.562724014336926;max
+17;Suspension Rate (Zawieszone/EN) (Δ% 2yr);12.08576998050682;min
+18;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.081574226517269;min
+18;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-8.125821398008956;max
+18;New Firms Rate (Nowe/EN) (Δ% 2yr);-8.832907813852579;max
+18;Suspension Rate (Zawieszone/EN) (Δ% 2yr);11.454858143067046;min
+19;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.0;min
+19;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.0;max
+19;New Firms Rate (Nowe/EN) (Δ% 2yr);-54.761904761904766;max
+19;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.735042735042736;min
+20;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);49.34970933280039;min
+20;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);8.086524871408814;max
+20;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.39556106204121;max
+20;Suspension Rate (Zawieszone/EN) (Δ% 2yr);18.607955107581148;min
+21;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-1.5586022667372779;min
+21;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-8.5983212467288;max
+21;New Firms Rate (Nowe/EN) (Δ% 2yr);-8.988764044943826;max
+21;Suspension Rate (Zawieszone/EN) (Δ% 2yr);2.897693672383197;min
+22;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);24.322782315750622;min
+22;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);4.665308544044252;max
+22;New Firms Rate (Nowe/EN) (Δ% 2yr);-18.929534806682106;max
+22;Suspension Rate (Zawieszone/EN) (Δ% 2yr);19.640238396243475;min
+23;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);13.409679319649806;min
+23;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);2.5188159068516436;max
+23;New Firms Rate (Nowe/EN) (Δ% 2yr);-18.751015973238193;max
+23;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.509096535313752;min
+24;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);66.23734254947527;min
+24;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);22.77351318084366;max
+24;New Firms Rate (Nowe/EN) (Δ% 2yr);-24.44135789860696;max
+24;Suspension Rate (Zawieszone/EN) (Δ% 2yr);22.29478549181153;min
+25;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);25.035766197328556;min
+25;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-7.950572149549598;max
+25;New Firms Rate (Nowe/EN) (Δ% 2yr);-8.50173536094113;max
+25;Suspension Rate (Zawieszone/EN) (Δ% 2yr);25.78019225393516;min
+26;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);12.69234912630047;min
+26;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.312563109795023;max
+26;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.187027507782226;max
+26;Suspension Rate (Zawieszone/EN) (Δ% 2yr);11.705590007476815;min
+27;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);37.86539679853731;min
+27;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.686516244797163;max
+27;New Firms Rate (Nowe/EN) (Δ% 2yr);-23.95926389137039;max
+27;Suspension Rate (Zawieszone/EN) (Δ% 2yr);18.650756365686345;min
+28;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);19.586476334836757;min
+28;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);5.353320636554857;max
+28;New Firms Rate (Nowe/EN) (Δ% 2yr);-4.3663268581950865;max
+28;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.562208474654096;min
+29;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);7.542909040850322;min
+29;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-11.091237980561308;max
+29;New Firms Rate (Nowe/EN) (Δ% 2yr);-17.196878751500588;max
+29;Suspension Rate (Zawieszone/EN) (Δ% 2yr);27.222982216142277;min
+30;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-11.988898904713565;min
+30;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-47.788728275307726;max
+30;New Firms Rate (Nowe/EN) (Δ% 2yr);18.07564555876996;max
+30;Suspension Rate (Zawieszone/EN) (Δ% 2yr);30.796470983301287;min
+31;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);19.664215352076596;min
+31;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.6251373165828636;max
+31;New Firms Rate (Nowe/EN) (Δ% 2yr);-19.538512616201853;max
+31;Suspension Rate (Zawieszone/EN) (Δ% 2yr);45.0793222473325;min
+32;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);26.549230062689144;min
+32;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.112044344608873;max
+32;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.682375117813393;max
+32;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.960376745696657;min
+33;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.896291597779896;min
+33;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-29.428160567420093;max
+33;New Firms Rate (Nowe/EN) (Δ% 2yr);-8.46833564020782;max
+33;Suspension Rate (Zawieszone/EN) (Δ% 2yr);19.690512070442956;min
+35;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);51.4886161609156;min
+35;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);47.15720099932689;max
+35;New Firms Rate (Nowe/EN) (Δ% 2yr);-20.651371935466038;max
+35;Suspension Rate (Zawieszone/EN) (Δ% 2yr);8.351421970565468;min
+36;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-9.673590145569403;min
+36;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.464475918920861;max
+36;New Firms Rate (Nowe/EN) (Δ% 2yr);-47.07790143084266;max
+36;Suspension Rate (Zawieszone/EN) (Δ% 2yr);31.4;min
+37;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-11.52966843317452;min
+37;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);9.118182708502367;max
+37;New Firms Rate (Nowe/EN) (Δ% 2yr);39.679537693722104;max
+37;Suspension Rate (Zawieszone/EN) (Δ% 2yr);11.761843945751984;min
+38;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.299766892159765;min
+38;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.297871143648492;max
+38;New Firms Rate (Nowe/EN) (Δ% 2yr);-12.410435353151254;max
+38;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-1.8742309943941513;min
+39;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);18.24599374265209;min
+39;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-9.727929976995545;max
+39;New Firms Rate (Nowe/EN) (Δ% 2yr);-29.35234699940582;max
+39;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-5.93256508749465;min
+41;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);30.227293656147943;min
+41;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-4.506744478492126;max
+41;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.775850458278572;max
+41;Suspension Rate (Zawieszone/EN) (Δ% 2yr);30.57308197760379;min
+42;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);2.1889684774755334;min
+42;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.2980233924073814;max
+42;New Firms Rate (Nowe/EN) (Δ% 2yr);0.11508519217770456;max
+42;Suspension Rate (Zawieszone/EN) (Δ% 2yr);21.512228504298793;min
+43;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);18.67059479051643;min
+43;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-11.085499887063534;max
+43;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.886228711410244;max
+43;Suspension Rate (Zawieszone/EN) (Δ% 2yr);33.47297925152942;min
+46;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);25.96388309217951;min
+46;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.226111506269334;max
+46;New Firms Rate (Nowe/EN) (Δ% 2yr);-5.657217372981626;max
+46;Suspension Rate (Zawieszone/EN) (Δ% 2yr);20.477571694421126;min
+47;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.45334528050716527;min
+47;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.2730788166845413;max
+47;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.26518599684179;max
+47;Suspension Rate (Zawieszone/EN) (Δ% 2yr);19.642458074581025;min
+49;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);39.29046885619817;min
+49;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.9508929686524494;max
+49;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.421403727352963;max
+49;Suspension Rate (Zawieszone/EN) (Δ% 2yr);8.632650703073615;min
+50;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);200.26453565100027;min
+50;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);165.04544572969013;max
+50;New Firms Rate (Nowe/EN) (Δ% 2yr);-35.54430379746835;max
+50;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-16.743718592964825;min
+51;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-19.85842377148713;min
+51;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-41.86828943373584;max
+51;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.036036036036037;max
+51;Suspension Rate (Zawieszone/EN) (Δ% 2yr);18.400000000000006;min
+52;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.811116784689009;min
+52;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-7.710680921528414;max
+52;New Firms Rate (Nowe/EN) (Δ% 2yr);-20.50592576552946;max
+52;Suspension Rate (Zawieszone/EN) (Δ% 2yr);22.791466148754132;min
+53;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);4.523734825030449;min
+53;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.460709949211528;max
+53;New Firms Rate (Nowe/EN) (Δ% 2yr);-10.43082524271844;max
+53;Suspension Rate (Zawieszone/EN) (Δ% 2yr);27.158543922984357;min
+55;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-19.615510260523873;min
+55;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-8.209184799009105;max
+55;New Firms Rate (Nowe/EN) (Δ% 2yr);-27.19650650432352;max
+55;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-2.5388655349663525;min
+56;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-14.751521505579317;min
+56;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-16.254650001894614;max
+56;New Firms Rate (Nowe/EN) (Δ% 2yr);-14.50913750329422;max
+56;Suspension Rate (Zawieszone/EN) (Δ% 2yr);0.08468962194554519;min
+58;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-11.94228226267219;min
+58;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-12.768596169120066;max
+58;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.83938814531548;max
+58;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.857105678361718;min
+59;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-27.24081217964106;min
+59;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-8.070149238397413;max
+59;New Firms Rate (Nowe/EN) (Δ% 2yr);-19.491442542787297;max
+59;Suspension Rate (Zawieszone/EN) (Δ% 2yr);35.242934264846006;min
+60;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.009323877258627;min
+60;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-15.97216049220736;max
+60;New Firms Rate (Nowe/EN) (Δ% 2yr);-34.2857142857143;max
+60;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-11.18367346938776;min
+61;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-3.2265577323382013;min
+61;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.83465759047502;max
+61;New Firms Rate (Nowe/EN) (Δ% 2yr);-25.0956937799043;max
+61;Suspension Rate (Zawieszone/EN) (Δ% 2yr);10.23211967058572;min
+62;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);5.905020816968409;min
+62;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.9238922979439668;max
+62;New Firms Rate (Nowe/EN) (Δ% 2yr);-27.412829353317203;max
+62;Suspension Rate (Zawieszone/EN) (Δ% 2yr);43.18908967676352;min
+63;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-5.346271713552728;min
+63;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.9909676951575279;max
+63;New Firms Rate (Nowe/EN) (Δ% 2yr);-11.015894955079473;max
+63;Suspension Rate (Zawieszone/EN) (Δ% 2yr);15.51827242524918;min
+64;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-31.213800889505983;min
+64;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.15135609655629004;max
+64;New Firms Rate (Nowe/EN) (Δ% 2yr);36.33847363592676;max
+64;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.724182511903644;min
+65;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+65;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+65;New Firms Rate (Nowe/EN) (Δ% 2yr);-36.36363636363637;max
+65;Suspension Rate (Zawieszone/EN) (Δ% 2yr);2.262443438914027;min
+66;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.819115198051973;min
+66;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);9.896967991739498;max
+66;New Firms Rate (Nowe/EN) (Δ% 2yr);1.8755235795594558;max
+66;Suspension Rate (Zawieszone/EN) (Δ% 2yr);2.4340910816725296;min
+68;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);10.73380446395207;min
+68;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-7.926022814817397;max
+68;New Firms Rate (Nowe/EN) (Δ% 2yr);1.8931010748133674;max
+68;Suspension Rate (Zawieszone/EN) (Δ% 2yr);37.435198354548724;min
+69;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-11.094504532942231;min
+69;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-1.4479794744310408;max
+69;New Firms Rate (Nowe/EN) (Δ% 2yr);-18.34550960050097;max
+69;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.706095576186737;min
+70;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-15.892786044942122;min
+70;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);50.623798709422864;max
+70;New Firms Rate (Nowe/EN) (Δ% 2yr);-11.854423348118916;max
+70;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.860203598887722;min
+71;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-10.929590828853057;min
+71;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.942544802777779;max
+71;New Firms Rate (Nowe/EN) (Δ% 2yr);-4.580093065486316;max
+71;Suspension Rate (Zawieszone/EN) (Δ% 2yr);23.227733173257317;min
+72;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-14.623534575890531;min
+72;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-15.335319670417682;max
+72;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.527405706510176;max
+72;Suspension Rate (Zawieszone/EN) (Δ% 2yr);24.736575027611128;min
+73;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-36.86512490010675;min
+73;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.8633355042352459;max
+73;New Firms Rate (Nowe/EN) (Δ% 2yr);-0.6623579901917103;max
+73;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.685026017361007;min
+74;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);13.153481158088312;min
+74;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);84.69544702063226;max
+74;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.000681849174969;max
+74;Suspension Rate (Zawieszone/EN) (Δ% 2yr);16.814296814296835;min
+75;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);31.589780460771564;min
+75;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);76.30532733701455;max
+75;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.277688603531315;max
+75;Suspension Rate (Zawieszone/EN) (Δ% 2yr);5.709384954667981;min
+77;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);11.17740235764467;min
+77;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.0614446837319225;max
+77;New Firms Rate (Nowe/EN) (Δ% 2yr);-24.870212557547262;max
+77;Suspension Rate (Zawieszone/EN) (Δ% 2yr);20.21345215489872;min
+78;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-12.394796406988725;min
+78;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-27.73460185315111;max
+78;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.901679021457179;max
+78;Suspension Rate (Zawieszone/EN) (Δ% 2yr);37.69356118453049;min
+79;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-34.348609672915195;min
+79;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-68.87268584995705;max
+79;New Firms Rate (Nowe/EN) (Δ% 2yr);0.44154044154042904;max
+79;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-22.52608552644616;min
+80;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);4.96961008752547;min
+80;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.587662494619679;max
+80;New Firms Rate (Nowe/EN) (Δ% 2yr);15.69391204971311;max
+80;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.117704305643414;min
+81;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-0.855916679694856;min
+81;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-14.309115370636494;max
+81;New Firms Rate (Nowe/EN) (Δ% 2yr);-13.121934511465744;max
+81;Suspension Rate (Zawieszone/EN) (Δ% 2yr);16.12272172414534;min
+82;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.4452344799276757;min
+82;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-4.448641181340355;max
+82;New Firms Rate (Nowe/EN) (Δ% 2yr);-2.143244796449897;max
+82;Suspension Rate (Zawieszone/EN) (Δ% 2yr);19.62639822906028;min
+84;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+84;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+84;New Firms Rate (Nowe/EN) (Δ% 2yr);28.915662650602407;max
+84;Suspension Rate (Zawieszone/EN) (Δ% 2yr);59.25925925925925;min
+85;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);29.77754915950542;min
+85;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);22.158355839646013;max
+85;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.431862719135637;max
+85;Suspension Rate (Zawieszone/EN) (Δ% 2yr);6.683070968909558;min
+86;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-7.892922285200372;min
+86;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.7312894899107252;max
+86;New Firms Rate (Nowe/EN) (Δ% 2yr);0.43230604108272447;max
+86;Suspension Rate (Zawieszone/EN) (Δ% 2yr);12.899916943671382;min
+87;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-13.07119708171845;min
+87;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.103420835863019;max
+87;New Firms Rate (Nowe/EN) (Δ% 2yr);34.82362592288759;max
+87;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.441219158200294;min
+88;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-4.639421247093723;min
+88;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.44746330180331;max
+88;New Firms Rate (Nowe/EN) (Δ% 2yr);27.927536231884055;max
+88;Suspension Rate (Zawieszone/EN) (Δ% 2yr);12.066311426879796;min
+90;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-21.52885340994538;min
+90;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);372.42932717799204;max
+90;New Firms Rate (Nowe/EN) (Δ% 2yr);-23.63868832731648;max
+90;Suspension Rate (Zawieszone/EN) (Δ% 2yr);-2.449059561128533;min
+91;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-7.097564108214619;min
+91;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.1433296757688987;max
+91;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.130534790109261;max
+91;Suspension Rate (Zawieszone/EN) (Δ% 2yr);17.15333423876136;min
+92;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.5494227169965874;min
+92;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.446971720422678;max
+92;New Firms Rate (Nowe/EN) (Δ% 2yr);6.206896551724154;max
+92;Suspension Rate (Zawieszone/EN) (Δ% 2yr);25.438596491228072;min
+93;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-6.439722768710094;min
+93;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-15.922579946056938;max
+93;New Firms Rate (Nowe/EN) (Δ% 2yr);3.6368393511250403;max
+93;Suspension Rate (Zawieszone/EN) (Δ% 2yr);13.931408867454156;min
+94;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.0;min
+94;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.0;max
+94;New Firms Rate (Nowe/EN) (Δ% 2yr);247.07112970711296;max
+94;Suspension Rate (Zawieszone/EN) (Δ% 2yr);4.780876494023905;min
+95;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-1.898173455362413;min
+95;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.071993673544755;max
+95;New Firms Rate (Nowe/EN) (Δ% 2yr);-23.7353027797286;max
+95;Suspension Rate (Zawieszone/EN) (Δ% 2yr);0.9498961912286243;min
+96;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-7.386093091771589;min
+96;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);29.463461542996345;max
+96;New Firms Rate (Nowe/EN) (Δ% 2yr);-10.383696537929007;max
+96;Suspension Rate (Zawieszone/EN) (Δ% 2yr);30.72605941324805;min
+97;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+97;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+98;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+98;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+99;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.420296562586723;min
+99;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.791015899858427;max
+99;New Firms Rate (Nowe/EN) (Δ% 2yr);567.0000000000002;max
+07;New Firms Rate (Nowe/EN) (Δ% 1yr);0.9222456678048493;max
+97;New Firms Rate (Nowe/EN) (Δ% 1yr);0.9222456678048493;max
+98;New Firms Rate (Nowe/EN) (Δ% 1yr);0.9222456678048493;max
+97;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.22443382924773;min
+98;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.22443382924773;min
+99;Suspension Rate (Zawieszone/EN) (Δ% 1yr);6.22443382924773;min
+05;New Firms Rate (Nowe/EN) (Δ% 2yr);-2.2272852481084806;max
+97;New Firms Rate (Nowe/EN) (Δ% 2yr);-2.2272852481084806;max
+98;New Firms Rate (Nowe/EN) (Δ% 2yr);-2.2272852481084806;max
+97;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.06023120331509;min
+98;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.06023120331509;min
+99;Suspension Rate (Zawieszone/EN) (Δ% 2yr);14.06023120331509;min
