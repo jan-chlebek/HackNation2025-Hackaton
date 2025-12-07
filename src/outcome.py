@@ -4,7 +4,7 @@ Sector Analysis using TOPSIS, VIKOR and Monte Carlo for SEKCJA level data.
 This script loads data from kpi-value-table.csv, filters by year and sector type,
 and performs multi-criteria decision analysis using only calculated indicators (ID >= 1000).
 
-Run from project root: python src/sector_analysis.py
+Run from project root: python src/outcome.py
 """
 
 import pandas as pd
@@ -16,7 +16,111 @@ from pathlib import Path
 # Add src to path for imports
 sys.path.append(str(Path(__file__).parent))
 
-from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter
+from analysis import DataLoader, AnalysisConfig, EnsembleAnalyzer, ResultsExporter, TOPSISAnalyzer
+
+
+def load_indicator_directions(input_dir: str = 'results-pipeline') -> dict:
+    """
+    Load indicator optimization directions from wskaznik_dictionary_minmax.csv.
+    
+    Args:
+        input_dir: Directory containing the dictionary file
+        
+    Returns:
+        Dictionary mapping WSKAZNIK names to 'max' or 'min'
+    """
+    wskaznik_minmax = pd.read_csv(
+        os.path.join(input_dir, 'wskaznik_dictionary_minmax.csv'), 
+        sep=';'
+    )
+    
+    # Strip whitespace from column names
+    wskaznik_minmax.columns = wskaznik_minmax.columns.str.strip()
+    
+    # Create mapping from WSKAZNIK name to direction
+    direction_map = {}
+    for _, row in wskaznik_minmax.iterrows():
+        wskaznik_name = row['WSKAZNIK'].strip()
+        minmax_value = str(row['MinMax']).strip().lower()
+        
+        # Normalize to 'max' or 'min'
+        if minmax_value == 'max':
+            direction_map[wskaznik_name] = 'max'
+        elif minmax_value == 'min':
+            direction_map[wskaznik_name] = 'min'
+        else:
+            # Default to max if unclear
+            direction_map[wskaznik_name] = 'max'
+    
+    # Show distribution
+    max_count = sum(1 for d in direction_map.values() if d == 'max')
+    min_count = sum(1 for d in direction_map.values() if d == 'min')
+    print(f"  Loaded directions: {max_count} maximize, {min_count} minimize")
+    
+    return direction_map
+
+
+def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, min_wskaznik_index: int) -> pd.DataFrame:
+    """
+    Calculate percentage changes for the previous year and two years earlier.
+    
+    Args:
+        df_merged: Merged dataframe with all data
+        year: Current year to analyze
+        typ: PKD type to filter
+        min_wskaznik_index: Minimum indicator index
+        
+    Returns:
+        DataFrame with percentage change data
+    """
+    print(f"\nCalculating percentage changes for years {year-2}, {year-1}, {year}...")
+    
+    # Get data for current year and two previous years
+    df_years = df_merged[
+        (df_merged['rok'].isin([year-2, year-1, year])) & 
+        (df_merged['typ'] == typ) &
+        (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index)
+    ].copy()
+    
+    # Pivot to get values by year
+    pivot_data = df_years.pivot_table(
+        index=['symbol', 'WSKAZNIK'],
+        columns='rok',
+        values='wartosc',
+        aggfunc='first'
+    ).reset_index()
+    
+    pct_changes = []
+    
+    # Calculate percentage change from year-1 to year (1-year change)
+    if year in pivot_data.columns and (year-1) in pivot_data.columns:
+        df_1yr = pivot_data[['symbol', 'WSKAZNIK', year, year-1]].copy()
+        df_1yr = df_1yr.dropna(subset=[year, year-1])
+        
+        df_1yr['pct_change'] = ((df_1yr[year] - df_1yr[year-1]) / df_1yr[year-1].abs()) * 100
+        df_1yr['cat_id'] = df_1yr['WSKAZNIK'] + ' (Δ% 1yr)'
+        
+        pct_changes.append(df_1yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
+        print(f"  ✓ Calculated 1-year changes: {len(df_1yr)} records")
+    
+    # Calculate percentage change from year-2 to year (2-year change)
+    if year in pivot_data.columns and (year-2) in pivot_data.columns:
+        df_2yr = pivot_data[['symbol', 'WSKAZNIK', year, year-2]].copy()
+        df_2yr = df_2yr.dropna(subset=[year, year-2])
+        
+        df_2yr['pct_change'] = ((df_2yr[year] - df_2yr[year-2]) / df_2yr[year-2].abs()) * 100
+        df_2yr['cat_id'] = df_2yr['WSKAZNIK'] + ' (Δ% 2yr)'
+        
+        pct_changes.append(df_2yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
+        print(f"  ✓ Calculated 2-year changes: {len(df_2yr)} records")
+    
+    if pct_changes:
+        result = pd.concat(pct_changes, ignore_index=True)
+        result.columns = ['kpi_id', 'cat_id', 'value']
+        return result
+    else:
+        print("  ⚠ No historical data available for percentage changes")
+        return pd.DataFrame(columns=['kpi_id', 'cat_id', 'value'])
 
 
 def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wskaznik_index: int = 1000) -> pd.DataFrame:
@@ -42,6 +146,9 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
     
+    # Load indicator directions from wskaznik_dictionary_minmax.csv
+    indicator_directions = load_indicator_directions(input_dir)
+    
     print(f"  Original data: {len(kpi_value_table)} rows")
     
     # Merge to get PKD type information
@@ -57,7 +164,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     # Merge with wskaznik dictionary to get indicator names
     df_merged = df_merged.merge(wskaznik_dictionary, on='WSKAZNIK_INDEX', how='left')
     
-    # Filter by year, type, and indicator index
+    # Filter by year, type, and indicator index for CURRENT YEAR data
     df_filtered = df_merged[
         (df_merged['rok'] == year) & 
         (df_merged['typ'] == typ) &
@@ -71,35 +178,41 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     if len(df_filtered) == 0:
         raise ValueError(f"No data found for year={year}, typ={typ}, WSKAZNIK_INDEX>={min_wskaznik_index}")
     
-    # Create analysis-ready format
-    # Use PKD symbol as alternative (kpi_id) and WSKAZNIK as criteria (cat_id)
+    # Create analysis-ready format for CURRENT YEAR values
     analysis_df = pd.DataFrame({
         'kpi_id': df_filtered['symbol'],  # Sectors (alternatives)
         'cat_id': df_filtered['WSKAZNIK'],  # Indicators (criteria)
         'value': df_filtered['wartosc'],
-        'direction': 'max'  # Default to max, will be customized per indicator
+        'direction': 'max'  # Will be loaded from dictionary
     })
     
-    # Define direction for each calculated indicator (1000+)
-    # All new calculated indicators are ratios/margins - context determines direction
-    indicator_directions = {
-        # Financial ratios - maximize
-        'Marża netto (NP/PNPM)': 'max',
-        'Marża operacyjna (OP/PNPM)': 'max',
-        'Cash flow margin (CF/PNPM)': 'max',
-        'Pokrycie odsetek (OP/IP)': 'max',
-        'Rotacja należności (PNPM/REC)': 'max',
-        
-        # Liquidity ratios - maximize
-        'Wskaźnik bieżącej płynności ((C+REC+INV)/STL)': 'max',
-        'Wskaźnik szybki ((C+REC)/STL)': 'max',
-        
-        # Debt ratio - minimize (lower is better)
-        'Wskaźnik zadłużenia ((STL+LTL)/PNPM)': 'min',
-    }
+    # Calculate percentage changes and add as additional criteria
+    pct_change_df = calculate_percentage_changes(df_merged, year, typ, min_wskaznik_index)
     
-    # Apply directions
-    analysis_df['direction'] = analysis_df['cat_id'].map(indicator_directions)
+    if len(pct_change_df) > 0:
+        # Add direction column to percentage changes (same as base indicator)
+        pct_change_df['direction'] = 'max'  # Will be set based on base indicator
+        
+        # Combine current year values with percentage changes
+        analysis_df = pd.concat([analysis_df, pct_change_df], ignore_index=True)
+        print(f"\n  ✓ Added {len(pct_change_df)} percentage change records")
+    
+    # Apply directions from wskaznik_dictionary_minmax.csv
+    # For percentage changes, use the same direction as the base indicator
+    def get_direction(cat_id):
+        # Extract base indicator name (remove " (Δ% 1yr)" or " (Δ% 2yr)")
+        base_indicator = cat_id.replace(' (Δ% 1yr)', '').replace(' (Δ% 2yr)', '')
+        direction = indicator_directions.get(base_indicator, 'max')
+        
+        # For percentage changes: 
+        # - If base is "max", positive change is good → max
+        # - If base is "min", positive change is bad → min (we want negative changes)
+        if '(Δ%' in cat_id and direction == 'min':
+            return 'min'  # Negative changes are good for minimization indicators
+        else:
+            return 'max'  # Positive changes are good for maximization indicators
+    
+    analysis_df['direction'] = analysis_df['cat_id'].apply(get_direction)
     
     # Fill any unmapped directions with 'max' as default
     analysis_df['direction'] = analysis_df['direction'].fillna('max')
@@ -195,7 +308,10 @@ def save_results_by_year_type(results: pd.DataFrame, year: int, typ: str):
 def run_sector_analysis(year: int = 2024, 
                        typ: str = 'SEKCJA',
                        min_wskaznik_index: int = 1000,
-                       n_simulations: int = 1000) -> pd.DataFrame:
+                       n_simulations: int = 1000,
+                       mc_weight_variance: float = 0.15,
+                       temporal_weight_1yr: float = 0.66,
+                       temporal_weight_2yr: float = 0.34) -> pd.DataFrame:
     """
     Run complete sector analysis.
     
@@ -204,6 +320,9 @@ def run_sector_analysis(year: int = 2024,
         typ: PKD type level
         min_wskaznik_index: Minimum indicator index to include (default: 1000 for calculated ratios)
         n_simulations: Number of Monte Carlo simulations
+        mc_weight_variance: Variance for Monte Carlo weight perturbation (default: 0.15 = 15%)
+        temporal_weight_1yr: Weight multiplier for 1-year changes (default: 0.66)
+        temporal_weight_2yr: Weight multiplier for 2-year changes (default: 0.34)
         
     Returns:
         DataFrame with analysis results
@@ -244,7 +363,19 @@ def run_sector_analysis(year: int = 2024,
         
         raise
     
-    # Configure analysis
+    # Calculate temporal weights (current year gets CV weight, changes get proportional weights)
+    print(f"\nCalculating temporal weights:")
+    print(f"  • Current year indicators: CV-based weight (w)")
+    print(f"  • 1-year change indicators: {temporal_weight_1yr} × w")
+    print(f"  • 2-year change indicators: {temporal_weight_2yr} × w")
+    
+    temporal_weights = DataLoader.calculate_temporal_weights(
+        matrix, 
+        weight_1yr=temporal_weight_1yr,
+        weight_2yr=temporal_weight_2yr
+    )
+    
+    # Configure analysis with temporal weights and MC variance
     config = AnalysisConfig(
         n_simulations=n_simulations,
         topsis_weight=0.33,
@@ -252,16 +383,69 @@ def run_sector_analysis(year: int = 2024,
         mc_weight=0.34,
         use_fuzzy_vikor=True,
         fuzzy_spread=0.1,
-        vikor_v=0.5
+        vikor_v=0.5,
+        mc_weight_variance=mc_weight_variance
     )
     
-    # Run ensemble analysis
+    # Run ensemble analysis with custom weights
     print("\n" + "="*90)
     print(f"RUNNING ENSEMBLE ANALYSIS - Year {year}, Type {typ}, Indicators >= {min_wskaznik_index}")
+    print(f"Temporal weighting: 1yr={temporal_weight_1yr}, 2yr={temporal_weight_2yr}")
+    print(f"Monte Carlo weight variance: ±{mc_weight_variance*100}%")
     print("="*90)
     
-    analyzer = EnsembleAnalyzer(matrix, directions, config)
-    results = analyzer.analyze()
+    # Create TOPSIS analyzer with temporal weights
+    print("Running TOPSIS analysis with temporal weights...")
+    topsis_analyzer = TOPSISAnalyzer(matrix, directions, weights=temporal_weights)
+    topsis_scores = topsis_analyzer.analyze()
+    
+    # Print weight information
+    print("\nCriterion weights (temporal weighting applied):")
+    weights_info = topsis_analyzer.get_weights_info()
+    print(weights_info.to_string(index=False))
+    
+    # Run VIKOR with same temporal weights
+    if config.use_fuzzy_vikor:
+        print(f"\nRunning Fuzzy VIKOR analysis (v={config.vikor_v}, spread=±{config.fuzzy_spread*100}%)...")
+        from analysis import FuzzyVIKORAnalyzer
+        vikor_analyzer = FuzzyVIKORAnalyzer(
+            matrix, 
+            directions,
+            weights=temporal_weights,
+            v=config.vikor_v,
+            fuzzy_spread=config.fuzzy_spread
+        )
+        vikor_scores, vikor_details = vikor_analyzer.analyze()
+    else:
+        vikor_scores = pd.Series(0, index=matrix.index, name='vikor_score')
+    
+    # Run Monte Carlo with temporal weights as base
+    print(f"\nRunning Monte Carlo simulation ({config.n_simulations} iterations, ±{config.mc_weight_variance*100}% variance)...")
+    from analysis import MonteCarloAnalyzer
+    mc_analyzer = MonteCarloAnalyzer(matrix, directions, config, base_weights=temporal_weights)
+    mc_scores = mc_analyzer.simulate()
+    
+    # Combine scores using weighted average
+    ensemble_scores = (
+        config.topsis_weight * topsis_scores +
+        config.vikor_weight * vikor_scores +
+        config.mc_weight * mc_scores
+    )
+    
+    # Create results DataFrame
+    results = pd.DataFrame({
+        'alternative_id': matrix.index,
+        'topsis_score': topsis_scores.values,
+        'vikor_score': vikor_scores.values,
+        'monte_carlo_score': mc_scores.values,
+        'ensemble_score': ensemble_scores.values,
+        'topsis_rank': topsis_scores.rank(ascending=False),
+        'vikor_rank': vikor_scores.rank(ascending=False),
+        'monte_carlo_rank': mc_scores.rank(ascending=False),
+        'ensemble_rank': ensemble_scores.rank(ascending=False)
+    })
+    
+    results = results.sort_values('ensemble_rank')
     
     # Add sector names to results (from input directory)
     input_dir = 'results-pipeline'
@@ -298,9 +482,12 @@ if __name__ == '__main__':
     # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
         year=2024,
-        typ='SEKCJA',
+        typ='DZIAŁ',
         min_wskaznik_index=1000,
-        n_simulations=1000
+        n_simulations=1000,
+        mc_weight_variance=0.15,  # 15% variance around temporal weights
+        temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
+        temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
     )
     
     print("\n" + "="*90)
@@ -315,12 +502,21 @@ if __name__ == '__main__':
     print("  • monte_carlo.csv - Monte Carlo rankings")
     print("  • ensemble.csv - Combined ensemble rankings")
     print("  • complete.csv - Complete results with all scores and metadata")
-    print("\nAnalysis uses only calculated financial ratios (indicators 1000-1007):")
-    print("  1000: Marża netto (Net Margin)")
-    print("  1001: Marża operacyjna (Operating Margin)")
-    print("  1002: Wskaźnik bieżącej płynności (Current Ratio)")
-    print("  1003: Wskaźnik szybki (Quick Ratio)")
-    print("  1004: Wskaźnik zadłużenia (Debt Ratio)")
-    print("  1005: Pokrycie odsetek (Interest Coverage)")
-    print("  1006: Rotacja należności (Receivables Turnover)")
-    print("  1007: Cash Flow Margin")
+    print("\nAnalysis includes:")
+    print("  • Current year indicator values (1000-1007) - CV-based weights")
+    print("  • 1-year percentage changes (Δ% 1yr) - 66% of base weight")
+    print("  • 2-year percentage changes (Δ% 2yr) - 34% of base weight")
+    print("  • All weights normalized to sum to 1.0")
+    print("  • Directions loaded from wskaznik_dictionary_minmax.csv")
+    print("\nWeighting methodology:")
+    print("  • Base indicators: w = 1/CV (normalized)")
+    print("  • 1-year changes: 0.66 × w")
+    print("  • 2-year changes: 0.34 × w")
+    print("  • Final normalization: all weights sum to 1.0")
+    print("\nMonte Carlo method:")
+    print("  • Uses temporal weights as base")
+    print("  • Adds controlled randomization (±15% variance)")
+    print("  • Tests robustness across weight perturbations")
+    print("\nDirection logic for percentage changes:")
+    print("  • Maximize indicators: positive change is good → max")
+    print("  • Minimize indicators: negative change is good → min")
