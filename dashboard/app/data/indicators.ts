@@ -12,14 +12,14 @@ export const indicators: IndicatorDefinition[] = [
   {
     id: 0,
     code: "C",
-    name: "Środki pieniężne i papiery wartościowe",
+    name: "Środki pieniężne i pap. wart.",
     preference: "Im wyższe, tym lepiej",
     justification: "Większe zasoby płynnych aktywów → mniejsze ryzyko braku płynności."
   },
   {
     id: 1,
     code: "CF",
-    name: "Nadwyżka finansowa (cash flow)",
+    name: "Nadwyżka finansowa",
     preference: "Im wyższe, tym lepiej",
     justification: "Mocna generacja gotówki to kluczowy wskaźnik zdolności spłaty długu."
   },
@@ -34,13 +34,13 @@ export const indicators: IndicatorDefinition[] = [
     id: 3,
     code: "EN",
     name: "Liczba jednostek gospodarczych",
-    preference: "Ostrożnie / neutralne",
-    justification: "Duża liczba jednostek może zwiększać skalę działalności, ale też ryzyko."
+    preference: "Im wyższe, tym lepiej",
+    justification: "Duża liczba jednostek może zwiększać skalę działalności."
   },
   {
     id: 4,
     code: "GS (I)",
-    name: "Przychody netto ze sprzedaży",
+    name: "Przychody netto ze sprzedaży i zrównane z nimi",
     preference: "Im wyższe, tym lepiej",
     justification: "Wyższe przychody stabilizują spłatę kredytu."
   },
@@ -49,20 +49,20 @@ export const indicators: IndicatorDefinition[] = [
     code: "GS",
     name: "Przychody ogółem",
     preference: "Im wyższe, tym lepiej",
-    justification: "Zwiększenie skali działalności poprawia zdolność kredytową, jeśli koszty są pod kontrolą."
+    justification: "Zwiększenie skali działalności poprawia zdolność kredytową."
   },
   {
     id: 6,
     code: "INV",
     name: "Zapasy",
     preference: "Raczej niższe / optymalne",
-    justification: "Nadmierne zapasy wiążą kapitał i mogą wskazywać na problemy ze sprzedażą."
+    justification: "Nadmierne zapasy wiążą kapitał."
   },
   {
     id: 7,
     code: "IO",
-    name: "Nakłady inwestycyjne",
-    preference: "Raczej niższe (o ile nie poprawiają zdolności)",
+    name: "Wartość nakładów inwestycyjnych",
+    preference: "Raczej niższe",
     justification: "Zbyt duże inwestycje podnoszą ryzyko finansowe w okresie spłaty."
   },
   {
@@ -75,7 +75,7 @@ export const indicators: IndicatorDefinition[] = [
   {
     id: 9,
     code: "LTC",
-    name: "Długoterminowe kredyty",
+    name: "Długoterminowe kredyty bankowe",
     preference: "Im niższe, tym lepiej",
     justification: "Niższe zadłużenie długoterminowe = mniejsze ryzyko kredytowe."
   },
@@ -88,101 +88,185 @@ export const indicators: IndicatorDefinition[] = [
   },
   {
     id: 11,
+    code: "Liczba firm z zawieszoną działalnością Ogółem",
+    name: "Liczba firm z zawieszoną działalnością",
+    preference: "Im niższe, tym lepiej",
+    justification: "Wskazuje na problemy w sektorze."
+  },
+  {
+    id: 12,
+    code: "Liczba firm zamkniętych Ogółem",
+    name: "Liczba firm zamkniętych",
+    preference: "Im niższe, tym lepiej",
+    justification: "Wysoka liczba zamknięć to sygnał ostrzegawczy."
+  },
+  {
+    id: 13,
+    code: "Liczba firm zarejestrowanych Ogółem",
+    name: "Liczba firm zarejestrowanych",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Wzrost liczby firm świadczy o rozwoju sektora."
+  },
+  {
+    id: 14,
+    code: "Liczba nowych firm Ogółem",
+    name: "Liczba nowych firm",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Nowe firmy to potencjał wzrostu."
+  },
+  {
+    id: 15,
     code: "NP",
-    name: "Zysk netto",
+    name: "Wynik finansowy netto (zysk netto)",
     preference: "Im wyższy, tym lepiej",
     justification: "Rentowność to fundament wiarygodności kredytowej."
   },
   {
-    id: 12,
+    id: 16,
     code: "NWC",
     name: "Kapitał obrotowy",
     preference: "Dodatni i stabilny",
-    justification: "Stabilny poziom zapewnia płynność, ale nadmierny nie jest konieczny."
+    justification: "Stabilny poziom zapewnia płynność."
   },
   {
-    id: 13,
+    id: 17,
     code: "OFE",
     name: "Pozostałe koszty finansowe",
     preference: "Im niższe, tym lepiej",
     justification: "Duże koszty finansowe oznaczają wyższe ryzyko kredytowe."
   },
   {
-    id: 14,
+    id: 18,
     code: "OP",
-    name: "Wynik operacyjny",
+    name: "Wynik na działalności operacyjnej",
     preference: "Im wyższy, tym lepiej",
     justification: "Kluczowy wskaźnik efektywności działalności podstawowej."
   },
   {
-    id: 15,
+    id: 19,
+    code: "Osoby fizyczne",
+    name: "Osoby fizyczne prowadzące działalność",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Informacja o strukturze rynku."
+  },
+  {
+    id: 20,
+    code: "Osoby prawne",
+    name: "Osoby prawne/jednostki org.",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Informacja o strukturze rynku."
+  },
+  {
+    id: 21,
     code: "PEN",
-    name: "Rentowne jednostki",
+    name: "Liczba rentownych jednostek",
     preference: "Im więcej, tym lepiej",
     justification: "Większa liczba zdrowych jednostek zmniejsza ryzyko kredytowe."
   },
   {
-    id: 16,
+    id: 22,
     code: "PNPM",
     name: "Przychody netto",
     preference: "Im wyższe, tym lepiej",
     justification: "Silne przychody stabilizują ocenę kredytową."
   },
   {
-    id: 17,
+    id: 23,
     code: "POS",
     name: "Wynik na sprzedaży",
     preference: "Im wyższy, tym lepiej",
     justification: "Świadczy o zdrowych marżach."
   },
   {
-    id: 18,
+    id: 24,
     code: "PPO",
     name: "Pozostałe przychody operacyjne",
     preference: "Im wyższe, tym lepiej",
     justification: "Dodatkowe źródła przychodów obniżają ryzyko."
   },
   {
-    id: 19,
+    id: 25,
+    code: "Pracujący 0-9",
+    name: "Przewidywana liczba pracujących 0-9",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Wielkość zatrudnienia w mikroprzedsiębiorstwach."
+  },
+  {
+    id: 26,
+    code: "Pracujący 10-49",
+    name: "Przewidywana liczba pracujących 10-49",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Wielkość zatrudnienia w małych przedsiębiorstwach."
+  },
+  {
+    id: 27,
+    code: "Pracujący 250+",
+    name: "Przewidywana liczba pracujących 250=>",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Wielkość zatrudnienia w dużych przedsiębiorstwach."
+  },
+  {
+    id: 28,
+    code: "Pracujący 50-249",
+    name: "Przewidywana liczba pracujących 50-249",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Wielkość zatrudnienia w średnich przedsiębiorstwach."
+  },
+  {
+    id: 29,
+    code: "Pracujący Ogółem",
+    name: "Przewidywana liczba pracujących Ogółem",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Ogólny poziom zatrudnienia w sektorze."
+  },
+  {
+    id: 30,
     code: "Przych. fin.",
     name: "Przychody finansowe",
     preference: "Im wyższe, tym lepiej",
     justification: "Zwiększają wynik i płynność."
   },
   {
-    id: 20,
+    id: 31,
     code: "REC",
     name: "Należności krótkoterminowe",
     preference: "Im niższe (po optymalizacji), tym lepiej",
     justification: "Niskie należności = dobra ściągalność → mniejsze ryzyko."
   },
   {
-    id: 21,
+    id: 32,
     code: "STC",
-    name: "Krótkoterminowe kredyty",
+    name: "Krótkoterminowe kredyty bankowe",
     preference: "Im niższe, tym lepiej",
     justification: "Mniejsze ryzyko utraty płynności."
   },
   {
-    id: 22,
+    id: 33,
     code: "STL",
     name: "Zobowiązania krótkoterminowe",
     preference: "Im niższe, tym lepiej",
     justification: "Zbyt duże krótkoterminowe zobowiązania zwiększają ryzyko płynności."
   },
   {
-    id: 23,
+    id: 34,
     code: "TC",
     name: "Koszty ogółem",
     preference: "Im niższe, tym lepiej",
     justification: "Niższe koszty poprawiają rentowność i ocenę kredytową."
   },
   {
-    id: 24,
+    id: 35,
     code: "Upadłość",
-    name: "Ryzyko upadłości",
+    name: "Upadłość",
     preference: "Minimalizować",
     justification: "Podstawowy negatywny czynnik ryzyka kredytowego."
+  },
+  {
+    id: 36,
+    code: "Firmy Ogółem",
+    name: "Liczba firm i działalności gospodarczych Ogółem",
+    preference: "Im wyższe, tym lepiej",
+    justification: "Całkowita liczba podmiotów na rynku."
   },
   {
     id: 1000,

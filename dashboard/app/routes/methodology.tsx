@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { indicators } from "../data/indicators";
 import { DashboardCard } from "../components/DashboardCard";
-import { ArrowRight, Database, Server, BrainCircuit, ChevronDown, ChevronUp } from "lucide-react";
+import { ArrowRight, ArrowLeft, Database, Server, BrainCircuit, ChevronDown, ChevronUp } from "lucide-react";
 
 export default function Methodology() {
   const basicIndicators = indicators.filter(i => !i.formula);
@@ -88,9 +88,18 @@ export default function Methodology() {
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
                   Wykonanie eksperymentów metodami wielokryterialnymi
                 </div>
-                <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
+                <div className="flex flex-col gap-1 justify-center">
+                  <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
+                  <ArrowLeft className="hidden md:block text-gray-400 shrink-0" />
+                </div>
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
-                  Poszukiwanie korelacji z danymi zewnętrznymi nieraportowanymi na poziomie PKD
+                  Analiza jakości wskaźników z przez wzgląd na korelacje i jakość/przewidywalność rankingów (TOPSIS vs VIKOR)
+                </div>
+                 <div className="flex flex-col gap-1 justify-center">
+                  <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
+                </div>
+                <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
+                  Predykcja przyszłościowa, określenie trendów i potrzeb pożyczkowych
                 </div>
               </div>
             </div>
