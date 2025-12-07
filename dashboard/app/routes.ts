@@ -6,5 +6,6 @@ export default [
   route("correlations", "routes/correlations.tsx"),
   route("trends", "routes/trends.tsx"),
   route("comparison", "routes/comparison.tsx"),
+  route("loan-needs", "routes/loan-needs.tsx"),
   route("methodology", "routes/methodology.tsx"),
 ] satisfies RouteConfig;

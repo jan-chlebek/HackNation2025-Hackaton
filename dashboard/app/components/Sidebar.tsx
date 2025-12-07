@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router";
-import { BarChart3, Home, PieChart, TrendingUp, Activity, FileText, GitCompare } from "lucide-react";
+import { BarChart3, Home, PieChart, TrendingUp, Activity, FileText, GitCompare, Wallet } from "lucide-react";
 import { clsx } from "clsx";
 
 const navItems = [
@@ -7,6 +7,7 @@ const navItems = [
   { label: "Analiza Metod", href: "/analysis", icon: BarChart3 },
   { label: "Trendy", href: "/trends", icon: TrendingUp },
   { label: "Korelacje", href: "/correlations", icon: Activity },
+  { label: "Potrzeby Pożyczkowe", href: "/loan-needs", icon: Wallet },
   { label: "TOPSIS vs VIKOR", href: "/comparison", icon: GitCompare },
   { label: "Metodologia", href: "/methodology", icon: PieChart },
 ];
