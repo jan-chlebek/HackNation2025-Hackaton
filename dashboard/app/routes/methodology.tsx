@@ -61,6 +61,10 @@ export default function Methodology() {
                 </div>
                 <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
                 <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
+                  Odrzucenie incydentów <span className="text-xs text-gray-500 block mt-1">(błędne kody PKD: 2520Z, 4961z, 1312A, 4749Z, 6839Z, 6819Z, Zielon)</span>
+                </div>
+                <ArrowRight className="hidden md:block text-gray-400 shrink-0" />
+                <div className="bg-gray-100 p-3 rounded-lg border border-gray-200 text-center min-w-[140px] flex-1">
                   Transpozycje do postaci tabeli faktowej
                 </div>
                 <ArrowRight className="hidden md:block text-gray-400 shrink-0" />

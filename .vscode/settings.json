@@ -1,0 +1,14 @@
+{
+    "appService.showBuildDuringDeployPrompt": false,
+    "appService.defaultWebAppToDeploy": "/subscriptions/0dd47a64-cf91-43e2-b43a-c9247235455f/resourceGroups/HackNation2026/providers/Microsoft.Web/sites/hacknation2025",
+    "appService.deploySubpath": "./dashboard/build/client",
+    "appService.preDeployTask": "build-dashboard",
+    "appService.zipIgnorePattern": [
+        "node_modules",
+        "node_modules/**",
+        ".vscode",
+        ".vscode/**",
+        "build/client/**/*.map",
+        "build/server/**/*.map"
+    ]
+}

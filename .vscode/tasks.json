@@ -1,0 +1,34 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build-dashboard",
+			"type": "shell",
+			"command": "npm install && npm run build",
+			"options": {
+				"cwd": "${workspaceFolder}/dashboard"
+			},
+			"problemMatcher": [],
+			"dependsOn": [
+				"dump-analysis-data"
+			]
+		},
+		{
+			"label": "run-dashboard",
+			"type": "shell",
+			"command": "npm run dev",
+			"options": {
+				"cwd": "${workspaceFolder}/dashboard"
+			},
+			"dependsOn": [
+				"dump-analysis-data"
+			]
+		},
+		{
+			"label": "dump-analysis-data",
+			"type": "shell",
+			"command": "Copy-Item \"results/2024/dział/complete.csv\" -Destination \"dashboard/public/data/dzial_complete.csv\" -Force; Copy-Item \"results/2024/sekcja/complete.csv\" -Destination \"dashboard/public/data/sekcja_complete.csv\" -Force; Copy-Item \"results-pipeline/pkd_dictionary.csv\" -Destination \"dashboard/public/data/pkd_dictionary.csv\" -Force",
+			"group": "build"
+		}
+	]
+}

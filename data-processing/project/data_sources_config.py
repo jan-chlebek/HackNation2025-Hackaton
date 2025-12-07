@@ -4,15 +4,13 @@ Add new data sources here to include them in the pipeline.
 """
 
 import os
-import sys
 
-# Add src to path (in the project folder)
-sys.path.append(os.path.join(os.path.dirname(__file__), 'src'))
-
-from etl_pipeline import (
+from processors import (
     UpadlosciProcessor,
     WskaznikFinansowyProcessor,
-    QuarterlyInfoProcessor,
+    QuarterlyInfoProcessorTabl4,
+    QuarterlyInfoProcessorTabl5,
+    QuarterlyInfoProcessorTabl7
 )
 
 
@@ -46,7 +44,7 @@ def get_data_sources_config():
             }
         },
         {
-            'processor_class': QuarterlyInfoProcessor,
+            'processor_class': QuarterlyInfoProcessorTabl4,
             'name': 'Dane Kwartalne - Pracujący',
             'kwargs': {
                 'folder_path': os.path.join(
@@ -58,7 +56,31 @@ def get_data_sources_config():
                 'wskaznik_prefix': 'Przewidywana liczba pracujących'
             }
         },
-        
+        {
+            'processor_class': QuarterlyInfoProcessorTabl5,
+            'name': 'Dane Kwartalne - liczba firm vs działalności gospodarczych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'Tabl 5'
+            }
+        },
+        {
+            'processor_class': QuarterlyInfoProcessorTabl7,
+            'name': 'Dane Kwartalne - liczba firm vs działalności gospodarczych',
+            'kwargs': {
+                'folder_path': os.path.join(
+                    base_path, 
+                    'external', 
+                    '_Full Kwartalna informacja o podmiotach gospodarki narodowej w rejestrze REGON'
+                ),
+                'sheet_name': 'Tabl 7',
+                'wskaznik_prefix': 'Liczba nowych firm'
+            }
+        }
         # =============================================================
         # ADD NEW DATA SOURCES BELOW THIS LINE
         # =============================================================
@@ -91,7 +113,7 @@ def get_data_sources_config():
 # =================================================================
 # TO ADD A NEW CUSTOM DATA SOURCE:
 # =================================================================
-# 1. Create a new processor class in etl_pipeline.py that inherits from DataProcessor
+# 1. Create a new processor class in processors/ folder that inherits from DataProcessor
 # 2. Implement the process() method that returns DataFrame with columns:
 #    [rok, pkd_2025, WSKAZNIK, wartosc]
 # 3. Import the processor class at the top of this file
