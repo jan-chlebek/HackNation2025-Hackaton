@@ -1,0 +1,169 @@
+kpi_id;cat_id;value;direction
+A;Marża netto (NP/PNPM);0.0890182205088379;max
+B;Marża netto (NP/PNPM);-0.0116518975407004;max
+C;Marża netto (NP/PNPM);0.0440814236395573;max
+D;Marża netto (NP/PNPM);0.0173108934035023;max
+E;Marża netto (NP/PNPM);0.0594340291608312;max
+F;Marża netto (NP/PNPM);0.0691900803089479;max
+G;Marża netto (NP/PNPM);0.0299089133503654;max
+H;Marża netto (NP/PNPM);0.0381679569581267;max
+I;Marża netto (NP/PNPM);0.0855161977874272;max
+J;Marża netto (NP/PNPM);0.0722096361078677;max
+L;Marża netto (NP/PNPM);0.1335208047662903;max
+M;Marża netto (NP/PNPM);0.058362775124708;max
+N;Marża netto (NP/PNPM);0.0794628356989966;max
+O;Marża netto (NP/PNPM);0.0673363210743123;max
+P;Marża netto (NP/PNPM);0.0445960728929051;max
+Q;Marża netto (NP/PNPM);0.0996050118948242;max
+R;Marża netto (NP/PNPM);0.0469390912548968;max
+S;Marża netto (NP/PNPM);0.0113673797444185;max
+T;Marża netto (NP/PNPM);0.0706873813124074;max
+U;Marża netto (NP/PNPM);0.0445960728929051;max
+V;Marża netto (NP/PNPM);0.0445960728929051;max
+A;Marża operacyjna (OP/PNPM);0.0897155691960188;max
+B;Marża operacyjna (OP/PNPM);-0.0028656322843183;max
+C;Marża operacyjna (OP/PNPM);0.055504621568671;max
+D;Marża operacyjna (OP/PNPM);0.0364392103298961;max
+E;Marża operacyjna (OP/PNPM);0.076295527895083;max
+F;Marża operacyjna (OP/PNPM);0.078792795262815;max
+G;Marża operacyjna (OP/PNPM);0.0370088715107728;max
+H;Marża operacyjna (OP/PNPM);0.0525951706632938;max
+I;Marża operacyjna (OP/PNPM);0.0982035576194624;max
+J;Marża operacyjna (OP/PNPM);0.1037020550829319;max
+L;Marża operacyjna (OP/PNPM);0.2509534706057403;max
+M;Marża operacyjna (OP/PNPM);0.062595459735235;max
+N;Marża operacyjna (OP/PNPM);0.0591949859262289;max
+O;Marża operacyjna (OP/PNPM);0.0872894490083614;max
+P;Marża operacyjna (OP/PNPM);0.0581353295951516;max
+Q;Marża operacyjna (OP/PNPM);0.1248575951314573;max
+R;Marża operacyjna (OP/PNPM);0.0633107534324206;max
+S;Marża operacyjna (OP/PNPM);0.0165063223830806;max
+T;Marża operacyjna (OP/PNPM);0.0875935126177758;max
+U;Marża operacyjna (OP/PNPM);0.0581353295951516;max
+V;Marża operacyjna (OP/PNPM);0.0581353295951516;max
+A;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);2.533255548550608;max
+B;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2343817971539526;max
+C;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.4281319031286328;max
+D;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.9769014718844876;max
+E;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.5489146994653769;max
+F;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.656980011347416;max
+G;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.3774921504430242;max
+H;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.4139140502893182;max
+I;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.18151277788258;max
+J;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.5190480560908657;max
+L;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.8834778030671975;max
+M;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2626681888165017;max
+N;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.82899706587579;max
+O;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.917159196176674;max
+P;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2439410072303445;max
+Q;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.9916976330065377;max
+R;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.300637870815754;max
+S;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);0.9007839001908392;max
+T;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.7194168447959577;max
+U;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2439410072303445;max
+V;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);1.2439410072303445;max
+A;Wskaźnik szybki ((C+REC)/STL);1.6534822110798195;max
+B;Wskaźnik szybki ((C+REC)/STL);0.775153969312534;max
+C;Wskaźnik szybki ((C+REC)/STL);0.8575158486883607;max
+D;Wskaźnik szybki ((C+REC)/STL);0.8263067529369035;max
+E;Wskaźnik szybki ((C+REC)/STL);1.4028341828961273;max
+F;Wskaźnik szybki ((C+REC)/STL);1.1609149097347788;max
+G;Wskaźnik szybki ((C+REC)/STL);0.7508757273368725;max
+H;Wskaźnik szybki ((C+REC)/STL);1.3421051788395273;max
+I;Wskaźnik szybki ((C+REC)/STL);1.087884568975798;max
+J;Wskaźnik szybki ((C+REC)/STL);1.3992718064787302;max
+L;Wskaźnik szybki ((C+REC)/STL);0.8286039137656012;max
+M;Wskaźnik szybki ((C+REC)/STL);0.9505496044488014;max
+N;Wskaźnik szybki ((C+REC)/STL);1.7442996457857505;max
+O;Wskaźnik szybki ((C+REC)/STL);0.8618159401698033;max
+P;Wskaźnik szybki ((C+REC)/STL);0.9518804695517648;max
+Q;Wskaźnik szybki ((C+REC)/STL);1.9475929939274856;max
+R;Wskaźnik szybki ((C+REC)/STL);1.218430571116555;max
+S;Wskaźnik szybki ((C+REC)/STL);0.8486967927464155;max
+T;Wskaźnik szybki ((C+REC)/STL);1.5237442066365106;max
+U;Wskaźnik szybki ((C+REC)/STL);0.9518804695517648;max
+V;Wskaźnik szybki ((C+REC)/STL);0.9518804695517648;max
+A;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.248378096023658;max
+B;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4066256135864617;max
+C;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3056299831711356;max
+D;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.460077783249575;max
+E;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4180413185523564;max
+F;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.3873566661246005;max
+G;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2181190297131723;max
+H;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4873585636240097;max
+I;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.4543599767114791;max
+J;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.5773567329304501;max
+L;Wskaźnik zadłużenia ((STL+LTL)/PNPM);3.22030507436824;max
+M;Wskaźnik zadłużenia ((STL+LTL)/PNPM);1.0444723242550027;max
+N;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.9957525660486948;max
+O;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.7052557396646194;max
+P;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2984506167420838;max
+Q;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2723643912929746;max
+R;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2944562882323174;max
+S;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.1109162327736216;max
+T;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2605183518390133;max
+U;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2984506167420838;max
+V;Wskaźnik zadłużenia ((STL+LTL)/PNPM);0.2984506167420838;max
+A;Pokrycie odsetek (OP/IP);14.18366920056978;max
+B;Pokrycie odsetek (OP/IP);0.2111726805621723;max
+C;Pokrycie odsetek (OP/IP);7.059491780663469;max
+D;Pokrycie odsetek (OP/IP);2.089668828673889;max
+E;Pokrycie odsetek (OP/IP);5.870227400323285;max
+F;Pokrycie odsetek (OP/IP);9.65065905028738;max
+G;Pokrycie odsetek (OP/IP);6.954281934805964;max
+H;Pokrycie odsetek (OP/IP);3.820014826100389;max
+I;Pokrycie odsetek (OP/IP);5.681403561073006;max
+J;Pokrycie odsetek (OP/IP);4.080653979023046;max
+L;Pokrycie odsetek (OP/IP);1.7654019242022776;max
+M;Pokrycie odsetek (OP/IP);2.316698870258857;max
+N;Pokrycie odsetek (OP/IP);4.289018834571376;max
+O;Pokrycie odsetek (OP/IP);2.7772616983629512;max
+P;Pokrycie odsetek (OP/IP);7.841829979996622;max
+Q;Pokrycie odsetek (OP/IP);13.651497027461506;max
+R;Pokrycie odsetek (OP/IP);6.005491963074167;max
+S;Pokrycie odsetek (OP/IP);3.73783281118007;max
+T;Pokrycie odsetek (OP/IP);9.42687692353147;max
+U;Pokrycie odsetek (OP/IP);7.841829979996622;max
+V;Pokrycie odsetek (OP/IP);7.841829979996622;max
+A;Rotacja należności (PNPM/REC);8.11574921411598;max
+B;Rotacja należności (PNPM/REC);8.84370830788101;max
+C;Rotacja należności (PNPM/REC);7.061340217800769;max
+D;Rotacja należności (PNPM/REC);6.04725556033503;max
+E;Rotacja należności (PNPM/REC);6.547732988160633;max
+F;Rotacja należności (PNPM/REC);4.752971897152569;max
+G;Rotacja należności (PNPM/REC);10.216501578512164;max
+H;Rotacja należności (PNPM/REC);5.936472721426844;max
+I;Rotacja należności (PNPM/REC);13.949311152208416;max
+J;Rotacja należności (PNPM/REC);4.23066177634202;max
+L;Rotacja należności (PNPM/REC);0.9652238587646292;max
+M;Rotacja należności (PNPM/REC);8.868346228649727;max
+N;Rotacja należności (PNPM/REC);1.4929297954435876;max
+O;Rotacja należności (PNPM/REC);4.108289973264153;max
+P;Rotacja należności (PNPM/REC);6.550818179251733;max
+Q;Rotacja należności (PNPM/REC);6.639524121355906;max
+R;Rotacja należności (PNPM/REC);8.457042227519864;max
+S;Rotacja należności (PNPM/REC);64.22510021807578;max
+T;Rotacja należności (PNPM/REC);5.542633728282064;max
+U;Rotacja należności (PNPM/REC);6.550818179251733;max
+V;Rotacja należności (PNPM/REC);6.550818179251733;max
+A;Cash flow margin (CF/PNPM);0.134388802480708;max
+B;Cash flow margin (CF/PNPM);0.0918784801114165;max
+C;Cash flow margin (CF/PNPM);0.0878108391494728;max
+D;Cash flow margin (CF/PNPM);0.1022093429839043;max
+E;Cash flow margin (CF/PNPM);0.1636362601825249;max
+F;Cash flow margin (CF/PNPM);0.0966488238850604;max
+G;Cash flow margin (CF/PNPM);0.0492737335446757;max
+H;Cash flow margin (CF/PNPM);0.1178872502363737;max
+I;Cash flow margin (CF/PNPM);0.1472069686871525;max
+J;Cash flow margin (CF/PNPM);0.1790623551382661;max
+L;Cash flow margin (CF/PNPM);0.3729952809616881;max
+M;Cash flow margin (CF/PNPM);0.1376271672536088;max
+N;Cash flow margin (CF/PNPM);0.1261233653316776;max
+O;Cash flow margin (CF/PNPM);0.1564916867063165;max
+P;Cash flow margin (CF/PNPM);0.0967985566729508;max
+Q;Cash flow margin (CF/PNPM);0.1406061648285049;max
+R;Cash flow margin (CF/PNPM);0.100303000495771;max
+S;Cash flow margin (CF/PNPM);0.0291681152322457;max
+T;Cash flow margin (CF/PNPM);0.1205904723645829;max
+U;Cash flow margin (CF/PNPM);0.0967985566729508;max
+V;Cash flow margin (CF/PNPM);0.0967985566729508;max

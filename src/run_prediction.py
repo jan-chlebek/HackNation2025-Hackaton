@@ -376,30 +376,32 @@ def forecast_single_category(args: Tuple) -> List[Dict]:
 def forecast_all_categories(df: pd.DataFrame, corr_matrix: pd.DataFrame) -> pd.DataFrame:
     """
     Forecast all PKD categories using multiprocessing.
+    ONLY FORECASTS BASE INDICATORS (0-36).
+    Derived indicators (1000+) will be calculated separately.
     
     Args:
         df: Historical data
         corr_matrix: Correlation matrix between indicators
     
     Returns:
-        DataFrame with forecasts for ALL PKD×WSKAZNIK combinations
+        DataFrame with forecasts for ALL PKD×WSKAZNIK combinations (base indicators only)
     """
-    print(f"\nForecasting {FORECAST_YEARS} years into the future...")
+    print(f"\nForecasting {FORECAST_YEARS} years into the future (BASE INDICATORS ONLY)...")
     print(f"  Years to forecast: {END_YEAR + 1} to {END_YEAR + FORECAST_YEARS}")
     
-    # Get all unique combinations from historical data
+    # Get all unique combinations from historical data - FILTER TO BASE INDICATORS ONLY
     all_pkd = df['PKD_INDEX'].unique()
-    all_wskaznik = df['WSKAZNIK_INDEX'].unique()
+    all_wskaznik = df[df['WSKAZNIK_INDEX'] < 1000]['WSKAZNIK_INDEX'].unique()  # Only base indicators
     
     print(f"  Total PKD categories: {len(all_pkd)}")
-    print(f"  Total indicators: {len(all_wskaznik)}")
+    print(f"  Base indicators (0-36): {len(all_wskaznik)}")
     print(f"  Expected combinations: {len(all_pkd) * len(all_wskaznik)}")
     
-    # Prepare tasks - one for each existing combination
+    # Prepare tasks - one for each existing combination (BASE INDICATORS ONLY)
     tasks = []
     existing_combinations = set()
     
-    for (pkd_idx, wskaznik_idx), group in df.groupby(['PKD_INDEX', 'WSKAZNIK_INDEX']):
+    for (pkd_idx, wskaznik_idx), group in df[df['WSKAZNIK_INDEX'] < 1000].groupby(['PKD_INDEX', 'WSKAZNIK_INDEX']):
         series = group.sort_values('rok')['wartosc']
         
         if len(series) >= 2:  # Need at least 2 points for forecasting
@@ -435,7 +437,7 @@ def forecast_all_categories(df: pd.DataFrame, corr_matrix: pd.DataFrame) -> pd.D
     forecast_df = pd.DataFrame(all_forecasts)
     
     # Fill missing combinations with median values per indicator
-    print("\nFilling missing combinations...")
+    print("\nFilling missing base indicator combinations...")
     
     all_forecast_data = []
     
@@ -480,10 +482,306 @@ def forecast_all_categories(df: pd.DataFrame, corr_matrix: pd.DataFrame) -> pd.D
     
     complete_forecast_df = pd.DataFrame(all_forecast_data)
     
-    print(f"  Complete forecasts: {len(complete_forecast_df)} records")
+    print(f"  Complete base forecasts: {len(complete_forecast_df)} records")
     print(f"  Coverage: {len(complete_forecast_df) / (len(all_pkd) * len(all_wskaznik) * FORECAST_YEARS) * 100:.1f}%")
     
     return complete_forecast_df
+
+
+def calculate_derived_indicators(base_forecast_df: pd.DataFrame, historical_df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Calculate derived indicators (1000+) from forecasted base indicators (0-36).
+    Uses the same formulas as creating_complex_indicators.ipynb.
+    """
+    print("\nPreparing data for derived indicator calculation...")
+    
+    # Load wskaznik dictionary to get indicator codes
+    wskaznik_dict = pd.read_csv('results-pipeline/wskaznik_dictionary.csv', sep=';', encoding='utf-8')
+    wskaznik_dict = wskaznik_dict[wskaznik_dict['WSKAZNIK_INDEX'] < 1000]  # Only base indicators
+    
+    # Build indicator mapping
+    indicator_codes = {
+        'C': 'C Środki pieniężne',
+        'CF': 'CF Nadwyżka finansowa',
+        'DEPR': 'DEPR Amortyzacja',
+        'EN': 'EN Liczba jednostek',
+        'GS': 'GS Przychody ogółem',
+        'GS_I': 'GS (I) Przychody netto ze sprzedaży',
+        'INV': 'INV Zapasy',
+        'IO': 'IO Wartość nakładów',
+        'IP': 'IP Odsetki',
+        'LTC': 'LTC Długoterminowe kredyty',
+        'LTL': 'LTL Zobowiązania długoterminowe',
+        'NP': 'NP Wynik finansowy netto',
+        'NWC': 'NWC Kapitał obrotowy',
+        'OFE': 'OFE Pozostałe koszty',
+        'OP': 'OP Wynik na działalności operacyjnej',
+        'PEN': 'PEN Liczba rentownych',
+        'PNPM': 'PNPM Przychody netto',
+        'POS': 'POS Wynik na sprzedaży',
+        'PPO': 'PPO Pozostałe przychody',
+        'REC': 'REC Należności',
+        'STC': 'STC Krótkoterminowe kredyty',
+        'STL': 'STL Zobowiązania krótkoterminowe',
+        'TC': 'TC Koszty ogółem',
+        'UPADLOSC': 'Upadłość',
+        'ZAMKNIETE': 'Liczba firm zamkniętych',
+        'ZAWIESZONE': 'Liczba firm z zawieszoną',
+        'ZAREJESTROWANE': 'Liczba firm zarejestrowanych',
+        'NOWE': 'Liczba nowych firm',
+        'PRZYCHFIN': 'Przych. fin.',
+        'PRACUJACY': 'Przewidywana liczba pracujących Ogółem'
+    }
+    
+    indicator_mapping = {}
+    for code, search_pattern in indicator_codes.items():
+        matching = wskaznik_dict[wskaznik_dict['WSKAZNIK'].str.contains(search_pattern, case=False, na=False)]
+        if not matching.empty:
+            indicator_mapping[code] = matching.iloc[0]['WSKAZNIK_INDEX']
+    
+    print(f"Mapped {len(indicator_mapping)} base indicators")
+    
+    # Pivot forecasted data to wide format for calculations
+    pivot_df = base_forecast_df.pivot_table(
+        index=['rok', 'PKD_INDEX'],
+        columns='WSKAZNIK_INDEX',
+        values='wartosc',
+        aggfunc='mean'
+    ).reset_index()
+    
+    # Safe division helper
+    def safe_divide(numerator, denominator, fill_value=0):
+        result = numerator / denominator
+        result = result.replace([np.inf, -np.inf], fill_value)
+        result = result.fillna(fill_value)
+        return result
+    
+    # MinMax helper
+    def get_minmax(indicator_code):
+        idx = indicator_mapping.get(indicator_code)
+        if idx is not None:
+            minmax_row = wskaznik_dict[wskaznik_dict['WSKAZNIK_INDEX'] == idx]
+            if not minmax_row.empty:
+                return minmax_row.iloc[0].get('MinMax', 'Max')
+        return 'Max'
+    
+    # Store new indicators
+    new_indicators = []
+    
+    print("\nCalculating derived indicators...")
+    print("Set 1: Credit & Liquidity (1000-1013)...")
+    
+    # ZESTAW 1: ZDOLNOŚĆ KREDYTOWA I PŁYNNOŚĆ (1000-1013)
+    pivot_df['indicator_1000'] = safe_divide(pivot_df[indicator_mapping['NP']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1000)
+    
+    pivot_df['indicator_1001'] = safe_divide(pivot_df[indicator_mapping['OP']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1001)
+    
+    pivot_df['indicator_1002'] = safe_divide(
+        pivot_df[indicator_mapping['C']] + pivot_df[indicator_mapping['REC']] + pivot_df[indicator_mapping['INV']],
+        pivot_df[indicator_mapping['STL']]
+    )
+    new_indicators.append(1002)
+    
+    pivot_df['indicator_1003'] = safe_divide(
+        pivot_df[indicator_mapping['C']] + pivot_df[indicator_mapping['REC']],
+        pivot_df[indicator_mapping['STL']]
+    )
+    new_indicators.append(1003)
+    
+    pivot_df['indicator_1004'] = safe_divide(pivot_df[indicator_mapping['C']], pivot_df[indicator_mapping['STL']])
+    new_indicators.append(1004)
+    
+    pivot_df['indicator_1005'] = safe_divide(
+        pivot_df[indicator_mapping['STL']],
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']]
+    )
+    new_indicators.append(1005)
+    
+    pivot_df['indicator_1006'] = safe_divide(
+        pivot_df[indicator_mapping['LTL']],
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']]
+    )
+    new_indicators.append(1006)
+    
+    pivot_df['indicator_1007'] = safe_divide(pivot_df[indicator_mapping['OP']], pivot_df[indicator_mapping['IP']])
+    new_indicators.append(1007)
+    
+    pivot_df['indicator_1008'] = safe_divide(pivot_df[indicator_mapping['OFE']], pivot_df[indicator_mapping['OP']])
+    new_indicators.append(1008)
+    
+    pivot_df['indicator_1009'] = safe_divide(pivot_df[indicator_mapping['CF']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1009)
+    
+    pivot_df['indicator_1010'] = safe_divide(
+        pivot_df[indicator_mapping['OP']] + pivot_df[indicator_mapping['DEPR']],
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']]
+    )
+    new_indicators.append(1010)
+    
+    if 'UPADLOSC' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1011'] = safe_divide(pivot_df[indicator_mapping['UPADLOSC']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1011)
+    
+    if 'ZAMKNIETE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1012'] = safe_divide(pivot_df[indicator_mapping['ZAMKNIETE']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1012)
+    
+    pivot_df['indicator_1013'] = safe_divide(pivot_df[indicator_mapping['PEN']], pivot_df[indicator_mapping['EN']])
+    new_indicators.append(1013)
+    
+    print("Set 2: Operational Efficiency (1020-1029)...")
+    
+    # ZESTAW 2: EFEKTYWNOŚĆ OPERACYJNA (1020-1029)
+    pivot_df['indicator_1020'] = safe_divide(pivot_df[indicator_mapping['POS']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1020)
+    
+    if 'GS_I' in indicator_mapping and 'GS' in indicator_mapping:
+        pivot_df['indicator_1021'] = safe_divide(pivot_df[indicator_mapping['GS_I']], pivot_df[indicator_mapping['GS']])
+        new_indicators.append(1021)
+    
+    pivot_df['indicator_1022'] = safe_divide(pivot_df[indicator_mapping['TC']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1022)
+    
+    pivot_df['indicator_1023'] = safe_divide(pivot_df[indicator_mapping['PNPM']], pivot_df[indicator_mapping['REC']])
+    new_indicators.append(1023)
+    
+    pivot_df['indicator_1024'] = safe_divide(pivot_df[indicator_mapping['TC']], pivot_df[indicator_mapping['INV']])
+    new_indicators.append(1024)
+    
+    pivot_df['indicator_1025'] = safe_divide(
+        pivot_df[indicator_mapping['PNPM']],
+        pivot_df[indicator_mapping['C']] + pivot_df[indicator_mapping['REC']] + pivot_df[indicator_mapping['INV']]
+    )
+    new_indicators.append(1025)
+    
+    pivot_df['indicator_1026'] = safe_divide(pivot_df[indicator_mapping['IO']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1026)
+    
+    if 'PRZYCHFIN' in indicator_mapping and 'GS' in indicator_mapping:
+        pivot_df['indicator_1027'] = safe_divide(pivot_df[indicator_mapping['PRZYCHFIN']], pivot_df[indicator_mapping['GS']])
+        new_indicators.append(1027)
+    
+    if 'ZAREJESTROWANE' in indicator_mapping and 'ZAMKNIETE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1028'] = safe_divide(
+            pivot_df[indicator_mapping['ZAREJESTROWANE']] - pivot_df[indicator_mapping['ZAMKNIETE']],
+            pivot_df[indicator_mapping['EN']]
+        )
+        new_indicators.append(1028)
+    
+    if 'PRACUJACY' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1029'] = safe_divide(pivot_df[indicator_mapping['PRACUJACY']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1029)
+    
+    print("Set 3: Industry Development (1040-1051)...")
+    
+    # ZESTAW 3: ROZWÓJ BRANŻY (1040-1051)
+    pivot_df['indicator_1040'] = safe_divide(pivot_df[indicator_mapping['IO']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1040)
+    
+    pivot_df['indicator_1041'] = safe_divide(pivot_df[indicator_mapping['DEPR']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1041)
+    
+    pivot_df['indicator_1042'] = safe_divide(pivot_df[indicator_mapping['CF']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1042)
+    
+    pivot_df['indicator_1043'] = safe_divide(
+        pivot_df[indicator_mapping['OP']] + pivot_df[indicator_mapping['DEPR']],
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']]
+    )
+    new_indicators.append(1043)
+    
+    pivot_df['indicator_1044'] = safe_divide(pivot_df[indicator_mapping['PEN']], pivot_df[indicator_mapping['EN']])
+    new_indicators.append(1044)
+    
+    if 'ZAREJESTROWANE' in indicator_mapping and 'ZAMKNIETE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1045'] = safe_divide(
+            pivot_df[indicator_mapping['ZAREJESTROWANE']] - pivot_df[indicator_mapping['ZAMKNIETE']],
+            pivot_df[indicator_mapping['EN']]
+        )
+        new_indicators.append(1045)
+    
+    if 'NOWE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1046'] = safe_divide(pivot_df[indicator_mapping['NOWE']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1046)
+    
+    if 'ZAMKNIETE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1047'] = safe_divide(pivot_df[indicator_mapping['ZAMKNIETE']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1047)
+    
+    if 'ZAWIESZONE' in indicator_mapping and 'EN' in indicator_mapping:
+        pivot_df['indicator_1048'] = safe_divide(pivot_df[indicator_mapping['ZAWIESZONE']], pivot_df[indicator_mapping['EN']])
+        new_indicators.append(1048)
+    
+    pivot_df['indicator_1049'] = safe_divide(pivot_df[indicator_mapping['OP']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1049)
+    
+    pivot_df['indicator_1050'] = safe_divide(pivot_df[indicator_mapping['POS']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1050)
+    
+    pivot_df['indicator_1051'] = safe_divide(
+        pivot_df[indicator_mapping['STC']] + pivot_df[indicator_mapping['LTC']],
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']]
+    )
+    new_indicators.append(1051)
+    
+    print("Set 4: Polish Named Indicators (1060-1067)...")
+    
+    # ZESTAW 4: POLISH NAMED INDICATORS (1060-1067)
+    pivot_df['indicator_1060'] = safe_divide(pivot_df[indicator_mapping['NP']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1060)
+    
+    pivot_df['indicator_1061'] = safe_divide(pivot_df[indicator_mapping['OP']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1061)
+    
+    pivot_df['indicator_1062'] = safe_divide(
+        pivot_df[indicator_mapping['C']] + pivot_df[indicator_mapping['REC']] + pivot_df[indicator_mapping['INV']],
+        pivot_df[indicator_mapping['STL']]
+    )
+    new_indicators.append(1062)
+    
+    pivot_df['indicator_1063'] = safe_divide(
+        pivot_df[indicator_mapping['C']] + pivot_df[indicator_mapping['REC']],
+        pivot_df[indicator_mapping['STL']]
+    )
+    new_indicators.append(1063)
+    
+    pivot_df['indicator_1064'] = safe_divide(
+        pivot_df[indicator_mapping['STL']] + pivot_df[indicator_mapping['LTL']],
+        pivot_df[indicator_mapping['PNPM']]
+    )
+    new_indicators.append(1064)
+    
+    pivot_df['indicator_1065'] = safe_divide(pivot_df[indicator_mapping['OP']], pivot_df[indicator_mapping['IP']])
+    new_indicators.append(1065)
+    
+    pivot_df['indicator_1066'] = safe_divide(pivot_df[indicator_mapping['PNPM']], pivot_df[indicator_mapping['REC']])
+    new_indicators.append(1066)
+    
+    pivot_df['indicator_1067'] = safe_divide(pivot_df[indicator_mapping['CF']], pivot_df[indicator_mapping['PNPM']])
+    new_indicators.append(1067)
+    
+    print(f"\nCalculated {len(new_indicators)} derived indicators")
+    
+    # Convert back to long format
+    derived_data = []
+    for indicator_idx in new_indicators:
+        col_name = f'indicator_{indicator_idx}'
+        if col_name in pivot_df.columns:
+            temp_df = pivot_df[['rok', 'PKD_INDEX', col_name]].copy()
+            temp_df.columns = ['rok', 'PKD_INDEX', 'wartosc']
+            temp_df['WSKAZNIK_INDEX'] = indicator_idx
+            derived_data.append(temp_df)
+    
+    derived_df = pd.concat(derived_data, ignore_index=True)
+    derived_df = derived_df[['rok', 'wartosc', 'WSKAZNIK_INDEX', 'PKD_INDEX']]
+    
+    print(f"Derived indicators DataFrame: {derived_df.shape}")
+    print(f"Years: {sorted(derived_df['rok'].unique())}")
+    print(f"Indicators: {sorted(derived_df['WSKAZNIK_INDEX'].unique())}")
+    
+    return derived_df
 
 
 def save_predictions(forecast_df: pd.DataFrame):
@@ -561,11 +859,27 @@ if __name__ == '__main__':
     # Calculate correlations (skipped in fast mode)
     corr_matrix = calculate_correlations(df)
     
-    # Forecast ALL combinations
-    forecasts = forecast_all_categories(df, corr_matrix)
+    # Forecast ONLY BASE INDICATORS (0-36)
+    print("\n" + "="*80)
+    print("STEP 1: FORECASTING BASE INDICATORS (0-36)")
+    print("="*80)
+    base_forecasts = forecast_all_categories(df, corr_matrix)
+    
+    # Calculate DERIVED INDICATORS (1000+) from forecasted base values
+    print("\n" + "="*80)
+    print("STEP 2: CALCULATING DERIVED INDICATORS (1000+)")
+    print("="*80)
+    derived_forecasts = calculate_derived_indicators(base_forecasts, df)
+    
+    # Combine base and derived forecasts
+    print("\n" + "="*80)
+    print("STEP 3: COMBINING FORECASTS")
+    print("="*80)
+    all_forecasts = pd.concat([base_forecasts, derived_forecasts], ignore_index=True)
+    print(f"Total forecasts: {len(all_forecasts)} (base: {len(base_forecasts)}, derived: {len(derived_forecasts)})")
     
     # Save results
-    save_predictions(forecasts)
+    save_predictions(all_forecasts)
     
     print("\n" + "="*80)
     print("FORECASTING COMPLETE")

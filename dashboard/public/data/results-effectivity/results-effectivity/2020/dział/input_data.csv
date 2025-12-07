@@ -1,0 +1,2872 @@
+kpi_id;cat_id;value;direction
+01;Sales Profitability (POS/PNPM);0.023051111321489;max
+02;Sales Profitability (POS/PNPM);0.0283802349184041;max
+03;Sales Profitability (POS/PNPM);-0.0714184698062508;max
+05;Sales Profitability (POS/PNPM);-0.1663985848354083;max
+06;Sales Profitability (POS/PNPM);0.0424856105012361;max
+07;Sales Profitability (POS/PNPM);0.0424856105012361;max
+08;Sales Profitability (POS/PNPM);0.103930828029515;max
+09;Sales Profitability (POS/PNPM);0.0370899831843679;max
+10;Sales Profitability (POS/PNPM);0.0480965232120811;max
+11;Sales Profitability (POS/PNPM);0.0825781755340376;max
+12;Sales Profitability (POS/PNPM);0.039711661256669;max
+13;Sales Profitability (POS/PNPM);0.0638254302848974;max
+14;Sales Profitability (POS/PNPM);0.0727527709247026;max
+15;Sales Profitability (POS/PNPM);0.0500398919847796;max
+16;Sales Profitability (POS/PNPM);0.0647267712352016;max
+17;Sales Profitability (POS/PNPM);0.1085524914300058;max
+18;Sales Profitability (POS/PNPM);0.0631730365812239;max
+19;Sales Profitability (POS/PNPM);-0.0021292417228221;max
+20;Sales Profitability (POS/PNPM);0.0739329049154827;max
+21;Sales Profitability (POS/PNPM);0.1419082379373262;max
+22;Sales Profitability (POS/PNPM);0.0859405982013917;max
+23;Sales Profitability (POS/PNPM);0.0989452521539987;max
+24;Sales Profitability (POS/PNPM);0.0134758984967719;max
+25;Sales Profitability (POS/PNPM);0.0719472890871164;max
+26;Sales Profitability (POS/PNPM);0.0432795636085622;max
+27;Sales Profitability (POS/PNPM);0.0399177834720189;max
+28;Sales Profitability (POS/PNPM);0.070537900618261;max
+29;Sales Profitability (POS/PNPM);0.0226478635708151;max
+30;Sales Profitability (POS/PNPM);0.0423582362855685;max
+31;Sales Profitability (POS/PNPM);0.0663911065479457;max
+32;Sales Profitability (POS/PNPM);0.0767745785211839;max
+33;Sales Profitability (POS/PNPM);0.0409006095645615;max
+35;Sales Profitability (POS/PNPM);0.0841103776521468;max
+36;Sales Profitability (POS/PNPM);0.0033747281001755;max
+37;Sales Profitability (POS/PNPM);-0.0040267719388791;max
+38;Sales Profitability (POS/PNPM);0.1152867348385976;max
+39;Sales Profitability (POS/PNPM);0.1134208555318457;max
+41;Sales Profitability (POS/PNPM);0.0703805736356962;max
+42;Sales Profitability (POS/PNPM);0.0531406307520853;max
+43;Sales Profitability (POS/PNPM);0.0746815199030005;max
+46;Sales Profitability (POS/PNPM);0.0363568273054567;max
+47;Sales Profitability (POS/PNPM);0.0359490844907234;max
+49;Sales Profitability (POS/PNPM);0.0269295728240977;max
+50;Sales Profitability (POS/PNPM);0.069300520477291;max
+51;Sales Profitability (POS/PNPM);0.0750951821799983;max
+52;Sales Profitability (POS/PNPM);0.0100770965174136;max
+53;Sales Profitability (POS/PNPM);0.0151003780814938;max
+55;Sales Profitability (POS/PNPM);-0.2192007322725767;max
+56;Sales Profitability (POS/PNPM);-0.0093441759063691;max
+58;Sales Profitability (POS/PNPM);0.2130543122910088;max
+59;Sales Profitability (POS/PNPM);-0.0348264616728811;max
+60;Sales Profitability (POS/PNPM);0.1420290121781217;max
+61;Sales Profitability (POS/PNPM);0.0941282266072174;max
+62;Sales Profitability (POS/PNPM);0.089151303645713;max
+63;Sales Profitability (POS/PNPM);0.1765839189432685;max
+64;Sales Profitability (POS/PNPM);0.1640549302188422;max
+65;Sales Profitability (POS/PNPM);0.0424856105012361;max
+66;Sales Profitability (POS/PNPM);0.0647580933840475;max
+68;Sales Profitability (POS/PNPM);0.0483293786989959;max
+69;Sales Profitability (POS/PNPM);0.12563049687761;max
+70;Sales Profitability (POS/PNPM);0.0555364330752163;max
+71;Sales Profitability (POS/PNPM);0.048742194114969;max
+72;Sales Profitability (POS/PNPM);-0.046682702358717;max
+73;Sales Profitability (POS/PNPM);0.0647359282989668;max
+74;Sales Profitability (POS/PNPM);0.0652873540188488;max
+75;Sales Profitability (POS/PNPM);0.1438165438165438;max
+77;Sales Profitability (POS/PNPM);0.1528178048247948;max
+78;Sales Profitability (POS/PNPM);0.0264475086646429;max
+79;Sales Profitability (POS/PNPM);-0.1064844897414215;max
+80;Sales Profitability (POS/PNPM);-0.029385482893561;max
+81;Sales Profitability (POS/PNPM);0.0188724294813466;max
+82;Sales Profitability (POS/PNPM);0.0568512780935183;max
+84;Sales Profitability (POS/PNPM);0.0424856105012361;max
+85;Sales Profitability (POS/PNPM);-0.3819522096358598;max
+86;Sales Profitability (POS/PNPM);0.0238237777887028;max
+87;Sales Profitability (POS/PNPM);0.0627043437645959;max
+88;Sales Profitability (POS/PNPM);-0.0163907123922668;max
+90;Sales Profitability (POS/PNPM);-0.4872448979591837;max
+91;Sales Profitability (POS/PNPM);-0.2573518011266732;max
+92;Sales Profitability (POS/PNPM);0.010685905414295;max
+93;Sales Profitability (POS/PNPM);-0.1682028399451532;max
+94;Sales Profitability (POS/PNPM);-0.1589619965967101;max
+95;Sales Profitability (POS/PNPM);0.0299836583405903;max
+96;Sales Profitability (POS/PNPM);0.0216766697893741;max
+97;Sales Profitability (POS/PNPM);0.0424856105012361;max
+98;Sales Profitability (POS/PNPM);0.0424856105012361;max
+99;Sales Profitability (POS/PNPM);0.0424856105012361;max
+01;Cost Share Ratio (TC/PNPM);1.015434903804685;max
+02;Cost Share Ratio (TC/PNPM);1.14460916772399;max
+03;Cost Share Ratio (TC/PNPM);1.1341158723424316;max
+05;Cost Share Ratio (TC/PNPM);1.523562855580762;max
+06;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+07;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+08;Cost Share Ratio (TC/PNPM);0.9392584354480418;max
+09;Cost Share Ratio (TC/PNPM);1.973077608269641;max
+10;Cost Share Ratio (TC/PNPM);1.0026994804171467;max
+11;Cost Share Ratio (TC/PNPM);0.9328444164040832;max
+12;Cost Share Ratio (TC/PNPM);0.9808631019932674;max
+13;Cost Share Ratio (TC/PNPM);0.9688786448477972;max
+14;Cost Share Ratio (TC/PNPM);0.9705323745958956;max
+15;Cost Share Ratio (TC/PNPM);0.9644501043328833;max
+16;Cost Share Ratio (TC/PNPM);0.9594915081801488;max
+17;Cost Share Ratio (TC/PNPM);0.9111498013097092;max
+18;Cost Share Ratio (TC/PNPM);0.9661704048254304;max
+19;Cost Share Ratio (TC/PNPM);1.1195954449439112;max
+20;Cost Share Ratio (TC/PNPM);0.949479653412508;max
+21;Cost Share Ratio (TC/PNPM);0.9416246058662036;max
+22;Cost Share Ratio (TC/PNPM);0.9459991701489252;max
+23;Cost Share Ratio (TC/PNPM);0.935769459201116;max
+24;Cost Share Ratio (TC/PNPM);1.0459927766155546;max
+25;Cost Share Ratio (TC/PNPM);0.9615556977151992;max
+26;Cost Share Ratio (TC/PNPM);0.9760518235458318;max
+27;Cost Share Ratio (TC/PNPM);0.9776819605845848;max
+28;Cost Share Ratio (TC/PNPM);0.9766578279241132;max
+29;Cost Share Ratio (TC/PNPM);1.0062142538673793;max
+30;Cost Share Ratio (TC/PNPM);1.0407262651210352;max
+31;Cost Share Ratio (TC/PNPM);0.9533063626016488;max
+32;Cost Share Ratio (TC/PNPM);0.940158280477774;max
+33;Cost Share Ratio (TC/PNPM);1.0087870085014787;max
+35;Cost Share Ratio (TC/PNPM);1.0218921125531035;max
+36;Cost Share Ratio (TC/PNPM);1.0382684849825894;max
+37;Cost Share Ratio (TC/PNPM);1.0471243226029618;max
+38;Cost Share Ratio (TC/PNPM);0.9201143051100265;max
+39;Cost Share Ratio (TC/PNPM);0.9146163955739582;max
+41;Cost Share Ratio (TC/PNPM);0.9731647975383736;max
+42;Cost Share Ratio (TC/PNPM);0.9774554376327887;max
+43;Cost Share Ratio (TC/PNPM);0.9486142849611842;max
+46;Cost Share Ratio (TC/PNPM);0.9796981233349964;max
+47;Cost Share Ratio (TC/PNPM);0.98809432563463;max
+49;Cost Share Ratio (TC/PNPM);1.007226248245173;max
+50;Cost Share Ratio (TC/PNPM);0.9597145513008316;max
+51;Cost Share Ratio (TC/PNPM);0.9501199004977776;max
+52;Cost Share Ratio (TC/PNPM);1.056465824820914;max
+53;Cost Share Ratio (TC/PNPM);1.0208749493743008;max
+55;Cost Share Ratio (TC/PNPM);1.335811245058134;max
+56;Cost Share Ratio (TC/PNPM);1.0607907967038803;max
+58;Cost Share Ratio (TC/PNPM);0.8428231445529119;max
+59;Cost Share Ratio (TC/PNPM);1.1149411192139518;max
+60;Cost Share Ratio (TC/PNPM);0.944956914201061;max
+61;Cost Share Ratio (TC/PNPM);0.9676054961106276;max
+62;Cost Share Ratio (TC/PNPM);0.9345471836716008;max
+63;Cost Share Ratio (TC/PNPM);0.8737416955003418;max
+64;Cost Share Ratio (TC/PNPM);1.3917128230024052;max
+65;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+66;Cost Share Ratio (TC/PNPM);1.0786520519344946;max
+68;Cost Share Ratio (TC/PNPM);1.051089944259532;max
+69;Cost Share Ratio (TC/PNPM);0.96800181904108;max
+70;Cost Share Ratio (TC/PNPM);1.0704051968324404;max
+71;Cost Share Ratio (TC/PNPM);0.973988656558078;max
+72;Cost Share Ratio (TC/PNPM);1.0980344407456673;max
+73;Cost Share Ratio (TC/PNPM);0.9632495886411488;max
+74;Cost Share Ratio (TC/PNPM);0.9636271197477466;max
+75;Cost Share Ratio (TC/PNPM);0.8655746655746656;max
+77;Cost Share Ratio (TC/PNPM);1.029885537969987;max
+78;Cost Share Ratio (TC/PNPM);0.9963042854092896;max
+79;Cost Share Ratio (TC/PNPM);1.1791000934621034;max
+80;Cost Share Ratio (TC/PNPM);1.0459201665280071;max
+81;Cost Share Ratio (TC/PNPM);1.0004964513193813;max
+82;Cost Share Ratio (TC/PNPM);0.9816634884478928;max
+84;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+85;Cost Share Ratio (TC/PNPM);1.4684598181729789;max
+86;Cost Share Ratio (TC/PNPM);1.00665908271999;max
+87;Cost Share Ratio (TC/PNPM);0.9613692978359022;max
+88;Cost Share Ratio (TC/PNPM);1.0253563349201282;max
+90;Cost Share Ratio (TC/PNPM);1.5651927437641722;max
+91;Cost Share Ratio (TC/PNPM);1.3196547625200268;max
+92;Cost Share Ratio (TC/PNPM);0.9943057404313276;max
+93;Cost Share Ratio (TC/PNPM);1.290241465058449;max
+94;Cost Share Ratio (TC/PNPM);2.5497022121384005;max
+95;Cost Share Ratio (TC/PNPM);0.9981283780788386;max
+96;Cost Share Ratio (TC/PNPM);1.0950797186873873;max
+97;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+98;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+99;Cost Share Ratio (TC/PNPM);0.9496955314016944;max
+01;Receivables Turnover (PNPM/REC);6.237132678567914;max
+02;Receivables Turnover (PNPM/REC);13.07914141337038;max
+03;Receivables Turnover (PNPM/REC);4.4885738468049095;max
+05;Receivables Turnover (PNPM/REC);9.425124863589645;max
+06;Receivables Turnover (PNPM/REC);6.277241918665276;max
+07;Receivables Turnover (PNPM/REC);6.277241918665276;max
+08;Receivables Turnover (PNPM/REC);6.724148285916326;max
+09;Receivables Turnover (PNPM/REC);3.374728723092263;max
+10;Receivables Turnover (PNPM/REC);8.054896961971531;max
+11;Receivables Turnover (PNPM/REC);7.561502776724581;max
+12;Receivables Turnover (PNPM/REC);20.86243881288438;max
+13;Receivables Turnover (PNPM/REC);5.956549470194976;max
+14;Receivables Turnover (PNPM/REC);5.9201716519591;max
+15;Receivables Turnover (PNPM/REC);4.336913269719594;max
+16;Receivables Turnover (PNPM/REC);7.494203045881864;max
+17;Receivables Turnover (PNPM/REC);6.143572656465544;max
+18;Receivables Turnover (PNPM/REC);5.491004288421262;max
+19;Receivables Turnover (PNPM/REC);14.332302324826369;max
+20;Receivables Turnover (PNPM/REC);6.563964828075281;max
+21;Receivables Turnover (PNPM/REC);5.262352005333915;max
+22;Receivables Turnover (PNPM/REC);5.865299776163125;max
+23;Receivables Turnover (PNPM/REC);6.0531879614036725;max
+24;Receivables Turnover (PNPM/REC);6.808125265165484;max
+25;Receivables Turnover (PNPM/REC);5.745439332807287;max
+26;Receivables Turnover (PNPM/REC);4.639317576985767;max
+27;Receivables Turnover (PNPM/REC);4.342558572109286;max
+28;Receivables Turnover (PNPM/REC);4.367339342213714;max
+29;Receivables Turnover (PNPM/REC);5.605959587495631;max
+30;Receivables Turnover (PNPM/REC);4.045341689379672;max
+31;Receivables Turnover (PNPM/REC);8.256161507636339;max
+32;Receivables Turnover (PNPM/REC);6.437359298181854;max
+33;Receivables Turnover (PNPM/REC);4.649558900979454;max
+35;Receivables Turnover (PNPM/REC);6.292028242585118;max
+36;Receivables Turnover (PNPM/REC);6.734725357083722;max
+37;Receivables Turnover (PNPM/REC);7.210767196395625;max
+38;Receivables Turnover (PNPM/REC);5.146670822073411;max
+39;Receivables Turnover (PNPM/REC);6.078773301262778;max
+41;Receivables Turnover (PNPM/REC);4.738726634877092;max
+42;Receivables Turnover (PNPM/REC);3.986965707337049;max
+43;Receivables Turnover (PNPM/REC);4.088375579815396;max
+46;Receivables Turnover (PNPM/REC);8.062634974117676;max
+47;Receivables Turnover (PNPM/REC);16.911231600726925;max
+49;Receivables Turnover (PNPM/REC);5.617158727557584;max
+50;Receivables Turnover (PNPM/REC);8.25538585569042;max
+51;Receivables Turnover (PNPM/REC);4.650850155058168;max
+52;Receivables Turnover (PNPM/REC);4.884269584245076;max
+53;Receivables Turnover (PNPM/REC);7.544773413897281;max
+55;Receivables Turnover (PNPM/REC);8.078889815441256;max
+56;Receivables Turnover (PNPM/REC);12.041245026673662;max
+58;Receivables Turnover (PNPM/REC);3.4643689470301173;max
+59;Receivables Turnover (PNPM/REC);2.8940212268074395;max
+60;Receivables Turnover (PNPM/REC);9.871978874016207;max
+61;Receivables Turnover (PNPM/REC);3.7087937380807223;max
+62;Receivables Turnover (PNPM/REC);4.316353092714054;max
+63;Receivables Turnover (PNPM/REC);4.990836009349674;max
+64;Receivables Turnover (PNPM/REC);0.3972585654886069;max
+65;Receivables Turnover (PNPM/REC);6.277241918665276;max
+66;Receivables Turnover (PNPM/REC);7.899855124954726;max
+68;Receivables Turnover (PNPM/REC);7.830951507230004;max
+69;Receivables Turnover (PNPM/REC);4.445470671595199;max
+70;Receivables Turnover (PNPM/REC);2.688463233029637;max
+71;Receivables Turnover (PNPM/REC);3.824467955272172;max
+72;Receivables Turnover (PNPM/REC);5.847511362873072;max
+73;Receivables Turnover (PNPM/REC);3.291188540919595;max
+74;Receivables Turnover (PNPM/REC);4.590544844157785;max
+75;Receivables Turnover (PNPM/REC);3.958288307758807;max
+77;Receivables Turnover (PNPM/REC);1.9758851724593225;max
+78;Receivables Turnover (PNPM/REC);4.674887094985525;max
+79;Receivables Turnover (PNPM/REC);2.7377403397044846;max
+80;Receivables Turnover (PNPM/REC);6.1835483905113735;max
+81;Receivables Turnover (PNPM/REC);5.395634004179039;max
+82;Receivables Turnover (PNPM/REC);4.164368045631267;max
+84;Receivables Turnover (PNPM/REC);6.277241918665276;max
+85;Receivables Turnover (PNPM/REC);5.458864118895966;max
+86;Receivables Turnover (PNPM/REC);7.750984005093675;max
+87;Receivables Turnover (PNPM/REC);7.08354011579818;max
+88;Receivables Turnover (PNPM/REC);11.72546786004882;max
+90;Receivables Turnover (PNPM/REC);1.9589117157134923;max
+91;Receivables Turnover (PNPM/REC);5.468136215910697;max
+92;Receivables Turnover (PNPM/REC);172.09194791389848;max
+93;Receivables Turnover (PNPM/REC);5.381450261387228;max
+94;Receivables Turnover (PNPM/REC);2.583150183150183;max
+95;Receivables Turnover (PNPM/REC);5.404330141630109;max
+96;Receivables Turnover (PNPM/REC);6.8239990211971975;max
+97;Receivables Turnover (PNPM/REC);6.277241918665276;max
+98;Receivables Turnover (PNPM/REC);6.277241918665276;max
+99;Receivables Turnover (PNPM/REC);6.277241918665276;max
+01;Inventory Turnover (TC/INV);4.641174929265296;max
+02;Inventory Turnover (TC/INV);34.191527196652714;max
+03;Inventory Turnover (TC/INV);5.1871496334627;max
+05;Inventory Turnover (TC/INV);17.553947834558496;max
+06;Inventory Turnover (TC/INV);13.58725262705974;max
+07;Inventory Turnover (TC/INV);13.58725262705974;max
+08;Inventory Turnover (TC/INV);10.362700065165216;max
+09;Inventory Turnover (TC/INV);27.07751937984496;max
+10;Inventory Turnover (TC/INV);9.805149113824074;max
+11;Inventory Turnover (TC/INV);14.900332147652588;max
+12;Inventory Turnover (TC/INV);8.872494211703245;max
+13;Inventory Turnover (TC/INV);5.464152689925727;max
+14;Inventory Turnover (TC/INV);3.9470682400692807;max
+15;Inventory Turnover (TC/INV);4.235267959411931;max
+16;Inventory Turnover (TC/INV);7.469687940801532;max
+17;Inventory Turnover (TC/INV);9.485790666171162;max
+18;Inventory Turnover (TC/INV);10.726777774416986;max
+19;Inventory Turnover (TC/INV);10.97989686977994;max
+20;Inventory Turnover (TC/INV);7.693530529263565;max
+21;Inventory Turnover (TC/INV);4.565428945047593;max
+22;Inventory Turnover (TC/INV);7.45115541318073;max
+23;Inventory Turnover (TC/INV);6.630136826620227;max
+24;Inventory Turnover (TC/INV);5.985809701351594;max
+25;Inventory Turnover (TC/INV);6.075658062776476;max
+26;Inventory Turnover (TC/INV);8.013061196843639;max
+27;Inventory Turnover (TC/INV);6.056314056061551;max
+28;Inventory Turnover (TC/INV);4.842231351834773;max
+29;Inventory Turnover (TC/INV);9.395338983050848;max
+30;Inventory Turnover (TC/INV);2.8566640738477167;max
+31;Inventory Turnover (TC/INV);8.205952969277655;max
+32;Inventory Turnover (TC/INV);4.793770165401269;max
+33;Inventory Turnover (TC/INV);6.565851303129159;max
+35;Inventory Turnover (TC/INV);17.76741427973206;max
+36;Inventory Turnover (TC/INV);56.77329654001274;max
+37;Inventory Turnover (TC/INV);58.82960083904004;max
+38;Inventory Turnover (TC/INV);32.12285289086079;max
+39;Inventory Turnover (TC/INV);13.879691185931804;max
+41;Inventory Turnover (TC/INV);3.500085770176055;max
+42;Inventory Turnover (TC/INV);19.687680705550388;max
+43;Inventory Turnover (TC/INV);17.074362478405487;max
+46;Inventory Turnover (TC/INV);8.945721604877216;max
+47;Inventory Turnover (TC/INV);8.184607561674781;max
+49;Inventory Turnover (TC/INV);52.29279848223598;max
+50;Inventory Turnover (TC/INV);60.386663632225776;max
+51;Inventory Turnover (TC/INV);18.438655288337213;max
+52;Inventory Turnover (TC/INV);45.1465581277808;max
+53;Inventory Turnover (TC/INV);372.1050875729776;max
+55;Inventory Turnover (TC/INV);26.54099756220253;max
+56;Inventory Turnover (TC/INV);56.76536471658423;max
+58;Inventory Turnover (TC/INV);11.596078151739874;max
+59;Inventory Turnover (TC/INV);43.282505206783696;max
+60;Inventory Turnover (TC/INV);10.311928908524951;max
+61;Inventory Turnover (TC/INV);43.6957269766385;max
+62;Inventory Turnover (TC/INV);58.43421857312011;max
+63;Inventory Turnover (TC/INV);158.9751791876825;max
+64;Inventory Turnover (TC/INV);12.65097036256958;max
+65;Inventory Turnover (TC/INV);13.58725262705974;max
+66;Inventory Turnover (TC/INV);189.85180012414648;max
+68;Inventory Turnover (TC/INV);5.164915085845571;max
+69;Inventory Turnover (TC/INV);385.8714454976304;max
+70;Inventory Turnover (TC/INV);36.65377902066403;max
+71;Inventory Turnover (TC/INV);28.632533511226;max
+72;Inventory Turnover (TC/INV);7.13026743711896;max
+73;Inventory Turnover (TC/INV);51.54806316641922;max
+74;Inventory Turnover (TC/INV);30.260165159260715;max
+75;Inventory Turnover (TC/INV);9.28433382137628;max
+77;Inventory Turnover (TC/INV);15.574161330121614;max
+78;Inventory Turnover (TC/INV);230.19826119826124;max
+79;Inventory Turnover (TC/INV);319.1951807228916;max
+80;Inventory Turnover (TC/INV);210.8683347713546;max
+81;Inventory Turnover (TC/INV);138.83151515151516;max
+82;Inventory Turnover (TC/INV);29.125716953448045;max
+84;Inventory Turnover (TC/INV);13.58725262705974;max
+85;Inventory Turnover (TC/INV);65.37824675324676;max
+86;Inventory Turnover (TC/INV);47.3814733450498;max
+87;Inventory Turnover (TC/INV);1452.9117647058822;max
+88;Inventory Turnover (TC/INV);2638.571428571428;max
+90;Inventory Turnover (TC/INV);11.82441113490364;max
+91;Inventory Turnover (TC/INV);36.97900072411296;max
+92;Inventory Turnover (TC/INV);422.7109798129;max
+93;Inventory Turnover (TC/INV);69.58861870142893;max
+94;Inventory Turnover (TC/INV);32.84109589041096;max
+95;Inventory Turnover (TC/INV);18.375886524822697;max
+96;Inventory Turnover (TC/INV);32.83281816960086;max
+97;Inventory Turnover (TC/INV);13.58725262705974;max
+98;Inventory Turnover (TC/INV);13.58725262705974;max
+99;Inventory Turnover (TC/INV);13.58725262705974;max
+01;Current Asset Turnover (PNPM/(C+REC+INV));2.104197239025492;max
+02;Current Asset Turnover (PNPM/(C+REC+INV));2.622056883670965;max
+03;Current Asset Turnover (PNPM/(C+REC+INV));1.0645889792231256;max
+05;Current Asset Turnover (PNPM/(C+REC+INV));3.466524771668965;max
+06;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+07;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+08;Current Asset Turnover (PNPM/(C+REC+INV));2.465000497152029;max
+09;Current Asset Turnover (PNPM/(C+REC+INV));0.933696031417606;max
+10;Current Asset Turnover (PNPM/(C+REC+INV));3.657604069834195;max
+11;Current Asset Turnover (PNPM/(C+REC+INV));4.463466556430018;max
+12;Current Asset Turnover (PNPM/(C+REC+INV));6.2244210153635615;max
+13;Current Asset Turnover (PNPM/(C+REC+INV));2.387350119232879;max
+14;Current Asset Turnover (PNPM/(C+REC+INV));1.828625257626532;max
+15;Current Asset Turnover (PNPM/(C+REC+INV));1.5996936882099415;max
+16;Current Asset Turnover (PNPM/(C+REC+INV));2.9499477411505337;max
+17;Current Asset Turnover (PNPM/(C+REC+INV));3.140877773558292;max
+18;Current Asset Turnover (PNPM/(C+REC+INV));2.605791984552184;max
+19;Current Asset Turnover (PNPM/(C+REC+INV));4.990879459281297;max
+20;Current Asset Turnover (PNPM/(C+REC+INV));2.695376097754857;max
+21;Current Asset Turnover (PNPM/(C+REC+INV));2.021046880427149;max
+22;Current Asset Turnover (PNPM/(C+REC+INV));2.697372364008805;max
+23;Current Asset Turnover (PNPM/(C+REC+INV));2.4372242037118346;max
+24;Current Asset Turnover (PNPM/(C+REC+INV));2.3512081610035387;max
+25;Current Asset Turnover (PNPM/(C+REC+INV));2.337228999234596;max
+26;Current Asset Turnover (PNPM/(C+REC+INV));2.440976922887581;max
+27;Current Asset Turnover (PNPM/(C+REC+INV));2.3258590899971225;max
+28;Current Asset Turnover (PNPM/(C+REC+INV));1.758387191545189;max
+29;Current Asset Turnover (PNPM/(C+REC+INV));3.0538860372100904;max
+30;Current Asset Turnover (PNPM/(C+REC+INV));1.409463184011167;max
+31;Current Asset Turnover (PNPM/(C+REC+INV));3.1861621855631124;max
+32;Current Asset Turnover (PNPM/(C+REC+INV));2.327029783724507;max
+33;Current Asset Turnover (PNPM/(C+REC+INV));1.9531172803074908;max
+35;Current Asset Turnover (PNPM/(C+REC+INV));3.2876163333735917;max
+36;Current Asset Turnover (PNPM/(C+REC+INV));2.535967079809803;max
+37;Current Asset Turnover (PNPM/(C+REC+INV));2.608414823471451;max
+38;Current Asset Turnover (PNPM/(C+REC+INV));2.860168593481873;max
+39;Current Asset Turnover (PNPM/(C+REC+INV));2.552685689549439;max
+41;Current Asset Turnover (PNPM/(C+REC+INV));1.502904241662082;max
+42;Current Asset Turnover (PNPM/(C+REC+INV));2.053147522408138;max
+43;Current Asset Turnover (PNPM/(C+REC+INV));2.393808232143286;max
+46;Current Asset Turnover (PNPM/(C+REC+INV));3.5738764114836754;max
+47;Current Asset Turnover (PNPM/(C+REC+INV));4.306809154975631;max
+49;Current Asset Turnover (PNPM/(C+REC+INV));3.182222848985351;max
+50;Current Asset Turnover (PNPM/(C+REC+INV));4.643628545995063;max
+51;Current Asset Turnover (PNPM/(C+REC+INV));2.538121766704907;max
+52;Current Asset Turnover (PNPM/(C+REC+INV));1.9164970925989464;max
+53;Current Asset Turnover (PNPM/(C+REC+INV));3.790578867937621;max
+55;Current Asset Turnover (PNPM/(C+REC+INV));2.0380888873011904;max
+56;Current Asset Turnover (PNPM/(C+REC+INV));5.30675898152951;max
+58;Current Asset Turnover (PNPM/(C+REC+INV));1.7489403975911042;max
+59;Current Asset Turnover (PNPM/(C+REC+INV));1.8362348007205584;max
+60;Current Asset Turnover (PNPM/(C+REC+INV));2.871944958284571;max
+61;Current Asset Turnover (PNPM/(C+REC+INV));2.6449766393640024;max
+62;Current Asset Turnover (PNPM/(C+REC+INV));2.4615757379548318;max
+63;Current Asset Turnover (PNPM/(C+REC+INV));2.726356572187759;max
+64;Current Asset Turnover (PNPM/(C+REC+INV));0.2798345985630105;max
+65;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+66;Current Asset Turnover (PNPM/(C+REC+INV));3.575948848266251;max
+68;Current Asset Turnover (PNPM/(C+REC+INV));1.3667311083501814;max
+69;Current Asset Turnover (PNPM/(C+REC+INV));2.4354193058018745;max
+70;Current Asset Turnover (PNPM/(C+REC+INV));1.160916263680326;max
+71;Current Asset Turnover (PNPM/(C+REC+INV));2.2711816907986924;max
+72;Current Asset Turnover (PNPM/(C+REC+INV));1.435021984072125;max
+73;Current Asset Turnover (PNPM/(C+REC+INV));2.2821295611993286;max
+74;Current Asset Turnover (PNPM/(C+REC+INV));2.5858326155520004;max
+75;Current Asset Turnover (PNPM/(C+REC+INV));2.142481137041586;max
+77;Current Asset Turnover (PNPM/(C+REC+INV));1.43558118652292;max
+78;Current Asset Turnover (PNPM/(C+REC+INV));3.5168839612437;max
+79;Current Asset Turnover (PNPM/(C+REC+INV));1.9629409606345989;max
+80;Current Asset Turnover (PNPM/(C+REC+INV));4.260230490279553;max
+81;Current Asset Turnover (PNPM/(C+REC+INV));3.509890289580321;max
+82;Current Asset Turnover (PNPM/(C+REC+INV));2.7369775644969443;max
+84;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+85;Current Asset Turnover (PNPM/(C+REC+INV));1.9772893860924523;max
+86;Current Asset Turnover (PNPM/(C+REC+INV));3.882758737338592;max
+87;Current Asset Turnover (PNPM/(C+REC+INV));5.328079635006221;max
+88;Current Asset Turnover (PNPM/(C+REC+INV));7.06125049000392;max
+90;Current Asset Turnover (PNPM/(C+REC+INV));0.8956587966488957;max
+91;Current Asset Turnover (PNPM/(C+REC+INV));1.6632854809593398;max
+92;Current Asset Turnover (PNPM/(C+REC+INV));40.22061084110989;max
+93;Current Asset Turnover (PNPM/(C+REC+INV));2.268289597149153;max
+94;Current Asset Turnover (PNPM/(C+REC+INV));1.1560655737704917;max
+95;Current Asset Turnover (PNPM/(C+REC+INV));3.254163737182123;max
+96;Current Asset Turnover (PNPM/(C+REC+INV));2.7251151257527453;max
+97;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+98;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+99;Current Asset Turnover (PNPM/(C+REC+INV));3.1161513512731256;max
+01;Investment Ratio (IO/PNPM);0.0510687199553998;max
+02;Investment Ratio (IO/PNPM);0.0024231869577448;max
+03;Investment Ratio (IO/PNPM);0.1016829302786027;max
+05;Investment Ratio (IO/PNPM);0.1570604010465761;max
+06;Investment Ratio (IO/PNPM);0.0293744712575078;max
+07;Investment Ratio (IO/PNPM);0.0293744712575078;max
+08;Investment Ratio (IO/PNPM);0.0863756457500785;max
+09;Investment Ratio (IO/PNPM);0.0847429641570675;max
+10;Investment Ratio (IO/PNPM);0.038010688788861;max
+11;Investment Ratio (IO/PNPM);0.0441532454899212;max
+12;Investment Ratio (IO/PNPM);0.0453488149507357;max
+13;Investment Ratio (IO/PNPM);0.0301568729517454;max
+14;Investment Ratio (IO/PNPM);0.0184376996324075;max
+15;Investment Ratio (IO/PNPM);0.0212348103596415;max
+16;Investment Ratio (IO/PNPM);0.0609424733101544;max
+17;Investment Ratio (IO/PNPM);0.0465606601284837;max
+18;Investment Ratio (IO/PNPM);0.0421752941881605;max
+19;Investment Ratio (IO/PNPM);0.0337929018596341;max
+20;Investment Ratio (IO/PNPM);0.0685895378191237;max
+21;Investment Ratio (IO/PNPM);0.0510788618839768;max
+22;Investment Ratio (IO/PNPM);0.0566376560292906;max
+23;Investment Ratio (IO/PNPM);0.0495300441082354;max
+24;Investment Ratio (IO/PNPM);0.0299113889057139;max
+25;Investment Ratio (IO/PNPM);0.0390738891634405;max
+26;Investment Ratio (IO/PNPM);0.021074285274264;max
+27;Investment Ratio (IO/PNPM);0.0756618343469383;max
+28;Investment Ratio (IO/PNPM);0.043382442469256;max
+29;Investment Ratio (IO/PNPM);0.0538129903868126;max
+30;Investment Ratio (IO/PNPM);0.0321615792420496;max
+31;Investment Ratio (IO/PNPM);0.0354086539496604;max
+32;Investment Ratio (IO/PNPM);0.0357154338755977;max
+33;Investment Ratio (IO/PNPM);0.0353984606721567;max
+35;Investment Ratio (IO/PNPM);0.0884894957508264;max
+36;Investment Ratio (IO/PNPM);0.2229170953011311;max
+37;Investment Ratio (IO/PNPM);0.3046235951046225;max
+38;Investment Ratio (IO/PNPM);0.0531710784009076;max
+39;Investment Ratio (IO/PNPM);0.0438082048528185;max
+41;Investment Ratio (IO/PNPM);0.047747841725816;max
+42;Investment Ratio (IO/PNPM);0.0264159317608715;max
+43;Investment Ratio (IO/PNPM);0.0177685306366622;max
+46;Investment Ratio (IO/PNPM);0.0100061857932309;max
+47;Investment Ratio (IO/PNPM);0.0176708304297746;max
+49;Investment Ratio (IO/PNPM);0.1030570911466269;max
+50;Investment Ratio (IO/PNPM);0.0036729999240443;max
+51;Investment Ratio (IO/PNPM);0.0289823941616266;max
+52;Investment Ratio (IO/PNPM);0.2227541351882468;max
+53;Investment Ratio (IO/PNPM);0.0265152815246515;max
+55;Investment Ratio (IO/PNPM);0.0948546166280406;max
+56;Investment Ratio (IO/PNPM);0.0629348043194635;max
+58;Investment Ratio (IO/PNPM);0.0114381489996413;max
+59;Investment Ratio (IO/PNPM);0.0293120164322037;max
+60;Investment Ratio (IO/PNPM);0.0835721876912176;max
+61;Investment Ratio (IO/PNPM);0.1131078462193153;max
+62;Investment Ratio (IO/PNPM);0.0188570286991428;max
+63;Investment Ratio (IO/PNPM);0.0148607411914125;max
+64;Investment Ratio (IO/PNPM);0.201707868008594;max
+65;Investment Ratio (IO/PNPM);0.0293744712575078;max
+66;Investment Ratio (IO/PNPM);0.015532561334088;max
+68;Investment Ratio (IO/PNPM);0.1412097995601944;max
+69;Investment Ratio (IO/PNPM);0.014830237693979;max
+70;Investment Ratio (IO/PNPM);0.0150227788934587;max
+71;Investment Ratio (IO/PNPM);0.0251376799980711;max
+72;Investment Ratio (IO/PNPM);0.018901287067222;max
+73;Investment Ratio (IO/PNPM);0.0149481400325051;max
+74;Investment Ratio (IO/PNPM);0.0387020669653702;max
+75;Investment Ratio (IO/PNPM);0.0111111111111111;max
+77;Investment Ratio (IO/PNPM);0.9020145659168732;max
+78;Investment Ratio (IO/PNPM);0.0052090107378586;max
+79;Investment Ratio (IO/PNPM);0.0085332383877045;max
+80;Investment Ratio (IO/PNPM);0.0072697657857526;max
+81;Investment Ratio (IO/PNPM);0.0193499545040946;max
+82;Investment Ratio (IO/PNPM);0.0358173392127258;max
+84;Investment Ratio (IO/PNPM);0.0293744712575078;max
+85;Investment Ratio (IO/PNPM);0.0173501385580242;max
+86;Investment Ratio (IO/PNPM);0.054805735007029;max
+87;Investment Ratio (IO/PNPM);0.019675385333956;max
+88;Investment Ratio (IO/PNPM);0.0012768378832248;max
+90;Investment Ratio (IO/PNPM);0.0130385487528344;max
+91;Investment Ratio (IO/PNPM);0.3073543852395472;max
+92;Investment Ratio (IO/PNPM);0.0076762479500665;max
+93;Investment Ratio (IO/PNPM);0.1276394989425736;max
+94;Investment Ratio (IO/PNPM);0.0075865002836074;max
+95;Investment Ratio (IO/PNPM);0.0062385698831421;max
+96;Investment Ratio (IO/PNPM);0.0759490266565664;max
+97;Investment Ratio (IO/PNPM);0.0293744712575078;max
+98;Investment Ratio (IO/PNPM);0.0293744712575078;max
+99;Investment Ratio (IO/PNPM);0.0293744712575078;max
+01;Financial Revenue Share (Przych.fin./GS);0.0168916121956612;max
+02;Financial Revenue Share (Przych.fin./GS);0.0020067517423617;max
+03;Financial Revenue Share (Przych.fin./GS);0.0127122021200286;max
+05;Financial Revenue Share (Przych.fin./GS);0.0020885188107293;max
+06;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+07;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+08;Financial Revenue Share (Przych.fin./GS);0.0057288017784936;max
+09;Financial Revenue Share (Przych.fin./GS);0.0100406156477126;max
+10;Financial Revenue Share (Przych.fin./GS);0.0093515116027244;max
+11;Financial Revenue Share (Przych.fin./GS);0.0072728790890785;max
+12;Financial Revenue Share (Przych.fin./GS);0.0045155887241238;max
+13;Financial Revenue Share (Przych.fin./GS);0.0053319084680229;max
+14;Financial Revenue Share (Przych.fin./GS);0.0053541386017033;max
+15;Financial Revenue Share (Przych.fin./GS);0.0141631258851953;max
+16;Financial Revenue Share (Przych.fin./GS);0.0043141712489636;max
+17;Financial Revenue Share (Przych.fin./GS);0.0044088575241455;max
+18;Financial Revenue Share (Przych.fin./GS);0.005009782337519;max
+19;Financial Revenue Share (Przych.fin./GS);0.0135878875232771;max
+20;Financial Revenue Share (Przych.fin./GS);0.0129289447760898;max
+21;Financial Revenue Share (Przych.fin./GS);0.0925598489574961;max
+22;Financial Revenue Share (Przych.fin./GS);0.00817889703594;max
+23;Financial Revenue Share (Przych.fin./GS);0.0101603313457213;max
+24;Financial Revenue Share (Przych.fin./GS);0.0200627533268735;max
+25;Financial Revenue Share (Przych.fin./GS);0.0073553340642789;max
+26;Financial Revenue Share (Przych.fin./GS);0.0085624982697419;max
+27;Financial Revenue Share (Przych.fin./GS);0.0052454471624598;max
+28;Financial Revenue Share (Przych.fin./GS);0.0111480387550306;max
+29;Financial Revenue Share (Przych.fin./GS);0.0141742403714711;max
+30;Financial Revenue Share (Przych.fin./GS);0.0104288183192914;max
+31;Financial Revenue Share (Przych.fin./GS);0.006229120113534;max
+32;Financial Revenue Share (Przych.fin./GS);0.0065099048093123;max
+33;Financial Revenue Share (Przych.fin./GS);0.0081731601612396;max
+35;Financial Revenue Share (Przych.fin./GS);0.0264581398574378;max
+36;Financial Revenue Share (Przych.fin./GS);0.0042982121113799;max
+37;Financial Revenue Share (Przych.fin./GS);0.0046706198938743;max
+38;Financial Revenue Share (Przych.fin./GS);0.0089131092899633;max
+39;Financial Revenue Share (Przych.fin./GS);0.0022242791815757;max
+41;Financial Revenue Share (Przych.fin./GS);0.0140371026950617;max
+42;Financial Revenue Share (Przych.fin./GS);0.0081895461323097;max
+43;Financial Revenue Share (Przych.fin./GS);0.0044164621258131;max
+46;Financial Revenue Share (Przych.fin./GS);0.0051568846780435;max
+47;Financial Revenue Share (Przych.fin./GS);0.004133732866574;max
+49;Financial Revenue Share (Przych.fin./GS);0.0072285099684541;max
+50;Financial Revenue Share (Przych.fin./GS);0.008737073151643;max
+51;Financial Revenue Share (Przych.fin./GS);0.0106106262800193;max
+52;Financial Revenue Share (Przych.fin./GS);0.0063104438894279;max
+53;Financial Revenue Share (Przych.fin./GS);0.0020542505923198;max
+55;Financial Revenue Share (Przych.fin./GS);0.038103152973055;max
+56;Financial Revenue Share (Przych.fin./GS);0.0026014689811167;max
+58;Financial Revenue Share (Przych.fin./GS);0.034187140920347;max
+59;Financial Revenue Share (Przych.fin./GS);0.0198491508345624;max
+60;Financial Revenue Share (Przych.fin./GS);0.0193920423004587;max
+61;Financial Revenue Share (Przych.fin./GS);0.0111063657891006;max
+62;Financial Revenue Share (Przych.fin./GS);0.0191663161064611;max
+63;Financial Revenue Share (Przych.fin./GS);0.0090232548245163;max
+64;Financial Revenue Share (Przych.fin./GS);0.224342278140405;max
+65;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+66;Financial Revenue Share (Przych.fin./GS);0.1219209545779188;max
+68;Financial Revenue Share (Przych.fin./GS);0.0489873483258182;max
+69;Financial Revenue Share (Przych.fin./GS);0.0340358458885971;max
+70;Financial Revenue Share (Przych.fin./GS);0.1297374158116007;max
+71;Financial Revenue Share (Przych.fin./GS);0.0070712118458802;max
+72;Financial Revenue Share (Przych.fin./GS);0.0094301658271863;max
+73;Financial Revenue Share (Przych.fin./GS);0.0241889447080857;max
+74;Financial Revenue Share (Przych.fin./GS);0.0104465264818484;max
+75;Financial Revenue Share (Przych.fin./GS);0.0058972648432288;max
+77;Financial Revenue Share (Przych.fin./GS);0.020475199361929;max
+78;Financial Revenue Share (Przych.fin./GS);0.0162777644134391;max
+79;Financial Revenue Share (Przych.fin./GS);0.0473690344708931;max
+80;Financial Revenue Share (Przych.fin./GS);0.0040302316605357;max
+81;Financial Revenue Share (Przych.fin./GS);0.0040700525963521;max
+82;Financial Revenue Share (Przych.fin./GS);0.0397022453924089;max
+84;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+85;Financial Revenue Share (Przych.fin./GS);0.0073599975234498;max
+86;Financial Revenue Share (Przych.fin./GS);0.0044131389479496;max
+87;Financial Revenue Share (Przych.fin./GS);0.0020624251910505;max
+88;Financial Revenue Share (Przych.fin./GS);0.0037760630438351;max
+90;Financial Revenue Share (Przych.fin./GS);0.0022583559168925;max
+91;Financial Revenue Share (Przych.fin./GS);0.0067629552194226;max
+92;Financial Revenue Share (Przych.fin./GS);0.0025684563799566;max
+93;Financial Revenue Share (Przych.fin./GS);0.0085171657571489;max
+94;Financial Revenue Share (Przych.fin./GS);0.0103149955634427;max
+95;Financial Revenue Share (Przych.fin./GS);0.0060924221943797;max
+96;Financial Revenue Share (Przych.fin./GS);0.0261670715283633;max
+97;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+98;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+99;Financial Revenue Share (Przych.fin./GS);0.0071137495991427;max
+01;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+02;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+03;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+05;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+06;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+07;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+08;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+09;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+10;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+11;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+12;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+13;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+14;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+15;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+16;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+17;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+18;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+19;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+20;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+21;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+22;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+23;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+24;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+25;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+26;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+27;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+28;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+29;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+30;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+31;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+32;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+33;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+35;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+36;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+37;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+38;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+39;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+41;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+42;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+43;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+46;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+47;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+49;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+50;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+51;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+52;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+53;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+55;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+56;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+58;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+59;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+60;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+61;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+62;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+63;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+64;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+65;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+66;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+68;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+69;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+70;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+71;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+72;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+73;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+74;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+75;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+77;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+78;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+79;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+80;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+81;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+82;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+84;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+85;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+86;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+87;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+88;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+90;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+91;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+92;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+93;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+94;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+95;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+96;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+97;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+98;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+99;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN);0.0;max
+01;Average Firm Size (Pracujący/EN);55.813496932515335;max
+02;Average Firm Size (Pracujący/EN);32.443762781186095;max
+03;Average Firm Size (Pracujący/EN);60.83870967741935;max
+05;Average Firm Size (Pracujący/EN);6.4;max
+06;Average Firm Size (Pracujący/EN);28.0;max
+07;Average Firm Size (Pracujący/EN);15.0;max
+08;Average Firm Size (Pracujący/EN);15.729166666666666;max
+09;Average Firm Size (Pracujący/EN);10.686567164179104;max
+10;Average Firm Size (Pracujący/EN);14.719542516161114;max
+11;Average Firm Size (Pracujący/EN);12.966386554621849;max
+12;Average Firm Size (Pracujący/EN);5.230769230769231;max
+13;Average Firm Size (Pracujący/EN);28.385802469135804;max
+14;Average Firm Size (Pracujący/EN);70.57530120481928;max
+15;Average Firm Size (Pracujący/EN);51.888888888888886;max
+16;Average Firm Size (Pracujący/EN);46.65037037037037;max
+17;Average Firm Size (Pracujący/EN);10.85579196217494;max
+18;Average Firm Size (Pracujący/EN);47.35493827160494;max
+19;Average Firm Size (Pracujący/EN);8.794117647058824;max
+20;Average Firm Size (Pracujący/EN);9.805769230769233;max
+21;Average Firm Size (Pracujący/EN);7.695652173913044;max
+22;Average Firm Size (Pracujący/EN);10.345509893455098;max
+23;Average Firm Size (Pracujący/EN);23.312586445366527;max
+24;Average Firm Size (Pracujący/EN);7.379182156133829;max
+25;Average Firm Size (Pracujący/EN);25.61969509682736;max
+26;Average Firm Size (Pracujący/EN);17.315315315315317;max
+27;Average Firm Size (Pracujący/EN);7.739130434782608;max
+28;Average Firm Size (Pracujący/EN);9.155746509129967;max
+29;Average Firm Size (Pracujący/EN);5.372246696035242;max
+30;Average Firm Size (Pracujący/EN);17.921348314606742;max
+31;Average Firm Size (Pracujący/EN);48.23556942277691;max
+32;Average Firm Size (Pracujący/EN);75.35272727272728;max
+33;Average Firm Size (Pracujący/EN);53.208883553421366;max
+35;Average Firm Size (Pracujący/EN);25.34862385321101;max
+36;Average Firm Size (Pracujący/EN);4.4330143540669855;max
+37;Average Firm Size (Pracujący/EN);6.949333333333334;max
+38;Average Firm Size (Pracujący/EN);12.16326530612245;max
+39;Average Firm Size (Pracujący/EN);26.8;max
+41;Average Firm Size (Pracujący/EN);121.37182260681448;max
+42;Average Firm Size (Pracujący/EN);23.815;max
+43;Average Firm Size (Pracujący/EN);193.85119726339795;max
+46;Average Firm Size (Pracujący/EN);44.243418803418805;max
+47;Average Firm Size (Pracujący/EN);106.81632653061224;max
+49;Average Firm Size (Pracujący/EN);90.26574633304573;max
+50;Average Firm Size (Pracujący/EN);49.68421052631579;max
+51;Average Firm Size (Pracujący/EN);101.86666666666666;max
+52;Average Firm Size (Pracujący/EN);29.8686327077748;max
+53;Average Firm Size (Pracujący/EN);311.95238095238096;max
+55;Average Firm Size (Pracujący/EN);48.013675213675214;max
+56;Average Firm Size (Pracujący/EN);191.39406779661016;max
+58;Average Firm Size (Pracujący/EN);41.43956043956044;max
+59;Average Firm Size (Pracujący/EN);259.8;max
+60;Average Firm Size (Pracujący/EN);8.972222222222221;max
+61;Average Firm Size (Pracujący/EN);47.20765027322405;max
+62;Average Firm Size (Pracujący/EN);91.21706586826348;max
+63;Average Firm Size (Pracujący/EN);82.96713615023474;max
+64;Average Firm Size (Pracujący/EN);79.48965517241379;max
+65;Average Firm Size (Pracujący/EN);1266.0;max
+66;Average Firm Size (Pracujący/EN);248.1424418604651;max
+68;Average Firm Size (Pracujący/EN);138.4841722885314;max
+69;Average Firm Size (Pracujący/EN);170.34913793103448;max
+70;Average Firm Size (Pracujący/EN);128.8149300155521;max
+71;Average Firm Size (Pracujący/EN);107.14285714285714;max
+72;Average Firm Size (Pracujący/EN);16.027950310559007;max
+73;Average Firm Size (Pracujący/EN);119.64285714285714;max
+74;Average Firm Size (Pracujący/EN);430.02777777777777;max
+75;Average Firm Size (Pracujący/EN);437.9166666666667;max
+77;Average Firm Size (Pracujący/EN);84.64953271028037;max
+78;Average Firm Size (Pracujący/EN);22.10037878787879;max
+79;Average Firm Size (Pracujący/EN);133.18072289156626;max
+80;Average Firm Size (Pracujący/EN);31.3015873015873;max
+81;Average Firm Size (Pracujący/EN);105.68115942028986;max
+82;Average Firm Size (Pracujący/EN);96.1105527638191;max
+84;Average Firm Size (Pracujący/EN);26524.0;max
+85;Average Firm Size (Pracujący/EN);339.4452554744525;max
+86;Average Firm Size (Pracujący/EN);154.46897931954638;max
+87;Average Firm Size (Pracujący/EN);57.32758620689656;max
+88;Average Firm Size (Pracujący/EN);197.33898305084745;max
+90;Average Firm Size (Pracujący/EN);2009.2;max
+91;Average Firm Size (Pracujący/EN);119.23076923076924;max
+92;Average Firm Size (Pracujący/EN);52.388888888888886;max
+93;Average Firm Size (Pracujący/EN);277.0280898876405;max
+94;Average Firm Size (Pracujący/EN);70948.0;max
+95;Average Firm Size (Pracujący/EN);470.719298245614;max
+96;Average Firm Size (Pracujący/EN);948.253846153846;max
+97;Average Firm Size (Pracujący/EN);0.0;max
+98;Average Firm Size (Pracujący/EN);0.0;max
+99;Average Firm Size (Pracujący/EN);5.804347826086956;max
+01;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.04988403838610581;min
+01;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.8479999468915835;max
+01;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.232647839514201;max
+01;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.14935539960906766;min
+01;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);3.6982465301953775;max
+01;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);54.13378775945776;max
+01;Inventory Turnover (TC/INV) (Δ% 1yr);4.820273659552503;max
+01;Investment Ratio (IO/PNPM) (Δ% 1yr);-0.8452973042477022;max
+01;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+01;New Firms Rate (Nowe/EN) (Δ% 1yr);10.66105775704656;max
+01;Receivables Turnover (PNPM/REC) (Δ% 1yr);8.118395638817336;max
+01;Sales Profitability (POS/PNPM) (Δ% 1yr);-34.4786823851665;max
+02;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.179202772920267;min
+02;Average Firm Size (Pracujący/EN) (Δ% 1yr);-1.0591670720973445;max
+02;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.650948301954761;max
+02;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.558720241525933;min
+02;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-16.55181073721616;max
+02;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-44.211893478613796;max
+02;Inventory Turnover (TC/INV) (Δ% 1yr);-8.426553749404633;max
+02;Investment Ratio (IO/PNPM) (Δ% 1yr);-16.515146745447193;max
+02;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+02;New Firms Rate (Nowe/EN) (Δ% 1yr);-20.07091259507731;max
+02;Receivables Turnover (PNPM/REC) (Δ% 1yr);12.565950473533732;max
+02;Sales Profitability (POS/PNPM) (Δ% 1yr);23.019865346669025;max
+03;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.376232963312473;min
+03;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.88164531729386;max
+03;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.817355568486784;max
+03;Cost Share Ratio (TC/PNPM) (Δ% 1yr);2.0051869457751734;min
+03;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);8.989580603975035;max
+03;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);3.020820154878653;max
+03;Inventory Turnover (TC/INV) (Δ% 1yr);24.33244567264382;max
+03;Investment Ratio (IO/PNPM) (Δ% 1yr);34.44504142967897;max
+03;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+03;New Firms Rate (Nowe/EN) (Δ% 1yr);23.902696985721832;max
+03;Receivables Turnover (PNPM/REC) (Δ% 1yr);-0.11834660265164842;max
+03;Sales Profitability (POS/PNPM) (Δ% 1yr);-120.02517742280425;max
+05;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);16.577624091857125;min
+05;Average Firm Size (Pracujący/EN) (Δ% 1yr);-5.882352941176463;max
+05;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);191.71858724931866;max
+05;Cost Share Ratio (TC/PNPM) (Δ% 1yr);22.589873599826596;min
+05;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-24.848865261159485;max
+05;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-40.62309364729213;max
+05;Inventory Turnover (TC/INV) (Δ% 1yr);-8.594676363288208;max
+05;Investment Ratio (IO/PNPM) (Δ% 1yr);-12.608966630105384;max
+05;Receivables Turnover (PNPM/REC) (Δ% 1yr);-18.555676091828726;max
+05;Sales Profitability (POS/PNPM) (Δ% 1yr);-1359.0915941856417;max
+06;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+06;Average Firm Size (Pracujący/EN) (Δ% 1yr);-9.67741935483871;max
+06;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+06;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+06;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+06;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+06;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+06;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+06;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+06;New Firms Rate (Nowe/EN) (Δ% 1yr);-100.0;max
+06;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+06;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+07;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+07;Average Firm Size (Pracujący/EN) (Δ% 1yr);50.0;max
+07;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+07;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+07;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+07;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+07;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+07;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+07;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+07;New Firms Rate (Nowe/EN) (Δ% 1yr);50.000000000000014;max
+07;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+07;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+08;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);7.485709898553436;min
+08;Average Firm Size (Pracujący/EN) (Δ% 1yr);-1.5971096704484204;max
+08;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);10.587785653467662;max
+08;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.4985775565947979;min
+08;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-5.616110779289293;max
+08;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);45.92694243383882;max
+08;Inventory Turnover (TC/INV) (Δ% 1yr);-7.4738926427880426;max
+08;Investment Ratio (IO/PNPM) (Δ% 1yr);-16.829959320046637;max
+08;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+08;New Firms Rate (Nowe/EN) (Δ% 1yr);1.4602803738317809;max
+08;Receivables Turnover (PNPM/REC) (Δ% 1yr);3.7773152955144274;max
+08;Sales Profitability (POS/PNPM) (Δ% 1yr);-8.730292699788258;max
+09;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);62.98929358650946;min
+09;Average Firm Size (Pracujący/EN) (Δ% 1yr);0.6491090255095898;max
+09;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);23.025899379734817;max
+09;Cost Share Ratio (TC/PNPM) (Δ% 1yr);5.299400913195692;min
+09;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-43.57282093871892;max
+09;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);37.16476380637142;max
+09;Inventory Turnover (TC/INV) (Δ% 1yr);4.590363954570979;max
+09;Investment Ratio (IO/PNPM) (Δ% 1yr);26.414120244436106;max
+09;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+09;New Firms Rate (Nowe/EN) (Δ% 1yr);-1.4925373134328401;max
+09;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.1443313976001805;max
+09;Sales Profitability (POS/PNPM) (Δ% 1yr);-1.5604285226960457;max
+10;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.174343678067125;min
+10;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.997202340723866;max
+10;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);4.096765316415756;max
+10;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.6944047429005519;min
+10;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);0.24265432219271513;max
+10;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);51.63713142051702;max
+10;Inventory Turnover (TC/INV) (Δ% 1yr);-5.414694123306869;max
+10;Investment Ratio (IO/PNPM) (Δ% 1yr);-1.718698459794867;max
+10;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+10;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.911532443122474;max
+10;Receivables Turnover (PNPM/REC) (Δ% 1yr);8.144313830929544;max
+10;Sales Profitability (POS/PNPM) (Δ% 1yr);14.91622906588309;max
+11;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.078098851249917;min
+11;Average Firm Size (Pracujący/EN) (Δ% 1yr);10.226907115863844;max
+11;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);6.8772185707586555;max
+11;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.591157265826883;min
+11;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);19.39279920426254;max
+11;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-32.87477535126473;max
+11;Inventory Turnover (TC/INV) (Δ% 1yr);9.049856889462221;max
+11;Investment Ratio (IO/PNPM) (Δ% 1yr);26.488169669922325;max
+11;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+11;New Firms Rate (Nowe/EN) (Δ% 1yr);-2.1475256769374385;max
+11;Receivables Turnover (PNPM/REC) (Δ% 1yr);15.505427685933567;max
+11;Sales Profitability (POS/PNPM) (Δ% 1yr);7.141419023744097;max
+12;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-3.87755863440367;min
+12;Average Firm Size (Pracujący/EN) (Δ% 1yr);-12.82051282051282;max
+12;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-13.805393807507786;max
+12;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.4410948709285172;min
+12;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);13.63699496405865;max
+12;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.281624294544905;max
+12;Inventory Turnover (TC/INV) (Δ% 1yr);8.723383306400018;max
+12;Investment Ratio (IO/PNPM) (Δ% 1yr);-37.31499540011941;max
+12;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+12;New Firms Rate (Nowe/EN) (Δ% 1yr);-34.06593406593408;max
+12;Receivables Turnover (PNPM/REC) (Δ% 1yr);25.922767982238405;max
+12;Sales Profitability (POS/PNPM) (Δ% 1yr);-10.07205384210097;max
+13;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.765980205155419;min
+13;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.932741206002975;max
+13;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);4.558476528550643;max
+13;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-2.1969530477492305;min
+13;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-11.382712751419199;max
+13;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);10.776927544492256;max
+13;Inventory Turnover (TC/INV) (Δ% 1yr);-6.285355039633774;max
+13;Investment Ratio (IO/PNPM) (Δ% 1yr);-36.088168128894715;max
+13;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+13;New Firms Rate (Nowe/EN) (Δ% 1yr);-12.947748217701271;max
+13;Receivables Turnover (PNPM/REC) (Δ% 1yr);-8.55821806805595;max
+13;Sales Profitability (POS/PNPM) (Δ% 1yr);74.45478797969444;max
+14;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);15.375580594768056;min
+14;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.091644412809265;max
+14;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);6.506180125399598;max
+14;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.07344514013637289;min
+14;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-14.779059103692404;max
+14;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);83.67736215845161;max
+14;Inventory Turnover (TC/INV) (Δ% 1yr);-13.166546761283657;max
+14;Investment Ratio (IO/PNPM) (Δ% 1yr);-6.738417925093603;max
+14;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+14;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.4850038451679;max
+14;Receivables Turnover (PNPM/REC) (Δ% 1yr);0.1480841174057705;max
+14;Sales Profitability (POS/PNPM) (Δ% 1yr);13.299631081378175;max
+15;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);18.110636459292085;min
+15;Average Firm Size (Pracujący/EN) (Δ% 1yr);13.476635514018682;max
+15;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);27.544263557729277;max
+15;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.8731324172511183;min
+15;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-14.569812518376857;max
+15;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);244.46989692644974;max
+15;Inventory Turnover (TC/INV) (Δ% 1yr);-3.6211664434239865;max
+15;Investment Ratio (IO/PNPM) (Δ% 1yr);-45.57257270738361;max
+15;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+15;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.213659437009687;max
+15;Receivables Turnover (PNPM/REC) (Δ% 1yr);-13.579416743271933;max
+15;Sales Profitability (POS/PNPM) (Δ% 1yr);-23.172394186762553;max
+16;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.82301829684332;min
+16;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.9012306076526135;max
+16;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.712714918158803;max
+16;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.3618587613885946;min
+16;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.062718347536549;max
+16;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);15.959745136920784;max
+16;Inventory Turnover (TC/INV) (Δ% 1yr);5.832530626093537;max
+16;Investment Ratio (IO/PNPM) (Δ% 1yr);-19.02937612209947;max
+16;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+16;New Firms Rate (Nowe/EN) (Δ% 1yr);-4.319697266262152;max
+16;Receivables Turnover (PNPM/REC) (Δ% 1yr);-9.797442039866567;max
+16;Sales Profitability (POS/PNPM) (Δ% 1yr);13.892704331808192;max
+17;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.61548279623008;min
+17;Average Firm Size (Pracujący/EN) (Δ% 1yr);-3.560604000278019;max
+17;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.316020436279298;max
+17;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.7126023106674101;min
+17;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.514563063131725;max
+17;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-23.868898993264224;max
+17;Inventory Turnover (TC/INV) (Δ% 1yr);-1.0220665328411;max
+17;Investment Ratio (IO/PNPM) (Δ% 1yr);4.166467921408216;max
+17;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+17;New Firms Rate (Nowe/EN) (Δ% 1yr);-13.67728659096756;max
+17;Receivables Turnover (PNPM/REC) (Δ% 1yr);-4.0335277232084;max
+17;Sales Profitability (POS/PNPM) (Δ% 1yr);6.527555753960676;max
+18;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.39730994029545;min
+18;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.95109508565744;max
+18;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.618568036903385;max
+18;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.0941130330891458;min
+18;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-9.701652191487439;max
+18;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);43.59063826988741;max
+18;Inventory Turnover (TC/INV) (Δ% 1yr);-6.0133551857851355;max
+18;Investment Ratio (IO/PNPM) (Δ% 1yr);-4.691550759419082;max
+18;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+18;New Firms Rate (Nowe/EN) (Δ% 1yr);-24.30517545460073;max
+18;Receivables Turnover (PNPM/REC) (Δ% 1yr);0.35593907213759124;max
+18;Sales Profitability (POS/PNPM) (Δ% 1yr);8.334414563258065;max
+19;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);51.942727177204794;min
+19;Average Firm Size (Pracujący/EN) (Δ% 1yr);-1.9850664724093803;max
+19;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.178401017052956;max
+19;Cost Share Ratio (TC/PNPM) (Δ% 1yr);6.939170635960182;min
+19;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);4.3589950493368885;max
+19;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-21.65720936223647;max
+19;Inventory Turnover (TC/INV) (Δ% 1yr);2.625627211688961;max
+19;Investment Ratio (IO/PNPM) (Δ% 1yr);109.09461919811352;max
+19;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+19;New Firms Rate (Nowe/EN) (Δ% 1yr);-77.31092436974791;max
+19;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.5503311460941727;max
+19;Sales Profitability (POS/PNPM) (Δ% 1yr);-106.16362241695589;max
+20;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);7.238531264567867;min
+20;Average Firm Size (Pracujący/EN) (Δ% 1yr);-2.23736594398578;max
+20;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-8.476401856764204;max
+20;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.5654013023840265;min
+20;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-9.202323551537935;max
+20;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);41.10152318209255;max
+20;Inventory Turnover (TC/INV) (Δ% 1yr);-1.5290821937683343;max
+20;Investment Ratio (IO/PNPM) (Δ% 1yr);25.82319853940921;max
+20;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+20;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.9417982679572103;max
+20;Receivables Turnover (PNPM/REC) (Δ% 1yr);-10.354255922479428;max
+20;Sales Profitability (POS/PNPM) (Δ% 1yr);0.5130312936455497;max
+21;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.9412277097558137;min
+21;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.4894569882440933;max
+21;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.788660855601468;max
+21;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-4.036888189371527;min
+21;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);15.679057727279366;max
+21;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);145.39280042080748;max
+21;Inventory Turnover (TC/INV) (Δ% 1yr);-12.720121082914526;max
+21;Investment Ratio (IO/PNPM) (Δ% 1yr);-6.815755404607208;max
+21;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+21;New Firms Rate (Nowe/EN) (Δ% 1yr);-20.304347826086968;max
+21;Receivables Turnover (PNPM/REC) (Δ% 1yr);17.563467712245007;max
+21;Sales Profitability (POS/PNPM) (Δ% 1yr);18.18161379575613;max
+22;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.462508415402832;min
+22;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.4678938909885952;max
+22;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.637101543290858;max
+22;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.904479523416776;min
+22;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.781722402887578;max
+22;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);87.96021860884899;max
+22;Inventory Turnover (TC/INV) (Δ% 1yr);-2.4670584599467458;max
+22;Investment Ratio (IO/PNPM) (Δ% 1yr);-10.169191366032107;max
+22;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+22;New Firms Rate (Nowe/EN) (Δ% 1yr);-14.018374341622591;max
+22;Receivables Turnover (PNPM/REC) (Δ% 1yr);-6.600203258088895;max
+22;Sales Profitability (POS/PNPM) (Δ% 1yr);25.382997104582717;max
+23;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.995453061874608;min
+23;Average Firm Size (Pracujący/EN) (Δ% 1yr);0.23480724616414564;max
+23;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-2.278081808737646;max
+23;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.30906043313614673;min
+23;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-5.23753401330938;max
+23;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-13.02103015584673;max
+23;Inventory Turnover (TC/INV) (Δ% 1yr);2.532579699360126;max
+23;Investment Ratio (IO/PNPM) (Δ% 1yr);-33.748023964130155;max
+23;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+23;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.840727301545964;max
+23;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.8236039270449724;max
+23;Sales Profitability (POS/PNPM) (Δ% 1yr);-5.227383596023732;max
+24;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.26867320646119;min
+24;Average Firm Size (Pracujący/EN) (Δ% 1yr);0.0753466778209312;max
+24;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);7.730840059215403;max
+24;Cost Share Ratio (TC/PNPM) (Δ% 1yr);3.82648645101229;min
+24;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-16.699676517588593;max
+24;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);45.508287642799395;max
+24;Inventory Turnover (TC/INV) (Δ% 1yr);-2.6126957583443704;max
+24;Investment Ratio (IO/PNPM) (Δ% 1yr);-17.064046470355766;max
+24;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+24;New Firms Rate (Nowe/EN) (Δ% 1yr);-32.698102132655045;max
+24;Receivables Turnover (PNPM/REC) (Δ% 1yr);-15.96897264528206;max
+24;Sales Profitability (POS/PNPM) (Δ% 1yr);-33.0829547586566;max
+25;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.051868723230227;min
+25;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.027587470896231;max
+25;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.5633036166479478;max
+25;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.2933916313673601;min
+25;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.09046498510227;max
+25;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-0.3831172075461451;max
+25;Inventory Turnover (TC/INV) (Δ% 1yr);-5.763300171262505;max
+25;Investment Ratio (IO/PNPM) (Δ% 1yr);-18.02471814039125;max
+25;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+25;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.07223118848277;max
+25;Receivables Turnover (PNPM/REC) (Δ% 1yr);-5.239868113541629;max
+25;Sales Profitability (POS/PNPM) (Δ% 1yr);8.360935983621056;max
+26;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.6486318109834166;min
+26;Average Firm Size (Pracujący/EN) (Δ% 1yr);-3.9026693702952633;max
+26;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);14.408809520569923;max
+26;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.4533497855662885;min
+26;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-5.788341787299711;max
+26;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);93.50639772171678;max
+26;Inventory Turnover (TC/INV) (Δ% 1yr);-3.0831120950953426;max
+26;Investment Ratio (IO/PNPM) (Δ% 1yr);-14.550705790151117;max
+26;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+26;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.462124095926917;max
+26;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.7706294550835062;max
+26;Sales Profitability (POS/PNPM) (Δ% 1yr);6.898797454088176;max
+27;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);13.798021879623084;min
+27;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.0314796436098415;max
+27;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);14.79810436471565;max
+27;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-3.2424466540639343;min
+27;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.9917874137215;max
+27;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);31.769907361290485;max
+27;Inventory Turnover (TC/INV) (Δ% 1yr);-4.284238223701813;max
+27;Investment Ratio (IO/PNPM) (Δ% 1yr);-6.307617732991437;max
+27;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+27;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.241571727505233;max
+27;Receivables Turnover (PNPM/REC) (Δ% 1yr);-12.986129021510015;max
+27;Sales Profitability (POS/PNPM) (Δ% 1yr);64.9285356821211;max
+28;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);13.130082811653052;min
+28;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.601946916441198;max
+28;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-8.993466653763804;max
+28;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.30337868044259697;min
+28;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-11.396900116106892;max
+28;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);64.6962838882232;max
+28;Inventory Turnover (TC/INV) (Δ% 1yr);-8.556528755615613;max
+28;Investment Ratio (IO/PNPM) (Δ% 1yr);-4.527880240474667;max
+28;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+28;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.6958886578147676;max
+28;Receivables Turnover (PNPM/REC) (Δ% 1yr);-5.332358159648886;max
+28;Sales Profitability (POS/PNPM) (Δ% 1yr);-1.6797912398931234;max
+29;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);22.455387877559;min
+29;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.143625291526296;max
+29;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.2939119614948381;max
+29;Cost Share Ratio (TC/PNPM) (Δ% 1yr);2.9008261797208714;min
+29;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-20.587110119698874;max
+29;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);107.20237177526919;max
+29;Inventory Turnover (TC/INV) (Δ% 1yr);-17.98803348412562;max
+29;Investment Ratio (IO/PNPM) (Δ% 1yr);-7.907586071719644;max
+29;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+29;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.5355446143215102;max
+29;Receivables Turnover (PNPM/REC) (Δ% 1yr);-20.11227074813479;max
+29;Sales Profitability (POS/PNPM) (Δ% 1yr);-37.72715677223912;max
+30;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);14.030976485720828;min
+30;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.64603514910766;max
+30;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.8689026282211114;max
+30;Cost Share Ratio (TC/PNPM) (Δ% 1yr);3.9243377897933724;min
+30;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.006432612929794;max
+30;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);67.09321342304723;max
+30;Inventory Turnover (TC/INV) (Δ% 1yr);-13.869574620704505;max
+30;Investment Ratio (IO/PNPM) (Δ% 1yr);-22.613498179398174;max
+30;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+30;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.315562993067173;max
+30;Receivables Turnover (PNPM/REC) (Δ% 1yr);-0.08320060132673618;max
+30;Sales Profitability (POS/PNPM) (Δ% 1yr);-31.67825875387043;max
+31;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);1.0696055216757032;min
+31;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.204658539171303;max
+31;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);12.783057244456622;max
+31;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.3331974486107208;min
+31;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.813256471467826;max
+31;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);74.44657217919382;max
+31;Inventory Turnover (TC/INV) (Δ% 1yr);-4.7782322562612976;max
+31;Investment Ratio (IO/PNPM) (Δ% 1yr);-2.040312146546391;max
+31;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+31;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.744904254608478;max
+31;Receivables Turnover (PNPM/REC) (Δ% 1yr);-2.952033838212794;max
+31;Sales Profitability (POS/PNPM) (Δ% 1yr);15.191834789390887;max
+32;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.067178463800694;min
+32;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.3215456847390508;max
+32;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);6.417528694566811;max
+32;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-2.3376975257081805;min
+32;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);2.900816673029644;max
+32;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);34.998284151583;max
+32;Inventory Turnover (TC/INV) (Δ% 1yr);6.441204932039701;max
+32;Investment Ratio (IO/PNPM) (Δ% 1yr);-18.90945964018994;max
+32;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+32;New Firms Rate (Nowe/EN) (Δ% 1yr);-6.870678617157474;max
+32;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.295558488009019;max
+32;Sales Profitability (POS/PNPM) (Δ% 1yr);34.55817600456661;max
+33;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.917950176303535;min
+33;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.946228137292827;max
+33;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.9004317449777257;max
+33;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.4477215517988755;min
+33;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-15.227108830196961;max
+33;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);54.86642533091841;max
+33;Inventory Turnover (TC/INV) (Δ% 1yr);-31.160139198993214;max
+33;Investment Ratio (IO/PNPM) (Δ% 1yr);-16.168063185687583;max
+33;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+33;New Firms Rate (Nowe/EN) (Δ% 1yr);-19.221593746987853;max
+33;Receivables Turnover (PNPM/REC) (Δ% 1yr);8.839601278780288;max
+33;Sales Profitability (POS/PNPM) (Δ% 1yr);-20.53518210101273;max
+35;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-34.83221044184784;min
+35;Average Firm Size (Pracujący/EN) (Δ% 1yr);17.261814865864615;max
+35;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);10.2442752493347;max
+35;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-5.497046873441818;min
+35;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-5.115040506831408;max
+35;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-46.88653125990011;max
+35;Inventory Turnover (TC/INV) (Δ% 1yr);1.1453122756257479;max
+35;Investment Ratio (IO/PNPM) (Δ% 1yr);-14.584917364577452;max
+35;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+35;New Firms Rate (Nowe/EN) (Δ% 1yr);69.14788859529632;max
+35;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.305727568757344;max
+35;Sales Profitability (POS/PNPM) (Δ% 1yr);305.1523316168659;max
+36;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-0.06052585341993897;min
+36;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.133173843700166;max
+36;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.9544825475295475;max
+36;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.7196307344438568;min
+36;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.521562872266086;max
+36;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-28.984233625973577;max
+36;Inventory Turnover (TC/INV) (Δ% 1yr);-6.416528452832565;max
+36;Investment Ratio (IO/PNPM) (Δ% 1yr);-2.7523047542667407;max
+36;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+36;New Firms Rate (Nowe/EN) (Δ% 1yr);-5.703566768160111;max
+36;Receivables Turnover (PNPM/REC) (Δ% 1yr);-13.798940172241009;max
+36;Sales Profitability (POS/PNPM) (Δ% 1yr);-79.25004398838263;max
+37;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.26142149251040114;min
+37;Average Firm Size (Pracujący/EN) (Δ% 1yr);-3.032558139534884;max
+37;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.9405613573793794;max
+37;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.838094711885672;min
+37;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);2.5961282680116144;max
+37;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-33.75283993714191;max
+37;Inventory Turnover (TC/INV) (Δ% 1yr);9.688368648796777;max
+37;Investment Ratio (IO/PNPM) (Δ% 1yr);-3.131387362927734;max
+37;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+37;New Firms Rate (Nowe/EN) (Δ% 1yr);-14.285714285714308;max
+37;Receivables Turnover (PNPM/REC) (Δ% 1yr);-0.45598310510896484;max
+37;Sales Profitability (POS/PNPM) (Δ% 1yr);-125.41832117569902;max
+38;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.776767846102366;min
+38;Average Firm Size (Pracujący/EN) (Δ% 1yr);-0.590933810729435;max
+38;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.629173004470633;max
+38;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-4.402424911180855;min
+38;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-2.1934431956213705;max
+38;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);1.519223601074215;max
+38;Inventory Turnover (TC/INV) (Δ% 1yr);15.475194779238578;max
+38;Investment Ratio (IO/PNPM) (Δ% 1yr);-26.935218504856174;max
+38;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+38;New Firms Rate (Nowe/EN) (Δ% 1yr);15.003363982955827;max
+38;Receivables Turnover (PNPM/REC) (Δ% 1yr);3.5951746905143174;max
+38;Sales Profitability (POS/PNPM) (Δ% 1yr);65.10627737991783;max
+39;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);2.936134384061519;min
+39;Average Firm Size (Pracujący/EN) (Δ% 1yr);13.182503770739077;max
+39;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.235695886006684;max
+39;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-5.159915297764028;min
+39;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-9.352914864783223;max
+39;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-31.50483915736358;max
+39;Inventory Turnover (TC/INV) (Δ% 1yr);0.762639865487393;max
+39;Investment Ratio (IO/PNPM) (Δ% 1yr);53.06081815184518;max
+39;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+39;New Firms Rate (Nowe/EN) (Δ% 1yr);19.466666666666658;max
+39;Receivables Turnover (PNPM/REC) (Δ% 1yr);4.61956467419621;max
+39;Sales Profitability (POS/PNPM) (Δ% 1yr);59.226280058636505;max
+41;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.9103612739948389;min
+41;Average Firm Size (Pracujący/EN) (Δ% 1yr);5.489346584979904;max
+41;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.407585618669524;max
+41;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.7453459818024248;min
+41;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.126571503366727;max
+41;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);6.7546023238297535;max
+41;Inventory Turnover (TC/INV) (Δ% 1yr);-6.802081665707031;max
+41;Investment Ratio (IO/PNPM) (Δ% 1yr);4.514378861265246;max
+41;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+41;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.975019084975656;max
+41;Receivables Turnover (PNPM/REC) (Δ% 1yr);4.675860293734504;max
+41;Sales Profitability (POS/PNPM) (Δ% 1yr);7.741593576420951;max
+42;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.741123054133491;min
+42;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.109691670785964;max
+42;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-22.30395032845397;max
+42;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.0109858705728834;min
+42;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-2.3295094575874087;max
+42;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);9.993889785928953;max
+42;Inventory Turnover (TC/INV) (Δ% 1yr);5.321596846650019;max
+42;Investment Ratio (IO/PNPM) (Δ% 1yr);-15.910242924306697;max
+42;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+42;New Firms Rate (Nowe/EN) (Δ% 1yr);-20.39929189614477;max
+42;Receivables Turnover (PNPM/REC) (Δ% 1yr);8.83646437395567;max
+42;Sales Profitability (POS/PNPM) (Δ% 1yr);24.50683736114674;max
+43;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.651431422081135;min
+43;Average Firm Size (Pracujący/EN) (Δ% 1yr);0.8529940298978215;max
+43;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);9.95746706582899;max
+43;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.3675592676773581;min
+43;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.489808230954452;max
+43;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);23.272435884163524;max
+43;Inventory Turnover (TC/INV) (Δ% 1yr);-8.400366724162723;max
+43;Investment Ratio (IO/PNPM) (Δ% 1yr);-0.9691577903268696;max
+43;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+43;New Firms Rate (Nowe/EN) (Δ% 1yr);-15.623481350820962;max
+43;Receivables Turnover (PNPM/REC) (Δ% 1yr);1.448149720188636;max
+43;Sales Profitability (POS/PNPM) (Δ% 1yr);1.2571049963236662;max
+46;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.890378744349805;min
+46;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.8779333251904178;max
+46;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.316366888391576;max
+46;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.40923896643462615;min
+46;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-3.3309586290437996;max
+46;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);24.86186995309525;max
+46;Inventory Turnover (TC/INV) (Δ% 1yr);-2.2066297776200825;max
+46;Investment Ratio (IO/PNPM) (Δ% 1yr);-17.941229872570872;max
+46;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+46;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.837331585929139;max
+46;Receivables Turnover (PNPM/REC) (Δ% 1yr);3.1604404334755474;max
+46;Sales Profitability (POS/PNPM) (Δ% 1yr);18.94647261561897;max
+47;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);4.597117360426011;min
+47;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.911757918869693;max
+47;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-1.1884894872353917;max
+47;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.6618528906264387;min
+47;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-4.778019228184869;max
+47;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);65.45860044168738;max
+47;Inventory Turnover (TC/INV) (Δ% 1yr);-0.4353076101100866;max
+47;Investment Ratio (IO/PNPM) (Δ% 1yr);-11.307285330470714;max
+47;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+47;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.614003006232301;max
+47;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.5282334085517453;max
+47;Sales Profitability (POS/PNPM) (Δ% 1yr);1.201439247327572;max
+49;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);5.895622368386158;min
+49;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.19808968979777;max
+49;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);2.1125949222116085;max
+49;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.84547029719645;min
+49;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.841106585321837;max
+49;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);45.74858990581459;max
+49;Inventory Turnover (TC/INV) (Δ% 1yr);-3.9618821952866154;max
+49;Investment Ratio (IO/PNPM) (Δ% 1yr);2.085630162008481;max
+49;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+49;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.985327224612586;max
+49;Receivables Turnover (PNPM/REC) (Δ% 1yr);-5.348314678736987;max
+49;Sales Profitability (POS/PNPM) (Δ% 1yr);-1.7031943983030398;max
+50;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-37.612207002089306;min
+50;Average Firm Size (Pracujący/EN) (Δ% 1yr);20.288088642659286;max
+50;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-28.065901018923867;max
+50;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-3.4524509530476344;min
+50;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-2.576332493585713;max
+50;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-59.88271577851435;max
+50;Inventory Turnover (TC/INV) (Δ% 1yr);2.6406742379174144;max
+50;Investment Ratio (IO/PNPM) (Δ% 1yr);-54.045910693558206;max
+50;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+50;New Firms Rate (Nowe/EN) (Δ% 1yr);-31.525784157363102;max
+50;Receivables Turnover (PNPM/REC) (Δ% 1yr);-2.623569576466803;max
+50;Sales Profitability (POS/PNPM) (Δ% 1yr);-0.780804466266952;max
+51;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.590050238077726;min
+51;Average Firm Size (Pracujący/EN) (Δ% 1yr);35.72697522206638;max
+51;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);210.60522311911166;max
+51;Cost Share Ratio (TC/PNPM) (Δ% 1yr);5.084367810987298;min
+51;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-13.95959476362295;max
+51;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);16.077550477404817;max
+51;Inventory Turnover (TC/INV) (Δ% 1yr);-18.134475691945724;max
+51;Investment Ratio (IO/PNPM) (Δ% 1yr);-29.530643720070078;max
+51;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+51;New Firms Rate (Nowe/EN) (Δ% 1yr);-45.781057810578105;max
+51;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.9387542063202836;max
+51;Sales Profitability (POS/PNPM) (Δ% 1yr);-37.68214926199149;max
+52;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.863299750057807;min
+52;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.7389560587035755;max
+52;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.26439850476288895;max
+52;Cost Share Ratio (TC/PNPM) (Δ% 1yr);4.99824969670843;min
+52;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-10.882592582928126;max
+52;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-41.880398616796114;max
+52;Inventory Turnover (TC/INV) (Δ% 1yr);12.89930585946751;max
+52;Investment Ratio (IO/PNPM) (Δ% 1yr);9.11874827589441;max
+52;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+52;New Firms Rate (Nowe/EN) (Δ% 1yr);-19.511172905620707;max
+52;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.9382220718941148;max
+52;Sales Profitability (POS/PNPM) (Δ% 1yr);-73.6877385608792;max
+53;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.2368893348960942;min
+53;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.8929927799340702;max
+53;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-23.27908514614571;max
+53;Cost Share Ratio (TC/PNPM) (Δ% 1yr);3.296609623276851;min
+53;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);8.26103969699696;max
+53;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-52.00351557506908;max
+53;Inventory Turnover (TC/INV) (Δ% 1yr);6.0834924579264085;max
+53;Investment Ratio (IO/PNPM) (Δ% 1yr);70.49585257965411;max
+53;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+53;New Firms Rate (Nowe/EN) (Δ% 1yr);-2.6559798837026656;max
+53;Receivables Turnover (PNPM/REC) (Δ% 1yr);-8.797533886563642;max
+53;Sales Profitability (POS/PNPM) (Δ% 1yr);-57.17966014025448;max
+55;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);89.83907672405005;min
+55;Average Firm Size (Pracujący/EN) (Δ% 1yr);10.028317935294675;max
+55;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);6.025209071148647;max
+55;Cost Share Ratio (TC/PNPM) (Δ% 1yr);38.08604950575603;min
+55;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-8.678124690632524;max
+55;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);43.17582561947949;max
+55;Inventory Turnover (TC/INV) (Δ% 1yr);-12.648153472769682;max
+55;Investment Ratio (IO/PNPM) (Δ% 1yr);29.73227294455335;max
+55;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+55;New Firms Rate (Nowe/EN) (Δ% 1yr);-2.2799415414185966;max
+55;Receivables Turnover (PNPM/REC) (Δ% 1yr);-30.541435002526256;max
+55;Sales Profitability (POS/PNPM) (Δ% 1yr);-325.4636771116255;max
+56;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);26.381946247366805;min
+56;Average Firm Size (Pracujący/EN) (Δ% 1yr);17.00832555226202;max
+56;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);7.647761224356053;max
+56;Cost Share Ratio (TC/PNPM) (Δ% 1yr);10.901615258115815;min
+56;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-3.5689120317147713;max
+56;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-63.08489699232681;max
+56;Inventory Turnover (TC/INV) (Δ% 1yr);-0.7206736643300571;max
+56;Investment Ratio (IO/PNPM) (Δ% 1yr);10.231577414050422;max
+56;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+56;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.64891700919041;max
+56;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.991718364192996;max
+56;Sales Profitability (POS/PNPM) (Δ% 1yr);-113.0782658747153;max
+58;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-15.158655208476675;min
+58;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.9239718777698425;max
+58;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.9067681163513928;max
+58;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-12.386148728807827;min
+58;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-24.958938338089656;max
+58;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-7.645262355670609;max
+58;Inventory Turnover (TC/INV) (Δ% 1yr);-4.365729808618569;max
+58;Investment Ratio (IO/PNPM) (Δ% 1yr);-33.92451328499674;max
+58;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+58;New Firms Rate (Nowe/EN) (Δ% 1yr);11.100527379597134;max
+58;Receivables Turnover (PNPM/REC) (Δ% 1yr);-26.668445364180187;max
+58;Sales Profitability (POS/PNPM) (Δ% 1yr);141.57518506593357;max
+59;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);33.63773776302722;min
+59;Average Firm Size (Pracujący/EN) (Δ% 1yr);16.8458305684583;max
+59;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.73936037137248;max
+59;Cost Share Ratio (TC/PNPM) (Δ% 1yr);17.646822655316928;min
+59;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-26.934988521033272;max
+59;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);44.92672094062922;max
+59;Inventory Turnover (TC/INV) (Δ% 1yr);-5.331395931515601;max
+59;Investment Ratio (IO/PNPM) (Δ% 1yr);20.97590841551317;max
+59;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+59;New Firms Rate (Nowe/EN) (Δ% 1yr);-2.964021624308682;max
+59;Receivables Turnover (PNPM/REC) (Δ% 1yr);-33.58656328994342;max
+59;Sales Profitability (POS/PNPM) (Δ% 1yr);-138.0891704262958;max
+60;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.07047228023409444;min
+60;Average Firm Size (Pracujący/EN) (Δ% 1yr);5.950008304268375;max
+60;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-25.668054912008902;max
+60;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-2.322167917662114;min
+60;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-1.037427344313893;max
+60;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-53.28070714726362;max
+60;Inventory Turnover (TC/INV) (Δ% 1yr);-10.704996017547398;max
+60;Investment Ratio (IO/PNPM) (Δ% 1yr);-12.414678559395712;max
+60;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+60;New Firms Rate (Nowe/EN) (Δ% 1yr);30.621693121693156;max
+60;Receivables Turnover (PNPM/REC) (Δ% 1yr);18.272952519711396;max
+60;Sales Profitability (POS/PNPM) (Δ% 1yr);10.685242131457219;max
+61;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);2.7248818075004277;min
+61;Average Firm Size (Pracujący/EN) (Δ% 1yr);5.187368200954187;max
+61;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-7.499455817617102;max
+61;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.8806552846596073;min
+61;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);0.50624464862222;max
+61;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);2.1898702913422436;max
+61;Inventory Turnover (TC/INV) (Δ% 1yr);3.3141910829378007;max
+61;Investment Ratio (IO/PNPM) (Δ% 1yr);-10.537773569344134;max
+61;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+61;New Firms Rate (Nowe/EN) (Δ% 1yr);0.205978214774709;max
+61;Receivables Turnover (PNPM/REC) (Δ% 1yr);10.377082528621187;max
+61;Sales Profitability (POS/PNPM) (Δ% 1yr);4.221716529493297;max
+62;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.1977298564746235;min
+62;Average Firm Size (Pracujący/EN) (Δ% 1yr);5.408951251815126;max
+62;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.0419500722719053;max
+62;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.14126082763236192;min
+62;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-5.670549213764212;max
+62;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);40.88406776830147;max
+62;Inventory Turnover (TC/INV) (Δ% 1yr);-14.849339042851536;max
+62;Investment Ratio (IO/PNPM) (Δ% 1yr);-7.543919864533962;max
+62;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+62;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.3185246317219566;max
+62;Receivables Turnover (PNPM/REC) (Δ% 1yr);1.5204031055519553;max
+62;Sales Profitability (POS/PNPM) (Δ% 1yr);3.0003947515649427;max
+63;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-11.431058718069751;min
+63;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.8381135808587366;max
+63;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.831901312945494;max
+63;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.7594217539031836;min
+63;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-18.21813263664753;max
+63;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-30.967636542413253;max
+63;Inventory Turnover (TC/INV) (Δ% 1yr);13.05515578379508;max
+63;Investment Ratio (IO/PNPM) (Δ% 1yr);-35.21519817325281;max
+63;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+63;New Firms Rate (Nowe/EN) (Δ% 1yr);-13.394328545817372;max
+63;Receivables Turnover (PNPM/REC) (Δ% 1yr);-8.27956178503808;max
+63;Sales Profitability (POS/PNPM) (Δ% 1yr);2.189577414746511;max
+64;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);19.637245059223684;min
+64;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.4907798668615957;max
+64;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-4.691018395270696;max
+64;Cost Share Ratio (TC/PNPM) (Δ% 1yr);19.252437106854792;min
+64;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-9.426210095409202;max
+64;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);99.32862392158903;max
+64;Inventory Turnover (TC/INV) (Δ% 1yr);11.713312753509838;max
+64;Investment Ratio (IO/PNPM) (Δ% 1yr);-9.105029665183968;max
+64;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+64;New Firms Rate (Nowe/EN) (Δ% 1yr);-21.103448275862068;max
+64;Receivables Turnover (PNPM/REC) (Δ% 1yr);-9.542962329701288;max
+64;Sales Profitability (POS/PNPM) (Δ% 1yr);-49.561801921821655;max
+65;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+65;Average Firm Size (Pracujący/EN) (Δ% 1yr);2.9268292682926833;max
+65;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+65;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+65;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+65;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+65;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+65;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+65;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+65;New Firms Rate (Nowe/EN) (Δ% 1yr);-29.13907284768212;max
+65;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+65;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+66;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);19.359706457477664;min
+66;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.7746507555085;max
+66;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.222531487718703;max
+66;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.7756530331277447;min
+66;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-15.595984603378794;max
+66;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);5.677330593324321;max
+66;Inventory Turnover (TC/INV) (Δ% 1yr);-27.91225005006987;max
+66;Investment Ratio (IO/PNPM) (Δ% 1yr);22.306581730569814;max
+66;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+66;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.709562032460681;max
+66;Receivables Turnover (PNPM/REC) (Δ% 1yr);-5.968875150245739;max
+66;Sales Profitability (POS/PNPM) (Δ% 1yr);20.612624921247463;max
+68;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-4.241914353144857;min
+68;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.734215274276568;max
+68;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.8956064920692604;max
+68;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.9074460456782649;min
+68;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-4.623580677728039;max
+68;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);24.365969637353476;max
+68;Inventory Turnover (TC/INV) (Δ% 1yr);-4.885666024965133;max
+68;Investment Ratio (IO/PNPM) (Δ% 1yr);27.4472163118537;max
+68;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+68;New Firms Rate (Nowe/EN) (Δ% 1yr);4.574420510084917;max
+68;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.410999142804114;max
+68;Sales Profitability (POS/PNPM) (Δ% 1yr);1.3383689694240188;max
+69;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);8.190156365479828;min
+69;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.5359258775780047;max
+69;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-9.94199143805367;max
+69;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.2086757725921435;min
+69;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.470331257957826;max
+69;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);42.385113424135234;max
+69;Inventory Turnover (TC/INV) (Δ% 1yr);25.599884465945493;max
+69;Investment Ratio (IO/PNPM) (Δ% 1yr);-15.22432026162084;max
+69;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+69;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.344648179634923;max
+69;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.703392789483533;max
+69;Sales Profitability (POS/PNPM) (Δ% 1yr);17.929346421606933;max
+70;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-9.055200819860879;min
+70;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.906770686341994;max
+70;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-69.42402385059484;max
+70;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.7808362615515507;min
+70;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-22.85421284785593;max
+70;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-9.593562391510995;max
+70;Inventory Turnover (TC/INV) (Δ% 1yr);-40.95019034887846;max
+70;Investment Ratio (IO/PNPM) (Δ% 1yr);-58.388084705276796;max
+70;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+70;New Firms Rate (Nowe/EN) (Δ% 1yr);-3.0895419519814644;max
+70;Receivables Turnover (PNPM/REC) (Δ% 1yr);-18.598857993243566;max
+70;Sales Profitability (POS/PNPM) (Δ% 1yr);61.76627546487774;max
+71;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-5.047797430750997;min
+71;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.7240267070928608;max
+71;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);5.302833966683592;max
+71;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.2193861135600337;min
+71;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);0.4609191439904053;max
+71;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);63.087164173475095;max
+71;Inventory Turnover (TC/INV) (Δ% 1yr);43.28897560674958;max
+71;Investment Ratio (IO/PNPM) (Δ% 1yr);-19.713092681926806;max
+71;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+71;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.609427715561875;max
+71;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.577244732917752;max
+71;Sales Profitability (POS/PNPM) (Δ% 1yr);10.330087806744253;max
+72;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-10.37376818302684;min
+72;Average Firm Size (Pracujący/EN) (Δ% 1yr);6.09675684341724;max
+72;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.321050601499346;max
+72;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.6368658941309906;min
+72;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-2.7443662039304426;max
+72;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);67.88430586800393;max
+72;Inventory Turnover (TC/INV) (Δ% 1yr);4.795275967644277;max
+72;Investment Ratio (IO/PNPM) (Δ% 1yr);56.244322702856905;max
+72;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+72;New Firms Rate (Nowe/EN) (Δ% 1yr);9.429035131606257;max
+72;Receivables Turnover (PNPM/REC) (Δ% 1yr);2.2078891101553433;max
+72;Sales Profitability (POS/PNPM) (Δ% 1yr);-6.029256386203135;max
+73;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.5117356199774494;min
+73;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.7463893535857524;max
+73;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.8156761973746642;max
+73;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.25564480027780934;min
+73;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-11.12175724347264;max
+73;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);22.01764785224773;max
+73;Inventory Turnover (TC/INV) (Δ% 1yr);12.33967120097674;max
+73;Investment Ratio (IO/PNPM) (Δ% 1yr);-19.40245525419848;max
+73;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+73;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.489389543152983;max
+73;Receivables Turnover (PNPM/REC) (Δ% 1yr);-4.200830483800775;max
+73;Sales Profitability (POS/PNPM) (Δ% 1yr);-16.883235503428622;max
+74;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.4733616840963173;min
+74;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.7032864016109466;max
+74;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-25.17003236628621;max
+74;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-9.259429744413882;min
+74;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-1.3584976758931278;max
+74;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);280.1452718097397;max
+74;Inventory Turnover (TC/INV) (Δ% 1yr);2.611520858490476;max
+74;Investment Ratio (IO/PNPM) (Δ% 1yr);39.08679771834086;max
+74;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+74;New Firms Rate (Nowe/EN) (Δ% 1yr);-16.578793204452264;max
+74;Receivables Turnover (PNPM/REC) (Δ% 1yr);3.723618018706195;max
+74;Sales Profitability (POS/PNPM) (Δ% 1yr);37.11575427486282;max
+75;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-25.12127512127455;min
+75;Average Firm Size (Pracujący/EN) (Δ% 1yr);-31.828501005383664;max
+75;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-35.01479852049656;max
+75;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-5.395303805345637;min
+75;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-17.197533944718135;max
+75;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);1321.8305537026934;max
+75;Inventory Turnover (TC/INV) (Δ% 1yr);-16.586563580076092;max
+75;Investment Ratio (IO/PNPM) (Δ% 1yr);-7.325536062377587;max
+75;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+75;New Firms Rate (Nowe/EN) (Δ% 1yr);-19.393939393939394;max
+75;Receivables Turnover (PNPM/REC) (Δ% 1yr);-11.845617343506282;max
+75;Sales Profitability (POS/PNPM) (Δ% 1yr);60.87826179120297;max
+77;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);6.933573584945711;min
+77;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.7395487343946883;max
+77;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);4.597671597473523;max
+77;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.8323727807192314;min
+77;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);14.49347267050724;max
+77;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);33.360130565707706;max
+77;Inventory Turnover (TC/INV) (Δ% 1yr);7.911513665879866;max
+77;Investment Ratio (IO/PNPM) (Δ% 1yr);-1.584535528735025;max
+77;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+77;New Firms Rate (Nowe/EN) (Δ% 1yr);-6.524008350730695;max
+77;Receivables Turnover (PNPM/REC) (Δ% 1yr);29.48306755535596;max
+77;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.20466217049027;max
+78;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-3.4323939137250905;min
+78;Average Firm Size (Pracujący/EN) (Δ% 1yr);11.57976645975654;max
+78;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.07176864930350957;max
+78;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.6772995014183816;min
+78;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-19.525538081888545;max
+78;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);88.39077600203498;max
+78;Inventory Turnover (TC/INV) (Δ% 1yr);-15.465851703118695;max
+78;Investment Ratio (IO/PNPM) (Δ% 1yr);-29.503536798485325;max
+78;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+78;New Firms Rate (Nowe/EN) (Δ% 1yr);-18.542012591670122;max
+78;Receivables Turnover (PNPM/REC) (Δ% 1yr);-13.086973698875562;max
+78;Sales Profitability (POS/PNPM) (Δ% 1yr);14.677857433026501;max
+79;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);246.25356203230163;min
+79;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.1314724667666045;max
+79;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);57.11445815175955;max
+79;Cost Share Ratio (TC/PNPM) (Δ% 1yr);18.609508829061607;min
+79;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-61.9485996872918;max
+79;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);261.0115263353672;max
+79;Inventory Turnover (TC/INV) (Δ% 1yr);107.67752921299574;max
+79;Investment Ratio (IO/PNPM) (Δ% 1yr);109.31216059067899;max
+79;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+79;New Firms Rate (Nowe/EN) (Δ% 1yr);-45.53259395196682;max
+79;Receivables Turnover (PNPM/REC) (Δ% 1yr);-63.796571451088;max
+79;Sales Profitability (POS/PNPM) (Δ% 1yr);-654.4675154776133;max
+80;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-4.469886231270124;min
+80;Average Firm Size (Pracujący/EN) (Δ% 1yr);6.1666595359317675;max
+80;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.15201214268496857;max
+80;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.6486193176080455;min
+80;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-0.5463123087201852;max
+80;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-36.842649879792596;max
+80;Inventory Turnover (TC/INV) (Δ% 1yr);5.1667694278046294;max
+80;Investment Ratio (IO/PNPM) (Δ% 1yr);-36.11268760075691;max
+80;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+80;New Firms Rate (Nowe/EN) (Δ% 1yr);23.458209574909798;max
+80;Receivables Turnover (PNPM/REC) (Δ% 1yr);8.412728425544818;max
+80;Sales Profitability (POS/PNPM) (Δ% 1yr);41.74122187095669;max
+81;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-1.2772908992139658;min
+81;Average Firm Size (Pracujący/EN) (Δ% 1yr);0.26867167711462303;max
+81;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-0.6077410128742409;max
+81;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-2.1223751706524343;min
+81;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-4.371448514047642;max
+81;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-19.56367972783749;max
+81;Inventory Turnover (TC/INV) (Δ% 1yr);21.819976831377964;max
+81;Investment Ratio (IO/PNPM) (Δ% 1yr);-1.7723115601510817;max
+81;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+81;New Firms Rate (Nowe/EN) (Δ% 1yr);-12.626212833252175;max
+81;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.883405770798798;max
+81;Sales Profitability (POS/PNPM) (Δ% 1yr);356.13733671788333;max
+82;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);14.24811885801433;min
+82;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.5583295988435975;max
+82;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-15.18627153023344;max
+82;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.8169194122784653;min
+82;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-6.835653787558901;max
+82;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-23.508122309961358;max
+82;Inventory Turnover (TC/INV) (Δ% 1yr);-5.638249812273193;max
+82;Investment Ratio (IO/PNPM) (Δ% 1yr);-11.903117395037219;max
+82;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+82;New Firms Rate (Nowe/EN) (Δ% 1yr);-10.10355141518042;max
+82;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.4380422912432462;max
+82;Sales Profitability (POS/PNPM) (Δ% 1yr);26.113709741307012;max
+84;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+84;Average Firm Size (Pracujący/EN) (Δ% 1yr);-0.007539772298876574;max
+84;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+84;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+84;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+84;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+84;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+84;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+84;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+84;New Firms Rate (Nowe/EN) (Δ% 1yr);-82.35294117647058;max
+84;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+84;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+85;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);9.371697884160605;min
+85;Average Firm Size (Pracujący/EN) (Δ% 1yr);-1.4604933975781225;max
+85;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.358130071978104;max
+85;Cost Share Ratio (TC/PNPM) (Δ% 1yr);11.864104935907461;min
+85;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-27.017393886207497;max
+85;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);130.558092045238;max
+85;Inventory Turnover (TC/INV) (Δ% 1yr);-21.019480282355914;max
+85;Investment Ratio (IO/PNPM) (Δ% 1yr);-3.083764732929514;max
+85;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+85;New Firms Rate (Nowe/EN) (Δ% 1yr);-17.64362887313406;max
+85;Receivables Turnover (PNPM/REC) (Δ% 1yr);-28.813456330117404;max
+85;Sales Profitability (POS/PNPM) (Δ% 1yr);-51.48761877202605;max
+86;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);3.7155203870563307;min
+86;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.105648728844533;max
+86;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-5.365845320460655;max
+86;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-0.38782827663520736;min
+86;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-14.493643891743519;max
+86;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-12.62477800074841;max
+86;Inventory Turnover (TC/INV) (Δ% 1yr);-33.75157952061155;max
+86;Investment Ratio (IO/PNPM) (Δ% 1yr);-7.90533891268424;max
+86;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+86;New Firms Rate (Nowe/EN) (Δ% 1yr);-0.8804473058029798;max
+86;Receivables Turnover (PNPM/REC) (Δ% 1yr);-3.6616181778456958;max
+86;Sales Profitability (POS/PNPM) (Δ% 1yr);32.314261917186506;max
+87;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-52.534006838849024;min
+87;Average Firm Size (Pracujący/EN) (Δ% 1yr);-7.850556947183267;max
+87;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-16.49902089787992;max
+87;Cost Share Ratio (TC/PNPM) (Δ% 1yr);2.364995903593268;min
+87;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);8.42120356452174;max
+87;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-80.2291138750672;max
+87;Inventory Turnover (TC/INV) (Δ% 1yr);327.56053108593665;max
+87;Investment Ratio (IO/PNPM) (Δ% 1yr);-34.256179454031994;max
+87;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+87;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.581450653983344;max
+87;Receivables Turnover (PNPM/REC) (Δ% 1yr);1.884620348439555;max
+87;Sales Profitability (POS/PNPM) (Δ% 1yr);-38.98672228698866;max
+88;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);21.173302985302954;min
+88;Average Firm Size (Pracujący/EN) (Δ% 1yr);7.440895805977271;max
+88;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-56.159912938308224;max
+88;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-2.4455019282078925;min
+88;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);0.40014612801505084;max
+88;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);101.24249430092136;max
+88;Inventory Turnover (TC/INV) (Δ% 1yr);939.4189321091145;max
+88;Investment Ratio (IO/PNPM) (Δ% 1yr);-85.1657433471091;max
+88;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+88;New Firms Rate (Nowe/EN) (Δ% 1yr);-8.518945780459672;max
+88;Receivables Turnover (PNPM/REC) (Δ% 1yr);6.08238626776807;max
+88;Sales Profitability (POS/PNPM) (Δ% 1yr);56.19661131752609;max
+90;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);421.37944842550314;min
+90;Average Firm Size (Pracujący/EN) (Δ% 1yr);-7.239150507848567;max
+90;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);345.9408009667977;max
+90;Cost Share Ratio (TC/PNPM) (Δ% 1yr);58.412181541771766;min
+90;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-52.72422539718114;max
+90;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-86.83228775197513;max
+90;Inventory Turnover (TC/INV) (Δ% 1yr);-97.94030563021138;max
+90;Investment Ratio (IO/PNPM) (Δ% 1yr);58.7736092440969;max
+90;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+90;New Firms Rate (Nowe/EN) (Δ% 1yr);-38.65511971472236;max
+90;Receivables Turnover (PNPM/REC) (Δ% 1yr);-79.05844772835793;max
+90;Sales Profitability (POS/PNPM) (Δ% 1yr);-925.7176870748308;max
+91;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);28.159386330130403;min
+91;Average Firm Size (Pracujący/EN) (Δ% 1yr);-6.688963210702319;max
+91;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-16.29209981074731;max
+91;Cost Share Ratio (TC/PNPM) (Δ% 1yr);16.136012037266102;min
+91;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-17.524075814014818;max
+91;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-32.16582505810906;max
+91;Inventory Turnover (TC/INV) (Δ% 1yr);11.379013291520245;max
+91;Investment Ratio (IO/PNPM) (Δ% 1yr);55.47257386527098;max
+91;New Firms Rate (Nowe/EN) (Δ% 1yr);-31.717597471022124;max
+91;Receivables Turnover (PNPM/REC) (Δ% 1yr);-31.96865969634231;max
+91;Sales Profitability (POS/PNPM) (Δ% 1yr);-345.86599712129515;max
+92;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);2.303131400480573;min
+92;Average Firm Size (Pracujący/EN) (Δ% 1yr);4.360336432049567;max
+92;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);18.616411054504553;max
+92;Cost Share Ratio (TC/PNPM) (Δ% 1yr);1.1335061080869928;min
+92;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);49.36615255084753;max
+92;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);28.923383382330307;max
+92;Inventory Turnover (TC/INV) (Δ% 1yr);4.939087990535301;max
+92;Investment Ratio (IO/PNPM) (Δ% 1yr);-35.281079415243724;max
+92;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+92;New Firms Rate (Nowe/EN) (Δ% 1yr);2.77777777777779;max
+92;Receivables Turnover (PNPM/REC) (Δ% 1yr);-15.650953788762695;max
+92;Sales Profitability (POS/PNPM) (Δ% 1yr);-47.88975171634866;max
+93;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);52.4577688366052;min
+93;Average Firm Size (Pracujący/EN) (Δ% 1yr);6.577915318636373;max
+93;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);1.805346174311375;max
+93;Cost Share Ratio (TC/PNPM) (Δ% 1yr);11.904382627184509;min
+93;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-23.60425888059626;max
+93;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);11.16129237102108;max
+93;Inventory Turnover (TC/INV) (Δ% 1yr);-5.31848271574537;max
+93;Investment Ratio (IO/PNPM) (Δ% 1yr);39.29145525842904;max
+93;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+93;New Firms Rate (Nowe/EN) (Δ% 1yr);-26.82584269662921;max
+93;Receivables Turnover (PNPM/REC) (Δ% 1yr);-18.435986728758838;max
+93;Sales Profitability (POS/PNPM) (Δ% 1yr);-201.11090816882782;max
+94;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);0.0;min
+94;Average Firm Size (Pracujący/EN) (Δ% 1yr);1.2552002683088692;max
+94;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);0.0;max
+94;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.0;min
+94;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);0.0;max
+94;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);0.0;max
+94;Inventory Turnover (TC/INV) (Δ% 1yr);0.0;max
+94;Investment Ratio (IO/PNPM) (Δ% 1yr);0.0;max
+94;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+94;New Firms Rate (Nowe/EN) (Δ% 1yr);-58.274518065943326;max
+94;Receivables Turnover (PNPM/REC) (Δ% 1yr);0.0;max
+94;Sales Profitability (POS/PNPM) (Δ% 1yr);0.0;max
+95;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);-2.204819460737836;min
+95;Average Firm Size (Pracujący/EN) (Δ% 1yr);-1.969309462915592;max
+95;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);-3.2250008175490126;max
+95;Cost Share Ratio (TC/PNPM) (Δ% 1yr);0.057872699592527777;min
+95;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-1.65574012039971;max
+95;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);16.885935471413646;max
+95;Inventory Turnover (TC/INV) (Δ% 1yr);-2.61160117594497;max
+95;Investment Ratio (IO/PNPM) (Δ% 1yr);-38.24769765420042;max
+95;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);100.0;max
+95;New Firms Rate (Nowe/EN) (Δ% 1yr);-22.967189728958623;max
+95;Receivables Turnover (PNPM/REC) (Δ% 1yr);-0.7747611737420104;max
+95;Sales Profitability (POS/PNPM) (Δ% 1yr);3.0088527795057165;max
+96;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);111.0708663344142;min
+96;Average Firm Size (Pracujący/EN) (Δ% 1yr);10.861782450762252;max
+96;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);20.53490053581011;max
+96;Cost Share Ratio (TC/PNPM) (Δ% 1yr);17.785517372135175;min
+96;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-37.77060997007691;max
+96;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);-4.245690917781788;max
+96;Inventory Turnover (TC/INV) (Δ% 1yr);-5.42727246930334;max
+96;Investment Ratio (IO/PNPM) (Δ% 1yr);13.067022991113097;max
+96;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-100.0;max
+96;New Firms Rate (Nowe/EN) (Δ% 1yr);-7.391177411058128;max
+96;Receivables Turnover (PNPM/REC) (Δ% 1yr);-17.867227440368726;max
+96;Sales Profitability (POS/PNPM) (Δ% 1yr);-78.53951783452703;max
+97;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+97;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+97;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+97;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+97;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+97;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+97;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+97;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+97;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+98;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+98;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+98;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+98;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+98;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+98;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+98;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+98;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+98;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+99;Amortization Ratio (DEPR/PNPM) (Δ% 1yr);10.320032232248227;min
+99;Average Firm Size (Pracujący/EN) (Δ% 1yr);10.896076352067857;max
+99;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 1yr);3.5728729058899984;max
+99;Cost Share Ratio (TC/PNPM) (Δ% 1yr);-1.4838499398487808;min
+99;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 1yr);-7.723339820982105;max
+99;Financial Revenue Share (Przych.fin./GS) (Δ% 1yr);29.799311850962273;max
+99;Inventory Turnover (TC/INV) (Δ% 1yr);-9.119092005704136;max
+99;Investment Ratio (IO/PNPM) (Δ% 1yr);1.6366311113963066;max
+99;New Firms Rate (Nowe/EN) (Δ% 1yr);27.71739130434781;max
+99;Receivables Turnover (PNPM/REC) (Δ% 1yr);-1.3214900726732466;max
+99;Sales Profitability (POS/PNPM) (Δ% 1yr);-17.524175292638986;max
+01;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-5.0855478345804;min
+01;Average Firm Size (Pracujący/EN) (Δ% 2yr);10.672127866098146;max
+01;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.3334132606426082;max
+01;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.7531674363792196;min
+01;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);10.014431556094507;max
+01;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);44.42220974286573;max
+01;Inventory Turnover (TC/INV) (Δ% 2yr);10.025204154295661;max
+01;Investment Ratio (IO/PNPM) (Δ% 2yr);-11.450357553225311;max
+01;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+01;New Firms Rate (Nowe/EN) (Δ% 2yr);31.623582403652655;max
+01;Receivables Turnover (PNPM/REC) (Δ% 2yr);18.301196459723432;max
+01;Sales Profitability (POS/PNPM) (Δ% 2yr);105.5273919674027;max
+02;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);13.130289452347904;min
+02;Average Firm Size (Pracujący/EN) (Δ% 2yr);-3.2815230589226267;max
+02;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);19.71063780471973;max
+02;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.527769239071738;min
+02;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-13.715306978792343;max
+02;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-44.06898993113142;max
+02;Inventory Turnover (TC/INV) (Δ% 2yr);-7.338360763670737;max
+02;Investment Ratio (IO/PNPM) (Δ% 2yr);-13.51010890709064;max
+02;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+02;New Firms Rate (Nowe/EN) (Δ% 2yr);-27.521621506475785;max
+02;Receivables Turnover (PNPM/REC) (Δ% 2yr);7.438074182054305;max
+02;Sales Profitability (POS/PNPM) (Δ% 2yr);-21.403642369728928;max
+03;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.2598049509377367;min
+03;Average Firm Size (Pracujący/EN) (Δ% 2yr);13.384176715105287;max
+03;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);25.28765070694936;max
+03;Cost Share Ratio (TC/PNPM) (Δ% 2yr);3.4864382360906734;min
+03;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);1.216412560888299;max
+03;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);4.8363752291381745;max
+03;Inventory Turnover (TC/INV) (Δ% 2yr);5.846969164180228;max
+03;Investment Ratio (IO/PNPM) (Δ% 2yr);39.19638047583498;max
+03;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+03;New Firms Rate (Nowe/EN) (Δ% 2yr);6.881720430107519;max
+03;Receivables Turnover (PNPM/REC) (Δ% 2yr);5.1281818967790045;max
+03;Sales Profitability (POS/PNPM) (Δ% 2yr);-212.44757746803836;max
+05;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);53.191996208009705;min
+05;Average Firm Size (Pracujący/EN) (Δ% 2yr);3.7837837837837847;max
+05;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);200.3670047466503;max
+05;Cost Share Ratio (TC/PNPM) (Δ% 2yr);34.91163113045271;min
+05;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-18.352576613310134;max
+05;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-47.139585634067856;max
+05;Inventory Turnover (TC/INV) (Δ% 2yr);-40.31966908335901;max
+05;Investment Ratio (IO/PNPM) (Δ% 2yr);21.86209643204205;max
+05;New Firms Rate (Nowe/EN) (Δ% 2yr);-76.0;max
+05;Receivables Turnover (PNPM/REC) (Δ% 2yr);-8.433884531796656;max
+05;Sales Profitability (POS/PNPM) (Δ% 2yr);-458.48125807509064;max
+06;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+06;Average Firm Size (Pracujący/EN) (Δ% 2yr);-11.578947368421055;max
+06;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+06;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+06;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+06;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+06;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+06;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+06;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+06;New Firms Rate (Nowe/EN) (Δ% 2yr);-100.0;max
+06;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+06;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+07;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+07;Average Firm Size (Pracujący/EN) (Δ% 2yr);-6.25;max
+07;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+07;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+07;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+07;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+07;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+07;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+07;New Firms Rate (Nowe/EN) (Δ% 2yr);-50.0;max
+07;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+07;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+08;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);23.206824573349728;min
+08;Average Firm Size (Pracujący/EN) (Δ% 2yr);-4.5354040885499485;max
+08;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.459761908940645;max
+08;Cost Share Ratio (TC/PNPM) (Δ% 2yr);2.996662301344787;min
+08;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-11.637406252887535;max
+08;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-20.466581441278528;max
+08;Inventory Turnover (TC/INV) (Δ% 2yr);-28.702437398102116;max
+08;Investment Ratio (IO/PNPM) (Δ% 2yr);10.289124306993692;max
+08;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+08;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.576086956521743;max
+08;Receivables Turnover (PNPM/REC) (Δ% 2yr);6.656953541436231;max
+08;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.407819440754981;max
+09;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);55.64275893631139;min
+09;Average Firm Size (Pracujący/EN) (Δ% 2yr);-6.131504638967317;max
+09;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);24.03609937688631;max
+09;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.5626346429832598;min
+09;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-29.798830568044625;max
+09;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);54.296731280988844;max
+09;Inventory Turnover (TC/INV) (Δ% 2yr);-12.975825274600375;max
+09;Investment Ratio (IO/PNPM) (Δ% 2yr);40.920923162384135;max
+09;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+09;New Firms Rate (Nowe/EN) (Δ% 2yr);-43.833464257659074;max
+09;Receivables Turnover (PNPM/REC) (Δ% 2yr);9.073350683921507;max
+09;Sales Profitability (POS/PNPM) (Δ% 2yr);9.084976586636406;max
+10;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);5.823523590261613;min
+10;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.478200656305552;max
+10;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.9553719961637617;max
+10;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.9238525468292171;min
+10;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);3.7702659189776577;max
+10;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);40.955191580166186;max
+10;Inventory Turnover (TC/INV) (Δ% 2yr);-3.2382268359486788;max
+10;Investment Ratio (IO/PNPM) (Δ% 2yr);2.0664777799895595;max
+10;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+10;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.37821434166878;max
+10;Receivables Turnover (PNPM/REC) (Δ% 2yr);11.51846153159163;max
+10;Sales Profitability (POS/PNPM) (Δ% 2yr);9.072292128501743;max
+11;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);5.260034563191917;min
+11;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.949865063518876;max
+11;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);14.352029946334374;max
+11;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.701124937633659;min
+11;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);9.92152806650006;max
+11;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-13.81062069138592;max
+11;Inventory Turnover (TC/INV) (Δ% 2yr);0.8373430082938665;max
+11;Investment Ratio (IO/PNPM) (Δ% 2yr);58.82436566277839;max
+11;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+11;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.092201366527913;max
+11;Receivables Turnover (PNPM/REC) (Δ% 2yr);2.9093189471006684;max
+11;Sales Profitability (POS/PNPM) (Δ% 2yr);4.1695497692658945;max
+12;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);2.178523193620545;min
+12;Average Firm Size (Pracujący/EN) (Δ% 2yr);-15.38461538461538;max
+12;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-25.949446062718213;max
+12;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.461115546411349;min
+12;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);14.13743430865281;max
+12;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);99.69458253044905;max
+12;Inventory Turnover (TC/INV) (Δ% 2yr);18.689542086807933;max
+12;Investment Ratio (IO/PNPM) (Δ% 2yr);-48.177693395292756;max
+12;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+12;New Firms Rate (Nowe/EN) (Δ% 2yr);41.02564102564102;max
+12;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.2628081799461355;max
+12;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.442711391433193;max
+13;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);18.87510311553071;min
+13;Average Firm Size (Pracujący/EN) (Δ% 2yr);7.533785569911637;max
+13;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);20.4294186485058;max
+13;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-3.0858161370763466;min
+13;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-9.263349467450475;max
+13;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-4.226732498250733;max
+13;Inventory Turnover (TC/INV) (Δ% 2yr);-2.7532612977682813;max
+13;Investment Ratio (IO/PNPM) (Δ% 2yr);-36.05545616346447;max
+13;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+13;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.383980365908073;max
+13;Receivables Turnover (PNPM/REC) (Δ% 2yr);-5.544235241139012;max
+13;Sales Profitability (POS/PNPM) (Δ% 2yr);83.26218106552483;max
+14;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);15.460624412981677;min
+14;Average Firm Size (Pracujący/EN) (Δ% 2yr);7.632406021402762;max
+14;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);10.28247719101213;max
+14;Cost Share Ratio (TC/PNPM) (Δ% 2yr);2.04113746760307;min
+14;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-11.368544861516831;max
+14;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);56.33557062734717;max
+14;Inventory Turnover (TC/INV) (Δ% 2yr);-9.443983255241022;max
+14;Investment Ratio (IO/PNPM) (Δ% 2yr);-33.550634754583875;max
+14;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+14;New Firms Rate (Nowe/EN) (Δ% 2yr);-16.937643930932904;max
+14;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.460868287521024;max
+14;Sales Profitability (POS/PNPM) (Δ% 2yr);-7.837676947270798;max
+15;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);83.88805953684127;min
+15;Average Firm Size (Pracujący/EN) (Δ% 2yr);13.856914468425249;max
+15;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);20.203523049685334;max
+15;Cost Share Ratio (TC/PNPM) (Δ% 2yr);2.5434902522789775;min
+15;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-22.721858656778178;max
+15;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);165.15682907230155;max
+15;Inventory Turnover (TC/INV) (Δ% 2yr);-4.946737124792861;max
+15;Investment Ratio (IO/PNPM) (Δ% 2yr);-51.434150470185145;max
+15;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+15;New Firms Rate (Nowe/EN) (Δ% 2yr);-10.596157654981184;max
+15;Receivables Turnover (PNPM/REC) (Δ% 2yr);-23.56539472276842;max
+15;Sales Profitability (POS/PNPM) (Δ% 2yr);-42.18526374287999;max
+16;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);25.25549103202164;min
+16;Average Firm Size (Pracujący/EN) (Δ% 2yr);5.314381270903001;max
+16;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.3237079548971349;max
+16;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.0585917285600188;min
+16;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-5.280411171020779;max
+16;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-64.71158029796713;max
+16;Inventory Turnover (TC/INV) (Δ% 2yr);3.8208596707258207;max
+16;Investment Ratio (IO/PNPM) (Δ% 2yr);-16.95053751623434;max
+16;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+16;New Firms Rate (Nowe/EN) (Δ% 2yr);-10.735229759299786;max
+16;Receivables Turnover (PNPM/REC) (Δ% 2yr);-5.8279993432164305;max
+16;Sales Profitability (POS/PNPM) (Δ% 2yr);-0.1675289413130062;max
+17;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);8.137642865591673;min
+17;Average Firm Size (Pracujący/EN) (Δ% 2yr);-2.35889802915731;max
+17;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.7695587076247545;max
+17;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.1152850599697786;min
+17;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-5.600755563286927;max
+17;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-47.186209574625856;max
+17;Inventory Turnover (TC/INV) (Δ% 2yr);6.971637410128617;max
+17;Investment Ratio (IO/PNPM) (Δ% 2yr);-13.86302886791152;max
+17;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+17;New Firms Rate (Nowe/EN) (Δ% 2yr);-28.08510638297873;max
+17;Receivables Turnover (PNPM/REC) (Δ% 2yr);-1.2392971100097154;max
+17;Sales Profitability (POS/PNPM) (Δ% 2yr);4.315447964329071;max
+18;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);5.5035099507063325;min
+18;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.006157225562084;max
+18;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-10.148805614335595;max
+18;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.0603410127337811;min
+18;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.468376833678347;max
+18;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-49.26507458175606;max
+18;Inventory Turnover (TC/INV) (Δ% 2yr);-7.841737461866023;max
+18;Investment Ratio (IO/PNPM) (Δ% 2yr);-33.95163190631103;max
+18;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+18;New Firms Rate (Nowe/EN) (Δ% 2yr);-28.06289099263688;max
+18;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.1788445861912018;max
+18;Sales Profitability (POS/PNPM) (Δ% 2yr);9.315127142537543;max
+19;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);84.34558159962164;min
+19;Average Firm Size (Pracujący/EN) (Δ% 2yr);2.6858048608665133;max
+19;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-15.612678648364353;max
+19;Cost Share Ratio (TC/PNPM) (Δ% 2yr);7.345987345967736;min
+19;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);1.6325412686967171;max
+19;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-38.04763844926574;max
+19;Inventory Turnover (TC/INV) (Δ% 2yr);4.663996391939742;max
+19;Investment Ratio (IO/PNPM) (Δ% 2yr);171.3521146731348;max
+19;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+19;New Firms Rate (Nowe/EN) (Δ% 2yr);-50.840336134453814;max
+19;Receivables Turnover (PNPM/REC) (Δ% 2yr);0.6450789372430041;max
+19;Sales Profitability (POS/PNPM) (Δ% 2yr);-104.79526539284576;max
+20;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);15.07260632082704;min
+20;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.14826239750099116;max
+20;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-10.67552375643681;max
+20;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-2.68532907224345;min
+20;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-10.486716928445636;max
+20;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-29.52513065846127;max
+20;Inventory Turnover (TC/INV) (Δ% 2yr);-7.8684748454266416;max
+20;Investment Ratio (IO/PNPM) (Δ% 2yr);33.176708130524105;max
+20;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+20;New Firms Rate (Nowe/EN) (Δ% 2yr);4.0437483478720635;max
+20;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.8237549376798834;max
+20;Sales Profitability (POS/PNPM) (Δ% 2yr);9.649903192006102;max
+21;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-5.69302653858673;min
+21;Average Firm Size (Pracujący/EN) (Δ% 2yr);1.6613142292490124;max
+21;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);19.73658206404822;max
+21;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.6791416852922721;min
+21;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-1.144890842997614;max
+21;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);929.150938219545;max
+21;Inventory Turnover (TC/INV) (Δ% 2yr);-5.406999667421354;max
+21;Investment Ratio (IO/PNPM) (Δ% 2yr);-9.730048171794442;max
+21;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+21;New Firms Rate (Nowe/EN) (Δ% 2yr);-26.99275362318842;max
+21;Receivables Turnover (PNPM/REC) (Δ% 2yr);11.24633903873594;max
+21;Sales Profitability (POS/PNPM) (Δ% 2yr);9.435482853378344;max
+22;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);8.525022732842464;min
+22;Average Firm Size (Pracujący/EN) (Δ% 2yr);-0.6919916455025987;max
+22;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.046462242790076;max
+22;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.8744312259657152;min
+22;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-6.369276331741168;max
+22;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);46.187359390589286;max
+22;Inventory Turnover (TC/INV) (Δ% 2yr);-0.7829341265550204;max
+22;Investment Ratio (IO/PNPM) (Δ% 2yr);-4.757987479203137;max
+22;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+22;New Firms Rate (Nowe/EN) (Δ% 2yr);-13.216178382161786;max
+22;Receivables Turnover (PNPM/REC) (Δ% 2yr);-1.7205987320095126;max
+22;Sales Profitability (POS/PNPM) (Δ% 2yr);33.0397320218514;max
+23;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);12.865235071018255;min
+23;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.0477927667731282;max
+23;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-9.516179787808406;max
+23;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.4185901494874202;min
+23;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-5.482966133933945;max
+23;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-4.302745097805426;max
+23;Inventory Turnover (TC/INV) (Δ% 2yr);-0.9811189396880188;max
+23;Investment Ratio (IO/PNPM) (Δ% 2yr);-41.68656950890268;max
+23;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+23;New Firms Rate (Nowe/EN) (Δ% 2yr);-21.658939423145195;max
+23;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.0973491481628248;max
+23;Sales Profitability (POS/PNPM) (Δ% 2yr);5.701860585229245;max
+24;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);18.99166726236603;min
+24;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.3941885156859908;max
+24;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);7.705603575572704;max
+24;Cost Share Ratio (TC/PNPM) (Δ% 2yr);4.661069377500407;min
+24;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-17.430446620213452;max
+24;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);74.258528452494;max
+24;Inventory Turnover (TC/INV) (Δ% 2yr);8.353627375172232;max
+24;Investment Ratio (IO/PNPM) (Δ% 2yr);-20.09427539265742;max
+24;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+24;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.948164825383534;max
+24;Receivables Turnover (PNPM/REC) (Δ% 2yr);-12.6972703469556;max
+24;Sales Profitability (POS/PNPM) (Δ% 2yr);-71.47596814837578;max
+25;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);11.51286600624997;min
+25;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.184883635538963;max
+25;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.3336270468062534;max
+25;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.6864490071422061;min
+25;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.319479740937918;max
+25;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);29.65585823297347;max
+25;Inventory Turnover (TC/INV) (Δ% 2yr);-4.7454759276831675;max
+25;Investment Ratio (IO/PNPM) (Δ% 2yr);-25.760464851996055;max
+25;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+25;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.806555028564464;max
+25;Receivables Turnover (PNPM/REC) (Δ% 2yr);-1.6736709936398586;max
+25;Sales Profitability (POS/PNPM) (Δ% 2yr);9.440104448578532;max
+26;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-2.0979777481269153;min
+26;Average Firm Size (Pracujący/EN) (Δ% 2yr);-0.8022856616206876;max
+26;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-2.6130553560752077;max
+26;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.6340313849397353;min
+26;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-1.6728986981517244;max
+26;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);114.18398828441241;max
+26;Inventory Turnover (TC/INV) (Δ% 2yr);9.255572111692913;max
+26;Investment Ratio (IO/PNPM) (Δ% 2yr);-11.70732332694363;max
+26;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+26;New Firms Rate (Nowe/EN) (Δ% 2yr);1.7559932814170165;max
+26;Receivables Turnover (PNPM/REC) (Δ% 2yr);-2.5790936500901114;max
+26;Sales Profitability (POS/PNPM) (Δ% 2yr);29.022080409973395;max
+27;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);23.485579641303246;min
+27;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.5211129003399534;max
+27;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);74.74494763908184;max
+27;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.069696359701939;min
+27;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-15.793270986794743;max
+27;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);8.702113352189185;max
+27;Inventory Turnover (TC/INV) (Δ% 2yr);-14.679102012423595;max
+27;Investment Ratio (IO/PNPM) (Δ% 2yr);83.5197709364049;max
+27;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+27;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.963890935887997;max
+27;Receivables Turnover (PNPM/REC) (Δ% 2yr);-15.486504390686337;max
+27;Sales Profitability (POS/PNPM) (Δ% 2yr);4.300303933091017;max
+28;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);21.372447702144175;min
+28;Average Firm Size (Pracujący/EN) (Δ% 2yr);3.7758922375225006;max
+28;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.30590907121398025;max
+28;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.545969174007661;min
+28;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-14.021202210439835;max
+28;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);52.27966146732559;max
+28;Inventory Turnover (TC/INV) (Δ% 2yr);-9.82505580636893;max
+28;Investment Ratio (IO/PNPM) (Δ% 2yr);-13.074640942055419;max
+28;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+28;New Firms Rate (Nowe/EN) (Δ% 2yr);-11.31711632021231;max
+28;Receivables Turnover (PNPM/REC) (Δ% 2yr);-5.512367680864381;max
+28;Sales Profitability (POS/PNPM) (Δ% 2yr);5.502375608984856;max
+29;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);30.137175409182166;min
+29;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.7434944237918232;max
+29;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);11.75633498994652;max
+29;Cost Share Ratio (TC/PNPM) (Δ% 2yr);2.0777193726128367;min
+29;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-21.013816387098675;max
+29;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);184.90662015221633;max
+29;Inventory Turnover (TC/INV) (Δ% 2yr);-20.468742060746468;max
+29;Investment Ratio (IO/PNPM) (Δ% 2yr);15.224301370939125;max
+29;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+29;New Firms Rate (Nowe/EN) (Δ% 2yr);-12.499999999999988;max
+29;Receivables Turnover (PNPM/REC) (Δ% 2yr);-18.090670245284407;max
+29;Sales Profitability (POS/PNPM) (Δ% 2yr);-41.583999127161945;max
+30;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.329830035555628;min
+30;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.729141298879313;max
+30;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-18.68665141069862;max
+30;Cost Share Ratio (TC/PNPM) (Δ% 2yr);4.078570608685035;min
+30;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-6.6433523329356525;max
+30;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-0.2998121721770879;max
+30;Inventory Turnover (TC/INV) (Δ% 2yr);-9.310478599858282;max
+30;Investment Ratio (IO/PNPM) (Δ% 2yr);-22.69687886186143;max
+30;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+30;New Firms Rate (Nowe/EN) (Δ% 2yr);-20.55721164870442;max
+30;Receivables Turnover (PNPM/REC) (Δ% 2yr);3.6523683253492987;max
+30;Sales Profitability (POS/PNPM) (Δ% 2yr);-43.28338331660328;max
+31;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);5.54897665390656;min
+31;Average Firm Size (Pracujący/EN) (Δ% 2yr);12.327293959252232;max
+31;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.622166280423455;max
+31;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-2.2600949152822425;min
+31;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);3.3201533122385594;max
+31;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-1.9303367262893996;max
+31;Inventory Turnover (TC/INV) (Δ% 2yr);-5.115149359927211;max
+31;Investment Ratio (IO/PNPM) (Δ% 2yr);-10.831417781655853;max
+31;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+31;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.364615937703064;max
+31;Receivables Turnover (PNPM/REC) (Δ% 2yr);28.987554174238266;max
+31;Sales Profitability (POS/PNPM) (Δ% 2yr);41.0098611622605;max
+32;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);16.82632054562519;min
+32;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.671552992332041;max
+32;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.1062406001069016;max
+32;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.2833889784053623;min
+32;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);0.7421777453829081;max
+32;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);3.6796535647106126;max
+32;Inventory Turnover (TC/INV) (Δ% 2yr);2.7445820565132175;max
+32;Investment Ratio (IO/PNPM) (Δ% 2yr);-32.73987623621319;max
+32;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+32;New Firms Rate (Nowe/EN) (Δ% 2yr);-12.197635853388897;max
+32;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.1211754367261273;max
+32;Sales Profitability (POS/PNPM) (Δ% 2yr);20.66648936259202;max
+33;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);9.865235155545669;min
+33;Average Firm Size (Pracujący/EN) (Δ% 2yr);2.2161074563637086;max
+33;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.674064816425014;max
+33;Cost Share Ratio (TC/PNPM) (Δ% 2yr);3.7054816410837152;min
+33;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-12.204381976293439;max
+33;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);51.382714482400125;max
+33;Inventory Turnover (TC/INV) (Δ% 2yr);-38.65882288607582;max
+33;Investment Ratio (IO/PNPM) (Δ% 2yr);2.3166172200745723;max
+33;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+33;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.0316992152383;max
+33;Receivables Turnover (PNPM/REC) (Δ% 2yr);14.668715159356013;max
+33;Sales Profitability (POS/PNPM) (Δ% 2yr);-22.327511915361317;max
+35;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.24386502078518557;min
+35;Average Firm Size (Pracujący/EN) (Δ% 2yr);28.526638701784652;max
+35;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);46.7209387487089;max
+35;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.18126838361658745;min
+35;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);1.162066455116621;max
+35;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-41.52453360421472;max
+35;Inventory Turnover (TC/INV) (Δ% 2yr);-4.3562604614402245;max
+35;Investment Ratio (IO/PNPM) (Δ% 2yr);-13.804536751929101;max
+35;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+35;New Firms Rate (Nowe/EN) (Δ% 2yr);168.19211340009414;max
+35;Receivables Turnover (PNPM/REC) (Δ% 2yr);16.035914837186972;max
+35;Sales Profitability (POS/PNPM) (Δ% 2yr);17.662323724382794;max
+36;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-3.823006294050351;min
+36;Average Firm Size (Pracujący/EN) (Δ% 2yr);6.481699770142048;max
+36;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.3782667979682757;max
+36;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.7662092022430682;min
+36;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-0.5013548758122163;max
+36;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-36.17620595559533;max
+36;Inventory Turnover (TC/INV) (Δ% 2yr);-9.040331874748073;max
+36;Investment Ratio (IO/PNPM) (Δ% 2yr);2.1868563740608136;max
+36;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+36;New Firms Rate (Nowe/EN) (Δ% 2yr);5.197368421052595;max
+36;Receivables Turnover (PNPM/REC) (Δ% 2yr);-2.72799206525314;max
+36;Sales Profitability (POS/PNPM) (Δ% 2yr);-87.14963373725608;max
+37;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.891231967841334;min
+37;Average Firm Size (Pracujący/EN) (Δ% 2yr);-4.297130933750653;max
+37;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.9326887278882663;max
+37;Cost Share Ratio (TC/PNPM) (Δ% 2yr);4.717977995648935;min
+37;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);11.890568044329818;max
+37;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-40.71623871848854;max
+37;Inventory Turnover (TC/INV) (Δ% 2yr);5.955326592916405;max
+37;Investment Ratio (IO/PNPM) (Δ% 2yr);16.08870203964344;max
+37;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+37;New Firms Rate (Nowe/EN) (Δ% 2yr);-1.1929824561403561;max
+37;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.005504861557677;max
+37;Sales Profitability (POS/PNPM) (Δ% 2yr);-109.05116755630932;max
+38;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-13.531217565908745;min
+38;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.9971027016036746;max
+38;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-19.22739074841958;max
+38;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-7.528703529624014;min
+38;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-9.785917544556392;max
+38;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-29.779049021360155;max
+38;Inventory Turnover (TC/INV) (Δ% 2yr);10.6598595281208;max
+38;Investment Ratio (IO/PNPM) (Δ% 2yr);-8.994916349360055;max
+38;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+38;New Firms Rate (Nowe/EN) (Δ% 2yr);-13.557567053007771;max
+38;Receivables Turnover (PNPM/REC) (Δ% 2yr);-10.162074960066304;max
+38;Sales Profitability (POS/PNPM) (Δ% 2yr);196.09839873241683;max
+39;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);3.9364910232192836;min
+39;Average Firm Size (Pracujący/EN) (Δ% 2yr);12.503748125937028;max
+39;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-9.401279688713391;max
+39;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-8.729133273479237;min
+39;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-38.12524893884508;max
+39;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-39.4863165427603;max
+39;Inventory Turnover (TC/INV) (Δ% 2yr);-71.65119672703938;max
+39;Investment Ratio (IO/PNPM) (Δ% 2yr);195.61859946640564;max
+39;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+39;New Firms Rate (Nowe/EN) (Δ% 2yr);9.71428571428571;max
+39;Receivables Turnover (PNPM/REC) (Δ% 2yr);3.94445374939945;max
+39;Sales Profitability (POS/PNPM) (Δ% 2yr);390.79878338882116;max
+41;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);2.3192064768992133;min
+41;Average Firm Size (Pracujący/EN) (Δ% 2yr);8.972268203072534;max
+41;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-8.928668607519654;max
+41;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.1562254196171995;min
+41;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-9.773910032820279;max
+41;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-11.230606958288753;max
+41;Inventory Turnover (TC/INV) (Δ% 2yr);-9.039078430672873;max
+41;Investment Ratio (IO/PNPM) (Δ% 2yr);4.666832739608525;max
+41;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+41;New Firms Rate (Nowe/EN) (Δ% 2yr);-11.22560436182787;max
+41;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.7642941026493084;max
+41;Sales Profitability (POS/PNPM) (Δ% 2yr);19.532350203586084;max
+42;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);22.19445021761314;min
+42;Average Firm Size (Pracujący/EN) (Δ% 2yr);3.6090972464273263;max
+42;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-54.81200803219931;max
+42;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.907932133367759;min
+42;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-10.654226530250504;max
+42;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-46.16035150285025;max
+42;Inventory Turnover (TC/INV) (Δ% 2yr);-0.557460001630061;max
+42;Investment Ratio (IO/PNPM) (Δ% 2yr);2.162516446115659;max
+42;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+42;New Firms Rate (Nowe/EN) (Δ% 2yr);-25.11861174675821;max
+42;Receivables Turnover (PNPM/REC) (Δ% 2yr);-1.2326219052475857;max
+42;Sales Profitability (POS/PNPM) (Δ% 2yr);17.956197732836362;max
+43;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.3843275337619465;min
+43;Average Firm Size (Pracujący/EN) (Δ% 2yr);10.307025255784803;max
+43;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.908744709615787;max
+43;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.8570039080653947;min
+43;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-7.864012652515;max
+43;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);13.067208054197627;max
+43;Inventory Turnover (TC/INV) (Δ% 2yr);-2.338990672041699;max
+43;Investment Ratio (IO/PNPM) (Δ% 2yr);-1.6695524020326786;max
+43;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+43;New Firms Rate (Nowe/EN) (Δ% 2yr);-8.091205381012406;max
+43;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.233364095853402;max
+43;Sales Profitability (POS/PNPM) (Δ% 2yr);11.667831030560816;max
+46;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);9.476835127629206;min
+46;Average Firm Size (Pracujący/EN) (Δ% 2yr);2.643540385635702;max
+46;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.055297711457002;max
+46;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.5512679903518166;min
+46;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-3.1463574231172027;max
+46;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);20.882193361259517;max
+46;Inventory Turnover (TC/INV) (Δ% 2yr);-2.588803843973831;max
+46;Investment Ratio (IO/PNPM) (Δ% 2yr);-15.449714817078897;max
+46;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+46;New Firms Rate (Nowe/EN) (Δ% 2yr);-14.121863058376308;max
+46;Receivables Turnover (PNPM/REC) (Δ% 2yr);5.985997055815156;max
+46;Sales Profitability (POS/PNPM) (Δ% 2yr);24.190279413000074;max
+47;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);13.214337933441461;min
+47;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.05453421398429;max
+47;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.7542396318833102;max
+47;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.36875349652351186;min
+47;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-6.1100935589101235;max
+47;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);4.260689512326603;max
+47;Inventory Turnover (TC/INV) (Δ% 2yr);-3.0680585576232744;max
+47;Investment Ratio (IO/PNPM) (Δ% 2yr);-20.32619873103473;max
+47;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+47;New Firms Rate (Nowe/EN) (Δ% 2yr);-3.928903928583119;max
+47;Receivables Turnover (PNPM/REC) (Δ% 2yr);3.080307370924;max
+47;Sales Profitability (POS/PNPM) (Δ% 2yr);8.01698017936493;max
+49;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);9.145313400249101;min
+49;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.6097818030339754;max
+49;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.481017261421801;max
+49;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.9399716375240565;min
+49;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-4.124727796077885;max
+49;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-3.485164654645703;max
+49;Inventory Turnover (TC/INV) (Δ% 2yr);2.5944884384668296;max
+49;Investment Ratio (IO/PNPM) (Δ% 2yr);18.179102422379753;max
+49;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+49;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.857425905212533;max
+49;Receivables Turnover (PNPM/REC) (Δ% 2yr);-4.719002964118168;max
+49;Sales Profitability (POS/PNPM) (Δ% 2yr);-7.644443057084237;max
+50;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-50.14200165224098;min
+50;Average Firm Size (Pracujący/EN) (Δ% 2yr);21.567749160134372;max
+50;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-36.53348571306454;max
+50;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-4.061560915888183;min
+50;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-7.276580248991965;max
+50;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-33.697371790394506;max
+50;Inventory Turnover (TC/INV) (Δ% 2yr);-32.137658965411696;max
+50;Investment Ratio (IO/PNPM) (Δ% 2yr);-74.66964863259452;max
+50;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+50;New Firms Rate (Nowe/EN) (Δ% 2yr);27.904667328699094;max
+50;Receivables Turnover (PNPM/REC) (Δ% 2yr);8.496245399422918;max
+50;Sales Profitability (POS/PNPM) (Δ% 2yr);-30.14405365576298;max
+51;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);37.927187266752675;min
+51;Average Firm Size (Pracujący/EN) (Δ% 2yr);91.99999999999999;max
+51;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);216.02015641986796;max
+51;Cost Share Ratio (TC/PNPM) (Δ% 2yr);4.553675718679466;min
+51;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-18.361357034008442;max
+51;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);46.283366767162455;max
+51;Inventory Turnover (TC/INV) (Δ% 2yr);-35.25080405772799;max
+51;Investment Ratio (IO/PNPM) (Δ% 2yr);-55.28704796348769;max
+51;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+51;New Firms Rate (Nowe/EN) (Δ% 2yr);-17.63313609467456;max
+51;Receivables Turnover (PNPM/REC) (Δ% 2yr);-8.147430164855853;max
+51;Sales Profitability (POS/PNPM) (Δ% 2yr);-41.01653158764677;max
+52;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);15.721038696816192;min
+52;Average Firm Size (Pracujący/EN) (Δ% 2yr);1.50310789408617;max
+52;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);7.1413182645142115;max
+52;Cost Share Ratio (TC/PNPM) (Δ% 2yr);3.8621563168016437;min
+52;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-13.462503660237218;max
+52;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-39.27970291363966;max
+52;Inventory Turnover (TC/INV) (Δ% 2yr);13.042816676455892;max
+52;Investment Ratio (IO/PNPM) (Δ% 2yr);4.762676107407097;max
+52;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+52;New Firms Rate (Nowe/EN) (Δ% 2yr);-26.908844626813753;max
+52;Receivables Turnover (PNPM/REC) (Δ% 2yr);4.787151638061721;max
+52;Sales Profitability (POS/PNPM) (Δ% 2yr);-73.42568458986385;max
+53;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);16.270939431741414;min
+53;Average Firm Size (Pracujący/EN) (Δ% 2yr);48.71871708256148;max
+53;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-37.50134398157115;max
+53;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.4547836532357363;min
+53;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);13.098552447019454;max
+53;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-49.4359841363847;max
+53;Inventory Turnover (TC/INV) (Δ% 2yr);33.73952414598006;max
+53;Investment Ratio (IO/PNPM) (Δ% 2yr);-3.3441743537086275;max
+53;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+53;New Firms Rate (Nowe/EN) (Δ% 2yr);51.009820270520656;max
+53;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.6213895263404543;max
+53;Sales Profitability (POS/PNPM) (Δ% 2yr);-21.03194806804441;max
+55;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);80.52187200911642;min
+55;Average Firm Size (Pracujący/EN) (Δ% 2yr);16.099494718089648;max
+55;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-0.20683311861953818;max
+55;Cost Share Ratio (TC/PNPM) (Δ% 2yr);36.272638763389665;min
+55;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-37.25319053162626;max
+55;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);167.04559607554756;max
+55;Inventory Turnover (TC/INV) (Δ% 2yr);-34.54668724141759;max
+55;Investment Ratio (IO/PNPM) (Δ% 2yr);13.359274339203505;max
+55;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+55;New Firms Rate (Nowe/EN) (Δ% 2yr);-6.860255739376629;max
+55;Receivables Turnover (PNPM/REC) (Δ% 2yr);-17.81902722401858;max
+55;Sales Profitability (POS/PNPM) (Δ% 2yr);-349.67708403606093;max
+56;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);24.587720019917157;min
+56;Average Firm Size (Pracujący/EN) (Δ% 2yr);12.66171474337257;max
+56;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.120082110660376;max
+56;Cost Share Ratio (TC/PNPM) (Δ% 2yr);9.023454409143952;min
+56;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-14.746171789240615;max
+56;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-67.53294761879299;max
+56;Inventory Turnover (TC/INV) (Δ% 2yr);-11.337081361778289;max
+56;Investment Ratio (IO/PNPM) (Δ% 2yr);5.8456238549493955;max
+56;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+56;New Firms Rate (Nowe/EN) (Δ% 2yr);-12.84605270267837;max
+56;Receivables Turnover (PNPM/REC) (Δ% 2yr);-9.275436114724583;max
+56;Sales Profitability (POS/PNPM) (Δ% 2yr);-114.75486447818975;max
+58;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-13.484902626534353;min
+58;Average Firm Size (Pracujący/EN) (Δ% 2yr);9.004755847357172;max
+58;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);19.09715236490836;max
+58;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-13.025986942379658;min
+58;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-24.700705300841875;max
+58;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);13.16581699032538;max
+58;Inventory Turnover (TC/INV) (Δ% 2yr);0.06781233718431486;max
+58;Investment Ratio (IO/PNPM) (Δ% 2yr);-41.22632213169252;max
+58;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+58;New Firms Rate (Nowe/EN) (Δ% 2yr);11.999851999851984;max
+58;Receivables Turnover (PNPM/REC) (Δ% 2yr);-23.464188985777973;max
+58;Sales Profitability (POS/PNPM) (Δ% 2yr);155.03040721494767;max
+59;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);46.08629719138523;min
+59;Average Firm Size (Pracujący/EN) (Δ% 2yr);9.055916363060373;max
+59;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-34.06294043338894;max
+59;Cost Share Ratio (TC/PNPM) (Δ% 2yr);16.86295552705657;min
+59;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-32.891129018042285;max
+59;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);54.14182969582645;max
+59;Inventory Turnover (TC/INV) (Δ% 2yr);-15.775126698353159;max
+59;Investment Ratio (IO/PNPM) (Δ% 2yr);-7.381484731945679;max
+59;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+59;New Firms Rate (Nowe/EN) (Δ% 2yr);-14.757806119243561;max
+59;Receivables Turnover (PNPM/REC) (Δ% 2yr);-41.51969330204961;max
+59;Sales Profitability (POS/PNPM) (Δ% 2yr);-142.7028178280632;max
+60;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-2.703599876790166;min
+60;Average Firm Size (Pracujący/EN) (Δ% 2yr);9.482473544973532;max
+60;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-29.433402448140377;max
+60;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-17.254093570636574;min
+60;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-4.733845878524166;max
+60;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-55.1340666168363;max
+60;Inventory Turnover (TC/INV) (Δ% 2yr);-21.719233028228555;max
+60;Investment Ratio (IO/PNPM) (Δ% 2yr);-2.016898563766216;max
+60;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+60;New Firms Rate (Nowe/EN) (Δ% 2yr);-5.092592592592579;max
+60;Receivables Turnover (PNPM/REC) (Δ% 2yr);12.108997704630076;max
+60;Sales Profitability (POS/PNPM) (Δ% 2yr);24.10824716416941;max
+61;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);13.3304356985084;min
+61;Average Firm Size (Pracujący/EN) (Δ% 2yr);10.608875871012003;max
+61;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-19.82105019508272;max
+61;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-3.5881823555078247;min
+61;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);0.27872113314572705;max
+61;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-14.098430824523017;max
+61;Inventory Turnover (TC/INV) (Δ% 2yr);6.0031984936138105;max
+61;Investment Ratio (IO/PNPM) (Δ% 2yr);-0.06374124638450877;max
+61;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+61;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.094312500660596;max
+61;Receivables Turnover (PNPM/REC) (Δ% 2yr);10.241469876249589;max
+61;Sales Profitability (POS/PNPM) (Δ% 2yr);11.870935406625966;max
+62;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);2.4438504253819935;min
+62;Average Firm Size (Pracujący/EN) (Δ% 2yr);8.568723723394253;max
+62;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);1.7621803877480142;max
+62;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.0641559318047868;min
+62;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-3.576464421303907;max
+62;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);19.905740257971146;max
+62;Inventory Turnover (TC/INV) (Δ% 2yr);-1.0977468117517601;max
+62;Investment Ratio (IO/PNPM) (Δ% 2yr);-10.561712852087256;max
+62;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+62;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.22856416630603;max
+62;Receivables Turnover (PNPM/REC) (Δ% 2yr);0.8743243831112323;max
+62;Sales Profitability (POS/PNPM) (Δ% 2yr);12.98115596062734;max
+63;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-16.720852966162184;min
+63;Average Firm Size (Pracujący/EN) (Δ% 2yr);-0.5303802720410155;max
+63;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-11.924444250219894;max
+63;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-4.534446076292624;min
+63;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);4.384997270719647;max
+63;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-3.421949447946841;max
+63;Inventory Turnover (TC/INV) (Δ% 2yr);24.212942832987718;max
+63;Investment Ratio (IO/PNPM) (Δ% 2yr);-33.82422794057533;max
+63;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+63;New Firms Rate (Nowe/EN) (Δ% 2yr);-27.425665101721446;max
+63;Receivables Turnover (PNPM/REC) (Δ% 2yr);-7.946412761290864;max
+63;Sales Profitability (POS/PNPM) (Δ% 2yr);14.531259765793964;max
+64;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);28.54914288122201;min
+64;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.6614570549520817;max
+64;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-1.8536404682186376;max
+64;Cost Share Ratio (TC/PNPM) (Δ% 2yr);20.97549550047402;min
+64;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.569673844580343;max
+64;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);57.500120403195524;max
+64;Inventory Turnover (TC/INV) (Δ% 2yr);21.218740486437902;max
+64;Investment Ratio (IO/PNPM) (Δ% 2yr);-16.26324634206111;max
+64;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+64;New Firms Rate (Nowe/EN) (Δ% 2yr);-38.17176317501626;max
+64;Receivables Turnover (PNPM/REC) (Δ% 2yr);-10.838372629777115;max
+64;Sales Profitability (POS/PNPM) (Δ% 2yr);-42.688810422232656;max
+65;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+65;Average Firm Size (Pracujący/EN) (Δ% 2yr);6.030150753768844;max
+65;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+65;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+65;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+65;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+65;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+65;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+65;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+65;New Firms Rate (Nowe/EN) (Δ% 2yr);-23.021582733812952;max
+65;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+65;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+66;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);33.39524604872716;min
+66;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.152429438689305;max
+66;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-9.341232658349092;max
+66;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-2.5226824003037445;min
+66;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-17.526334580749413;max
+66;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-5.575224493483198;max
+66;Inventory Turnover (TC/INV) (Δ% 2yr);-26.435998577585096;max
+66;Investment Ratio (IO/PNPM) (Δ% 2yr);60.19756966075246;max
+66;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+66;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.673819522103295;max
+66;Receivables Turnover (PNPM/REC) (Δ% 2yr);-10.439084494649576;max
+66;Sales Profitability (POS/PNPM) (Δ% 2yr);27.484243851339002;max
+68;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-0.6387376600044559;min
+68;Average Firm Size (Pracujący/EN) (Δ% 2yr);9.285330904852342;max
+68;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.6050445013176273;max
+68;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.6758885311547594;min
+68;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.58067895267493;max
+68;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-1.6068126470264394;max
+68;Inventory Turnover (TC/INV) (Δ% 2yr);-23.333042097131923;max
+68;Investment Ratio (IO/PNPM) (Δ% 2yr);58.60479866954239;max
+68;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+68;New Firms Rate (Nowe/EN) (Δ% 2yr);12.069474598349974;max
+68;Receivables Turnover (PNPM/REC) (Δ% 2yr);12.055075170532234;max
+68;Sales Profitability (POS/PNPM) (Δ% 2yr);-16.383640635166934;max
+69;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);1.8824374264947004;min
+69;Average Firm Size (Pracujący/EN) (Δ% 2yr);4.095994375996193;max
+69;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.596600374385278;max
+69;Cost Share Ratio (TC/PNPM) (Δ% 2yr);2.333353285647887;min
+69;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.11372092455844;max
+69;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-17.473973678816616;max
+69;Inventory Turnover (TC/INV) (Δ% 2yr);43.70037670936269;max
+69;Investment Ratio (IO/PNPM) (Δ% 2yr);-24.560059378081963;max
+69;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+69;New Firms Rate (Nowe/EN) (Δ% 2yr);-26.27516727838447;max
+69;Receivables Turnover (PNPM/REC) (Δ% 2yr);3.545422982908819;max
+69;Sales Profitability (POS/PNPM) (Δ% 2yr);15.473701768148358;max
+70;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-11.13146317761642;min
+70;Average Firm Size (Pracujący/EN) (Δ% 2yr);2.6413784984478945;max
+70;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-72.17875780159176;max
+70;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-5.416530477337908;min
+70;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-17.211758045254726;max
+70;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);2.476395432668416;max
+70;Inventory Turnover (TC/INV) (Δ% 2yr);-35.642793044754676;max
+70;Investment Ratio (IO/PNPM) (Δ% 2yr);-54.65789245880445;max
+70;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+70;New Firms Rate (Nowe/EN) (Δ% 2yr);-21.545506607907154;max
+70;Receivables Turnover (PNPM/REC) (Δ% 2yr);-18.876478049781447;max
+70;Sales Profitability (POS/PNPM) (Δ% 2yr);134.61480653492777;max
+71;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-12.049663626477528;min
+71;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.3862372374865122;max
+71;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-4.578422122630315;max
+71;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.5064400632188681;min
+71;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-3.28510710504918;max
+71;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-11.52950260162357;max
+71;Inventory Turnover (TC/INV) (Δ% 2yr);25.28049212169953;max
+71;Investment Ratio (IO/PNPM) (Δ% 2yr);-25.82888436865257;max
+71;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+71;New Firms Rate (Nowe/EN) (Δ% 2yr);-20.754493031720763;max
+71;Receivables Turnover (PNPM/REC) (Δ% 2yr);1.6518390875358204;max
+71;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.545300683100013;max
+72;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-17.453332549719466;min
+72;Average Firm Size (Pracujący/EN) (Δ% 2yr);12.311112195796582;max
+72;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-3.392244676927097;max
+72;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-1.3055887147425453;min
+72;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);2.3837572773241815;max
+72;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);50.64704881249802;max
+72;Inventory Turnover (TC/INV) (Δ% 2yr);0.7018128328782602;max
+72;Investment Ratio (IO/PNPM) (Δ% 2yr);96.17496128654447;max
+72;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+72;New Firms Rate (Nowe/EN) (Δ% 2yr);12.001682710153192;max
+72;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.952203779263152;max
+72;Sales Profitability (POS/PNPM) (Δ% 2yr);2.3755353941083897;max
+73;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-61.187649565122214;min
+73;Average Firm Size (Pracujący/EN) (Δ% 2yr);13.331182079360463;max
+73;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);14.487841656288708;max
+73;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-3.8557450707387106;min
+73;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-12.513121706182417;max
+73;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);37.237603649062024;max
+73;Inventory Turnover (TC/INV) (Δ% 2yr);-34.1667336125727;max
+73;Investment Ratio (IO/PNPM) (Δ% 2yr);27.234708259228935;max
+73;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+73;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.016830401340327;max
+73;Receivables Turnover (PNPM/REC) (Δ% 2yr);-4.21460016557556;max
+73;Sales Profitability (POS/PNPM) (Δ% 2yr);112.32730665581356;max
+74;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-0.724936190937772;min
+74;Average Firm Size (Pracujący/EN) (Δ% 2yr);-2.641780652696357;max
+74;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-22.33492621029645;max
+74;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-7.879132449695081;min
+74;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);0.024225275514859756;max
+74;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);100.24906401399794;max
+74;Inventory Turnover (TC/INV) (Δ% 2yr);0.19380423040659725;max
+74;Investment Ratio (IO/PNPM) (Δ% 2yr);64.81062391603639;max
+74;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+74;New Firms Rate (Nowe/EN) (Δ% 2yr);-27.06822554388043;max
+74;Receivables Turnover (PNPM/REC) (Δ% 2yr);7.787720508316758;max
+74;Sales Profitability (POS/PNPM) (Δ% 2yr);21.29704440338143;max
+75;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-21.147242953034954;min
+75;Average Firm Size (Pracujący/EN) (Δ% 2yr);-22.462128664174706;max
+75;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-36.552599239299695;max
+75;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-4.921155121016356;min
+75;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-18.66349540956763;max
+75;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);237.7874946934378;max
+75;Inventory Turnover (TC/INV) (Δ% 2yr);-20.869499429923806;max
+75;Investment Ratio (IO/PNPM) (Δ% 2yr);-1.7977254758863879;max
+75;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+75;New Firms Rate (Nowe/EN) (Δ% 2yr);-7.35294117647058;max
+75;Receivables Turnover (PNPM/REC) (Δ% 2yr);-10.816313419666937;max
+75;Sales Profitability (POS/PNPM) (Δ% 2yr);52.76037755711489;max
+77;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);12.1717135255526;min
+77;Average Firm Size (Pracujący/EN) (Δ% 2yr);6.231580741013655;max
+77;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);3.128382468610931;max
+77;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.4381325402530268;min
+77;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);22.70301468098991;max
+77;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-24.301036099877653;max
+77;Inventory Turnover (TC/INV) (Δ% 2yr);14.487486051722422;max
+77;Investment Ratio (IO/PNPM) (Δ% 2yr);7.370281360576346;max
+77;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+77;New Firms Rate (Nowe/EN) (Δ% 2yr);-13.111572857835926;max
+77;Receivables Turnover (PNPM/REC) (Δ% 2yr);32.033400557312355;max
+77;Sales Profitability (POS/PNPM) (Δ% 2yr);-15.912167933877457;max
+78;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);16.719312248768745;min
+78;Average Firm Size (Pracujący/EN) (Δ% 2yr);18.554442960320127;max
+78;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);8.589699150379964;max
+78;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.45925446719779384;min
+78;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-22.037307381032146;max
+78;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);20.719347557343877;max
+78;Inventory Turnover (TC/INV) (Δ% 2yr);-20.59908158407426;max
+78;Investment Ratio (IO/PNPM) (Δ% 2yr);-13.000280030998523;max
+78;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+78;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.75592409074054;max
+78;Receivables Turnover (PNPM/REC) (Δ% 2yr);-14.596233439479184;max
+78;Sales Profitability (POS/PNPM) (Δ% 2yr);28.833759101486034;max
+79;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);304.1509900066075;min
+79;Average Firm Size (Pracujący/EN) (Δ% 2yr);1.7188469686918264;max
+79;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);128.7773644317241;max
+79;Cost Share Ratio (TC/PNPM) (Δ% 2yr);16.41870692355227;min
+79;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-54.972568908633754;max
+79;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);124.06600543748405;max
+79;Inventory Turnover (TC/INV) (Δ% 2yr);51.57695174895992;max
+79;Investment Ratio (IO/PNPM) (Δ% 2yr);272.5674104977765;max
+79;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+79;New Firms Rate (Nowe/EN) (Δ% 2yr);-50.20600536862476;max
+79;Receivables Turnover (PNPM/REC) (Δ% 2yr);-67.8152311909092;max
+79;Sales Profitability (POS/PNPM) (Δ% 2yr);-14084.61009367181;max
+80;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.5204268728686838;min
+80;Average Firm Size (Pracujący/EN) (Δ% 2yr);1.6839387579960008;max
+80;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-5.399308376932178;max
+80;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-2.038537602006159;min
+80;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);5.421301017892718;max
+80;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-32.050484786215705;max
+80;Inventory Turnover (TC/INV) (Δ% 2yr);37.73212849718009;max
+80;Investment Ratio (IO/PNPM) (Δ% 2yr);-33.234740511876204;max
+80;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+80;New Firms Rate (Nowe/EN) (Δ% 2yr);13.455131483117178;max
+80;Receivables Turnover (PNPM/REC) (Δ% 2yr);18.30472534632576;max
+80;Sales Profitability (POS/PNPM) (Δ% 2yr);46.65121080604607;max
+81;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-5.322341910689126;min
+81;Average Firm Size (Pracujący/EN) (Δ% 2yr);-1.5538511980147753;max
+81;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-1.4586406634012248;max
+81;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-2.9540202891262934;min
+81;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-4.009201656404897;max
+81;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-53.11895640916403;max
+81;Inventory Turnover (TC/INV) (Δ% 2yr);30.090499808330616;max
+81;Investment Ratio (IO/PNPM) (Δ% 2yr);-3.1826801468692163;max
+81;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+81;New Firms Rate (Nowe/EN) (Δ% 2yr);-15.853791202813946;max
+81;Receivables Turnover (PNPM/REC) (Δ% 2yr);8.903684528071661;max
+81;Sales Profitability (POS/PNPM) (Δ% 2yr);280.4474784709647;max
+82;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);9.062836969910673;min
+82;Average Firm Size (Pracujący/EN) (Δ% 2yr);-0.9547738693467294;max
+82;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);6.2648344057245;max
+82;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.9937290654518153;min
+82;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-9.338335156636083;max
+82;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);102.61363276898425;max
+82;Inventory Turnover (TC/INV) (Δ% 2yr);10.086952940040177;max
+82;Investment Ratio (IO/PNPM) (Δ% 2yr);-6.213904533388138;max
+82;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+82;New Firms Rate (Nowe/EN) (Δ% 2yr);-21.39089379773221;max
+82;Receivables Turnover (PNPM/REC) (Δ% 2yr);-7.462192307132706;max
+82;Sales Profitability (POS/PNPM) (Δ% 2yr);40.37696220354176;max
+84;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+84;Average Firm Size (Pracujący/EN) (Δ% 2yr);0.7329763396756674;max
+84;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+84;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+84;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+84;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+84;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+84;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+84;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+84;New Firms Rate (Nowe/EN) (Δ% 2yr);-22.727272727272727;max
+84;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+84;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+85;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.825533698682968;min
+85;Average Firm Size (Pracujący/EN) (Δ% 2yr);-9.072047902762268;max
+85;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-4.309357449061594;max
+85;Cost Share Ratio (TC/PNPM) (Δ% 2yr);5.3200004442616695;min
+85;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-24.723124932982294;max
+85;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);42.05738173413599;max
+85;Inventory Turnover (TC/INV) (Δ% 2yr);-51.68694679496877;max
+85;Investment Ratio (IO/PNPM) (Δ% 2yr);-56.02539116320799;max
+85;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+85;New Firms Rate (Nowe/EN) (Δ% 2yr);-28.91548338547885;max
+85;Receivables Turnover (PNPM/REC) (Δ% 2yr);-20.488739178142147;max
+85;Sales Profitability (POS/PNPM) (Δ% 2yr);-16.042195123531847;max
+86;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);4.5118437352679;min
+86;Average Firm Size (Pracujący/EN) (Δ% 2yr);6.350620079289401;max
+86;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-9.442206240270695;max
+86;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.8877680139299073;min
+86;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-16.76167943969123;max
+86;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);2.3109181280969064;max
+86;Inventory Turnover (TC/INV) (Δ% 2yr);-33.23897312905849;max
+86;Investment Ratio (IO/PNPM) (Δ% 2yr);-8.647108692963986;max
+86;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+86;New Firms Rate (Nowe/EN) (Δ% 2yr);1.1308004573993806;max
+86;Receivables Turnover (PNPM/REC) (Δ% 2yr);-7.170639792613167;max
+86;Sales Profitability (POS/PNPM) (Δ% 2yr);103.64461328341952;max
+87;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-49.87359352580061;min
+87;Average Firm Size (Pracujący/EN) (Δ% 2yr);-35.67963572874091;max
+87;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-19.13711022325646;max
+87;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.621883921874459;min
+87;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-11.7804195166226;max
+87;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);103.89364597081759;max
+87;Inventory Turnover (TC/INV) (Δ% 2yr);452.03167919944036;max
+87;Investment Ratio (IO/PNPM) (Δ% 2yr);-62.5407592024937;max
+87;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+87;New Firms Rate (Nowe/EN) (Δ% 2yr);-47.74175412293853;max
+87;Receivables Turnover (PNPM/REC) (Δ% 2yr);-16.840577804560766;max
+87;Sales Profitability (POS/PNPM) (Δ% 2yr);-20.00094485240274;max
+88;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);6.095330619722943;min
+88;Average Firm Size (Pracujący/EN) (Δ% 2yr);-11.230972464045495;max
+88;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);4.0859544756435975;max
+88;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.6770445459277635;min
+88;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-9.038707470192252;max
+88;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);120.22443914358456;max
+88;Inventory Turnover (TC/INV) (Δ% 2yr);77.9099553599648;max
+88;Investment Ratio (IO/PNPM) (Δ% 2yr);-30.120486705223552;max
+88;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+88;New Firms Rate (Nowe/EN) (Δ% 2yr);-33.29090674743829;max
+88;Receivables Turnover (PNPM/REC) (Δ% 2yr);-8.28160092070052;max
+88;Sales Profitability (POS/PNPM) (Δ% 2yr);-5.386549663956838;max
+90;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);37.09984761069756;min
+90;Average Firm Size (Pracujący/EN) (Δ% 2yr);-35.12082234540659;max
+90;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);79.21900228750528;max
+90;Cost Share Ratio (TC/PNPM) (Δ% 2yr);36.61790304608244;min
+90;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-64.66925476224647;max
+90;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);127.5971093044393;max
+90;Inventory Turnover (TC/INV) (Δ% 2yr);-89.39999733607247;max
+90;Investment Ratio (IO/PNPM) (Δ% 2yr);-81.14941936370515;max
+90;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+90;New Firms Rate (Nowe/EN) (Δ% 2yr);-61.38528138528139;max
+90;Receivables Turnover (PNPM/REC) (Δ% 2yr);-67.76890176409366;max
+90;Sales Profitability (POS/PNPM) (Δ% 2yr);-566.0875095023689;max
+91;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);23.99945828528825;min
+91;Average Firm Size (Pracujący/EN) (Δ% 2yr);-3.3193411891636653;max
+91;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-24.29073611786873;max
+91;Cost Share Ratio (TC/PNPM) (Δ% 2yr);18.386162299683296;min
+91;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-23.508590628609028;max
+91;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-25.022024412182958;max
+91;Inventory Turnover (TC/INV) (Δ% 2yr);29.417324000778272;max
+91;Investment Ratio (IO/PNPM) (Δ% 2yr);164.5820328873953;max
+91;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+91;New Firms Rate (Nowe/EN) (Δ% 2yr);-41.11405835543766;max
+91;Receivables Turnover (PNPM/REC) (Δ% 2yr);-30.85941598933471;max
+91;Sales Profitability (POS/PNPM) (Δ% 2yr);-349.4995214708209;max
+92;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-19.05076437094354;min
+92;Average Firm Size (Pracujący/EN) (Δ% 2yr);-4.381470807983784;max
+92;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);111.57611268515942;max
+92;Cost Share Ratio (TC/PNPM) (Δ% 2yr);1.8417979452250888;min
+92;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);136.22787887456388;max
+92;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);5.2744542210732615;max
+92;Inventory Turnover (TC/INV) (Δ% 2yr);14.349254774592609;max
+92;Investment Ratio (IO/PNPM) (Δ% 2yr);-14.475324370347547;max
+92;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+92;New Firms Rate (Nowe/EN) (Δ% 2yr);-21.88888888888887;max
+92;Receivables Turnover (PNPM/REC) (Δ% 2yr);63.64978843459783;max
+92;Sales Profitability (POS/PNPM) (Δ% 2yr);-65.65114184552796;max
+93;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);51.636707342404655;min
+93;Average Firm Size (Pracujący/EN) (Δ% 2yr);7.575734094636097;max
+93;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);8.19689928618623;max
+93;Cost Share Ratio (TC/PNPM) (Δ% 2yr);9.412442885294618;min
+93;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-28.198662749248378;max
+93;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);-10.2460332181151;max
+93;Inventory Turnover (TC/INV) (Δ% 2yr);36.75934026173067;max
+93;Investment Ratio (IO/PNPM) (Δ% 2yr);3.824565361715139;max
+93;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+93;New Firms Rate (Nowe/EN) (Δ% 2yr);-30.187705251134023;max
+93;Receivables Turnover (PNPM/REC) (Δ% 2yr);-31.95068758933547;max
+93;Sales Profitability (POS/PNPM) (Δ% 2yr);-115.3837091937828;max
+94;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);0.0;min
+94;Average Firm Size (Pracujący/EN) (Δ% 2yr);110.85040937931853;max
+94;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.0;max
+94;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.0;min
+94;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);0.0;max
+94;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);0.0;max
+94;Inventory Turnover (TC/INV) (Δ% 2yr);0.0;max
+94;Investment Ratio (IO/PNPM) (Δ% 2yr);0.0;max
+94;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+94;New Firms Rate (Nowe/EN) (Δ% 2yr);-39.39718482252142;max
+94;Receivables Turnover (PNPM/REC) (Δ% 2yr);0.0;max
+94;Sales Profitability (POS/PNPM) (Δ% 2yr);0.0;max
+95;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);-4.478317956320732;min
+95;Average Firm Size (Pracujący/EN) (Δ% 2yr);-4.609246935824038;max
+95;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-6.401132533017891;max
+95;Cost Share Ratio (TC/PNPM) (Δ% 2yr);0.12042108235712404;min
+95;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-3.4430993555516807;max
+95;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);43.157249450253;max
+95;Inventory Turnover (TC/INV) (Δ% 2yr);-5.434200279348947;max
+95;Investment Ratio (IO/PNPM) (Δ% 2yr);-38.44203586676273;max
+95;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);100.0;max
+95;New Firms Rate (Nowe/EN) (Δ% 2yr);-33.72563200631185;max
+95;Receivables Turnover (PNPM/REC) (Δ% 2yr);-1.6111101405053976;max
+95;Sales Profitability (POS/PNPM) (Δ% 2yr);6.466935424367881;max
+96;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);139.58248273056947;min
+96;Average Firm Size (Pracujący/EN) (Δ% 2yr);20.34550951985136;max
+96;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);-27.86632671963391;max
+96;Cost Share Ratio (TC/PNPM) (Δ% 2yr);20.247525581679376;min
+96;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-34.9479413065974;max
+96;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);35.55666018875821;max
+96;Inventory Turnover (TC/INV) (Δ% 2yr);-26.56545028903553;max
+96;Investment Ratio (IO/PNPM) (Δ% 2yr);21.04409940636764;max
+96;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);-100.0;max
+96;New Firms Rate (Nowe/EN) (Δ% 2yr);-1.58448140273206;max
+96;Receivables Turnover (PNPM/REC) (Δ% 2yr);-8.226857441076096;max
+96;Sales Profitability (POS/PNPM) (Δ% 2yr);-81.03091776152472;max
+97;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+97;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+97;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+97;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+97;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+97;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+97;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+97;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+97;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+98;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+98;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+98;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+98;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+98;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+98;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+98;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+98;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+98;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+99;Amortization Ratio (DEPR/PNPM) (Δ% 2yr);20.201504588859123;min
+99;Average Firm Size (Pracujący/EN) (Δ% 2yr);20.005503577325257;max
+99;Bank Loans Ratio ((STC+LTC)/(STL+LTL)) (Δ% 2yr);0.8820770675934221;max
+99;Cost Share Ratio (TC/PNPM) (Δ% 2yr);-0.1880763593118734;min
+99;Current Asset Turnover (PNPM/(C+REC+INV)) (Δ% 2yr);-8.119500986482025;max
+99;Financial Revenue Share (Przych.fin./GS) (Δ% 2yr);21.375650655462035;max
+99;Inventory Turnover (TC/INV) (Δ% 2yr);-5.788689233782599;max
+99;Investment Ratio (IO/PNPM) (Δ% 2yr);0.24608714368193177;max
+99;New Firms Rate (Nowe/EN) (Δ% 2yr);432.6086956521744;max
+99;Receivables Turnover (PNPM/REC) (Δ% 2yr);-0.06243072277708965;max
+99;Sales Profitability (POS/PNPM) (Δ% 2yr);-12.810208645390237;max
+97;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.9905139864364663;max
+98;Average Firm Size (Pracujący/EN) (Δ% 1yr);3.9905139864364663;max
+05;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-39.02439024390244;max
+91;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-39.02439024390244;max
+97;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-39.02439024390244;max
+98;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-39.02439024390244;max
+99;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 1yr);-39.02439024390244;max
+05;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.24384433504065;max
+97;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.24384433504065;max
+98;New Firms Rate (Nowe/EN) (Δ% 1yr);-11.24384433504065;max
+97;Average Firm Size (Pracujący/EN) (Δ% 2yr);5.619561914676038;max
+98;Average Firm Size (Pracujący/EN) (Δ% 2yr);5.619561914676038;max
+05;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);7.317073170731708;max
+07;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);7.317073170731708;max
+97;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);7.317073170731708;max
+98;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);7.317073170731708;max
+99;Net Firm Growth Rate ((Zarejestrowane-Zamknięte)/EN) (Δ% 2yr);7.317073170731708;max
+97;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.024490314565174;max
+98;New Firms Rate (Nowe/EN) (Δ% 2yr);-9.024490314565174;max
