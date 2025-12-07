@@ -1020,7 +1020,7 @@ HackNation2025-Hackaton/
 
 ---
 
-## Jak uruchomić program
+## Jak uruchomić poszczególne części programu
 
 ### 1. Analiza danych (Jupyter Notebook)
 
