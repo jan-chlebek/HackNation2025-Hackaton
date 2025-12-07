@@ -2,10 +2,10 @@
 Advanced Financial Indicator Forecasting with Multi-Model Ensemble.
 
 Features:
-- Multiple forecasting models (ARIMA, Prophet, XGBoost, LSTM)
+- Multiple forecasting models with ensemble approach
 - Cross-indicator correlations for improved accuracy
 - Multiprocessing for faster execution
-- Ensemble methods combining best predictions
+- Complete coverage of all PKD×WSKAZNIK combinations
 
 Run from project root: python src/run_prediction.py
 """
@@ -98,226 +98,242 @@ def get_correlated_features(wskaznik_idx: int, corr_matrix: pd.DataFrame,
 
 
 def simple_exponential_smoothing(series: pd.Series, alpha: float = 0.3) -> float:
-    """Simple exponential smoothing for forecasting."""
+    """Simple exponential smoothing for next value."""
     if len(series) == 0:
-        return np.nan
+        return 0.0
+    if len(series) == 1:
+        return series.iloc[0]
     
-    result = series.iloc[0]
+    # Initialize with first value
+    smoothed = series.iloc[0]
+    
+    # Apply exponential smoothing
     for value in series.iloc[1:]:
-        result = alpha * value + (1 - alpha) * result
+        if pd.notna(value):
+            smoothed = alpha * value + (1 - alpha) * smoothed
     
-    return result
+    # Forecast next value
+    return smoothed
 
 
-def linear_trend_forecast(series: pd.Series, periods: int = 1) -> float:
-    """Forecast using linear trend."""
+def linear_trend_forecast(series: pd.Series) -> float:
+    """Forecast next value using linear regression."""
     if len(series) < 2:
-        return series.iloc[-1] if len(series) > 0 else np.nan
+        return series.iloc[-1] if len(series) > 0 else 0.0
     
-    x = np.arange(len(series))
-    y = series.values
+    # Remove NaN values
+    clean_series = series.dropna()
+    if len(clean_series) < 2:
+        return series.iloc[-1] if len(series) > 0 else 0.0
     
-    # Fit linear regression
-    coeffs = np.polyfit(x, y, 1)
+    # Create time index
+    x = np.arange(len(clean_series))
+    y = clean_series.values
     
-    # Forecast
-    future_x = len(series) + periods - 1
-    forecast = coeffs[0] * future_x + coeffs[1]
-    
-    return forecast
+    # Calculate linear regression coefficients
+    try:
+        slope, intercept = np.polyfit(x, y, 1)
+        # Forecast for next time step
+        next_value = slope * len(clean_series) + intercept
+        return next_value
+    except:
+        return clean_series.iloc[-1]
 
 
-def moving_average_forecast(series: pd.Series, window: int = 3) -> float:
-    """Forecast using moving average."""
-    if len(series) < window:
-        return series.mean() if len(series) > 0 else np.nan
-    
-    return series.tail(window).mean()
-
-
-def weighted_moving_average(series: pd.Series, weights: List[float] = None) -> float:
-    """Weighted moving average giving more weight to recent values."""
+def weighted_moving_average(series: pd.Series, window: int = 3) -> float:
+    """Weighted moving average forecast."""
     if len(series) == 0:
-        return np.nan
+        return 0.0
     
-    if weights is None:
-        n = min(len(series), 3)
-        weights = [i+1 for i in range(n)]  # [1, 2, 3] for recent values
+    clean_series = series.dropna()
+    if len(clean_series) == 0:
+        return 0.0
     
-    values = series.tail(len(weights)).values
-    if len(values) < len(weights):
-        weights = weights[-len(values):]
+    # Use last N values
+    recent_values = clean_series.iloc[-min(window, len(clean_series)):]
     
-    return np.average(values, weights=weights)
+    if len(recent_values) == 0:
+        return 0.0
+    
+    # Create linearly decreasing weights (more recent = higher weight)
+    n = len(recent_values)
+    weights = np.arange(1, n + 1)
+    weights = weights / weights.sum()
+    
+    return np.sum(recent_values.values * weights)
 
 
 def seasonal_naive_forecast(series: pd.Series, season_length: int = 1) -> float:
-    """Seasonal naive forecast (use value from same season last year)."""
-    if len(series) < season_length:
-        return series.iloc[-1] if len(series) > 0 else np.nan
+    """Seasonal naive forecast (use value from same period last year)."""
+    if len(series) == 0:
+        return 0.0
     
-    return series.iloc[-season_length]
+    clean_series = series.dropna()
+    if len(clean_series) == 0:
+        return 0.0
+    
+    # If we have data from same season last year, use it
+    if len(clean_series) >= season_length:
+        return clean_series.iloc[-season_length]
+    else:
+        return clean_series.iloc[-1]
 
 
-def ensemble_forecast(series: pd.Series, correlated_data: Dict[int, pd.Series] = None) -> float:
+def correlation_based_forecast(pkd_idx: float, wskaznik_idx: int, 
+                               correlated_wskazniki: List[int],
+                               df: pd.DataFrame) -> float:
+    """Forecast based on correlated indicators."""
+    if not correlated_wskazniki:
+        return None
+    
+    # Get most recent values of correlated indicators for same PKD
+    recent_values = []
+    
+    for corr_wskaznik in correlated_wskazniki:
+        mask = (df['PKD_INDEX'] == pkd_idx) & (df['WSKAZNIK_INDEX'] == corr_wskaznik)
+        corr_series = df[mask].sort_values('rok')['wartosc']
+        
+        if len(corr_series) > 0:
+            # Get growth rate of correlated indicator
+            if len(corr_series) >= 2:
+                growth_rate = (corr_series.iloc[-1] - corr_series.iloc[-2]) / (abs(corr_series.iloc[-2]) + 1e-10)
+                recent_values.append(growth_rate)
+    
+    if not recent_values:
+        return None
+    
+    # Average growth rate from correlated indicators
+    avg_growth = np.mean(recent_values)
+    
+    # Apply to current indicator
+    mask = (df['PKD_INDEX'] == pkd_idx) & (df['WSKAZNIK_INDEX'] == wskaznik_idx)
+    current_series = df[mask].sort_values('rok')['wartosc']
+    
+    if len(current_series) > 0:
+        last_value = current_series.iloc[-1]
+        return last_value * (1 + avg_growth)
+    
+    return None
+
+
+def ensemble_forecast(series: pd.Series, pkd_idx: float, wskaznik_idx: int,
+                     corr_matrix: pd.DataFrame, df_full: pd.DataFrame) -> float:
     """
     Ensemble forecast combining multiple methods.
     
-    Args:
-        series: Time series to forecast
-        correlated_data: Dictionary of correlated indicator data
+    Weights:
+    - Exponential Smoothing: 25%
+    - Linear Trend: 25%
+    - Weighted MA: 30%
+    - Seasonal Naive: 10%
+    - Correlation-based: 10%
     """
-    if len(series) == 0:
-        return np.nan
-    
     forecasts = []
     weights = []
     
-    # Method 1: Exponential smoothing (weight: 0.25)
-    try:
-        es_forecast = simple_exponential_smoothing(series, alpha=0.3)
-        if not np.isnan(es_forecast):
-            forecasts.append(es_forecast)
-            weights.append(0.25)
-    except:
-        pass
+    # 1. Exponential Smoothing
+    es_forecast = simple_exponential_smoothing(series)
+    if pd.notna(es_forecast):
+        forecasts.append(es_forecast)
+        weights.append(0.25)
     
-    # Method 2: Linear trend (weight: 0.25)
-    try:
-        lt_forecast = linear_trend_forecast(series, periods=1)
-        if not np.isnan(lt_forecast):
-            forecasts.append(lt_forecast)
-            weights.append(0.25)
-    except:
-        pass
+    # 2. Linear Trend
+    lt_forecast = linear_trend_forecast(series)
+    if pd.notna(lt_forecast):
+        forecasts.append(lt_forecast)
+        weights.append(0.25)
     
-    # Method 3: Weighted moving average (weight: 0.3)
-    try:
-        wma_forecast = weighted_moving_average(series)
-        if not np.isnan(wma_forecast):
-            forecasts.append(wma_forecast)
-            weights.append(0.3)
-    except:
-        pass
+    # 3. Weighted Moving Average
+    wma_forecast = weighted_moving_average(series)
+    if pd.notna(wma_forecast):
+        forecasts.append(wma_forecast)
+        weights.append(0.30)
     
-    # Method 4: Seasonal naive (weight: 0.1)
-    try:
-        sn_forecast = seasonal_naive_forecast(series, season_length=1)
-        if not np.isnan(sn_forecast):
-            forecasts.append(sn_forecast)
-            weights.append(0.1)
-    except:
-        pass
+    # 4. Seasonal Naive
+    sn_forecast = seasonal_naive_forecast(series)
+    if pd.notna(sn_forecast):
+        forecasts.append(sn_forecast)
+        weights.append(0.10)
     
-    # Method 5: Use correlated indicators (weight: 0.1 if available)
-    if correlated_data and len(correlated_data) > 0:
-        try:
-            # Average the latest values of correlated indicators
-            corr_values = []
-            for corr_series in correlated_data.values():
-                if len(corr_series) > 0:
-                    corr_values.append(corr_series.iloc[-1])
-            
-            if corr_values:
-                # Use correlation-based adjustment
-                avg_corr = np.mean(corr_values)
-                last_value = series.iloc[-1]
-                
-                # Adjust based on correlation trend
-                corr_forecast = last_value * (avg_corr / np.mean([s.iloc[-1] for s in correlated_data.values() if len(s) > 0]))
-                
-                if not np.isnan(corr_forecast) and np.isfinite(corr_forecast):
-                    forecasts.append(corr_forecast)
-                    weights.append(0.1)
-        except:
-            pass
+    # 5. Correlation-based
+    correlated = get_correlated_features(wskaznik_idx, corr_matrix)
+    corr_forecast = correlation_based_forecast(pkd_idx, wskaznik_idx, correlated, df_full)
+    if corr_forecast is not None and pd.notna(corr_forecast):
+        forecasts.append(corr_forecast)
+        weights.append(0.10)
     
-    # Combine forecasts
+    # If no forecasts available, use last value
     if len(forecasts) == 0:
-        # Fallback to last known value
-        return series.iloc[-1]
+        return series.iloc[-1] if len(series) > 0 else 0.0
     
     # Normalize weights
     weights = np.array(weights)
     weights = weights / weights.sum()
     
     # Weighted average
-    final_forecast = np.average(forecasts, weights=weights)
+    ensemble_value = np.average(forecasts, weights=weights)
     
-    # Apply bounds based on historical volatility
-    std = series.std()
-    mean = series.mean()
+    # Bounds check: clip to reasonable range (mean ± 3 std devs)
+    if len(series) >= 3:
+        series_mean = series.mean()
+        series_std = series.std()
+        lower_bound = series_mean - 3 * series_std
+        upper_bound = series_mean + 3 * series_std
+        ensemble_value = np.clip(ensemble_value, lower_bound, upper_bound)
     
-    # Clip to reasonable range (mean ± 3*std)
-    lower_bound = mean - 3 * std
-    upper_bound = mean + 3 * std
-    
-    final_forecast = np.clip(final_forecast, lower_bound, upper_bound)
-    
-    return final_forecast
+    return ensemble_value
 
 
-def forecast_single_category(args: Tuple) -> Dict:
+def forecast_single_category(args: Tuple) -> List[Dict]:
     """
-    Forecast a single PKD category for one indicator.
+    Forecast a single PKD×WSKAZNIK combination.
     
     Args:
         args: Tuple of (pkd_idx, wskaznik_idx, series, corr_matrix, df_full)
     
     Returns:
-        Dictionary with forecast results
+        List of forecast dictionaries
     """
     pkd_idx, wskaznik_idx, series, corr_matrix, df_full = args
     
     results = []
     
     try:
-        # Get correlated indicators
-        correlated_indicators = get_correlated_features(wskaznik_idx, corr_matrix)
-        
-        # Get correlated data for this PKD
-        correlated_data = {}
-        for corr_idx in correlated_indicators:
-            corr_series = df_full[
-                (df_full['PKD_INDEX'] == pkd_idx) & 
-                (df_full['WSKAZNIK_INDEX'] == corr_idx)
-            ].sort_values('rok')['wartosc']
-            
-            if len(corr_series) > 0:
-                correlated_data[corr_idx] = corr_series
-        
-        # Iteratively forecast future years
+        # Create extended series for iterative forecasting
         forecast_series = series.copy()
         
         for year_ahead in range(1, FORECAST_YEARS + 1):
             forecast_year = END_YEAR + year_ahead
             
-            # Generate forecast for this year
-            forecast_value = ensemble_forecast(forecast_series, correlated_data)
+            # Generate forecast using ensemble
+            forecast_value = ensemble_forecast(
+                forecast_series, pkd_idx, wskaznik_idx, corr_matrix, df_full
+            )
+            
+            # Add to results
+            results.append({
+                'rok': forecast_year,
+                'wartosc': forecast_value,
+                'WSKAZNIK_INDEX': wskaznik_idx,
+                'PKD_INDEX': pkd_idx
+            })
             
             # Add to series for next iteration
             new_point = pd.Series([forecast_value], index=[forecast_year])
             forecast_series = pd.concat([forecast_series, new_point])
-            
-            results.append({
-                'rok': forecast_year,
-                'PKD_INDEX': pkd_idx,
-                'WSKAZNIK_INDEX': wskaznik_idx,
-                'wartosc': forecast_value
-            })
     
     except Exception as e:
         # If forecasting fails, use last known value
-        last_value = series.iloc[-1] if len(series) > 0 else 0
+        last_value = series.iloc[-1] if len(series) > 0 else 0.0
         
         for year_ahead in range(1, FORECAST_YEARS + 1):
             forecast_year = END_YEAR + year_ahead
             
             results.append({
                 'rok': forecast_year,
-                'PKD_INDEX': pkd_idx,
+                'wartosc': last_value,
                 'WSKAZNIK_INDEX': wskaznik_idx,
-                'wartosc': last_value
+                'PKD_INDEX': pkd_idx
             })
     
     return results
@@ -332,23 +348,33 @@ def forecast_all_categories(df: pd.DataFrame, corr_matrix: pd.DataFrame) -> pd.D
         corr_matrix: Correlation matrix between indicators
     
     Returns:
-        DataFrame with forecasts
+        DataFrame with forecasts for ALL PKD×WSKAZNIK combinations
     """
     print(f"\nForecasting {FORECAST_YEARS} years into the future...")
     print(f"  Years to forecast: {END_YEAR + 1} to {END_YEAR + FORECAST_YEARS}")
     
-    # Prepare tasks
+    # Get all unique combinations from historical data
+    all_pkd = df['PKD_INDEX'].unique()
+    all_wskaznik = df['WSKAZNIK_INDEX'].unique()
+    
+    print(f"  Total PKD categories: {len(all_pkd)}")
+    print(f"  Total indicators: {len(all_wskaznik)}")
+    print(f"  Expected combinations: {len(all_pkd) * len(all_wskaznik)}")
+    
+    # Prepare tasks - one for each existing combination
     tasks = []
+    existing_combinations = set()
     
     for (pkd_idx, wskaznik_idx), group in df.groupby(['PKD_INDEX', 'WSKAZNIK_INDEX']):
         series = group.sort_values('rok')['wartosc']
         
         if len(series) >= 2:  # Need at least 2 points for forecasting
             tasks.append((pkd_idx, wskaznik_idx, series, corr_matrix, df))
+            existing_combinations.add((pkd_idx, wskaznik_idx))
     
-    print(f"  Total forecasting tasks: {len(tasks)}")
+    print(f"  Forecasting tasks (with historical data): {len(tasks)}")
     
-    # Run in parallel
+    # Run forecasting in parallel
     all_forecasts = []
     
     with ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
@@ -374,18 +400,71 @@ def forecast_all_categories(df: pd.DataFrame, corr_matrix: pd.DataFrame) -> pd.D
     # Create DataFrame from forecasts
     forecast_df = pd.DataFrame(all_forecasts)
     
-    return forecast_df
+    # Fill missing combinations with median values per indicator
+    print("\nFilling missing combinations...")
+    
+    all_forecast_data = []
+    
+    for year in range(END_YEAR + 1, END_YEAR + FORECAST_YEARS + 1):
+        for pkd_idx in all_pkd:
+            for wskaznik_idx in all_wskaznik:
+                # Check if this combination exists in forecasts
+                existing = forecast_df[
+                    (forecast_df['rok'] == year) &
+                    (forecast_df['PKD_INDEX'] == pkd_idx) &
+                    (forecast_df['WSKAZNIK_INDEX'] == wskaznik_idx)
+                ]
+                
+                if len(existing) > 0:
+                    # Use existing forecast
+                    all_forecast_data.append({
+                        'rok': year,
+                        'wartosc': existing.iloc[0]['wartosc'],
+                        'WSKAZNIK_INDEX': wskaznik_idx,
+                        'PKD_INDEX': pkd_idx
+                    })
+                else:
+                    # Fill with median value for this indicator across all PKDs
+                    median_value = forecast_df[
+                        (forecast_df['rok'] == year) &
+                        (forecast_df['WSKAZNIK_INDEX'] == wskaznik_idx)
+                    ]['wartosc'].median()
+                    
+                    if pd.isna(median_value):
+                        # If still no data, use global median for this indicator from historical data
+                        median_value = df[df['WSKAZNIK_INDEX'] == wskaznik_idx]['wartosc'].median()
+                    
+                    if pd.isna(median_value):
+                        median_value = 0.0
+                    
+                    all_forecast_data.append({
+                        'rok': year,
+                        'wartosc': median_value,
+                        'WSKAZNIK_INDEX': wskaznik_idx,
+                        'PKD_INDEX': pkd_idx
+                    })
+    
+    complete_forecast_df = pd.DataFrame(all_forecast_data)
+    
+    print(f"  Complete forecasts: {len(complete_forecast_df)} records")
+    print(f"  Coverage: {len(complete_forecast_df) / (len(all_pkd) * len(all_wskaznik) * FORECAST_YEARS) * 100:.1f}%")
+    
+    return complete_forecast_df
 
 
 def save_predictions(forecast_df: pd.DataFrame):
-    """Save predictions in the same format as input data."""
+    """Save predictions in the EXACT same format as input data."""
     output_dir = Path('results-future')
     output_dir.mkdir(exist_ok=True)
     
     output_file = output_dir / 'kpi-value-table-predicted.csv'
     
-    # Sort by year, PKD_INDEX, WSKAZNIK_INDEX
-    forecast_df = forecast_df.sort_values(['rok', 'PKD_INDEX', 'WSKAZNIK_INDEX'])
+    # CRITICAL: Match input column order exactly
+    # Input has: rok;wartosc;WSKAZNIK_INDEX;PKD_INDEX
+    forecast_df = forecast_df[['rok', 'wartosc', 'WSKAZNIK_INDEX', 'PKD_INDEX']]
+    
+    # Sort by year, then WSKAZNIK_INDEX, then PKD_INDEX (to match input pattern)
+    forecast_df = forecast_df.sort_values(['rok', 'WSKAZNIK_INDEX', 'PKD_INDEX'])
     
     # Save with semicolon separator (same as input)
     forecast_df.to_csv(output_file, sep=';', index=False)
@@ -393,6 +472,7 @@ def save_predictions(forecast_df: pd.DataFrame):
     print(f"\n✓ Predictions saved to: {output_file}")
     print(f"  Total predictions: {len(forecast_df)}")
     print(f"  Years: {forecast_df['rok'].min()} to {forecast_df['rok'].max()}")
+    print(f"  Format: rok;wartosc;WSKAZNIK_INDEX;PKD_INDEX (matches input)")
     
     # Save summary statistics
     summary_file = output_dir / 'forecast-summary.txt'
@@ -417,6 +497,10 @@ def save_predictions(forecast_df: pd.DataFrame):
         f.write(f"  Std Dev: {forecast_df['wartosc'].std():.2f}\n")
         f.write(f"  Min: {forecast_df['wartosc'].min():.2f}\n")
         f.write(f"  Max: {forecast_df['wartosc'].max():.2f}\n")
+        
+        # Check for missing values
+        missing_count = forecast_df['wartosc'].isna().sum()
+        f.write(f"\nMissing values: {missing_count}\n")
     
     print(f"✓ Summary saved to: {summary_file}")
 
@@ -437,7 +521,7 @@ if __name__ == '__main__':
     # Calculate correlations
     corr_matrix = calculate_correlations(df)
     
-    # Forecast
+    # Forecast ALL combinations
     forecasts = forecast_all_categories(df, corr_matrix)
     
     # Save results
@@ -448,4 +532,5 @@ if __name__ == '__main__':
     print("="*80)
     print("\nNext steps:")
     print("  1. Review predictions in: results-future/kpi-value-table-predicted.csv")
-    print("  2. Run evaluation: python src/evaluate_predictions.py")
+    print("  2. Run analysis: python src/outcome.py results-future")
+    print("  3. Compare with historical: python src/checking_predictions.py")

@@ -82,12 +82,22 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
         (df_merged['WSKAZNIK_INDEX'] >= min_wskaznik_index)
     ].copy()
     
-    # Pivot to get values by year
+    # Check for duplicates BEFORE pivoting
+    duplicate_check = df_years.groupby(['symbol', 'WSKAZNIK', 'rok']).size()
+    duplicates = duplicate_check[duplicate_check > 1]
+    
+    if len(duplicates) > 0:
+        print(f"  ⚠ WARNING: Found {len(duplicates)} duplicate entries (symbol, WSKAZNIK, rok)")
+        print(f"  First few duplicates:")
+        print(duplicates.head(10))
+        print(f"  → Aggregating duplicates using mean...")
+    
+    # Pivot to get values by year - use 'mean' to handle duplicates
     pivot_data = df_years.pivot_table(
         index=['symbol', 'WSKAZNIK'],
         columns='rok',
         values='wartosc',
-        aggfunc='first'
+        aggfunc='mean'  # Changed from 'first' to 'mean' to handle duplicates
     ).reset_index()
     
     pct_changes = []
@@ -97,7 +107,12 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
         df_1yr = pivot_data[['symbol', 'WSKAZNIK', year, year-1]].copy()
         df_1yr = df_1yr.dropna(subset=[year, year-1])
         
-        df_1yr['pct_change'] = ((df_1yr[year] - df_1yr[year-1]) / df_1yr[year-1].abs()) * 100
+        # Avoid division by zero
+        df_1yr['pct_change'] = np.where(
+            df_1yr[year-1].abs() > 1e-10,
+            ((df_1yr[year] - df_1yr[year-1]) / df_1yr[year-1].abs()) * 100,
+            0
+        )
         df_1yr['cat_id'] = df_1yr['WSKAZNIK'] + ' (Δ% 1yr)'
         
         pct_changes.append(df_1yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
@@ -108,7 +123,12 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
         df_2yr = pivot_data[['symbol', 'WSKAZNIK', year, year-2]].copy()
         df_2yr = df_2yr.dropna(subset=[year, year-2])
         
-        df_2yr['pct_change'] = ((df_2yr[year] - df_2yr[year-2]) / df_2yr[year-2].abs()) * 100
+        # Avoid division by zero
+        df_2yr['pct_change'] = np.where(
+            df_2yr[year-2].abs() > 1e-10,
+            ((df_2yr[year] - df_2yr[year-2]) / df_2yr[year-2].abs()) * 100,
+            0
+        )
         df_2yr['cat_id'] = df_2yr['WSKAZNIK'] + ' (Δ% 2yr)'
         
         pct_changes.append(df_2yr[['symbol', 'cat_id', 'pct_change']].rename(columns={'pct_change': 'value'}))
@@ -117,6 +137,14 @@ def calculate_percentage_changes(df_merged: pd.DataFrame, year: int, typ: str, m
     if pct_changes:
         result = pd.concat(pct_changes, ignore_index=True)
         result.columns = ['kpi_id', 'cat_id', 'value']
+        
+        # Remove any infinite or NaN values
+        initial_len = len(result)
+        result = result[np.isfinite(result['value'])]
+        removed = initial_len - len(result)
+        if removed > 0:
+            print(f"  ⚠ Removed {removed} invalid percentage values (inf/nan)")
+        
         return result
     else:
         print("  ⚠ No historical data available for percentage changes")
@@ -141,7 +169,7 @@ def load_and_prepare_sector_data(year: int = 2024, typ: str = 'SEKCJA', min_wska
     print(f"Loading data for year {year}, type {typ}, indicators >= {min_wskaznik_index}...")
     
     # Read CSV files from results-pipeline
-    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table-predicted.csv'), sep=';')
+    kpi_value_table = pd.read_csv(os.path.join(input_dir, 'kpi-value-table.csv'), sep=';')
     pkd_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_dictionary.csv'), sep=';')
     pkd_typ_dictionary = pd.read_csv(os.path.join(input_dir, 'pkd_typ_dictionary.csv'), sep=';')
     wskaznik_dictionary = pd.read_csv(os.path.join(input_dir, 'wskaznik_dictionary.csv'), sep=';')
@@ -481,7 +509,7 @@ def run_sector_analysis(year: int = 2024,
 if __name__ == '__main__':
     # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
     results = run_sector_analysis(
-        year=2026,
+        year=2024,
         typ='DZIAŁ',
         min_wskaznik_index=1000,
         n_simulations=1000,

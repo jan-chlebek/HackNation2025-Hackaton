@@ -2,20 +2,22 @@ FORECAST SUMMARY
 ================================================================================
 
 Forecast period: 2025 to 2028
-Total predictions: 92296
+Total predictions: 164640
 
 Predictions per year:
-  2025: 23074 predictions
-  2026: 23074 predictions
-  2027: 23074 predictions
-  2028: 23074 predictions
+  2025: 41160 predictions
+  2026: 41160 predictions
+  2027: 41160 predictions
+  2028: 41160 predictions
 
 Unique indicators: 30
-Unique PKD categories: 1371
+Unique PKD categories: 1372
 
 Value statistics:
-  Mean: -28388.50
-  Median: 226.33
-  Std Dev: 1471177.90
+  Mean: -16821.99
+  Median: 243.49
+  Std Dev: 1017795.92
   Min: -226220651.51
-  Max: 6260793.70
+  Max: 6278720.50
+
+Missing values: 10861
