@@ -10,7 +10,8 @@ from .processors import (
     WskaznikFinansowyProcessor,
     QuarterlyInfoProcessorTabl4,
     QuarterlyInfoProcessorTabl5,
-    QuarterlyInfoProcessorTabl7
+    QuarterlyInfoProcessorTabl7,
+    MonthlyInfoProcessorTabl5
 )
 from .etl_pipeline_new import ETLPipeline
 
@@ -22,5 +23,6 @@ __all__ = [
     'QuarterlyInfoProcessorTabl4',
     'QuarterlyInfoProcessorTabl5',
     'QuarterlyInfoProcessorTabl7',
+    'MonthlyInfoProcessorTabl5',
     'ETLPipeline',
 ]

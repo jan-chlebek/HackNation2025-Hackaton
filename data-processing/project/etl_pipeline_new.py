@@ -64,7 +64,10 @@ class ETLPipeline:
         combined = pd.concat(self.data_sources, ignore_index=True)
         
         # Clean values
-        combined['wartosc'] = combined['wartosc'].apply(DataProcessor.clean_value)
+        if 'wartosc' in combined.columns:
+            combined['wartosc'] = combined['wartosc'].apply(DataProcessor.clean_value)
+        else:
+            raise KeyError(f"Column 'wartosc' not found. Available columns: {combined.columns.tolist()}")
         
         return combined
     

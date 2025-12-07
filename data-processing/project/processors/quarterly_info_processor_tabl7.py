@@ -1,15 +1,9 @@
-"""
-Quarterly Information Processor Module
-Processes quarterly employment forecast data from Excel files.
-"""
-
 import os
 import pandas as pd
 from processors.data_processor import DataProcessor
 
 
 class QuarterlyInfoProcessorTabl7(DataProcessor):
-    """Processor for quarterly employment forecast data."""
     
     def process(
         self, 
@@ -17,16 +11,7 @@ class QuarterlyInfoProcessorTabl7(DataProcessor):
         sheet_name: str = 'Tabl 7',
         wskaznik_prefix: str = "Liczba nowych firm"
     ) -> pd.DataFrame:
-        """
-        Process quarterly info from multiple Excel files.
-        
-        Args:
-            folder_path: Path to folder with Excel files
-            sheet_name: Name of sheet to extract
-            
-        Returns:
-            Standardized DataFrame
-        """
+ 
         all_data = []
         files = [f for f in os.listdir(folder_path) if f.endswith('.xlsx') and not f.startswith('~$')]
         
