@@ -22,9 +22,11 @@ interface AnalysisChartProps {
 const CustomTooltip = ({ active, payload, label }: any) => {
   if (active && payload && payload.length) {
     const data = payload[0].payload;
-    const title = (data.alternative_id && data.nazwa) 
-      ? `${data.alternative_id} - ${data.nazwa}`
-      : label;
+    const title = (data.name && data.nazwa) 
+      ? `${data.name} - ${data.nazwa}`
+      : (data.alternative_id && data.nazwa)
+        ? `${data.alternative_id} - ${data.nazwa}`
+        : label;
 
     return (
       <div style={{ backgroundColor: "#fff", padding: "10px", border: "1px solid #d0d0d0", borderRadius: "4px", boxShadow: "0 2px 4px rgba(0,0,0,0.1)" }}>

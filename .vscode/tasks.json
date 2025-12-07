@@ -27,7 +27,7 @@
 		{
 			"label": "dump-analysis-data",
 			"type": "shell",
-			"command": "Copy-Item \"results/2024/dział/complete.csv\" -Destination \"dashboard/public/data/dzial_complete.csv\" -Force; Copy-Item \"results/2024/sekcja/complete.csv\" -Destination \"dashboard/public/data/sekcja_complete.csv\" -Force",
+			"command": "Copy-Item \"results/2024/dział/complete.csv\" -Destination \"dashboard/public/data/dzial_complete.csv\" -Force; Copy-Item \"results/2024/sekcja/complete.csv\" -Destination \"dashboard/public/data/sekcja_complete.csv\" -Force; Copy-Item \"results-pipeline/pkd_dictionary.csv\" -Destination \"dashboard/public/data/pkd_dictionary.csv\" -Force",
 			"group": "build"
 		}
 	]
