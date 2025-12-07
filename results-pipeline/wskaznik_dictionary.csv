@@ -36,3 +36,11 @@ WSKAZNIK_INDEX;WSKAZNIK;MinMax
 34;TC Koszty ogółem;Min
 35;Upadłość;Min
 36;liczba firm i działalności gospodarczych Ogółem;Max
+1000;Marża netto (NP/PNPM);
+1001;Marża operacyjna (OP/PNPM);
+1002;Wskaźnik bieżącej płynności ((C+REC+INV)/STL);
+1003;Wskaźnik szybki ((C+REC)/STL);
+1004;Wskaźnik zadłużenia ((STL+LTL)/PNPM);
+1005;Pokrycie odsetek (OP/IP);
+1006;Rotacja należności (PNPM/REC);
+1007;Cash flow margin (CF/PNPM);
