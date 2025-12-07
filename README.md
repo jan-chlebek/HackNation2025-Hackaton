@@ -980,7 +980,3 @@ HackNation2025-Hackaton/
 ```
 
 ---
-
-*Dokument wersja 1.0 - Grudzień 2025*
-*System analizy sektorowej gospodarki polskiej*
-*Wykorzystanie: GUS + MCDM + Ensemble Forecasting*
