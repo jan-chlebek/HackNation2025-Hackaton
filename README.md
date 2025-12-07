@@ -9,6 +9,7 @@
 6. [Ensemble i agregacja wyników](#ensemble-i-agregacja-wyników)
 7. [System predykcji](#system-predykcji)
 8. [Uzasadnienie rozwiązań](#uzasadnienie-rozwiązań)
+9. [Jak uruchomić poszczególne części programu](#uruchomienie_programu)
 
 ---
 
@@ -990,6 +991,8 @@ System łączy **klasyczne metody finansowe** (wskaźniki) z **nowoczesną anali
 
 ---
 
+**Uruchumienie programu**:
+
 ## Struktura plików projektu
 
 ```
@@ -1014,5 +1017,48 @@ HackNation2025-Hackaton/
         ├── monte_carlo.csv
         └── ensemble.csv
 ```
+
+---
+
+## Jak uruchomić program
+
+### 1. Analiza danych (Jupyter Notebook)
+
+```bash
+# Eksploracja i czyszczenie danych wejściowych
+jupyter notebook data-processing/data-processing.ipynb
+
+# Konstrukcja wskaźników złożonych (1000-1067)
+jupyter notebook data-processing/creating_complex_indicators.ipynb
+```
+
+### 2. Predykcja szeregów czasowych (2025-2028)
+
+```bash
+# Tryb FAST (WMA + Seasonal Naive, ~5 minut)
+python src/run_prediction.py --mode fast
+
+# Tryb ENSEMBLE (5 metod + korelacje, ~15 minut)
+python src/run_prediction.py
+```
+
+Wynik: `results-future/kpi-value-table-predicted.csv`
+
+### 3. Analiza MCDM wszystkich kategorii równolegle
+
+```bash
+python src/run_prediction_sets.py
+```
+
+Analizuje równolegle 4 zestawy wskaźników (credit, effectivity, development, polish) używając TOPSIS, VIKOR i Monte Carlo.
+
+Wyniki: `results-{kategoria}/{rok}/{poziom}/ensemble.csv`
+
+### 4. Frontend
+#### Uruchomienie:
+na potrzeby przeniesienia danych analitycznych do struktury raportu, przygotowane zostały odpowiednie zadania budujące i mapujące w .vscode/tasks.json. Zadania te można uruchomić poprzez VS Code (akcja Tasks: Run Task) lub poprzez przekopiowanie do terminala. Dashboard można uruchomić z zainstalowanym NPM poprzez wykonanie zadania run-dashboard.
+
+#### Deployment:
+W trakcie realizacji projektu, frontend został zbudowany i zdeployowany na prywatne zasoby w Azure (Web App Node 24) z wykorzystaniem VS Code i wtyczki Azure App Service (akcja Deploy to Web App).
 
 ---
