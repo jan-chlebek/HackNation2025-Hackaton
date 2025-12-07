@@ -16,7 +16,7 @@
 		{
 			"label": "run-dashboard",
 			"type": "shell",
-			"command": "npm run dev",
+			"command": "npm install && npm run dev",
 			"options": {
 				"cwd": "${workspaceFolder}/dashboard"
 			},
