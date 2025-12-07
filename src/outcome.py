@@ -479,16 +479,39 @@ def run_sector_analysis(year: int = 2024,
 
 
 if __name__ == '__main__':
-    # Run sector analysis for year 2024, SEKCJA level, only calculated indicators (>= 1000)
-    results = run_sector_analysis(
-        year=2025,
-        typ='DZIAŁ',
-        min_wskaznik_index=1000,
-        n_simulations=1000,
-        mc_weight_variance=0.15,  # 15% variance around temporal weights
-        temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
-        temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
-    )
+
+    for x in range(2025, 2029):
+        results = run_sector_analysis(
+            year=x,
+            typ='SEKCJA',
+            min_wskaznik_index=1000,
+            n_simulations=1000,
+            mc_weight_variance=0.15,  # 15% variance around temporal weights
+            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
+            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+        )
+
+        run_sector_analysis(
+            year=x,
+            typ='DZIAŁ',
+            min_wskaznik_index=1000,
+            n_simulations=1000,
+            mc_weight_variance=0.15,  # 15% variance around temporal weights
+            temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
+            temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+        )
+    
+
+
+    #results = run_sector_analysis(
+    #    year=2024,
+    #    typ='DZIAŁ',
+    #    min_wskaznik_index=1000,
+    #    n_simulations=1000,
+    #    mc_weight_variance=0.15,  # 15% variance around temporal weights
+    #    temporal_weight_1yr=0.66,  # 1-year changes get 66% of base weight
+    #    temporal_weight_2yr=0.34   # 2-year changes get 34% of base weight
+    #)
     
     print("\n" + "="*90)
     print("ANALYSIS COMPLETE")
